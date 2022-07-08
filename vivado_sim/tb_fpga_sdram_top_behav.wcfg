@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_fpga_qspi_sim_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_fpga_qspi_sim" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="180398333334fs"></ZoomStartTime>
+      <ZoomEndTime time="187458333335fs"></ZoomEndTime>
+      <Cursor1Time time="181575000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="233"></NameColumnWidth>
+      <ValueColumnWidth column_width="96"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="7" />
+   <wave_markers>
+      <marker time="220327250000" label="" />
+   </wave_markers>
+   <wvobject fp_name="group1586" type="group">
+      <obj_property name="label">usb2_cyp_vip</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_fpga_qspi_sim/usb2_cyp_vip_inst/rst_n" type="logic">
+         <obj_property name="ElementShortName">rst_n</obj_property>
+         <obj_property name="ObjectShortName">rst_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_clk" type="logic">
+         <obj_property name="ElementShortName">usb_clk</obj_property>
+         <obj_property name="ObjectShortName">usb_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_fifoaddr" type="array">
+         <obj_property name="ElementShortName">usb_fifoaddr[1:0]</obj_property>
+         <obj_property name="ObjectShortName">usb_fifoaddr[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_slcs" type="logic">
+         <obj_property name="ElementShortName">usb_slcs</obj_property>
+         <obj_property name="ObjectShortName">usb_slcs</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_sloe" type="logic">
+         <obj_property name="ElementShortName">usb_sloe</obj_property>
+         <obj_property name="ObjectShortName">usb_sloe</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_slrd" type="logic">
+         <obj_property name="ElementShortName">usb_slrd</obj_property>
+         <obj_property name="ObjectShortName">usb_slrd</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_slwr" type="logic">
+         <obj_property name="ElementShortName">usb_slwr</obj_property>
+         <obj_property name="ObjectShortName">usb_slwr</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_flaga" type="logic">
+         <obj_property name="ElementShortName">usb_flaga</obj_property>
+         <obj_property name="ObjectShortName">usb_flaga</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_flagb" type="logic">
+         <obj_property name="ElementShortName">usb_flagb</obj_property>
+         <obj_property name="ObjectShortName">usb_flagb</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_flagc" type="logic">
+         <obj_property name="ElementShortName">usb_flagc</obj_property>
+         <obj_property name="ObjectShortName">usb_flagc</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_download_finished" type="logic">
+         <obj_property name="ElementShortName">usb_download_finished</obj_property>
+         <obj_property name="ObjectShortName">usb_download_finished</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/usb2_cyp_vip_inst/pa0" type="logic">
+         <obj_property name="ElementShortName">pa0</obj_property>
+         <obj_property name="ObjectShortName">pa0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/usb2_cyp_vip_inst/r_cnt" type="array">
+         <obj_property name="ElementShortName">r_cnt[15:0]</obj_property>
+         <obj_property name="ObjectShortName">r_cnt[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_fd" type="array">
+         <obj_property name="ElementShortName">usb_fd[15:0]</obj_property>
+         <obj_property name="ObjectShortName">usb_fd[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_fd_i" type="array">
+         <obj_property name="ElementShortName">usb_fd_i[15:0]</obj_property>
+         <obj_property name="ObjectShortName">usb_fd_i[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_fd_o" type="array">
+         <obj_property name="ElementShortName">usb_fd_o[15:0]</obj_property>
+         <obj_property name="ObjectShortName">usb_fd_o[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_fd_oe" type="logic">
+         <obj_property name="ElementShortName">usb_fd_oe</obj_property>
+         <obj_property name="ObjectShortName">usb_fd_oe</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group1722" type="group">
+      <obj_property name="label">qspi_mater_vip</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/csn" type="logic">
+         <obj_property name="ElementShortName">csn</obj_property>
+         <obj_property name="ObjectShortName">csn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/qspi_clk" type="logic">
+         <obj_property name="ElementShortName">qspi_clk</obj_property>
+         <obj_property name="ObjectShortName">qspi_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/di" type="logic">
+         <obj_property name="ElementShortName">di</obj_property>
+         <obj_property name="ObjectShortName">di</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/byte_end" type="logic">
+         <obj_property name="ElementShortName">byte_end</obj_property>
+         <obj_property name="ObjectShortName">byte_end</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/do" type="logic">
+         <obj_property name="ElementShortName">do</obj_property>
+         <obj_property name="ObjectShortName">do</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/wpn" type="logic">
+         <obj_property name="ElementShortName">wpn</obj_property>
+         <obj_property name="ObjectShortName">wpn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/holdn" type="logic">
+         <obj_property name="ElementShortName">holdn</obj_property>
+         <obj_property name="ObjectShortName">holdn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/rst_n" type="logic">
+         <obj_property name="ElementShortName">rst_n</obj_property>
+         <obj_property name="ObjectShortName">rst_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/start" type="logic">
+         <obj_property name="ElementShortName">start</obj_property>
+         <obj_property name="ObjectShortName">start</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/cmd_end" type="logic">
+         <obj_property name="ElementShortName">cmd_end</obj_property>
+         <obj_property name="ObjectShortName">cmd_end</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/address_end" type="logic">
+         <obj_property name="ElementShortName">address_end</obj_property>
+         <obj_property name="ObjectShortName">address_end</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/dummy_end" type="logic">
+         <obj_property name="ElementShortName">dummy_end</obj_property>
+         <obj_property name="ObjectShortName">dummy_end</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/data_end" type="logic">
+         <obj_property name="ElementShortName">data_end</obj_property>
+         <obj_property name="ObjectShortName">data_end</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/usb_download_finished" type="logic">
+         <obj_property name="ElementShortName">usb_download_finished</obj_property>
+         <obj_property name="ObjectShortName">usb_download_finished</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/rand" type="array">
+         <obj_property name="ElementShortName">rand[7:0]</obj_property>
+         <obj_property name="ObjectShortName">rand[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/m_state" type="array">
+         <obj_property name="ElementShortName">m_state[4:0]</obj_property>
+         <obj_property name="ObjectShortName">m_state[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/m_cnt" type="array">
+         <obj_property name="ElementShortName">m_cnt[15:0]</obj_property>
+         <obj_property name="ObjectShortName">m_cnt[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/byte_cnt" type="array">
+         <obj_property name="ElementShortName">byte_cnt[2:0]</obj_property>
+         <obj_property name="ObjectShortName">byte_cnt[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/di_out" type="array">
+         <obj_property name="ElementShortName">di_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">di_out[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/rand" type="array">
+         <obj_property name="ElementShortName">rand[7:0]</obj_property>
+         <obj_property name="ObjectShortName">rand[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/m_state" type="array">
+         <obj_property name="ElementShortName">m_state[4:0]</obj_property>
+         <obj_property name="ObjectShortName">m_state[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/m_cnt" type="array">
+         <obj_property name="ElementShortName">m_cnt[15:0]</obj_property>
+         <obj_property name="ObjectShortName">m_cnt[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/byte_cnt" type="array">
+         <obj_property name="ElementShortName">byte_cnt[2:0]</obj_property>
+         <obj_property name="ObjectShortName">byte_cnt[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/r_cnt" type="array">
+         <obj_property name="ElementShortName">r_cnt[7:0]</obj_property>
+         <obj_property name="ObjectShortName">r_cnt[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/qspi_address" type="array">
+         <obj_property name="ElementShortName">qspi_address[23:0]</obj_property>
+         <obj_property name="ObjectShortName">qspi_address[23:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/di_out" type="array">
+         <obj_property name="ElementShortName">di_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">di_out[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group1912" type="group">
+      <obj_property name="label">sdram_core</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/work_state_r" type="array">
+         <obj_property name="ElementShortName">work_state_r[4:0]</obj_property>
+         <obj_property name="ObjectShortName">work_state_r[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/work_state" type="array">
+         <obj_property name="ElementShortName">work_state[4:0]</obj_property>
+         <obj_property name="ObjectShortName">work_state[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/sdram_wr_req" type="logic">
+         <obj_property name="ElementShortName">sdram_wr_req</obj_property>
+         <obj_property name="ObjectShortName">sdram_wr_req</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/sdram_wr_ack" type="logic">
+         <obj_property name="ElementShortName">sdram_wr_ack</obj_property>
+         <obj_property name="ObjectShortName">sdram_wr_ack</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/sdram_ref_req" type="logic">
+         <obj_property name="ElementShortName">sdram_ref_req</obj_property>
+         <obj_property name="ObjectShortName">sdram_ref_req</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/sdram_ref_ack" type="logic">
+         <obj_property name="ElementShortName">sdram_ref_ack</obj_property>
+         <obj_property name="ObjectShortName">sdram_ref_ack</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/sdram_rd_req" type="logic">
+         <obj_property name="ElementShortName">sdram_rd_req</obj_property>
+         <obj_property name="ObjectShortName">sdram_rd_req</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/sdram_rd_ack" type="logic">
+         <obj_property name="ElementShortName">sdram_rd_ack</obj_property>
+         <obj_property name="ObjectShortName">sdram_rd_ack</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/sdram_r_wn" type="logic">
+         <obj_property name="ElementShortName">sdram_r_wn</obj_property>
+         <obj_property name="ObjectShortName">sdram_r_wn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/sdram_init_done" type="logic">
+         <obj_property name="ElementShortName">sdram_init_done</obj_property>
+         <obj_property name="ObjectShortName">sdram_init_done</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/rst_n" type="logic">
+         <obj_property name="ElementShortName">rst_n</obj_property>
+         <obj_property name="ObjectShortName">rst_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/ref_domain" type="logic">
+         <obj_property name="ElementShortName">ref_domain</obj_property>
+         <obj_property name="ObjectShortName">ref_domain</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/init_state_r" type="array">
+         <obj_property name="ElementShortName">init_state_r[4:0]</obj_property>
+         <obj_property name="ObjectShortName">init_state_r[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/init_state" type="array">
+         <obj_property name="ElementShortName">init_state[4:0]</obj_property>
+         <obj_property name="ObjectShortName">init_state[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/sdram_wr_data_valid" type="logic">
+         <obj_property name="ElementShortName">sdram_wr_data_valid</obj_property>
+         <obj_property name="ObjectShortName">sdram_wr_data_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/end_twrite" type="logic">
+         <obj_property name="ElementShortName">end_twrite</obj_property>
+         <obj_property name="ObjectShortName">end_twrite</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/end_twait" type="logic">
+         <obj_property name="ElementShortName">end_twait</obj_property>
+         <obj_property name="ObjectShortName">end_twait</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/end_trp" type="logic">
+         <obj_property name="ElementShortName">end_trp</obj_property>
+         <obj_property name="ObjectShortName">end_trp</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/end_trfc" type="logic">
+         <obj_property name="ElementShortName">end_trfc</obj_property>
+         <obj_property name="ObjectShortName">end_trfc</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/end_tread" type="logic">
+         <obj_property name="ElementShortName">end_tread</obj_property>
+         <obj_property name="ObjectShortName">end_tread</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/end_trcd" type="logic">
+         <obj_property name="ElementShortName">end_trcd</obj_property>
+         <obj_property name="ObjectShortName">end_trcd</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/end_tmrd" type="logic">
+         <obj_property name="ElementShortName">end_tmrd</obj_property>
+         <obj_property name="ObjectShortName">end_tmrd</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/end_tdal" type="logic">
+         <obj_property name="ElementShortName">end_tdal</obj_property>
+         <obj_property name="ObjectShortName">end_tdal</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/end_tcl" type="logic">
+         <obj_property name="ElementShortName">end_tcl</obj_property>
+         <obj_property name="ObjectShortName">end_tcl</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/done_200us" type="logic">
+         <obj_property name="ElementShortName">done_200us</obj_property>
+         <obj_property name="ObjectShortName">done_200us</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/cur_work_state" type="array">
+         <obj_property name="ElementShortName">cur_work_state[4:0]</obj_property>
+         <obj_property name="ObjectShortName">cur_work_state[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/cur_init_state" type="array">
+         <obj_property name="ElementShortName">cur_init_state[4:0]</obj_property>
+         <obj_property name="ObjectShortName">cur_init_state[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group1961" type="group">
+      <obj_property name="label">sdram_data</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/wr_valid" type="logic">
+         <obj_property name="ElementShortName">wr_valid</obj_property>
+         <obj_property name="ObjectShortName">wr_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/wr_state" type="array">
+         <obj_property name="ElementShortName">wr_state[4:0]</obj_property>
+         <obj_property name="ObjectShortName">wr_state[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/wr_ready" type="logic">
+         <obj_property name="ElementShortName">wr_ready</obj_property>
+         <obj_property name="ObjectShortName">wr_ready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/wr_data" type="array">
+         <obj_property name="ElementShortName">wr_data[15:0]</obj_property>
+         <obj_property name="ObjectShortName">wr_data[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/wr_cnt" type="array">
+         <obj_property name="ElementShortName">wr_cnt[2:0]</obj_property>
+         <obj_property name="ObjectShortName">wr_cnt[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/wr_addr" type="array">
+         <obj_property name="ElementShortName">wr_addr[21:0]</obj_property>
+         <obj_property name="ObjectShortName">wr_addr[21:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/work_state" type="array">
+         <obj_property name="ElementShortName">work_state[4:0]</obj_property>
+         <obj_property name="ObjectShortName">work_state[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/wdata_valid" type="logic">
+         <obj_property name="ElementShortName">wdata_valid</obj_property>
+         <obj_property name="ObjectShortName">wdata_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/w_idx" type="array">
+         <obj_property name="ElementShortName">w_idx[2:0]</obj_property>
+         <obj_property name="ObjectShortName">w_idx[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/temp_wdata" type="array">
+         <obj_property name="ElementShortName">temp_wdata[2:0][15:0]</obj_property>
+         <obj_property name="ObjectShortName">temp_wdata[2:0][15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/temp_rdata" type="array">
+         <obj_property name="ElementShortName">temp_rdata[2:0][15:0]</obj_property>
+         <obj_property name="ObjectShortName">temp_rdata[2:0][15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sys_wraddr_r" type="array">
+         <obj_property name="ElementShortName">sys_wraddr_r[21:0]</obj_property>
+         <obj_property name="ObjectShortName">sys_wraddr_r[21:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sys_wraddr" type="array">
+         <obj_property name="ElementShortName">sys_wraddr[21:0]</obj_property>
+         <obj_property name="ObjectShortName">sys_wraddr[21:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sys_rdaddr_r" type="array">
+         <obj_property name="ElementShortName">sys_rdaddr_r[21:0]</obj_property>
+         <obj_property name="ObjectShortName">sys_rdaddr_r[21:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sys_rdaddr" type="array">
+         <obj_property name="ElementShortName">sys_rdaddr[21:0]</obj_property>
+         <obj_property name="ObjectShortName">sys_rdaddr[21:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_wr_req" type="logic">
+         <obj_property name="ElementShortName">sdram_wr_req</obj_property>
+         <obj_property name="ObjectShortName">sdram_wr_req</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_wr_ack" type="logic">
+         <obj_property name="ElementShortName">sdram_wr_ack</obj_property>
+         <obj_property name="ObjectShortName">sdram_wr_ack</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_rd_req" type="logic">
+         <obj_property name="ElementShortName">sdram_rd_req</obj_property>
+         <obj_property name="ObjectShortName">sdram_rd_req</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_rd_ack" type="logic">
+         <obj_property name="ElementShortName">sdram_rd_ack</obj_property>
+         <obj_property name="ObjectShortName">sdram_rd_ack</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_r_wn" type="logic">
+         <obj_property name="ElementShortName">sdram_r_wn</obj_property>
+         <obj_property name="ObjectShortName">sdram_r_wn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_data_i_valid" type="logic">
+         <obj_property name="ElementShortName">sdram_data_i_valid</obj_property>
+         <obj_property name="ObjectShortName">sdram_data_i_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_data_i" type="array">
+         <obj_property name="ElementShortName">sdram_data_i[15:0]</obj_property>
+         <obj_property name="ObjectShortName">sdram_data_i[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_data_o" type="array">
+         <obj_property name="ElementShortName">sdram_data_o[15:0]</obj_property>
+         <obj_property name="ObjectShortName">sdram_data_o[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_data_oe" type="logic">
+         <obj_property name="ElementShortName">sdram_data_oe</obj_property>
+         <obj_property name="ObjectShortName">sdram_data_oe</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sd_wr_finished" type="logic">
+         <obj_property name="ElementShortName">sd_wr_finished</obj_property>
+         <obj_property name="ObjectShortName">sd_wr_finished</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sd_rd_finished" type="logic">
+         <obj_property name="ElementShortName">sd_rd_finished</obj_property>
+         <obj_property name="ObjectShortName">sd_rd_finished</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sd_rcnt" type="array">
+         <obj_property name="ElementShortName">sd_rcnt[2:0]</obj_property>
+         <obj_property name="ObjectShortName">sd_rcnt[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rst_n" type="logic">
+         <obj_property name="ElementShortName">rst_n</obj_property>
+         <obj_property name="ObjectShortName">rst_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rd_valid" type="logic">
+         <obj_property name="ElementShortName">rd_valid</obj_property>
+         <obj_property name="ObjectShortName">rd_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rd_state" type="array">
+         <obj_property name="ElementShortName">rd_state[4:0]</obj_property>
+         <obj_property name="ObjectShortName">rd_state[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rd_ready" type="logic">
+         <obj_property name="ElementShortName">rd_ready</obj_property>
+         <obj_property name="ObjectShortName">rd_ready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rd_data" type="array">
+         <obj_property name="ElementShortName">rd_data[15:0]</obj_property>
+         <obj_property name="ObjectShortName">rd_data[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rd_cnt" type="array">
+         <obj_property name="ElementShortName">rd_cnt[2:0]</obj_property>
+         <obj_property name="ObjectShortName">rd_cnt[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rd_avalid" type="logic">
+         <obj_property name="ElementShortName">rd_avalid</obj_property>
+         <obj_property name="ObjectShortName">rd_avalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rd_aready" type="logic">
+         <obj_property name="ElementShortName">rd_aready</obj_property>
+         <obj_property name="ObjectShortName">rd_aready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rd_addr" type="array">
+         <obj_property name="ElementShortName">rd_addr[21:0]</obj_property>
+         <obj_property name="ObjectShortName">rd_addr[21:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/j" type="array">
+         <obj_property name="ElementShortName">j[31:0]</obj_property>
+         <obj_property name="ObjectShortName">j[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/init_state" type="array">
+         <obj_property name="ElementShortName">init_state[4:0]</obj_property>
+         <obj_property name="ObjectShortName">init_state[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/i" type="array">
+         <obj_property name="ElementShortName">i[31:0]</obj_property>
+         <obj_property name="ObjectShortName">i[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/end_twrite" type="logic">
+         <obj_property name="ElementShortName">end_twrite</obj_property>
+         <obj_property name="ObjectShortName">end_twrite</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/end_tread" type="logic">
+         <obj_property name="ElementShortName">end_tread</obj_property>
+         <obj_property name="ObjectShortName">end_tread</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/end_rdata" type="logic">
+         <obj_property name="ElementShortName">end_rdata</obj_property>
+         <obj_property name="ObjectShortName">end_rdata</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/cur_work_state" type="array">
+         <obj_property name="ElementShortName">cur_work_state[4:0]</obj_property>
+         <obj_property name="ObjectShortName">cur_work_state[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/cur_init_state" type="array">
+         <obj_property name="ElementShortName">cur_init_state[4:0]</obj_property>
+         <obj_property name="ObjectShortName">cur_init_state[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/cur_end_twrite" type="logic">
+         <obj_property name="ElementShortName">cur_end_twrite</obj_property>
+         <obj_property name="ObjectShortName">cur_end_twrite</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/cur_end_tread" type="logic">
+         <obj_property name="ElementShortName">cur_end_tread</obj_property>
+         <obj_property name="ObjectShortName">cur_end_tread</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group1981" type="group">
+      <obj_property name="label">sdram_cmd</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/work_state" type="array">
+         <obj_property name="ElementShortName">work_state[4:0]</obj_property>
+         <obj_property name="ObjectShortName">work_state[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sys_wraddr" type="array">
+         <obj_property name="ElementShortName">sys_wraddr[21:0]</obj_property>
+         <obj_property name="ObjectShortName">sys_wraddr[21:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sys_rdaddr" type="array">
+         <obj_property name="ElementShortName">sys_rdaddr[21:0]</obj_property>
+         <obj_property name="ObjectShortName">sys_rdaddr[21:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sys_addr" type="array">
+         <obj_property name="ElementShortName">sys_addr[21:0]</obj_property>
+         <obj_property name="ObjectShortName">sys_addr[21:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sdram_rasn" type="logic">
+         <obj_property name="ElementShortName">sdram_rasn</obj_property>
+         <obj_property name="ObjectShortName">sdram_rasn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sdram_r_wn" type="logic">
+         <obj_property name="ElementShortName">sdram_r_wn</obj_property>
+         <obj_property name="ObjectShortName">sdram_r_wn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sdram_csn" type="logic">
+         <obj_property name="ElementShortName">sdram_csn</obj_property>
+         <obj_property name="ObjectShortName">sdram_csn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sdram_wen" type="logic">
+         <obj_property name="ElementShortName">sdram_wen</obj_property>
+         <obj_property name="ObjectShortName">sdram_wen</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_data_i" type="array">
+         <obj_property name="ElementShortName">sdram_data_i[15:0]</obj_property>
+         <obj_property name="ObjectShortName">sdram_data_i[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_data_o" type="array">
+         <obj_property name="ElementShortName">sdram_data_o[15:0]</obj_property>
+         <obj_property name="ObjectShortName">sdram_data_o[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_data_oe" type="logic">
+         <obj_property name="ElementShortName">sdram_data_oe</obj_property>
+         <obj_property name="ObjectShortName">sdram_data_oe</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sdram_cmd_r" type="array">
+         <obj_property name="ElementShortName">sdram_cmd_r[4:0]</obj_property>
+         <obj_property name="ObjectShortName">sdram_cmd_r[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sdram_cke" type="logic">
+         <obj_property name="ElementShortName">sdram_cke</obj_property>
+         <obj_property name="ObjectShortName">sdram_cke</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sdram_casn" type="logic">
+         <obj_property name="ElementShortName">sdram_casn</obj_property>
+         <obj_property name="ObjectShortName">sdram_casn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sdram_ba_r" type="array">
+         <obj_property name="ElementShortName">sdram_ba_r[1:0]</obj_property>
+         <obj_property name="ObjectShortName">sdram_ba_r[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sdram_ba" type="array">
+         <obj_property name="ElementShortName">sdram_ba[1:0]</obj_property>
+         <obj_property name="ObjectShortName">sdram_ba[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sdram_addr_r" type="array">
+         <obj_property name="ElementShortName">sdram_addr_r[12:0]</obj_property>
+         <obj_property name="ObjectShortName">sdram_addr_r[12:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sdram_addr" type="array">
+         <obj_property name="ElementShortName">sdram_addr[12:0]</obj_property>
+         <obj_property name="ObjectShortName">sdram_addr[12:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/rst_n" type="logic">
+         <obj_property name="ElementShortName">rst_n</obj_property>
+         <obj_property name="ObjectShortName">rst_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/init_state" type="array">
+         <obj_property name="ElementShortName">init_state[4:0]</obj_property>
+         <obj_property name="ObjectShortName">init_state[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group2012" type="group">
+      <obj_property name="label">sdram_t</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/work_state" type="array">
+         <obj_property name="ElementShortName">work_state[4:0]</obj_property>
+         <obj_property name="ObjectShortName">work_state[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/sdram_wr_req" type="logic">
+         <obj_property name="ElementShortName">sdram_wr_req</obj_property>
+         <obj_property name="ObjectShortName">sdram_wr_req</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/sdram_ref_req" type="logic">
+         <obj_property name="ElementShortName">sdram_ref_req</obj_property>
+         <obj_property name="ObjectShortName">sdram_ref_req</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/sdram_ref_ack" type="logic">
+         <obj_property name="ElementShortName">sdram_ref_ack</obj_property>
+         <obj_property name="ObjectShortName">sdram_ref_ack</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/sdram_rd_req" type="logic">
+         <obj_property name="ElementShortName">sdram_rd_req</obj_property>
+         <obj_property name="ObjectShortName">sdram_rd_req</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/sdram_data_i_valid" type="logic">
+         <obj_property name="ElementShortName">sdram_data_i_valid</obj_property>
+         <obj_property name="ObjectShortName">sdram_data_i_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/rst_n" type="logic">
+         <obj_property name="ElementShortName">rst_n</obj_property>
+         <obj_property name="ObjectShortName">rst_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_req_r1" type="logic">
+         <obj_property name="ElementShortName">ref_req_r1</obj_property>
+         <obj_property name="ObjectShortName">ref_req_r1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_req_r0" type="logic">
+         <obj_property name="ElementShortName">ref_req_r0</obj_property>
+         <obj_property name="ObjectShortName">ref_req_r0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_domain" type="logic">
+         <obj_property name="ElementShortName">ref_domain</obj_property>
+         <obj_property name="ObjectShortName">ref_domain</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_cnt" type="array">
+         <obj_property name="ElementShortName">ref_cnt[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ref_cnt[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_60ms" type="logic">
+         <obj_property name="ElementShortName">ref_60ms</obj_property>
+         <obj_property name="ObjectShortName">ref_60ms</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/init_state" type="array">
+         <obj_property name="ElementShortName">init_state[4:0]</obj_property>
+         <obj_property name="ObjectShortName">init_state[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/end_twrite" type="logic">
+         <obj_property name="ElementShortName">end_twrite</obj_property>
+         <obj_property name="ObjectShortName">end_twrite</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/end_twait" type="logic">
+         <obj_property name="ElementShortName">end_twait</obj_property>
+         <obj_property name="ObjectShortName">end_twait</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/end_trp" type="logic">
+         <obj_property name="ElementShortName">end_trp</obj_property>
+         <obj_property name="ObjectShortName">end_trp</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/end_trfc" type="logic">
+         <obj_property name="ElementShortName">end_trfc</obj_property>
+         <obj_property name="ObjectShortName">end_trfc</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/end_tread" type="logic">
+         <obj_property name="ElementShortName">end_tread</obj_property>
+         <obj_property name="ObjectShortName">end_tread</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/end_trcd" type="logic">
+         <obj_property name="ElementShortName">end_trcd</obj_property>
+         <obj_property name="ObjectShortName">end_trcd</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/end_tmrd" type="logic">
+         <obj_property name="ElementShortName">end_tmrd</obj_property>
+         <obj_property name="ObjectShortName">end_tmrd</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/end_tdal" type="logic">
+         <obj_property name="ElementShortName">end_tdal</obj_property>
+         <obj_property name="ObjectShortName">end_tdal</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/end_tcl" type="logic">
+         <obj_property name="ElementShortName">end_tcl</obj_property>
+         <obj_property name="ObjectShortName">end_tcl</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/done_200us" type="logic">
+         <obj_property name="ElementShortName">done_200us</obj_property>
+         <obj_property name="ObjectShortName">done_200us</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/cur_work_state" type="array">
+         <obj_property name="ElementShortName">cur_work_state[4:0]</obj_property>
+         <obj_property name="ObjectShortName">cur_work_state[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/cur_init_state" type="array">
+         <obj_property name="ElementShortName">cur_init_state[4:0]</obj_property>
+         <obj_property name="ObjectShortName">cur_init_state[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/cnt_rst_n" type="logic">
+         <obj_property name="ElementShortName">cnt_rst_n</obj_property>
+         <obj_property name="ObjectShortName">cnt_rst_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/cnt_clk_r" type="array">
+         <obj_property name="ElementShortName">cnt_clk_r[8:0]</obj_property>
+         <obj_property name="ObjectShortName">cnt_clk_r[8:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/cnt_clk" type="logic">
+         <obj_property name="ElementShortName">cnt_clk</obj_property>
+         <obj_property name="ObjectShortName">cnt_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/cnt_200us" type="array">
+         <obj_property name="ElementShortName">cnt_200us[14:0]</obj_property>
+         <obj_property name="ObjectShortName">cnt_200us[14:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group2115" type="group">
+      <obj_property name="label">qspi_rd_fifo</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/qspi_clk" type="logic">
+         <obj_property name="ElementShortName">qspi_clk</obj_property>
+         <obj_property name="ObjectShortName">qspi_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/rst_n" type="logic">
+         <obj_property name="ElementShortName">rst_n</obj_property>
+         <obj_property name="ObjectShortName">rst_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/csn" type="logic">
+         <obj_property name="ElementShortName">csn</obj_property>
+         <obj_property name="ObjectShortName">csn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/di" type="logic">
+         <obj_property name="ElementShortName">di</obj_property>
+         <obj_property name="ObjectShortName">di</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/do" type="logic">
+         <obj_property name="ElementShortName">do</obj_property>
+         <obj_property name="ObjectShortName">do</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/wpn" type="logic">
+         <obj_property name="ElementShortName">wpn</obj_property>
+         <obj_property name="ObjectShortName">wpn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/holdn" type="logic">
+         <obj_property name="ElementShortName">holdn</obj_property>
+         <obj_property name="ObjectShortName">holdn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/qspi_master_vip_inst/start" type="logic">
+         <obj_property name="ElementShortName">start</obj_property>
+         <obj_property name="ObjectShortName">start</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/bit_cnt" type="array">
+         <obj_property name="ElementShortName">bit_cnt[15:0]</obj_property>
+         <obj_property name="ObjectShortName">bit_cnt[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/qspi_state" type="array">
+         <obj_property name="ElementShortName">qspi_state[4:0]</obj_property>
+         <obj_property name="ObjectShortName">qspi_state[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/cur_value" type="array">
+         <obj_property name="ElementShortName">cur_value[31:0]</obj_property>
+         <obj_property name="ObjectShortName">cur_value[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/in_dat" type="array">
+         <obj_property name="ElementShortName">in_dat[31:0]</obj_property>
+         <obj_property name="ObjectShortName">in_dat[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/cmd_fstrd_0bh" type="logic">
+         <obj_property name="ElementShortName">cmd_fstrd_0bh</obj_property>
+         <obj_property name="ObjectShortName">cmd_fstrd_0bh</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/address_end" type="logic">
+         <obj_property name="ElementShortName">address_end</obj_property>
+         <obj_property name="ObjectShortName">address_end</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/qspi_rd_addr" type="array">
+         <obj_property name="ElementShortName">qspi_rd_addr[23:0]</obj_property>
+         <obj_property name="ObjectShortName">qspi_rd_addr[23:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/dummy_end" type="logic">
+         <obj_property name="ElementShortName">dummy_end</obj_property>
+         <obj_property name="ObjectShortName">dummy_end</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/byte_end" type="logic">
+         <obj_property name="ElementShortName">byte_end</obj_property>
+         <obj_property name="ObjectShortName">byte_end</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/byte_cnt" type="array">
+         <obj_property name="ElementShortName">byte_cnt[2:0]</obj_property>
+         <obj_property name="ObjectShortName">byte_cnt[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/read_end" type="logic">
+         <obj_property name="ElementShortName">read_end</obj_property>
+         <obj_property name="ObjectShortName">read_end</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/qspi_rd_req" type="logic">
+         <obj_property name="ElementShortName">qspi_rd_req</obj_property>
+         <obj_property name="ObjectShortName">qspi_rd_req</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/qspi_rd_busy" type="logic">
+         <obj_property name="ElementShortName">qspi_rd_busy</obj_property>
+         <obj_property name="ObjectShortName">qspi_rd_busy</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/fifo_rempty" type="logic">
+         <obj_property name="ElementShortName">fifo_rempty</obj_property>
+         <obj_property name="ObjectShortName">fifo_rempty</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/fifo_ren" type="logic">
+         <obj_property name="ElementShortName">fifo_ren</obj_property>
+         <obj_property name="ObjectShortName">fifo_ren</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/fifo_rdata" type="array">
+         <obj_property name="ElementShortName">fifo_rdata[15:0]</obj_property>
+         <obj_property name="ObjectShortName">fifo_rdata[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/do_data" type="array">
+         <obj_property name="ElementShortName">do_data[15:0]</obj_property>
+         <obj_property name="ObjectShortName">do_data[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,36 @@
+IDLE	cyp2sdram.v	60
+always	cyp2sdram.v	/^always@(posedge clk or negedge rst_n)begin$/
+always	cyp2sdram.v	/^always@(posedge clk or negedge rst_n)begin$/
+case	cyp2sdram.v	/^		case(cyp_state)$/
+cyp_state	cyp2sdram.v	56
+i	cyp2sdram.v	138
+i	cyp2sdram.v	140
+pa0	cyp2sdram.v	47
+st_rcnt	cyp2sdram.v	57
+st_wcnt	cyp2sdram.v	58
+temp_rdata	cyp2sdram.v	136
+usb_empty	cyp2sdram.v	48
+usb_fd_oe	cyp2sdram.v	163
+usb_slcs	cyp2sdram.v	160
+usb_sloe	cyp2sdram.v	161
+usb_slrd	cyp2sdram.v	159
+usb_slwr	cyp2sdram.v	50
+wr_data	cyp2sdram.v	156
+ASIZE	cyp2fifo.v	/^	.ASIZE(10)     \/\/ 10 --> deepth 512 $/
+IDLE	cyp2fifo.v	52
+always	cyp2fifo.v	/^always@(posedge cyp_clk or negedge rst_n)begin$/
+case	cyp2fifo.v	/^		case(cyp_state)$/
+cyp_state	cyp2fifo.v	50
+usb_clk	cyp2fifo.v	44
+usb_empty	cyp2fifo.v	99
+usb_slcs	cyp2fifo.v	102
+usb_sloe	cyp2fifo.v	103
+usb_slrd	cyp2fifo.v	101
+usb_slwr	cyp2fifo.v	100
+S_IDLE	fifo2sdram.v	34
+always	fifo2sdram.v	/^always@(posedge clk or negedge rst_n)begin$/
+always	fifo2sdram.v	/^always@(posedge clk or negedge rst_n)begin$/
+case	fifo2sdram.v	/^		case(wr_state)$/
+fifo_ren	fifo2sdram.v	93
+rd_cnt	fifo2sdram.v	39
+wr_valid	fifo2sdram.v	95

@@ -1,0 +1,40 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 6f64d7b443964a58bbd73ee764f8f2bd --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fpga_qspi_sim_behav xil_defaultlib.tb_fpga_qspi_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 2 for port 'Dqm' [D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/tb_fpga_qspi_sim.v:107]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/async_fifo/asyn_fifo_top.v" Line 15. Module asyn_fifo_top(DATAWIDTH=16,ASIZE=10) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/cyp2sdram/cyp2sdram_top.v" Line 16. Module cyp2sdram_top doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/cyp2sdram/cyp_wr_fifo.v" Line 15. Module cyp_wr_fifo doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/async_fifo/asyn_fifo_top.v" Line 15. Module asyn_fifo_top(DATAWIDTH=16,ASIZE=10) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IOBUF
+Compiling module xil_defaultlib.qspi_rd_fifo(RD_BL=2)
+Compiling module xil_defaultlib.sync_r2w(ASIZE=10)
+Compiling module xil_defaultlib.sync_w2r(ASIZE=10)
+Compiling module xil_defaultlib.fifomem(DATAWIDTH=16,ASIZE=10)
+Compiling module xil_defaultlib.empty(ASIZE=10)
+Compiling module xil_defaultlib.full(ASIZE=10)
+Compiling module xil_defaultlib.asyn_fifo_top(DATAWIDTH=16,ASIZE...
+Compiling module xil_defaultlib.fifo_rd_sdram(RD_BL=2)
+Compiling module xil_defaultlib.qspi2sdram_top
+Compiling module xil_defaultlib.sdram_core
+Compiling module xil_defaultlib.sdram_t
+Compiling module xil_defaultlib.sdram_cmd
+Compiling module xil_defaultlib.sdram_data
+Compiling module xil_defaultlib.sdram_top
+Compiling module xil_defaultlib.cyp_wr_fifo
+Compiling module xil_defaultlib.fifo_wr_sdram
+Compiling module xil_defaultlib.cyp2sdram_top
+Compiling module xil_defaultlib.qspi_simulator_top
+Compiling module xil_defaultlib.fpga_qspi_simulator_top_default
+Compiling module xil_defaultlib.qspi_master_model
+Compiling module xil_defaultlib.mt48lc16m16a2
+Compiling module xil_defaultlib.usb2_cyp_vip_default
+Compiling module xil_defaultlib.tb_fpga_qspi_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_fpga_qspi_sim_behav

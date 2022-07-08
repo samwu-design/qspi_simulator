@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../spi-simulator/design_rtl/my_rtl/async_fifo/asyn_fifo_top.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/cyp2sdram/cyp2fifo.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/cyp2sdram/cyp2sdram_top.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/async_fifo/empty.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/cyp2sdram/fifo2sdram.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/async_fifo/fifomen.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/async_fifo/full.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/async_fifo/sync_r2w.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/async_fifo/sync_w2r.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/cyp2sdram/tb_cyp2sdram.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

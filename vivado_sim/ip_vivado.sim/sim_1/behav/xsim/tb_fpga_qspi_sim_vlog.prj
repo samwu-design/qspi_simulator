@@ -1,0 +1,31 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../spi-simulator/design_rtl/my_rtl/async_fifo/asyn_fifo_top.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/cyp2sdram/cyp2sdram_top.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/cyp2sdram/cyp_wr_fifo.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/async_fifo/empty.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/qspi2sdram/fifo_rd_sdram.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/cyp2sdram/fifo_wr_sdram.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/async_fifo/fifomen.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/fpga_qspi_simulator_top.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/async_fifo/full.v" \
+"../../../../../spi-simulator/design_rtl/sim_model/sdram_model/mt48lc16m16a2.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/qspi2sdram/qspi2sdram_top.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/qspi2sdram/qspi_master_model.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/qspi2sdram/qspi_rd_fifo.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/qspi_simulator_top.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_cmd.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_core.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_data.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_t.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_top.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/async_fifo/sync_r2w.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/async_fifo/sync_w2r.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/usb2_cyp_vip.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/tb_fpga_qspi_sim.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

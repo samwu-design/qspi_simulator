@@ -1,0 +1,1 @@
+-wto "6f64d7b443964a58bbd73ee764f8f2bd" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "tb_fpga_qspi_sim_behav" "xil_defaultlib.tb_fpga_qspi_sim" "xil_defaultlib.glbl" -log "elaborate.log" 

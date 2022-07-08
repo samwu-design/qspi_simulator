@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Jul  6 11:05:29 2022
+# Process ID: 21156
+# Current directory: D:/88-ISE_share/vivado_sim/ip_vivado.runs/synth_1
+# Command line: vivado.exe -log qspi_simulator_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source qspi_simulator_top.tcl
+# Log file: D:/88-ISE_share/vivado_sim/ip_vivado.runs/synth_1/qspi_simulator_top.vds
+# Journal file: D:/88-ISE_share/vivado_sim/ip_vivado.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source qspi_simulator_top.tcl -notrace

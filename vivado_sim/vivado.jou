@@ -1,0 +1,1587 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Jun 13 10:09:16 2022
+# Process ID: 13176
+# Current directory: D:/88-ISE_share/vivado_sim
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12332 D:\88-ISE_share\vivado_sim\ip_vivado.xpr
+# Log file: D:/88-ISE_share/vivado_sim/vivado.log
+# Journal file: D:/88-ISE_share/vivado_sim\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/88-ISE_share/vivado_sim/ip_vivado.xpr
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/88-ISE_share/vivado_sim/ip_vivado.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.xci] -no_script -reset -force -quiet
+remove_files  -fileset pcie_7x_0 D:/88-ISE_share/vivado_sim/ip_vivado.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.xci
+file delete -force D:/88-ISE_share/vivado_sim/ip_vivado.srcs/sources_1/ip/pcie_7x_0
+set_property SOURCE_SET {} [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_data.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_top.v D:/88-ISE_share/spi-simulator/design_rtl/sim_model/sdram_model/mt48lc16m16a2.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_ctrl.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_core.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_cmd.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_param.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_t.v}
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files D:/88-ISE_share/vivado_sim/ip_vivado.srcs/sources_1/ip/axi_pcie_0/axi_pcie_0.xci] -no_script -reset -force -quiet
+remove_files  -fileset axi_pcie_0 D:/88-ISE_share/vivado_sim/ip_vivado.srcs/sources_1/ip/axi_pcie_0/axi_pcie_0.xci
+file delete -force D:/88-ISE_share/vivado_sim/ip_vivado.srcs/sources_1/ip/axi_pcie_0
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+set_property SOURCE_SET {} [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/fpga_sdram_top.v
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top fpga_sdram_top [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_ctrl.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_ctrl.v
+set_property SOURCE_SET {} [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/tb_fpga_sdram_top.v
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_fpga_sdram_top [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source tb_fpga_sdram_top.tcl
+relaunch_sim
+current_wave_config {Untitled 1}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/clk}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/rst_n}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_cke}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_csn}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_rasn}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_casn}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_wen}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_ba}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_addr}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/init_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/work_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_r_wn}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sys_wraddr}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sys_rdaddr}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_cmd_r}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_ba_r}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_addr_r}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sys_addr}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/cur_init_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/cur_work_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/TRP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/TMRD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/TRCD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/TCL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/TDAL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/T_REFRESH_PERIOD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/T_200US}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/W_BL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/R_BL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/CMD_INHIBIT}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/CMD_NOP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/CMD_ACTIVE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/CMD_READ}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/CMD_WRITE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/CMD_B_STOP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/CMD_PRECHARGE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/CMD_A_REF}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/CMD_LMR}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/MODE_REGISTER}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/I_POWON}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/I_PRE_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/I_PRE_TRP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/I_AR0_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/I_AR0_TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/I_AR1_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/I_AR1_TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/I_MRS_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/I_MRS_TMRD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/I_DONE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_IDLE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_RAS_ACTIVE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_TRCD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_RD_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_CL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_RD_DATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_R_PRECHARGE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_RWAIT}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_WR_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_WR_DATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_TDAL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_AR}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_RD_IDLE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_RD_SDDATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_RD_TRANS}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_RD_CHECK}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_RD_END}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_WR_IDLE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_WR_SDDATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_WR_CHECK}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_WR_TRANS}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_WR_END}} 
+restart
+restart
+run 100 us
+current_wave_config {Untitled 1}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/clk}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/rst_n}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/init_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/work_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_trp}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_trfc}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_tmrd}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_trcd}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_tcl}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_tread}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_twait}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_twrite}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_tdal}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/done_200us}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/ref_domain}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/sdram_ref_req}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/sdram_ref_ack}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/sdram_rd_req}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/sdram_rd_ack}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/sdram_wr_req}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/sdram_wr_ack}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/init_state_r}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/work_state_r}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/sdram_r_wn}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/sdram_init_done}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/TRP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/TMRD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/TRCD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/TCL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/TDAL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/T_REFRESH_PERIOD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/T_200US}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/W_BL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/R_BL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_INHIBIT}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_NOP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_ACTIVE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_READ}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_WRITE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_B_STOP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_PRECHARGE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_A_REF}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_LMR}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/MODE_REGISTER}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_POWON}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_PRE_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_PRE_TRP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_AR0_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_AR0_TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_AR1_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_AR1_TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_MRS_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_MRS_TMRD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_DONE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_IDLE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RAS_ACTIVE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_TRCD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RD_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_CL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RD_DATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_R_PRECHARGE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RWAIT}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_WR_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_WR_DATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_TDAL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_AR}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RD_IDLE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RD_SDDATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RD_TRANS}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RD_CHECK}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RD_END}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_WR_IDLE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_WR_SDDATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_WR_CHECK}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_WR_TRANS}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_WR_END}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+add_files -fileset sim_1 -norecurse D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg
+set_property xsim.view D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg [get_filesets sim_1]
+restart
+restart
+restart
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/clk}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/rst_n}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/init_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/work_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_trp}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_trfc}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_tmrd}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_trcd}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_tcl}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_tread}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_twait}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_twrite}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_tdal}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/done_200us}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/ref_domain}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/sdram_ref_req}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/sdram_ref_ack}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/sdram_rd_req}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/sdram_rd_ack}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/sdram_wr_req}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/sdram_wr_ack}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/init_state_r}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/work_state_r}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/sdram_r_wn}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/sdram_init_done}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/TRP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/TMRD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/TRCD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/TCL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/TDAL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/T_REFRESH_PERIOD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/T_200US}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/W_BL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/R_BL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_INHIBIT}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_NOP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_ACTIVE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_READ}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_WRITE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_B_STOP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_PRECHARGE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_A_REF}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_LMR}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/MODE_REGISTER}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_POWON}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_PRE_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_PRE_TRP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_AR0_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_AR0_TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_AR1_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_AR1_TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_MRS_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_MRS_TMRD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_DONE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_IDLE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RAS_ACTIVE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_TRCD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RD_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_CL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RD_DATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_R_PRECHARGE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RWAIT}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_WR_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_WR_DATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_TDAL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_AR}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RD_IDLE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RD_SDDATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RD_TRANS}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RD_CHECK}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RD_END}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_WR_IDLE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_WR_SDDATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_WR_CHECK}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_WR_TRANS}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_WR_END}} 
+run 100 us
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/cnt_200us}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/cnt_clk_r}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/cnt_rst_n}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_cke}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_csn}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_rasn}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_casn}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_wen}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_ba}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_addr}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/cur_init_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/cur_work_state}} 
+relaunch_sim
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+run 100 us
+run 100 us
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+run 100 us
+run 100 us
+relaunch_sim
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+run 100 us
+run 100 us
+relaunch_sim
+relaunch_sim
+run 100 us
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+relaunch_sim
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+run 100 us
+run 100 us
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_addr}} {{/tb_fpga_sdram_top/dut/sdram_data}} {{/tb_fpga_sdram_top/dut/sdram_dqmh}} {{/tb_fpga_sdram_top/dut/sdram_dqml}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_i}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_o}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_oe}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+relaunch_sim
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/clk}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rst_n}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/init_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/work_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_r_wn}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_data_i_valid}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_data_i}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_data_o}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_data_oe}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sys_wraddr}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sys_rdaddr}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_rd_req}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_rd_ack}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_wr_req}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_wr_data_req}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_wr_ack}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/end_tread}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/end_twrite}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/wr_data}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/wr_addr}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/wr_valid}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/wr_ready}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rd_addr}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rd_avalid}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rd_aready}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rd_data}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rd_valid}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rd_ready}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sys_rdaddr_r}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sys_wraddr_r}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/byte_pos}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rd_cnt}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/wr_cnt}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rd_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sd_rcnt}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/temp_rdata}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/i}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sd_wcnt}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/wr_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/temp_wdata}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/w_idx}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/end_rdata}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/wdata_valid}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/TRP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/TMRD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/TRCD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/TCL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/TDAL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/T_REFRESH_PERIOD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/T_200US}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/W_BL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/R_BL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/CMD_INHIBIT}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/CMD_NOP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/CMD_ACTIVE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/CMD_READ}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/CMD_WRITE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/CMD_B_STOP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/CMD_PRECHARGE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/CMD_A_REF}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/CMD_LMR}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/MODE_REGISTER}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/I_POWON}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/I_PRE_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/I_PRE_TRP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/I_AR0_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/I_AR0_TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/I_AR1_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/I_AR1_TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/I_MRS_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/I_MRS_TMRD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/I_DONE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_IDLE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_RAS_ACTIVE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_TRCD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_RD_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_CL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_RD_DATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_R_PRECHARGE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_RWAIT}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_WR_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_WR_DATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_TDAL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_AR}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_RD_IDLE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_RD_REQ}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_RD_SDDATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_RD_TRANS}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_RD_CHECK}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_RD_END}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_WR_IDLE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_WR_REQ}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_WR_SDDATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_WR_CHECK}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_WR_TRANS}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_WR_END}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/wr_valid}} {{/tb_fpga_sdram_top/wr_ready}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/init_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/work_state}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/clk}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rst_n}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/init_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/work_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_r_wn}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_data_i_valid}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_data_i}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_data_o}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_data_oe}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sys_wraddr}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sys_rdaddr}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_rd_req}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_rd_ack}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_wr_req}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_wr_data_req}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_wr_ack}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/end_tread}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/end_twrite}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/wr_data}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/wr_addr}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/wr_valid}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/wr_ready}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rd_addr}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rd_avalid}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rd_aready}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rd_data}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rd_valid}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rd_ready}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sys_rdaddr_r}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sys_wraddr_r}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/byte_pos}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rd_cnt}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/wr_cnt}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rd_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sd_rcnt}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/temp_rdata}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/i}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sd_wcnt}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/wr_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/temp_wdata}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/w_idx}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/end_rdata}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/wdata_valid}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/wr_cnt}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_twrite}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/init_state_r}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/work_state_r}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/cnt_clk_r}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/clk}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/rst_n}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/init_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/work_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_trp}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_trfc}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_tmrd}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_trcd}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_tcl}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_tread}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_twait}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_twrite}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/end_tdal}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/done_200us}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/ref_domain}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/sdram_ref_req}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/sdram_ref_ack}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/sdram_r_wn}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/sdram_rd_req}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/sdram_rd_ack}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/sdram_wr_req}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/sdram_wr_data_req}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/sdram_wr_ack}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/init_state_r}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/work_state_r}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/sdram_init_done}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/TRP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/TMRD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/TRCD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/TCL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/TDAL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/T_REFRESH_PERIOD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/T_200US}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/W_BL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/R_BL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_INHIBIT}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_NOP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_ACTIVE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_READ}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_WRITE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_B_STOP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_PRECHARGE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_A_REF}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/CMD_LMR}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/MODE_REGISTER}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_POWON}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_PRE_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_PRE_TRP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_AR0_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_AR0_TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_AR1_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_AR1_TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_MRS_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_MRS_TMRD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/I_DONE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_IDLE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RAS_ACTIVE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_TRCD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RD_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_CL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RD_DATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_R_PRECHARGE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RWAIT}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_WR_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_WR_DATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_TDAL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_AR}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RD_IDLE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RD_REQ}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RD_SDDATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RD_TRANS}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RD_CHECK}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_RD_END}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_WR_IDLE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_WR_REQ}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_WR_SDDATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_WR_CHECK}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_WR_TRANS}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_core_inst/S_WR_END}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/clk}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/rst_n}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/init_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/work_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/end_trp}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/end_trfc}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/end_tmrd}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/end_trcd}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/end_tcl}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/end_tread}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/end_twait}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/end_twrite}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/end_tdal}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/sdram_data_i_valid}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/done_200us}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/ref_domain}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/sdram_ref_req}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/sdram_ref_ack}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/ref_cnt}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/ref_60ms}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/ref_req}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/ref_req_r0}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/ref_req_r1}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/cnt_200us}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/cur_init_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/cur_work_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/cnt_clk_r}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/cnt_rst_n}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/cnt_clk}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/TRP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/TMRD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/TRCD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/TCL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/TDAL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/T_REFRESH_PERIOD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/T_200US}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/W_BL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/R_BL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/CMD_INHIBIT}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/CMD_NOP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/CMD_ACTIVE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/CMD_READ}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/CMD_WRITE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/CMD_B_STOP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/CMD_PRECHARGE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/CMD_A_REF}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/CMD_LMR}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/MODE_REGISTER}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/I_POWON}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/I_PRE_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/I_PRE_TRP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/I_AR0_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/I_AR0_TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/I_AR1_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/I_AR1_TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/I_MRS_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/I_MRS_TMRD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/I_DONE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/S_IDLE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/S_RAS_ACTIVE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/S_TRCD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/S_RD_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/S_CL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/S_RD_DATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/S_R_PRECHARGE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/S_RWAIT}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/S_WR_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/S_WR_DATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/S_TDAL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/S_AR}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/S_TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/S_RD_IDLE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/S_RD_REQ}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/S_RD_SDDATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/S_RD_TRANS}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/S_RD_CHECK}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/S_RD_END}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/S_WR_IDLE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/S_WR_REQ}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/S_WR_SDDATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/S_WR_CHECK}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/S_WR_TRANS}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_t_inst/S_WR_END}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/clk}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/rst_n}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_cke}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_csn}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_rasn}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_casn}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_wen}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_ba}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_addr}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/init_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/work_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_r_wn}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sys_wraddr}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sys_rdaddr}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_cmd_r}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_ba_r}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sdram_addr_r}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sys_addr}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/TRP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/TMRD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/TRCD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/TCL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/TDAL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/T_REFRESH_PERIOD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/T_200US}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/W_BL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/R_BL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/CMD_INHIBIT}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/CMD_NOP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/CMD_ACTIVE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/CMD_READ}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/CMD_WRITE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/CMD_B_STOP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/CMD_PRECHARGE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/CMD_A_REF}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/CMD_LMR}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/MODE_REGISTER}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/I_POWON}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/I_PRE_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/I_PRE_TRP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/I_AR0_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/I_AR0_TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/I_AR1_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/I_AR1_TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/I_MRS_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/I_MRS_TMRD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/I_DONE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_IDLE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_RAS_ACTIVE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_TRCD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_RD_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_CL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_RD_DATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_R_PRECHARGE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_RWAIT}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_WR_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_WR_DATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_TDAL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_AR}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_RD_IDLE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_RD_REQ}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_RD_SDDATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_RD_TRANS}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_RD_CHECK}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_RD_END}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_WR_IDLE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_WR_REQ}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_WR_SDDATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_WR_CHECK}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_WR_TRANS}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/S_WR_END}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/clk}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rst_n}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/init_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/work_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_r_wn}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_data_i_valid}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_data_i}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_data_o}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_data_oe}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sys_wraddr}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sys_rdaddr}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_rd_req}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_rd_ack}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_wr_req}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_wr_data_req}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_wr_ack}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/end_tread}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/end_twrite}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/wr_data}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/wr_addr}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/wr_valid}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/wr_ready}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rd_addr}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rd_avalid}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rd_aready}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rd_data}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rd_valid}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rd_ready}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sys_rdaddr_r}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sys_wraddr_r}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/byte_pos}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rd_cnt}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/wr_cnt}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/rd_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sd_rcnt}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/temp_rdata}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/i}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/wr_state}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/temp_wdata}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/w_idx}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/end_rdata}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/wdata_valid}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/TRP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/TMRD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/TRCD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/TCL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/TDAL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/T_REFRESH_PERIOD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/T_200US}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/W_BL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/R_BL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/CMD_INHIBIT}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/CMD_NOP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/CMD_ACTIVE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/CMD_READ}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/CMD_WRITE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/CMD_B_STOP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/CMD_PRECHARGE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/CMD_A_REF}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/CMD_LMR}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/MODE_REGISTER}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/I_POWON}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/I_PRE_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/I_PRE_TRP}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/I_AR0_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/I_AR0_TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/I_AR1_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/I_AR1_TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/I_MRS_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/I_MRS_TMRD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/I_DONE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_IDLE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_RAS_ACTIVE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_TRCD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_RD_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_CL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_RD_DATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_R_PRECHARGE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_RWAIT}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_WR_CMD}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_WR_DATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_TDAL}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_AR}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_TRFC}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_RD_IDLE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_RD_REQ}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_RD_SDDATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_RD_TRANS}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_RD_CHECK}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_RD_END}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_WR_IDLE}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_WR_REQ}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_WR_SDDATA}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_WR_CHECK}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_WR_TRANS}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/S_WR_END}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+restart
+run 100 us
+run 100 us
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+run 100 us
+run 100 us
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+run 100 us
+run 100 us
+relaunch_sim
+relaunch_sim
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+relaunch_sim
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+update_compile_order -fileset sim_1
+relaunch_sim
+update_compile_order -fileset sim_1
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/wr_valid}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/wr_ready}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/rd_avalid}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/rd_aready}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+relaunch_sim
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run all
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_r_wn}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sdram_r_wn}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_data}} {{/tb_fpga_sdram_top/dut/sdram_data_i}} {{/tb_fpga_sdram_top/dut/sdram_data_o}} {{/tb_fpga_sdram_top/dut/sdram_data_oe}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+restart
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/sdram_module_inst/Dq}} {{/tb_fpga_sdram_top/sdram_module_inst/Addr}} {{/tb_fpga_sdram_top/sdram_module_inst/Ba}} {{/tb_fpga_sdram_top/sdram_module_inst/Clk}} {{/tb_fpga_sdram_top/sdram_module_inst/Cke}} {{/tb_fpga_sdram_top/sdram_module_inst/Cs_n}} {{/tb_fpga_sdram_top/sdram_module_inst/Ras_n}} {{/tb_fpga_sdram_top/sdram_module_inst/Cas_n}} {{/tb_fpga_sdram_top/sdram_module_inst/We_n}} {{/tb_fpga_sdram_top/sdram_module_inst/Dqm}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+relaunch_sim
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/cur_end_tread}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/cur_end_twrite}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+run 100 us
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sd_rd_finished}} {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_data_inst/sd_wr_finished}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+run 100 us
+run 100 us
+restart
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/rd_addr}} {{/tb_fpga_sdram_top/rd_avalid}} {{/tb_fpga_sdram_top/rd_aready}} {{/tb_fpga_sdram_top/rd_data}} {{/tb_fpga_sdram_top/rd_valid}} {{/tb_fpga_sdram_top/rd_ready}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+run 100 us
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/wr_data}} {{/tb_fpga_sdram_top/wr_addr}} {{/tb_fpga_sdram_top/wr_valid}} {{/tb_fpga_sdram_top/wr_ready}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+run 100 us
+restart
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run all
+relaunch_sim
+relaunch_sim
+run all
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/cmp_rdata0}} {{/tb_fpga_sdram_top/cmp_rdata1}} {{/tb_fpga_sdram_top/cmp_wdata0}} {{/tb_fpga_sdram_top/cmp_wdata1}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+run 100 us
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/cmp_flag}} 
+relaunch_sim
+relaunch_sim
+run all
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/cmp_flag0}} {{/tb_fpga_sdram_top/cmp_flag1}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+run 100 us
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/cnt}} 
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_sdram_top/dut/sdram_top_inst/sdram_cmd_inst/sys_addr}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run all
+relaunch_sim
+relaunch_sim
+run all
+update_compile_order -fileset sim_1
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+update_compile_order -fileset sim_1
+run all
+relaunch_sim
+run 100 us
+run all
+restart
+set_property SOURCE_SET {} [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/cyp2sdram/cyp2sdram.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/cyp2sdram/tb_cyp2sdram.v}
+update_compile_order -fileset sim_1
+close_sim
+set_property SOURCE_SET {} [get_filesets sim_1]
+add_files -fileset sim_1 {D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/async_fifo/sync_r2w.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/async_fifo/full.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/async_fifo/fifomen.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/async_fifo/sync_w2r.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/async_fifo/asyn_fifo_top.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/async_fifo/empty.v}
+update_compile_order -fileset sim_1
+set_property SOURCE_SET {} [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/cyp2sdram/fifo2sdram.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/cyp2sdram/cyp2fifo.v}
+update_compile_order -fileset sim_1
+set_property SOURCE_SET {} [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/cyp2sdram/cyp2sdram_top.v
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/cyp2sdram/cyp2sdram.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/cyp2sdram/cyp2sdram.v
+set_property SOURCE_SET {} [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/cyp2sdram/fifo2sdram.v
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_cyp2sdram [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+open_wave_config D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg
+source tb_cyp2sdram.tcl
+run 100 us
+run 100 us
+restart
+restart
+restart
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_cyp2sdram/dut_inst/cyp_clk}} {{/tb_cyp2sdram/dut_inst/sdram_clk}} {{/tb_cyp2sdram/dut_inst/rst_n}} {{/tb_cyp2sdram/dut_inst/usb_clk}} {{/tb_cyp2sdram/dut_inst/usb_fifoaddr}} {{/tb_cyp2sdram/dut_inst/usb_slcs}} {{/tb_cyp2sdram/dut_inst/usb_sloe}} {{/tb_cyp2sdram/dut_inst/usb_slrd}} {{/tb_cyp2sdram/dut_inst/usb_slwr}} {{/tb_cyp2sdram/dut_inst/usb_fd_i}} {{/tb_cyp2sdram/dut_inst/usb_fd_o}} {{/tb_cyp2sdram/dut_inst/usb_fd_oe}} {{/tb_cyp2sdram/dut_inst/usb_flaga}} {{/tb_cyp2sdram/dut_inst/usb_flagb}} {{/tb_cyp2sdram/dut_inst/usb_flagc}} {{/tb_cyp2sdram/dut_inst/pa0}} {{/tb_cyp2sdram/dut_inst/wr_data}} {{/tb_cyp2sdram/dut_inst/wr_addr}} {{/tb_cyp2sdram/dut_inst/wr_valid}} {{/tb_cyp2sdram/dut_inst/wr_ready}} {{/tb_cyp2sdram/dut_inst/fifo_rdata}} {{/tb_cyp2sdram/dut_inst/fifo_ren}} {{/tb_cyp2sdram/dut_inst/fifo_rempty}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/cyp_clk}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/rst_n}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_clk}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_fifoaddr}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_slcs}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_sloe}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_slrd}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_slwr}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_fd_i}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_fd_o}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_fd_oe}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_flaga}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_flagb}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_flagc}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/pa0}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/sdram_clk}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/fifo_ren}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/fifo_rdata}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/fifo_rempty}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/cyp_state}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_empty}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/wfull}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_cyp2sdram/dut_inst/fifo2sdram_inst/sdram_clk}} {{/tb_cyp2sdram/dut_inst/fifo2sdram_inst/rst_n}} {{/tb_cyp2sdram/dut_inst/fifo2sdram_inst/fifo_ren}} {{/tb_cyp2sdram/dut_inst/fifo2sdram_inst/fifo_rdata}} {{/tb_cyp2sdram/dut_inst/fifo2sdram_inst/fifo_rempty}} {{/tb_cyp2sdram/dut_inst/fifo2sdram_inst/wr_data}} {{/tb_cyp2sdram/dut_inst/fifo2sdram_inst/wr_addr}} {{/tb_cyp2sdram/dut_inst/fifo2sdram_inst/wr_valid}} {{/tb_cyp2sdram/dut_inst/fifo2sdram_inst/wr_ready}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_cyp2sdram/dut_inst/fifo2sdram_inst/wr_state}} {{/tb_cyp2sdram/dut_inst/fifo2sdram_inst/rd_cnt}} 
+restart
+restart
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+run 100 us
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/wrfifo_inst/rdata}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/wrfifo_inst/wfull}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/wrfifo_inst/rempty}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/wrfifo_inst/wdata}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/wrfifo_inst/wen}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/wrfifo_inst/wclk}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/wrfifo_inst/wrstn}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/wrfifo_inst/ren}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/wrfifo_inst/rclk}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/wrfifo_inst/rrstn}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+set_property SOURCE_SET {} [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/async_fifo/tb_async_fifo.v
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_async_fifo [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg
+source tb_async_fifo.tcl
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_async_fifo/dut_inst/rdata}} {{/tb_async_fifo/dut_inst/wfull}} {{/tb_async_fifo/dut_inst/rempty}} {{/tb_async_fifo/dut_inst/wdata}} {{/tb_async_fifo/dut_inst/wen}} {{/tb_async_fifo/dut_inst/wclk}} {{/tb_async_fifo/dut_inst/wrstn}} {{/tb_async_fifo/dut_inst/ren}} {{/tb_async_fifo/dut_inst/rclk}} {{/tb_async_fifo/dut_inst/rrstn}} {{/tb_async_fifo/dut_inst/waddr}} {{/tb_async_fifo/dut_inst/raddr}} {{/tb_async_fifo/dut_inst/wptr}} {{/tb_async_fifo/dut_inst/rptr}} {{/tb_async_fifo/dut_inst/w_rptr}} {{/tb_async_fifo/dut_inst/r_wptr}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+current_sim simulation_2
+close_sim
+relaunch_sim
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_async_fifo/dut_inst/fifo/DEEPTH}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+relaunch_sim
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+relaunch_sim
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_async_fifo/rand}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+relaunch_sim
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+run 100 us
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 100 us
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_async_fifo/rrand}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+run 100 us
+relaunch_sim
+run 10 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+run 10 us
+relaunch_sim
+relaunch_sim
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+run 10 us
+relaunch_sim
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+run 10 us
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run all
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_cyp2sdram [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg
+source tb_cyp2sdram.tcl
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/cyp_clk}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/rst_n}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_clk}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_fifoaddr}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_slcs}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_sloe}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_slrd}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_slwr}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_fd_i}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_fd_o}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_fd_oe}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_flaga}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_flagb}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_flagc}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/pa0}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/sdram_clk}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/fifo_ren}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/fifo_rdata}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/fifo_rempty}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/cyp_state}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/usb_empty}} {{/tb_cyp2sdram/dut_inst/cy2fifo_inst/wfull}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_cyp2sdram/dut_inst/fifo2sdram_inst/sdram_clk}} {{/tb_cyp2sdram/dut_inst/fifo2sdram_inst/rst_n}} {{/tb_cyp2sdram/dut_inst/fifo2sdram_inst/fifo_ren}} {{/tb_cyp2sdram/dut_inst/fifo2sdram_inst/fifo_rdata}} {{/tb_cyp2sdram/dut_inst/fifo2sdram_inst/fifo_rempty}} {{/tb_cyp2sdram/dut_inst/fifo2sdram_inst/wr_data}} {{/tb_cyp2sdram/dut_inst/fifo2sdram_inst/wr_addr}} {{/tb_cyp2sdram/dut_inst/fifo2sdram_inst/wr_valid}} {{/tb_cyp2sdram/dut_inst/fifo2sdram_inst/wr_ready}} {{/tb_cyp2sdram/dut_inst/fifo2sdram_inst/wr_state}} {{/tb_cyp2sdram/dut_inst/fifo2sdram_inst/rd_cnt}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+relaunch_sim
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+relaunch_sim
+run 100 us
+run 100 us
+close_sim
+set_property SOURCE_SET {} [get_filesets sim_1]
+add_files -fileset sim_1 {D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/qspi2sdram/qspi_rd_fifo.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/qspi2sdram/qspi2sdram_top.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/qspi2sdram/tb_qspi2sdram_top.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/qspi2sdram/fifo_rd_sdram.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/qspi2sdram/qspi_master_model.v}
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_qspi2sdram_top [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+open_wave_config D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg
+source tb_qspi2sdram_top.tcl
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_qspi2sdram_top/vip_inst/qspi_clk}} {{/tb_qspi2sdram_top/vip_inst/csn}} {{/tb_qspi2sdram_top/vip_inst/di}} {{/tb_qspi2sdram_top/vip_inst/do}} {{/tb_qspi2sdram_top/vip_inst/wpn}} {{/tb_qspi2sdram_top/vip_inst/holdn}} {{/tb_qspi2sdram_top/vip_inst/rst_n}} {{/tb_qspi2sdram_top/vip_inst/start}} {{/tb_qspi2sdram_top/vip_inst/cmd_end}} {{/tb_qspi2sdram_top/vip_inst/adress_end}} {{/tb_qspi2sdram_top/vip_inst/dummy_end}} {{/tb_qspi2sdram_top/vip_inst/byte_end}} {{/tb_qspi2sdram_top/vip_inst/data_end}} {{/tb_qspi2sdram_top/vip_inst/rand}} {{/tb_qspi2sdram_top/vip_inst/m_state}} {{/tb_qspi2sdram_top/vip_inst/m_cnt}} {{/tb_qspi2sdram_top/vip_inst/byte_cnt}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+run 100 us
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_qspi2sdram_top/vip_inst/qspi_clk}} {{/tb_qspi2sdram_top/vip_inst/csn}} {{/tb_qspi2sdram_top/vip_inst/di}} {{/tb_qspi2sdram_top/vip_inst/do}} {{/tb_qspi2sdram_top/vip_inst/wpn}} {{/tb_qspi2sdram_top/vip_inst/holdn}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_qspi2sdram_top/vip_inst/rst_n}} {{/tb_qspi2sdram_top/vip_inst/start}} {{/tb_qspi2sdram_top/vip_inst/cmd_end}} {{/tb_qspi2sdram_top/vip_inst/address_end}} {{/tb_qspi2sdram_top/vip_inst/dummy_end}} {{/tb_qspi2sdram_top/vip_inst/byte_end}} {{/tb_qspi2sdram_top/vip_inst/data_end}} {{/tb_qspi2sdram_top/vip_inst/rand}} {{/tb_qspi2sdram_top/vip_inst/m_state}} {{/tb_qspi2sdram_top/vip_inst/m_cnt}} {{/tb_qspi2sdram_top/vip_inst/byte_cnt}} {{/tb_qspi2sdram_top/vip_inst/aspi_address}} {{/tb_qspi2sdram_top/vip_inst/di_out}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+run 100 us
+relaunch_sim
+relaunch_sim
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+relaunch_sim
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/qspi_clk}} {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/rst_n}} {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/csn}} {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/di}} {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/do}} {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/wpn}} {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/holdn}} {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/qspi_rd_addr}} {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/qspi_rd_req}} {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/qspi_rd_busy}} {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/fifo_ren}} {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/fifo_rempty}} {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/fifo_rdata}} {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/cmd_fstrd_08h}} {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/address_end}} {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/dummy_end}} {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/byte_end}} {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/read_end}} {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/in_dat}} {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/cur_value}} {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/bit_cnt}} {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/byte_cnt}} {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/qspi_state}} {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/do_data}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+relaunch_sim
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/cmd_fstrd_0bh}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_qspi2sdram_top/dut/qspi_rd_fifo_inst/do_data}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_qspi2sdram_top/dut/fifo_rd_sdram_inst/rst_n}} {{/tb_qspi2sdram_top/dut/fifo_rd_sdram_inst/qspi_rd_addr}} {{/tb_qspi2sdram_top/dut/fifo_rd_sdram_inst/qspi_rd_req}} {{/tb_qspi2sdram_top/dut/fifo_rd_sdram_inst/qspi_rd_busy}} {{/tb_qspi2sdram_top/dut/fifo_rd_sdram_inst/qspi_clk}} {{/tb_qspi2sdram_top/dut/fifo_rd_sdram_inst/fifo_ren}} {{/tb_qspi2sdram_top/dut/fifo_rd_sdram_inst/fifo_rempty}} {{/tb_qspi2sdram_top/dut/fifo_rd_sdram_inst/fifo_rdata}} {{/tb_qspi2sdram_top/dut/fifo_rd_sdram_inst/sdram_clk}} {{/tb_qspi2sdram_top/dut/fifo_rd_sdram_inst/rd_addr}} {{/tb_qspi2sdram_top/dut/fifo_rd_sdram_inst/rd_avalid}} {{/tb_qspi2sdram_top/dut/fifo_rd_sdram_inst/rd_aready}} {{/tb_qspi2sdram_top/dut/fifo_rd_sdram_inst/rd_data}} {{/tb_qspi2sdram_top/dut/fifo_rd_sdram_inst/rd_valid}} {{/tb_qspi2sdram_top/dut/fifo_rd_sdram_inst/rd_ready}} {{/tb_qspi2sdram_top/dut/fifo_rd_sdram_inst/wen}} {{/tb_qspi2sdram_top/dut/fifo_rd_sdram_inst/qspi_rd_req0}} {{/tb_qspi2sdram_top/dut/fifo_rd_sdram_inst/qspi_rd_req1}} {{/tb_qspi2sdram_top/dut/fifo_rd_sdram_inst/qspi_rd_posedge}} {{/tb_qspi2sdram_top/dut/fifo_rd_sdram_inst/rd_state}} {{/tb_qspi2sdram_top/dut/fifo_rd_sdram_inst/rd_cnt}} {{/tb_qspi2sdram_top/dut/fifo_rd_sdram_inst/wfull}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+relaunch_sim
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+run 100 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 100 us
+relaunch_sim
+relaunch_sim
+run 100 us
+set_property SOURCE_SET {} [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/qspi_simulator_top.v
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top qspi_simulator_top [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+close_sim
+move_files [get_files  D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/qspi_simulator_top.v]
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+move_files [get_files  {D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_top.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_core.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_t.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_cmd.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_data.v}]
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+move_files [get_files  {D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/qspi2sdram/qspi2sdram_top.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/qspi2sdram/qspi_rd_fifo.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/qspi2sdram/fifo_rd_sdram.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/async_fifo/asyn_fifo_top.v}]
+update_compile_order -fileset sources_1
+move_files [get_files  {D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/async_fifo/empty.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/async_fifo/fifomen.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/async_fifo/full.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/async_fifo/sync_r2w.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/async_fifo/sync_w2r.v}]
+update_compile_order -fileset sources_1
+move_files [get_files  D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/cyp2sdram/cyp2sdram_top.v]
+update_compile_order -fileset sources_1
+move_files [get_files  D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/cyp2sdram/fifo2sdram.v]
+update_compile_order -fileset sources_1
+move_files [get_files  D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/cyp2sdram/cyp2fifo.v]
+update_compile_order -fileset sources_1
+move_files [get_files  D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/fpga_sdram_top.v]
+update_compile_order -fileset sources_1
+move_files -fileset sim_1 [get_files  D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/fpga_sdram_top.v]
+update_compile_order -fileset sim_1
+set_property SOURCE_SET {} [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/tb_fpga_sdram_top.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/cyp2sdram/fifo2sdram.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_data.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/async_fifo/full.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/cyp2sdram/cyp2fifo.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_core.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/qspi2sdram/tb_qspi2sdram_top.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/async_fifo/tb_async_fifo.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/async_fifo/fifomen.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_param.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/async_fifo/empty.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_t.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/fpga_sdram_top.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/qspi2sdram/qspi_rd_fifo.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/async_fifo/sync_r2w.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_top.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/qspi2sdram/qspi2sdram_top.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/cyp2sdram/cyp2sdram_top.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_cmd.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/async_fifo/sync_w2r.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/async_fifo/asyn_fifo_top.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/qspi2sdram/fifo_rd_sdram.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/cyp2sdram/tb_cyp2sdram.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/qspi2sdram/qspi_master_model.v}
+update_compile_order -fileset sim_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+set_property SOURCE_SET {} [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/qspi_simulator_top.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/fpga_qspi_simulator_top.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/usb2_cyp_vip.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/tb_fpga_qspi_sim.v}
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_fpga_qspi_sim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+open_wave_config D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg
+source tb_fpga_qspi_sim.tcl
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/usb2_cyp_vip_inst/rst_n}} {{/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_clk}} {{/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_fifoaddr}} {{/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_slcs}} {{/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_sloe}} {{/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_slrd}} {{/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_slwr}} {{/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_fd}} {{/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_flaga}} {{/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_flagb}} {{/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_flagc}} {{/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_download_finished}} {{/tb_fpga_qspi_sim/usb2_cyp_vip_inst/pa0}} {{/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_fd_i}} {{/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_fd_o}} {{/tb_fpga_qspi_sim/usb2_cyp_vip_inst/r_cnt}} {{/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_fd_oe}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 100 us
+relaunch_sim
+relaunch_sim
+run 100 us
+relaunch_sim
+relaunch_sim
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+relaunch_sim
+relaunch_sim
+run 100 us
+relaunch_sim
+run 100 us
+relaunch_sim
+relaunch_sim
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/cy2fifo_inst/cyp_clk}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/cy2fifo_inst/rst_n}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/cy2fifo_inst/usb_clk}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/cy2fifo_inst/usb_fifoaddr}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/cy2fifo_inst/usb_slcs}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/cy2fifo_inst/usb_sloe}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/cy2fifo_inst/usb_slrd}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/cy2fifo_inst/usb_slwr}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/cy2fifo_inst/usb_fd_i}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/cy2fifo_inst/usb_fd_o}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/cy2fifo_inst/usb_fd_oe}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/cy2fifo_inst/usb_flaga}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/cy2fifo_inst/usb_flagb}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/cy2fifo_inst/usb_flagc}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/cy2fifo_inst/pa0}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/cy2fifo_inst/sdram_clk}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/cy2fifo_inst/fifo_ren}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/cy2fifo_inst/fifo_rdata}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/cy2fifo_inst/fifo_rempty}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/cy2fifo_inst/cyp_state}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/cy2fifo_inst/usb_empty}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/cy2fifo_inst/wen}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/cy2fifo_inst/wfull}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/dut_inst/usb_fd}} {{/tb_fpga_qspi_sim/dut_inst/usb_fd_i}} {{/tb_fpga_qspi_sim/dut_inst/usb_fd_o}} {{/tb_fpga_qspi_sim/dut_inst/usb_fd_oe}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+run 10 us
+relaunch_sim
+run 10 us
+relaunch_sim
+run 10 us
+relaunch_sim
+run 10 us
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/dut_inst/usb_fd}} {{/tb_fpga_qspi_sim/dut_inst/usb_fd_i}} {{/tb_fpga_qspi_sim/dut_inst/usb_fd_o}} {{/tb_fpga_qspi_sim/dut_inst/usb_fd_oe}} 
+relaunch_sim
+relaunch_sim
+run 10 us
+relaunch_sim
+run 10 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/fifo2sdram_inst/sdram_clk}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/fifo2sdram_inst/rst_n}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/fifo2sdram_inst/fifo_ren}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/fifo2sdram_inst/fifo_rdata}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/fifo2sdram_inst/fifo_rempty}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/fifo2sdram_inst/wr_data}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/fifo2sdram_inst/wr_addr}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/fifo2sdram_inst/wr_valid}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/fifo2sdram_inst/wr_ready}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/fifo2sdram_inst/wr_state}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/cyp2sdram_inst/fifo2sdram_inst/rd_cnt}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+run 10 us
+run all
+restart
+run 10 us
+run 10 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/rst_n}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/qspi_rd_addr}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/qspi_rd_req}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/qspi_rd_busy}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/qspi_clk}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/fifo_ren}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/fifo_rempty}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/fifo_rdata}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/sdram_clk}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/rd_addr}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/rd_avalid}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/rd_aready}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/rd_data}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/rd_valid}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/rd_ready}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/wen}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/qspi_rd_req0}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/qspi_rd_req1}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/qspi_rd_posedge}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/rd_state}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/rd_cnt}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/wfull}} 
+relaunch_sim
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+set_property SOURCE_SET {} [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/cyp2sdram/cyp_wr_fifo.v D:/88-ISE_share/spi-simulator/design_rtl/my_rtl/cyp2sdram/fifo_wr_sdram.v}
+update_compile_order -fileset sim_1
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run all
+relaunch_sim
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/qspi_master_vip_inst/usb_download_finished}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/qspi_clk}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/csn}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/di}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/do}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/wpn}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/holdn}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/rst_n}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/start}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/cmd_end}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/address_end}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/dummy_end}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/byte_end}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/data_end}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/rand}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/m_state}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/m_cnt}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/byte_cnt}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/aspi_address}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/di_out}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+relaunch_sim
+run 10 us
+relaunch_sim
+run 10 us
+run 10 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/wpn}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/rst_n}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/read_end}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/qspi_state}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/qspi_rd_req}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/qspi_rd_busy}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/qspi_rd_addr}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/qspi_clk}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/in_dat}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/holdn}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/fifo_ren}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/fifo_rempty}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/fifo_rdata}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/dummy_end}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/do_data}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/do}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/di}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/cur_value}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/csn}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/cmd_fstrd_0bh}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/byte_end}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/byte_cnt}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/bit_cnt}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/address_end}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 10 us
+run 10 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/wfull}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/wen}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/sdram_clk}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/rst_n}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/rd_valid}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/rd_state}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/rd_ready}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/rd_data}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/rd_cnt}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/rd_avalid}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/rd_aready}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/rd_addr}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/qspi_rd_req1}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/qspi_rd_req0}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/qspi_rd_req}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/qspi_rd_posedge}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/qspi_rd_busy}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/qspi_rd_addr}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/qspi_clk}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/fifo_ren}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/fifo_rempty}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/fifo_rdata}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/wr_valid}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/wr_state}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/wr_ready}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/wr_data}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/wr_cnt}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/wr_addr}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/work_state}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/wdata_valid}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/w_idx}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/temp_wdata}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/temp_rdata}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sys_wraddr_r}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sys_wraddr}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sys_rdaddr_r}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sys_rdaddr}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_wr_req}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_wr_data_req}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_wr_ack}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_rd_req}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_rd_ack}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_r_wn}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_data_oe}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_data_o}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_data_i_valid}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_data_i}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sd_wr_finished}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sd_rd_finished}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sd_rcnt}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rst_n}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rd_valid}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rd_state}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rd_ready}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rd_data}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rd_cnt}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rd_avalid}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rd_aready}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rd_addr}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/j}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/init_state}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/i}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/end_twrite}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/end_tread}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/end_rdata}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/cur_work_state}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/cur_init_state}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/cur_end_twrite}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/cur_end_tread}} {{/tb_fpga_qspi_sim/dut_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/clk}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 10 us
+run 10 us
+relaunch_sim
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+run 10 us
+run 10 us
+run 10 us
+relaunch_sim
+relaunch_sim
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/work_state_r}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/work_state}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/sdram_wr_req}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/sdram_wr_data_req}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/sdram_wr_ack}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/sdram_ref_req}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/sdram_ref_ack}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/sdram_rd_req}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/sdram_rd_ack}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/sdram_r_wn}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/sdram_init_done}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/rst_n}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/ref_domain}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/init_state_r}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/init_state}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/end_twrite}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/end_twait}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/end_trp}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/end_trfc}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/end_tread}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/end_trcd}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/end_tmrd}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/end_tdal}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/end_tcl}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/done_200us}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/cur_work_state}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/cur_init_state}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/clk}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/wr_valid}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/wr_state}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/wr_ready}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/wr_data}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/wr_cnt}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/wr_addr}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/work_state}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/wdata_valid}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/w_idx}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/temp_wdata}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/temp_rdata}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sys_wraddr_r}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sys_wraddr}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sys_rdaddr_r}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sys_rdaddr}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_wr_req}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_wr_data_req}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_wr_ack}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_rd_req}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_rd_ack}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_r_wn}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_data_oe}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_data_o}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_data_i_valid}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_data_i}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sd_wr_finished}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sd_rd_finished}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sd_rcnt}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rst_n}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rd_valid}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rd_state}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rd_ready}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rd_data}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rd_cnt}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rd_avalid}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rd_aready}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/rd_addr}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/j}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/init_state}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/i}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/end_twrite}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/end_tread}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/end_rdata}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/cur_work_state}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/cur_init_state}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/cur_end_twrite}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/cur_end_tread}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/clk}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run all
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 10 us
+run all
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/sdram_wr_data_valid}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run all
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/work_state}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sys_wraddr}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sys_rdaddr}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sys_addr}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sdram_wen}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sdram_rasn}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sdram_r_wn}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sdram_csn}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sdram_cmd_r}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sdram_cke}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sdram_casn}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sdram_ba_r}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sdram_ba}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sdram_addr_r}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/sdram_addr}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/rst_n}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/init_state}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cmd_inst/clk}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/work_state}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/sdram_wr_req}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/sdram_ref_req}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/sdram_ref_ack}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/sdram_rd_req}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/sdram_data_i_valid}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/rst_n}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_req_r1}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_req_r0}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_domain}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_cnt}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_60ms}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/init_state}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/end_twrite}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/end_twait}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/end_trp}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/end_trfc}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/end_tread}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/end_trcd}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/end_tmrd}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/end_tdal}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/end_tcl}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/done_200us}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/cur_work_state}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/cur_init_state}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/cnt_rst_n}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/cnt_clk_r}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/cnt_clk}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/cnt_200us}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/clk}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_init_done}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/wr_data}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/wr_addr}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/wr_valid}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/wr_ready}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/wr_state}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/temp_wdata}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sys_wraddr_r}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_wr_req}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sdram_wr_ack}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_cke}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_csn}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_rasn}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_casn}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_wen}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_ba}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_addr}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/clk}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/fpga_qspi_inst/sdram_data}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/usb2_cyp_vip_inst/usb_download_finished}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/cyp2sdram_inst/fifo_wr_sdram_inst/fifo_ren}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/cyp2sdram_inst/fifo_wr_sdram_inst/fifo_rdata}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/cyp2sdram_inst/fifo_wr_sdram_inst/fifo_rempty}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 100 us
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/sdram_rd_req}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/sdram_rd_ack}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/rd_addr}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/rd_avalid}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/rd_aready}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/rd_data}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/rd_valid}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/sdram_ctrl_inst/rd_ready}} 
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/rd_addr}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/rd_avalid}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/rd_aready}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/rd_data}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/rd_valid}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/rd_ready}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/qspi_rd_posedge}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/fifo_rd_sdram_inst/qspi_rd_addr}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+run 200 us
+run 200 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/qspi_clk}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/rst_n}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/csn}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/di}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/do}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/wpn}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/holdn}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/qspi_rd_addr}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/qspi_rd_req}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/qspi_rd_busy}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/fifo_ren}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/fifo_rempty}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/fifo_rdata}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/cmd_fstrd_0bh}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/address_end}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/dummy_end}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/byte_end}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/read_end}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+run 200 us
+restart
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+run 200 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/qspi_master_vip_inst/start}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+run 200 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/in_dat}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/cur_value}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/bit_cnt}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/byte_cnt}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/qspi_state}} {{/tb_fpga_qspi_sim/fpga_qspi_inst/qspi_simulator_inst/qspi2sdram_inst/qspi_rd_fifo_inst/do_data}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+run 200 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+run 200 us
+run all
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+run 200 us
+run 200 us
+run 200 us
+run all
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+relaunch_sim
+run 200 us
+run 200 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+run 200 us
+relaunch_sim
+run 200 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/qspi_master_vip_inst/usb_download_finished}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/qspi_clk}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/csn}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/di}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/do}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/wpn}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/holdn}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/rst_n}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/start}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/cmd_end}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/address_end}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/dummy_end}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/byte_end}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/data_end}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/rand}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/m_state}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/m_cnt}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/byte_cnt}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/r_cnt}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/qspi_address}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/di_out}} 
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/qspi_master_vip_inst/rand}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/m_state}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/m_cnt}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/byte_cnt}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/r_cnt}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/qspi_address}} {{/tb_fpga_qspi_sim/qspi_master_vip_inst/di_out}} 
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+restart
+restart
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+run 200 us
+run 200 us
+relaunch_sim
+run 200 us
+run 200 us
+current_wave_config {tb_fpga_sdram_top_behav.wcfg}
+add_wave {{/tb_fpga_qspi_sim/qspi_master_vip_inst/r_cnt}} 
+run 200 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+run 200 us
+run 200 us
+relaunch_sim
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+run 200 us
+run 200 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+run 200 us
+relaunch_sim
+run 200 us
+run 200 us
+run 200 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+run 200 us
+run 200 us
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+save_wave_config {D:/88-ISE_share/vivado_sim/tb_fpga_sdram_top_behav.wcfg}
+relaunch_sim
+run 200 us
+close_sim

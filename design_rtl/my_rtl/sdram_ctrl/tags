@@ -1,0 +1,91 @@
+I_POWON	sdram_core.v	65
+S_IDLE	sdram_core.v	155
+always	sdram_core.v	/^always@(posedge clk or negedge rst_n)begin$/
+case	sdram_core.v	/^		case (init_state_r)$/
+case	sdram_core.v	/^		case (work_state_r)$/
+init_state	sdram_core.v	143
+init_state_r	sdram_core.v	63
+sdram_init_done	sdram_core.v	144
+sdram_r_wn	sdram_core.v	153
+sdram_rd_ack	sdram_core.v	291
+sdram_ref_ack	sdram_core.v	271
+work_state	sdram_core.v	270
+work_state_r	sdram_core.v	152
+always	sdram_t.v	/^always@(posedge clk or negedge rst_n)begin$/
+cnt_200us	sdram_t.v	104
+cnt_rst_n	sdram_t.v	119
+done_200us	sdram_t.v	113
+end_tcl	sdram_t.v	246
+end_tdal	sdram_t.v	250
+end_tmrd	sdram_t.v	244
+end_trcd	sdram_t.v	245
+end_tread	sdram_t.v	247
+end_trfc	sdram_t.v	243
+end_twait	sdram_t.v	248
+end_twrite	sdram_t.v	249
+ref_60ms	sdram_t.v	51
+ref_60ms	sdram_t.v	68
+ref_cnt	sdram_t.v	50
+ref_domain	sdram_t.v	52
+ref_domain	sdram_t.v	71
+ref_req	sdram_t.v	54
+ref_req_r0	sdram_t.v	54
+ref_req_r1	sdram_t.v	54
+@	sdram_cmd.v	/^always @ (posedge clk or negedge rst_n) begin$/
+CMD_INHIBIT	sdram_cmd.v	63
+always	sdram_cmd.v	/^always@(posedge clk or negedge rst_n)begin$/
+assign	sdram_cmd.v	88
+case	sdram_cmd.v	/^				case (work_state)$/
+cur_init_state	sdram_cmd.v	99
+cur_work_state	sdram_cmd.v	100
+sdram_addr	sdram_cmd.v	90
+sdram_addr_r	sdram_cmd.v	85
+sdram_ba	sdram_cmd.v	89
+sdram_ba_r	sdram_cmd.v	84
+sdram_cmd_r	sdram_cmd.v	83
+sys_addr	sdram_cmd.v	93
+sys_addr	sdram_cmd.v	94
+S_RD_IDLE	sdram_data.v	65
+always	sdram_data.v	/^always@(posedge clk or negedge rst_n)begin$/
+always	sdram_data.v	/^always@(posedge clk or negedge rst_n)begin$/
+always	sdram_data.v	/^always@(posedge clk or negedge rst_n)begin$/
+byte_pos	sdram_data.v	141
+case	sdram_data.v	/^		case(rd_state)$/
+rd_aready	sdram_data.v	56
+rd_aready_r	sdram_data.v	119
+rd_valid	sdram_data.v	57
+rd_valid_r	sdram_data.v	134
+sys_rdaddr	sdram_data.v	59
+sys_rdaddr_r	sdram_data.v	140
+sys_wraddr	sdram_data.v	60
+done_200us	sdram_top.v	64
+end_tcl	sdram_top.v	59
+end_tdal	sdram_top.v	63
+end_tmrd	sdram_top.v	57
+end_trcd	sdram_top.v	58
+end_tread	sdram_top.v	60
+end_trfc	sdram_top.v	56
+end_trp	sdram_top.v	55
+end_twait	sdram_top.v	61
+end_twrite	sdram_top.v	62
+init_state	sdram_top.v	53
+ref_domain	sdram_top.v	65
+sdram_data_i	sdram_top.v	80
+sdram_data_i_valid	sdram_top.v	79
+sdram_data_o	sdram_top.v	81
+sdram_data_oe	sdram_top.v	82
+sdram_r_wn	sdram_top.v	74
+sdram_rd_ack	sdram_top.v	69
+sdram_rd_req	sdram_top.v	68
+sdram_ref_ack	sdram_top.v	67
+sdram_ref_req	sdram_top.v	66
+sdram_wr_ack	sdram_top.v	71
+sdram_wr_req	sdram_top.v	70
+sys_rdaddr	sdram_top.v	76
+sys_wraddr	sdram_top.v	75
+work_state	sdram_top.v	54
+i	fpga_sdram_top.v	53
+i	fpga_sdram_top.v	55
+sdram_data_i	fpga_sdram_top.v	48
+sdram_data_o	fpga_sdram_top.v	49
+sdram_data_oe	fpga_sdram_top.v	50
