@@ -1,3 +1,4 @@
+verion 1.0
 Note:
 
 Only surpport FastRead mode (0Bh)
