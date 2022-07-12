@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=/home/ise/88-ISE_share/spi-simulator/sdram_test.ncd
-OUTFILE=/home/ise/88-ISE_share/spi-simulator/sdram_test.bit
-FAMILY=Spartan6
-PART=xc6slx16-3ftg256
-WORKINGDIR=/home/ise/88-ISE_share/spi-simulator
-LICENSE=WebPack
-USER_INFO=8416_11442_1478797146_620
