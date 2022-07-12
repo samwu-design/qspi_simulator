@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/ise/88-ISE_share/spi-simulator/tb_sdram.xst" -ofn "/home/ise/88-ISE_share/spi-simulator/tb_sdram.syr" 
+xst -intstyle ise -ifn "/home/ise/88-ISE_share/spi-simulator/tb_sdram.xst" -ofn "/home/ise/88-ISE_share/spi-simulator/tb_sdram.syr" 

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1142" delta="old" >"/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_ip/sdram_wr_data.v" Line 1: Compiler directive <arg fmt="%s" index="1">`timescale</arg> is not allowed here
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1142" delta="old" >"/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_ip/sdram_ctrl.v" Line 1: Compiler directive <arg fmt="%s" index="1">`timescale</arg> is not allowed here
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1142" delta="old" >"/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_ip/sdram_cmd.v" Line 1: Compiler directive <arg fmt="%s" index="1">`timescale</arg> is not allowed here
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="old" >"/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_ip/sdram_2fifo_top.v" Line 68: Redeclaration of ansi port <arg fmt="%s" index="1">sdram_wr_req</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="old" >"/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_ip/sdram_2fifo_top.v" Line 70: Redeclaration of ansi port <arg fmt="%s" index="1">sdram_rd_req</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="872" delta="new" >"/home/ise/88-ISE_share/spi-simulator/design_rtl/tb_sdram.v" Line 6: Using initial value of <arg fmt="%s" index="1">rstn</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_test.v" Line 83: Port <arg fmt="%s" index="1">sdram_wr_req</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/ise/88-ISE_share/spi-simulator/ipcore_dir/sdram_pll.v" Line 131: Assignment to <arg fmt="%s" index="1">clkout4_unused</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/ise/88-ISE_share/spi-simulator/ipcore_dir/sdram_pll.v" Line 132: Assignment to <arg fmt="%s" index="1">clkout5_unused</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/system_ctrl.v" Line 47: Assignment to <arg fmt="%s" index="1">locked</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="new" >"/home/ise/88-ISE_share/spi-simulator/ipcore_dir/wrfifo.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">wrfifo</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="new" >"/home/ise/88-ISE_share/spi-simulator/ipcore_dir/rdfifo.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">rdfifo</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_test.v" Line 102: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">sdram_addr</arg>&gt;. Formal port size is <arg fmt="%d" index="2">12</arg>-bit while actual signal size is <arg fmt="%d" index="1">13</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_test.v" Line 122: Assignment to <arg fmt="%s" index="1">sys_data_out</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="817" delta="new" >"/home/ise/88-ISE_share/spi-simulator/design_rtl/sim_model/sdram_model/mt48lc16m16a2.v" Line 190: System task <arg fmt="%s" index="1">timeformat</arg> ignored for synthesis
+</msg>
+
+<msg type="error" file="HDLCompiler" num="608" delta="new" >"/home/ise/88-ISE_share/spi-simulator/design_rtl/sim_model/sdram_model/mt48lc16m16a2.v" Line 199: Multiple event control statements in one always/initial process block are not supported in this case.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="new" >"/home/ise/88-ISE_share/spi-simulator/design_rtl/sim_model/sdram_model/mt48lc16m16a2.v" Line 42: Empty module &lt;<arg fmt="%s" index="1">mt48lc16m16a2</arg>&gt; remains a black box.
+</msg>
+
+</messages>
+

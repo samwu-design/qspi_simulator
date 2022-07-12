@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1142" delta="unknown" >"/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_ip/sdram_wr_data.v" Line 1: Compiler directive <arg fmt="%s" index="1">`timescale</arg> is not allowed here
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1142" delta="unknown" >"/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_ip/sdram_ctrl.v" Line 1: Compiler directive <arg fmt="%s" index="1">`timescale</arg> is not allowed here
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1142" delta="unknown" >"/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_ip/sdram_cmd.v" Line 1: Compiler directive <arg fmt="%s" index="1">`timescale</arg> is not allowed here
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_ip/sdram_2fifo_top.v" Line 68: Redeclaration of ansi port <arg fmt="%s" index="1">sdram_wr_req</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_ip/sdram_2fifo_top.v" Line 70: Redeclaration of ansi port <arg fmt="%s" index="1">sdram_rd_req</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_test.v" Line 107: Port <arg fmt="%s" index="1">sdram_wr_req</arg> is not connected to this instance
+</msg>
+
+</messages>
+

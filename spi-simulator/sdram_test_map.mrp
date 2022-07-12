@@ -1,0 +1,1339 @@
+Release 14.7 Map P.20131013 (lin64)
+Xilinx Mapping Report File for Design 'sdram_test'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx16-ftg256-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o sdram_test_map.ncd sdram_test.ngd sdram_test.pcf 
+Target Device  : xc6slx16
+Target Package : ftg256
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Mon May 23 07:46:08 2022
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    3
+Slice Logic Utilization:
+  Number of Slice Registers:                   424 out of  18,224    2%
+    Number used as Flip Flops:                 424
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                        456 out of   9,112    5%
+    Number used as logic:                      414 out of   9,112    4%
+      Number using O6 output only:             249
+      Number using O5 output only:              44
+      Number using O5 and O6:                  121
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of   2,176    0%
+    Number used exclusively as route-thrus:     42
+      Number with same-slice register load:     38
+      Number with same-slice carry load:         4
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   174 out of   2,278    7%
+  Number of MUXCYs used:                       172 out of   4,556    3%
+  Number of LUT Flip Flop pairs used:          526
+    Number with an unused Flip Flop:           188 out of     526   35%
+    Number with an unused LUT:                  70 out of     526   13%
+    Number of fully used LUT-FF pairs:         268 out of     526   50%
+    Number of unique control sets:              32
+    Number of slice register sites lost
+      to control set restrictions:             152 out of  18,224    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        41 out of     186   22%
+    Number of LOCed IOBs:                       40 out of      41   97%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      32    0%
+  Number of RAMB8BWERs:                          1 out of      64    1%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             1 out of      32    3%
+    Number used as BUFIO2FBs:                    1
+    Number used as BUFIO2FB_2CLKs:               0
+  Number of BUFG/BUFGMUXs:                       3 out of      16   18%
+    Number used as BUFGs:                        3
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     1 out of       4   25%
+    Number used as DCMs:                         1
+    Number used as DCM_CLKGENs:                  0
+  Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     248    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      32    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                3.68
+
+Peak Memory Usage:  775 MB
+Total REAL time to MAP completion:  9 secs 
+Total CPU time to MAP completion:   8 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Place:1206 - This design contains a global buffer instance,
+   <u_system_ctrl/u_sdram_pll/clkout3_buf>, driving the net, <clk_refout>, that
+   is driving the following (first 30) non-clock load pins off chip.
+   < PIN: S_CLK.O; >
+   This design practice, in Spartan-6, can lead to an unroutable situation due
+   to limitations in the global routing. If the design does route there may be
+   excessive delay or skew on this net. It is recommended to use a Clock
+   Forwarding technique to create a reliable and repeatable low skew solution:
+   instantiate an ODDR2 component; tie the .D0 pin to Logic1; tie the .D1 pin to
+   Logic0; tie the clock net to be forwarded to .C0; tie the inverted clock to
+   .C1. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint was
+   applied on COMP.PIN <u_system_ctrl/u_sdram_pll/clkout3_buf.O> allowing your
+   design to continue. This constraint disables all clock placer rules related
+   to the specified COMP.PIN.
+WARNING:Place:1137 - This design is not guaranteed to be routable! This design
+   contains a global buffer instance, <u_system_ctrl/u_sdram_pll/clkout3_buf>,
+   driving the net, <clk_refout>, that is driving the following (first 30)
+   non-clock load pins.
+   < PIN: S_CLK.O; >
+   This is not a recommended design practice in Spartan-6 due to limitations in
+   the global routing that may cause excessive delay, skew or unroutable
+   situations.  It is recommended to only use a BUFG resource to drive clock
+   loads. Please pay extra attention to the timing and routing of this path to
+   ensure the design goals are met. This is normally an ERROR but the
+   CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN
+   <u_system_ctrl/u_sdram_pll/clkout3_buf.O> allowing your design to continue.
+   This constraint disables all clock placer rules related to the specified
+   COMP.PIN.
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network
+   u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/g
+   rf.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<7> has no load.
+INFO:LIT:395 - The above info message is repeated 53 more times for the
+   following (max. 5 shown):
+   u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/g
+   rf.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<6>,
+   u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/g
+   rf.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<5>,
+   u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/g
+   rf.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<4>,
+   u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/g
+   rf.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<3>,
+   u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/g
+   rf.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<2>
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Place:834 - Only a subset of IOs are locked. Out of 41 IOs, 40 are locked
+   and 1 are not locked. If you would like to print the names of these IOs,
+   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 160 block(s) removed
+   7 block(s) optimized away
+ 175 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "u_system_ctrl/u_sdram_pll/clkout4_buf" (CKBUF) removed.
+ The signal "u_system_ctrl/u_sdram_pll/clkdv" is loadless and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<7>" is sourceless and has
+been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<6>" is sourceless and has
+been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<5>" is sourceless and has
+been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<4>" is sourceless and has
+been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<3>" is sourceless and has
+been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<2>" is sourceless and has
+been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<1>" is sourceless and has
+been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<0>" is sourceless and has
+been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<8>" is sourceless
+and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<7>" is sourceless
+and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<6>" is sourceless
+and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<5>" is sourceless
+and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<4>" is sourceless
+and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<3>" is sourceless
+and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<2>" is sourceless
+and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<1>" is sourceless
+and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<0>" is sourceless
+and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i" is sourceless and has been
+removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i" is sourceless and has been
+removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_192_o_GND_192_o_sub_2_OUT<7>" is
+sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_7" (FF) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_192_o_GND_192_o_sub_2_OUT<6>" is
+sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_6" (FF) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_192_o_GND_192_o_sub_2_OUT<5>" is
+sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_5" (FF) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_192_o_GND_192_o_sub_2_OUT<4>" is
+sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_4" (FF) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_192_o_GND_192_o_sub_2_OUT<3>" is
+sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_3" (FF) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_192_o_GND_192_o_sub_2_OUT<2>" is
+sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_2" (FF) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_192_o_GND_192_o_sub_2_OUT<1>" is
+sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_1" (FF) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_192_o_GND_192_o_sub_2_OUT<0>" is
+sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_0" (FF) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_cy<7>" is sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_xor<8>" (XOR) removed.
+  The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_198_o_GND_198_o_sub_2_OUT<8>" is
+sourceless and has been removed.
+   Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_8" (FF) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_lut<8>" is sourceless and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_cy<6>" is sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_xor<7>" (XOR) removed.
+  The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_198_o_GND_198_o_sub_2_OUT<7>" is
+sourceless and has been removed.
+   Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_7" (FF) removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_cy<7>" (MUX) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_lut<7>" is sourceless and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_cy<5>" is sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_xor<6>" (XOR) removed.
+  The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_198_o_GND_198_o_sub_2_OUT<6>" is
+sourceless and has been removed.
+   Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_6" (FF) removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_cy<6>" (MUX) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_lut<6>" is sourceless and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_cy<4>" is sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_xor<5>" (XOR) removed.
+  The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_198_o_GND_198_o_sub_2_OUT<5>" is
+sourceless and has been removed.
+   Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_5" (FF) removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_cy<5>" (MUX) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_lut<5>" is sourceless and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_cy<3>" is sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_xor<4>" (XOR) removed.
+  The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_198_o_GND_198_o_sub_2_OUT<4>" is
+sourceless and has been removed.
+   Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_4" (FF) removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_cy<4>" (MUX) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_lut<4>" is sourceless and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_cy<2>" is sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_xor<3>" (XOR) removed.
+  The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_198_o_GND_198_o_sub_2_OUT<3>" is
+sourceless and has been removed.
+   Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_3" (FF) removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_cy<3>" (MUX) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_lut<3>" is sourceless and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_cy<1>" is sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_xor<2>" (XOR) removed.
+  The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_198_o_GND_198_o_sub_2_OUT<2>" is
+sourceless and has been removed.
+   Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_2" (FF) removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_cy<2>" (MUX) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_lut<2>" is sourceless and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_cy<0>" is sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_xor<1>" (XOR) removed.
+  The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_198_o_GND_198_o_sub_2_OUT<1>" is
+sourceless and has been removed.
+   Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_1" (FF) removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_cy<1>" (MUX) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_lut<1>" is sourceless and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_lut<0>" is sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_xor<0>" (XOR) removed.
+  The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_198_o_GND_198_o_sub_2_OUT<0>" is
+sourceless and has been removed.
+   Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_0" (FF) removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_cy<0>" (MUX) removed.
+The signal "u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/dout<15>" is sourceless and
+has been removed.
+The signal "u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/dout<14>" is sourceless and
+has been removed.
+The signal "u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/dout<13>" is sourceless and
+has been removed.
+The signal "u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/dout<12>" is sourceless and
+has been removed.
+The signal "u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/dout<11>" is sourceless and
+has been removed.
+The signal "u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/dout<10>" is sourceless and
+has been removed.
+The signal "u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/dout<9>" is sourceless and
+has been removed.
+The signal "u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/dout<8>" is sourceless and
+has been removed.
+The signal "u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/dout<7>" is sourceless and
+has been removed.
+The signal "u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/dout<6>" is sourceless and
+has been removed.
+The signal "u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/dout<5>" is sourceless and
+has been removed.
+The signal "u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/dout<4>" is sourceless and
+has been removed.
+The signal "u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/dout<3>" is sourceless and
+has been removed.
+The signal "u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/dout<2>" is sourceless and
+has been removed.
+The signal "u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/dout<1>" is sourceless and
+has been removed.
+The signal "u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/dout<0>" is sourceless and
+has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<8>" is sourceless and has
+been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<7>" is sourceless and has
+been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<6>" is sourceless and has
+been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<5>" is sourceless and has
+been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<4>" is sourceless and has
+been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<3>" is sourceless and has
+been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<2>" is sourceless and has
+been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<1>" is sourceless and has
+been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i<0>" is sourceless and has
+been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<7>" is sourceless
+and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<6>" is sourceless
+and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<5>" is sourceless
+and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<4>" is sourceless
+and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<3>" is sourceless
+and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<2>" is sourceless
+and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<1>" is sourceless
+and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i<0>" is sourceless
+and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i" is sourceless and has been
+removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i" is sourceless and has been
+removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/rstblk/ngwrdrst.grst.rd_rst_reg<0>" is sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.mem/tmp_ram_rd_en1" (ROM) removed.
+  The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.mem/tmp_ram_rd_en" is sourceless and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_cy<7>" is sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_xor<8>" (XOR) removed.
+  The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_192_o_GND_192_o_sub_2_OUT<8>" is
+sourceless and has been removed.
+   Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_8" (FF) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_lut<8>" is sourceless and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_cy<6>" is sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_xor<7>" (XOR) removed.
+  The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_192_o_GND_192_o_sub_2_OUT<7>" is
+sourceless and has been removed.
+   Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_7" (FF) removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_cy<7>" (MUX) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_lut<7>" is sourceless and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_cy<5>" is sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_xor<6>" (XOR) removed.
+  The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_192_o_GND_192_o_sub_2_OUT<6>" is
+sourceless and has been removed.
+   Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_6" (FF) removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_cy<6>" (MUX) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_lut<6>" is sourceless and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_cy<4>" is sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_xor<5>" (XOR) removed.
+  The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_192_o_GND_192_o_sub_2_OUT<5>" is
+sourceless and has been removed.
+   Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_5" (FF) removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_cy<5>" (MUX) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_lut<5>" is sourceless and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_cy<3>" is sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_xor<4>" (XOR) removed.
+  The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_192_o_GND_192_o_sub_2_OUT<4>" is
+sourceless and has been removed.
+   Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_4" (FF) removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_cy<4>" (MUX) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_lut<4>" is sourceless and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_cy<2>" is sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_xor<3>" (XOR) removed.
+  The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_192_o_GND_192_o_sub_2_OUT<3>" is
+sourceless and has been removed.
+   Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_3" (FF) removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_cy<3>" (MUX) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_lut<3>" is sourceless and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_cy<1>" is sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_xor<2>" (XOR) removed.
+  The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_192_o_GND_192_o_sub_2_OUT<2>" is
+sourceless and has been removed.
+   Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_2" (FF) removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_cy<2>" (MUX) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_lut<2>" is sourceless and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_cy<0>" is sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_xor<1>" (XOR) removed.
+  The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_192_o_GND_192_o_sub_2_OUT<1>" is
+sourceless and has been removed.
+   Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_1" (FF) removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_cy<1>" (MUX) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_lut<1>" is sourceless and has been removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_lut<0>" is sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_xor<0>" (XOR) removed.
+  The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/GND_192_o_GND_192_o_sub_2_OUT<0>" is
+sourceless and has been removed.
+   Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_0" (FF) removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_cy<0>" (MUX) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_198_o_GND_198_o_sub_2_OUT<7>" is
+sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_7" (FF) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_198_o_GND_198_o_sub_2_OUT<6>" is
+sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_6" (FF) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_198_o_GND_198_o_sub_2_OUT<5>" is
+sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_5" (FF) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_198_o_GND_198_o_sub_2_OUT<4>" is
+sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_4" (FF) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_198_o_GND_198_o_sub_2_OUT<3>" is
+sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_3" (FF) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_198_o_GND_198_o_sub_2_OUT<2>" is
+sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_2" (FF) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_198_o_GND_198_o_sub_2_OUT<1>" is
+sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_1" (FF) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/GND_198_o_GND_198_o_sub_2_OUT<0>" is
+sourceless and has been removed.
+ Sourceless block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/wr_data_count_i_0" (FF) removed.
+The signal
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen
+/valid.cstr/DBITERR" is sourceless and has been removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout<0>" is unused and
+has been removed.
+ Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_0" (FF) removed.
+  The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_0_rstpot" is unused
+and has been removed.
+   Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_0_rstpot" (ROM)
+removed.
+    The signal
+"u_sdram_2fifo_top/u_sdramtop/module_003/work_state[3]_GND_12_o_equal_8_o" is
+unused and has been removed.
+     Unused block
+"u_sdram_2fifo_top/u_sdramtop/module_003/work_state[3]_GND_12_o_equal_8_o1"
+(ROM) removed.
+    The signal "N59" is unused and has been removed.
+     Unused block "S_DB_0_IOBUF/IBUF" (BUF) removed.
+The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout<1>" is unused and
+has been removed.
+ Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_1" (FF) removed.
+  The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_1_rstpot" is unused
+and has been removed.
+   Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_1_rstpot" (ROM)
+removed.
+    The signal "N58" is unused and has been removed.
+     Unused block "S_DB_1_IOBUF/IBUF" (BUF) removed.
+The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout<2>" is unused and
+has been removed.
+ Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_2" (FF) removed.
+  The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_2_rstpot" is unused
+and has been removed.
+   Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_2_rstpot" (ROM)
+removed.
+    The signal "N57" is unused and has been removed.
+     Unused block "S_DB_2_IOBUF/IBUF" (BUF) removed.
+The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout<3>" is unused and
+has been removed.
+ Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_3" (FF) removed.
+  The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_3_rstpot" is unused
+and has been removed.
+   Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_3_rstpot" (ROM)
+removed.
+    The signal "N56" is unused and has been removed.
+     Unused block "S_DB_3_IOBUF/IBUF" (BUF) removed.
+The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout<4>" is unused and
+has been removed.
+ Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_4" (FF) removed.
+  The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_4_rstpot" is unused
+and has been removed.
+   Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_4_rstpot" (ROM)
+removed.
+    The signal "N55" is unused and has been removed.
+     Unused block "S_DB_4_IOBUF/IBUF" (BUF) removed.
+The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout<5>" is unused and
+has been removed.
+ Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_5" (FF) removed.
+  The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_5_rstpot" is unused
+and has been removed.
+   Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_5_rstpot" (ROM)
+removed.
+    The signal "N54" is unused and has been removed.
+     Unused block "S_DB_5_IOBUF/IBUF" (BUF) removed.
+The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout<6>" is unused and
+has been removed.
+ Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_6" (FF) removed.
+  The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_6_rstpot" is unused
+and has been removed.
+   Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_6_rstpot" (ROM)
+removed.
+    The signal "N53" is unused and has been removed.
+     Unused block "S_DB_6_IOBUF/IBUF" (BUF) removed.
+The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout<7>" is unused and
+has been removed.
+ Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_7" (FF) removed.
+  The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_7_rstpot" is unused
+and has been removed.
+   Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_7_rstpot" (ROM)
+removed.
+    The signal "N52" is unused and has been removed.
+     Unused block "S_DB_7_IOBUF/IBUF" (BUF) removed.
+The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout<8>" is unused and
+has been removed.
+ Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_8" (FF) removed.
+  The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_8_rstpot" is unused
+and has been removed.
+   Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_8_rstpot" (ROM)
+removed.
+    The signal "N51" is unused and has been removed.
+     Unused block "S_DB_8_IOBUF/IBUF" (BUF) removed.
+The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout<9>" is unused and
+has been removed.
+ Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_9" (FF) removed.
+  The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_9_rstpot" is unused
+and has been removed.
+   Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_9_rstpot" (ROM)
+removed.
+    The signal "N50" is unused and has been removed.
+     Unused block "S_DB_9_IOBUF/IBUF" (BUF) removed.
+The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout<10>" is unused and
+has been removed.
+ Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_10" (FF) removed.
+  The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_10_rstpot" is
+unused and has been removed.
+   Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_10_rstpot" (ROM)
+removed.
+    The signal "N49" is unused and has been removed.
+     Unused block "S_DB_10_IOBUF/IBUF" (BUF) removed.
+The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout<11>" is unused and
+has been removed.
+ Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_11" (FF) removed.
+  The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_11_rstpot" is
+unused and has been removed.
+   Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_11_rstpot" (ROM)
+removed.
+    The signal "N48" is unused and has been removed.
+     Unused block "S_DB_11_IOBUF/IBUF" (BUF) removed.
+The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout<12>" is unused and
+has been removed.
+ Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_12" (FF) removed.
+  The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_12_rstpot" is
+unused and has been removed.
+   Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_12_rstpot" (ROM)
+removed.
+    The signal "N47" is unused and has been removed.
+     Unused block "S_DB_12_IOBUF/IBUF" (BUF) removed.
+The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout<13>" is unused and
+has been removed.
+ Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_13" (FF) removed.
+  The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_13_rstpot" is
+unused and has been removed.
+   Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_13_rstpot" (ROM)
+removed.
+    The signal "N46" is unused and has been removed.
+     Unused block "S_DB_13_IOBUF/IBUF" (BUF) removed.
+The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout<14>" is unused and
+has been removed.
+ Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_14" (FF) removed.
+  The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_14_rstpot" is
+unused and has been removed.
+   Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_14_rstpot" (ROM)
+removed.
+    The signal "N45" is unused and has been removed.
+     Unused block "S_DB_14_IOBUF/IBUF" (BUF) removed.
+The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout<15>" is unused and
+has been removed.
+ Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_15" (FF) removed.
+  The signal "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_15_rstpot" is
+unused and has been removed.
+   Unused block "u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dout_15_rstpot" (ROM)
+removed.
+    The signal "N44" is unused and has been removed.
+     Unused block "S_DB_15_IOBUF/IBUF" (BUF) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_lut<0>" (ROM) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_lut<1>" (ROM) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_lut<2>" (ROM) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_lut<3>" (ROM) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_lut<4>" (ROM) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_lut<5>" (ROM) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_lut<6>" (ROM) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_lut<7>" (ROM) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_lut<8>" (ROM) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i" (FF) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_xor<0>" (XOR) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_xor<1>" (XOR) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_xor<2>" (XOR) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_xor<3>" (XOR) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_xor<4>" (XOR) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_xor<5>" (XOR) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_xor<6>" (XOR) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_xor<7>" (XOR) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i" (FF) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen
+/valid.cstr/XST_GND" (ZERO) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen
+/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM9.ram" (RAMB8BWER)
+removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0" (FF) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_xor<0>" (XOR) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_xor<1>" (XOR) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_xor<2>" (XOR) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_xor<3>" (XOR) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_xor<4>" (XOR) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_xor<5>" (XOR) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_xor<6>" (XOR) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/Msub_GND_192_o_GND_192_o_sub_2_OUT<8
+:0>_xor<7>" (XOR) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i" (FF) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_lut<0>" (ROM) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_lut<1>" (ROM) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_lut<2>" (ROM) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_lut<3>" (ROM) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_lut<4>" (ROM) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_lut<5>" (ROM) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_lut<6>" (ROM) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_lut<7>" (ROM) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.gwdc0.wdc/Msub_GND_198_o_GND_198_o_sub_2_OUT<8
+:0>_lut<8>" (ROM) removed.
+Unused block
+"u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf
+.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i" (FF) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+GND 		u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/XST_GND
+VCC 		u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/XST_VCC
+GND
+		u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/gr
+f.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_ge
+n/valid.cstr/XST_GND
+GND 		u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/XST_GND
+VCC 		u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| S_A<0>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_A<1>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_A<2>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_A<3>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_A<4>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_A<5>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_A<6>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_A<7>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_A<8>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_A<9>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_A<10>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_A<11>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_A<12>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_BA<0>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_BA<1>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_CKE                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| S_CLK                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_DB<0>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_DB<1>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_DB<2>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_DB<3>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_DB<4>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_DB<5>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_DB<6>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_DB<7>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_DB<8>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_DB<9>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_DB<10>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_DB<11>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_DB<12>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_DB<13>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_DB<14>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_DB<15>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_DQM<0>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_DQM<1>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_NCAS                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_NCS                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_NRAS                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| S_NWE                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| clk_50m                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| reset_n                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

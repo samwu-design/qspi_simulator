@@ -1,0 +1,205 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: tb_sdram.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "tb_sdram.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "tb_sdram"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-ftg256
+
+---- Source Options
+Top Module Name                    : tb_sdram
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/ise/88-ISE_share/spi-simulator/ipcore_dir/sdram_pll.v" into library work
+Parsing module <sdram_pll>.
+Analyzing Verilog file "/home/ise/88-ISE_share/spi-simulator/ipcore_dir/wrfifo.v" into library work
+Parsing module <wrfifo>.
+Analyzing Verilog file "/home/ise/88-ISE_share/spi-simulator/ipcore_dir/rdfifo.v" into library work
+Parsing module <rdfifo>.
+Analyzing Verilog file "/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_ip/sdram_wr_data.v" into library work
+Parsing module <sdram_wr_data>.
+Parsing verilog file "/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_ip/sdram_para.v" included at line 25.
+WARNING:HDLCompiler:1142 - "/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_ip/sdram_wr_data.v" Line 1: Compiler directive `timescale is not allowed here
+Analyzing Verilog file "/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_ip/sdram_ctrl.v" into library work
+Parsing module <sdram_ctrl>.
+Parsing verilog file "/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_ip/sdram_para.v" included at line 54.
+WARNING:HDLCompiler:1142 - "/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_ip/sdram_ctrl.v" Line 1: Compiler directive `timescale is not allowed here
+Analyzing Verilog file "/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_ip/sdram_cmd.v" into library work
+Parsing module <sdram_cmd>.
+Parsing verilog file "/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_ip/sdram_para.v" included at line 38.
+WARNING:HDLCompiler:1142 - "/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_ip/sdram_cmd.v" Line 1: Compiler directive `timescale is not allowed here
+Analyzing Verilog file "/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_ip/sdram_top.v" into library work
+Parsing module <sdram_top>.
+Analyzing Verilog file "/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_ip/dcfifo_ctrl.v" into library work
+Parsing module <dcfifo_ctrl>.
+Analyzing Verilog file "/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/system_ctrl.v" into library work
+Parsing module <system_ctrl>.
+Analyzing Verilog file "/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_ip/sdram_2fifo_top.v" into library work
+Parsing module <sdram_2fifo_top>.
+WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_ip/sdram_2fifo_top.v" Line 68: Redeclaration of ansi port sdram_wr_req is not allowed
+WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_ip/sdram_2fifo_top.v" Line 70: Redeclaration of ansi port sdram_rd_req is not allowed
+Analyzing Verilog file "/home/ise/88-ISE_share/spi-simulator/design_rtl/sim_model/sdram_model/mt48lc16m16a2.v" into library work
+Parsing module <mt48lc16m16a2>.
+Analyzing Verilog file "/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_test.v" into library work
+Parsing module <sdram_test>.
+Analyzing Verilog file "/home/ise/88-ISE_share/spi-simulator/design_rtl/tb_sdram.v" into library work
+Parsing module <tb_sdram>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <tb_sdram>.
+WARNING:HDLCompiler:872 - "/home/ise/88-ISE_share/spi-simulator/design_rtl/tb_sdram.v" Line 6: Using initial value of rstn since it is never assigned
+WARNING:HDLCompiler:1016 - "/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_test.v" Line 83: Port sdram_wr_req is not connected to this instance
+
+Elaborating module <sdram_test>.
+
+Elaborating module <system_ctrl>.
+
+Elaborating module <sdram_pll>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="SYSTEM_SYNCHRONOUS",DIVCLK_DIVIDE=1,CLKFBOUT_MULT=8,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=8,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DIVIDE=3,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT2_DIVIDE=3,CLKOUT2_PHASE=0.0,CLKOUT2_DUTY_CYCLE=0.5,CLKOUT3_DIVIDE=16,CLKOUT3_PHASE=0.0,CLKOUT3_DUTY_CYCLE=0.5,CLKIN_PERIOD=20.0,REF_JITTER=0.01)>.
+WARNING:HDLCompiler:1127 - "/home/ise/88-ISE_share/spi-simulator/ipcore_dir/sdram_pll.v" Line 131: Assignment to clkout4_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/88-ISE_share/spi-simulator/ipcore_dir/sdram_pll.v" Line 132: Assignment to clkout5_unused ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+WARNING:HDLCompiler:1127 - "/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/system_ctrl.v" Line 47: Assignment to locked ignored, since the identifier is never used
+
+Elaborating module <sdram_2fifo_top>.
+
+Elaborating module <sdram_top>.
+
+Elaborating module <sdram_ctrl>.
+
+Elaborating module <sdram_cmd>.
+
+Elaborating module <sdram_wr_data>.
+
+Elaborating module <dcfifo_ctrl>.
+
+Elaborating module <wrfifo>.
+WARNING:HDLCompiler:1499 - "/home/ise/88-ISE_share/spi-simulator/ipcore_dir/wrfifo.v" Line 39: Empty module <wrfifo> remains a black box.
+
+Elaborating module <rdfifo>.
+WARNING:HDLCompiler:1499 - "/home/ise/88-ISE_share/spi-simulator/ipcore_dir/rdfifo.v" Line 39: Empty module <rdfifo> remains a black box.
+WARNING:HDLCompiler:189 - "/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_test.v" Line 102: Size mismatch in connection of port <sdram_addr>. Formal port size is 12-bit while actual signal size is 13-bit.
+WARNING:HDLCompiler:1127 - "/home/ise/88-ISE_share/spi-simulator/design_rtl/sdram_controllor/sdram_test.v" Line 122: Assignment to sys_data_out ignored, since the identifier is never used
+
+Elaborating module <mt48lc16m16a2>.
+WARNING:HDLCompiler:817 - "/home/ise/88-ISE_share/spi-simulator/design_rtl/sim_model/sdram_model/mt48lc16m16a2.v" Line 190: System task timeformat ignored for synthesis
+ERROR:HDLCompiler:608 - "/home/ise/88-ISE_share/spi-simulator/design_rtl/sim_model/sdram_model/mt48lc16m16a2.v" Line 199: Multiple event control statements in one always/initial process block are not supported in this case.
+Module mt48lc16m16a2 remains a blackbox, due to errors in its contents
+WARNING:HDLCompiler:1499 - "/home/ise/88-ISE_share/spi-simulator/design_rtl/sim_model/sdram_model/mt48lc16m16a2.v" Line 42: Empty module <mt48lc16m16a2> remains a black box.
+--> 
+
+
+Total memory usage is 411692 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :   16 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

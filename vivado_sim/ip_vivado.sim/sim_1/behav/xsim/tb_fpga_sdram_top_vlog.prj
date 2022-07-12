@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../spi-simulator/design_rtl/my_rtl/sdram_ctrl/fpga_sdram_top.v" \
+"../../../../../spi-simulator/design_rtl/sim_model/sdram_model/mt48lc16m16a2.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_cmd.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_core.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_data.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_t.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/sdram_ctrl/sdram_top.v" \
+"../../../../../spi-simulator/design_rtl/my_rtl/sdram_ctrl/tb_fpga_sdram_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
