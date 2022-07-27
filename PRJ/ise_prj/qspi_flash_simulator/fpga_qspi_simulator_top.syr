@@ -1,0 +1,180 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: fpga_qspi_simulator_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "fpga_qspi_simulator_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "fpga_qspi_simulator_top"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-ftg256
+
+---- Source Options
+Top Module Name                    : fpga_qspi_simulator_top
+Verilog Macros                     : { DEBUG_ILA }
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/ipcore_dir/clk_gen.v" into library work
+Parsing module <clk_gen>.
+Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/ipcore_dir/clk_gen_cyp.v" into library work
+Parsing module <clk_gen_cyp>.
+Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/async_fifo/sync_w2r.v" into library work
+Parsing module <sync_w2r>.
+Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/async_fifo/sync_r2w.v" into library work
+Parsing module <sync_r2w>.
+Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/async_fifo/full.v" into library work
+Parsing module <full>.
+Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/async_fifo/fifomen.v" into library work
+Parsing module <fifomem>.
+Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/async_fifo/empty.v" into library work
+Parsing module <empty>.
+Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/dual_port_ram/dual_port_ram.v" into library work
+Parsing module <dual_port_ram>.
+Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/async_fifo/asyn_fifo_top.v" into library work
+Parsing module <asyn_fifo_top>.
+Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/ipcore_dir/chipscope_ila_0.v" into library work
+Parsing module <chipscope_ila_0>.
+Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/ipcore_dir/chipscope_icon.v" into library work
+Parsing module <chipscope_icon>.
+Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_t.v" into library work
+Parsing module <sdram_t>.
+Parsing verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_param.v" included at line 51.
+WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_t.v" Line 60: Redeclaration of ansi port ref_domain is not allowed
+WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_t.v" Line 171: Redeclaration of ansi port sdram_data_i_valid is not allowed
+Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_data.v" into library work
+Parsing module <sdram_data>.
+Parsing verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_param.v" included at line 60.
+Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_core.v" into library work
+Parsing module <sdram_core>.
+Parsing verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_param.v" included at line 59.
+Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_cmd.v" into library work
+Parsing module <sdram_cmd>.
+Parsing verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_param.v" included at line 63.
+Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/ram_rd_sdram.v" into library work
+Parsing module <ram_rd_sdram>.
+Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" into library work
+Parsing module <qspi_rd_ram>.
+WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" Line 360: Redeclaration of ansi port qspi_do is not allowed
+Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/cyp2sdram/fifo_wr_sdram.v" into library work
+Parsing module <fifo_wr_sdram>.
+Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/cyp2sdram/cyp_wr_fifo.v" into library work
+Parsing module <cyp_wr_fifo>.
+Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_top.v" into library work
+Parsing module <sdram_top>.
+WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_top.v" Line 84: Redeclaration of ansi port sdram_data_i is not allowed
+WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_top.v" Line 85: Redeclaration of ansi port sdram_data_o is not allowed
+WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_top.v" Line 86: Redeclaration of ansi port sdram_data_oe is not allowed
+Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi2sdram_top.v" into library work
+Parsing module <qspi2sdram_top>.
+Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/cyp2sdram/cyp2sdram_top.v" into library work
+Parsing module <cyp2sdram_top>.
+ERROR:HDLCompiler:69 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/cyp2sdram/cyp2sdram_top.v" Line 103: <wen> is not declared.
+ERROR:HDLCompiler:598 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/cyp2sdram/cyp2sdram_top.v" Line 16: Module <cyp2sdram_top> ignored due to previous errors.
+Verilog file /home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/cyp2sdram/cyp2sdram_top.v ignored due to errors
+--> 
+
+
+Total memory usage is 407264 kilobytes
+
+Number of errors   :    2 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

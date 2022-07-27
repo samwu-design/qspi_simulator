@@ -1,0 +1,100 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/async_fifo/asyn_fifo_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module asyn_fifo_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/cyp2sdram/cyp2sdram_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cyp2sdram_top
+INFO: [VRFC 10-2458] undeclared symbol fifo_ren, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/cyp2sdram/cyp2sdram_top.v:77]
+INFO: [VRFC 10-2458] undeclared symbol fifo_rempty, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/cyp2sdram/cyp2sdram_top.v:79]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/cyp2sdram/cyp_wr_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cyp_wr_fifo
+INFO: [VRFC 10-2458] undeclared symbol usb_empty, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/cyp2sdram/cyp_wr_fifo.v:100]
+INFO: [VRFC 10-2458] undeclared symbol wen, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/cyp2sdram/cyp_wr_fifo.v:109]
+INFO: [VRFC 10-2458] undeclared symbol wfull, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/cyp2sdram/cyp_wr_fifo.v:115]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/dual_port_ram/dual_port_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dual_port_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/async_fifo/empty.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module empty
+INFO: [VRFC 10-2458] undeclared symbol rempty_val, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/async_fifo/empty.v:48]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/cyp2sdram/fifo_wr_sdram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_wr_sdram
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/async_fifo/fifomen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifomem
+WARNING: [VRFC 10-3380] identifier 'ASIZE' is used before its declaration [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/async_fifo/fifomen.v:10]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/async_fifo/full.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module full
+INFO: [VRFC 10-2458] undeclared symbol wfull_val, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/async_fifo/full.v:46]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/sim_model/sdram_model/mt48lc16m16a2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mt48lc16m16a2
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi2sdram_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module qspi2sdram_top
+INFO: [VRFC 10-2458] undeclared symbol qspi_rd_req, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi2sdram_top.v:60]
+INFO: [VRFC 10-2458] undeclared symbol qspi_rd_busy, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi2sdram_top.v:61]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_master_model.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module qspi_master_model
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'qspi_clk' is not allowed [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_master_model.v:42]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'di' is not allowed [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_master_model.v:199]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module qspi_rd_ram
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'qspi_do' is not allowed [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v:345]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi_simulator_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module qspi_simulator_top
+INFO: [VRFC 10-2458] undeclared symbol rd_avalid, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi_simulator_top.v:88]
+INFO: [VRFC 10-2458] undeclared symbol rd_aready, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi_simulator_top.v:89]
+INFO: [VRFC 10-2458] undeclared symbol rd_valid, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi_simulator_top.v:91]
+INFO: [VRFC 10-2458] undeclared symbol rd_ready, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi_simulator_top.v:92]
+INFO: [VRFC 10-2458] undeclared symbol sdram_init_done, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi_simulator_top.v:99]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/ram_rd_sdram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_rd_sdram
+INFO: [VRFC 10-2458] undeclared symbol ram_wen, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/ram_rd_sdram.v:165]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_cmd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sdram_cmd
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sdram_core
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_data.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sdram_data
+INFO: [VRFC 10-2458] undeclared symbol sd_rd_finished, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_data.v:89]
+INFO: [VRFC 10-2458] undeclared symbol sd_wr_finished, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_data.v:90]
+INFO: [VRFC 10-2458] undeclared symbol end_rdata, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_data.v:173]
+INFO: [VRFC 10-2458] undeclared symbol wdata_valid, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_data.v:277]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sdram_t
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'ref_domain' is not allowed [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_t.v:60]
+INFO: [VRFC 10-2458] undeclared symbol cnt_clk, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_t.v:155]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'sdram_data_i_valid' is not allowed [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_t.v:171]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sdram_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'sdram_data_i' is not allowed [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_top.v:84]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'sdram_data_o' is not allowed [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_top.v:85]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'sdram_data_oe' is not allowed [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_top.v:86]
+INFO: [VRFC 10-2458] undeclared symbol sdram_wr_data_valid, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_top.v:124]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/async_fifo/sync_r2w.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_r2w
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/async_fifo/sync_w2r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_w2r
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/usb2_cyp_vip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module usb2_cyp_vip
+INFO: [VRFC 10-2458] undeclared symbol usb_fd_oe, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/usb2_cyp_vip.v:40]
+WARNING: [VRFC 10-3380] identifier 'r_cnt' is used before its declaration [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/usb2_cyp_vip.v:38]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/tb_fpga_qspi_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_fpga_qspi_sim
+INFO: [VRFC 10-2458] undeclared symbol ph_sd_clk, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/tb_fpga_qspi_sim.v:33]
+INFO: [VRFC 10-2458] undeclared symbol qspi_clk, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/tb_fpga_qspi_sim.v:89]
+INFO: [VRFC 10-2458] undeclared symbol qspi_csn, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/tb_fpga_qspi_sim.v:90]
+INFO: [VRFC 10-2458] undeclared symbol qspi_di, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/tb_fpga_qspi_sim.v:91]
+INFO: [VRFC 10-2458] undeclared symbol qspi_do, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/tb_fpga_qspi_sim.v:92]
+INFO: [VRFC 10-2458] undeclared symbol qspi_wpn, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/tb_fpga_qspi_sim.v:93]
+INFO: [VRFC 10-2458] undeclared symbol qspi_holdn, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/tb_fpga_qspi_sim.v:94]
+INFO: [VRFC 10-2458] undeclared symbol sdram_cke, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/tb_fpga_qspi_sim.v:98]
+INFO: [VRFC 10-2458] undeclared symbol sdram_csn, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/tb_fpga_qspi_sim.v:99]
+INFO: [VRFC 10-2458] undeclared symbol sdram_rasn, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/tb_fpga_qspi_sim.v:100]
+INFO: [VRFC 10-2458] undeclared symbol sdram_casn, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/tb_fpga_qspi_sim.v:101]
+INFO: [VRFC 10-2458] undeclared symbol sdram_wen, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/tb_fpga_qspi_sim.v:102]
+INFO: [VRFC 10-2458] undeclared symbol usb_clk, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/tb_fpga_qspi_sim.v:110]
+INFO: [VRFC 10-2458] undeclared symbol usb_slcs, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/tb_fpga_qspi_sim.v:112]
+INFO: [VRFC 10-2458] undeclared symbol usb_sloe, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/tb_fpga_qspi_sim.v:113]
+INFO: [VRFC 10-2458] undeclared symbol usb_slrd, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/tb_fpga_qspi_sim.v:114]
+INFO: [VRFC 10-2458] undeclared symbol usb_slwr, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/tb_fpga_qspi_sim.v:115]
+INFO: [VRFC 10-2458] undeclared symbol usb_flaga, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/tb_fpga_qspi_sim.v:121]
+INFO: [VRFC 10-2458] undeclared symbol usb_flagb, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/tb_fpga_qspi_sim.v:122]
+INFO: [VRFC 10-2458] undeclared symbol usb_flagc, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/tb_fpga_qspi_sim.v:123]
+INFO: [VRFC 10-2458] undeclared symbol pa0, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/tb_fpga_qspi_sim.v:124]
+INFO: [VRFC 10-2458] undeclared symbol usb_download_finished, assumed default net type wire [D:/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/tb_fpga_qspi_sim.v:131]

@@ -1,0 +1,223 @@
+
+
+NET "fpga_clk" LOC = T8;
+
+
+NET "fpga_clk" IOSTANDARD = LVCMOS33;
+
+
+NET "pa0" LOC = H11;
+NET "usb_clk" LOC = G12;
+NET "usb_flaga" LOC = F12;
+NET "usb_flagb" LOC = F14;
+NET "usb_flagc" LOC = F13;
+NET "usb_slcs" LOC = G16;
+NET "usb_sloe" LOC = G14;
+NET "usb_slrd" LOC = K11;
+NET "usb_slwr" LOC = J12;
+NET "usb_fifoaddr[0]" LOC = H14;
+NET "usb_fifoaddr[1]" LOC = H13;
+NET "usb_fd[0]" LOC = D16;
+NET "usb_fd[1]" LOC = C16;
+NET "usb_fd[2]" LOC = C15;
+NET "usb_fd[3]" LOC = B16;
+NET "usb_fd[4]" LOC = E15;
+NET "usb_fd[5]" LOC = E16;
+NET "usb_fd[6]" LOC = F15;
+NET "usb_fd[7]" LOC = F16;
+NET "usb_fd[8]" LOC = H15;
+NET "usb_fd[9]" LOC = H16;
+NET "usb_fd[10]" LOC = J16;
+NET "usb_fd[11]" LOC = K16;
+NET "usb_fd[12]" LOC = K15;
+NET "usb_fd[13]" LOC = K12;
+NET "usb_fd[14]" LOC = K14;
+NET "usb_fd[15]" LOC = J13;
+
+
+NET "usb_fd[15]" IOSTANDARD = LVCMOS33;
+NET "usb_fd[14]" IOSTANDARD = LVCMOS33;
+NET "usb_fd[13]" IOSTANDARD = LVCMOS33;
+NET "usb_fd[12]" IOSTANDARD = LVCMOS33;
+NET "usb_fd[11]" IOSTANDARD = LVCMOS33;
+NET "usb_fd[10]" IOSTANDARD = LVCMOS33;
+NET "usb_fd[9]" IOSTANDARD = LVCMOS33;
+NET "usb_fd[8]" IOSTANDARD = LVCMOS33;
+NET "usb_fd[7]" IOSTANDARD = LVCMOS33;
+NET "usb_fd[6]" IOSTANDARD = LVCMOS33;
+NET "usb_fd[5]" IOSTANDARD = LVCMOS33;
+NET "usb_fd[4]" IOSTANDARD = LVCMOS33;
+NET "usb_fd[3]" IOSTANDARD = LVCMOS33;
+NET "usb_fd[2]" IOSTANDARD = LVCMOS33;
+NET "usb_fd[1]" IOSTANDARD = LVCMOS33;
+NET "usb_fd[0]" IOSTANDARD = LVCMOS33;
+NET "usb_fifoaddr[1]" IOSTANDARD = LVCMOS33;
+NET "usb_fifoaddr[0]" IOSTANDARD = LVCMOS33;
+
+
+NET "rst_n" LOC = H2;
+NET "sdram_casn" LOC = F2;
+NET "sdram_clk" LOC = H4;
+NET "sdram_csn" LOC = G1;
+NET "sdram_rasn" LOC = F1;
+NET "sdram_wen" LOC = E1;
+NET "sdram_data[0]" LOC = A3;
+NET "sdram_data[1]" LOC = B3;
+NET "sdram_data[2]" LOC = A2;
+NET "sdram_data[3]" LOC = B2;
+NET "sdram_data[4]" LOC = B1;
+NET "sdram_data[5]" LOC = C2;
+NET "sdram_data[6]" LOC = C1;
+NET "sdram_data[7]" LOC = D1;
+NET "sdram_data[8]" LOC = H5;
+NET "sdram_data[9]" LOC = G5;
+NET "sdram_data[10]" LOC = H3;
+NET "sdram_data[11]" LOC = F6;
+NET "sdram_data[12]" LOC = G3;
+NET "sdram_data[13]" LOC = F5;
+NET "sdram_data[14]" LOC = F3;
+NET "sdram_data[15]" LOC = F4;
+
+
+NET "sdram_data[15]" IOSTANDARD = LVCMOS33;
+NET "sdram_data[14]" IOSTANDARD = LVCMOS33;
+NET "sdram_data[13]" IOSTANDARD = LVCMOS33;
+NET "sdram_data[12]" IOSTANDARD = LVCMOS33;
+NET "sdram_data[11]" IOSTANDARD = LVCMOS33;
+NET "sdram_data[10]" IOSTANDARD = LVCMOS33;
+NET "sdram_data[9]" IOSTANDARD = LVCMOS33;
+NET "sdram_data[8]" IOSTANDARD = LVCMOS33;
+NET "sdram_data[7]" IOSTANDARD = LVCMOS33;
+NET "sdram_data[6]" IOSTANDARD = LVCMOS33;
+NET "sdram_data[5]" IOSTANDARD = LVCMOS33;
+NET "sdram_data[4]" IOSTANDARD = LVCMOS33;
+NET "sdram_data[3]" IOSTANDARD = LVCMOS33;
+NET "sdram_data[2]" IOSTANDARD = LVCMOS33;
+NET "sdram_data[1]" IOSTANDARD = LVCMOS33;
+NET "sdram_data[0]" IOSTANDARD = LVCMOS33;
+
+
+NET "sdram_ba[0]" LOC = G6;
+NET "sdram_ba[1]" LOC = J6;
+
+
+NET "sdram_ba[1]" IOSTANDARD = LVCMOS33;
+NET "sdram_ba[0]" IOSTANDARD = LVCMOS33;
+
+
+NET "sdram_addr[0]" LOC = J3;
+NET "sdram_addr[1]" LOC = J4;
+NET "sdram_addr[2]" LOC = K3;
+NET "sdram_addr[3]" LOC = K5;
+NET "sdram_addr[4]" LOC = P1;
+NET "sdram_addr[5]" LOC = N1;
+NET "sdram_addr[6]" LOC = M2;
+NET "sdram_addr[7]" LOC = M1;
+NET "sdram_addr[8]" LOC = L1;
+NET "sdram_addr[9]" LOC = K2;
+NET "sdram_addr[10]" LOC = K6;
+NET "sdram_addr[11]" LOC = K1;
+NET "sdram_addr[12]" LOC = J1;
+
+
+NET "sdram_addr[12]" IOSTANDARD = LVCMOS33;
+NET "sdram_addr[11]" IOSTANDARD = LVCMOS33;
+NET "sdram_addr[10]" IOSTANDARD = LVCMOS33;
+NET "sdram_addr[9]" IOSTANDARD = LVCMOS33;
+NET "sdram_addr[8]" IOSTANDARD = LVCMOS33;
+NET "sdram_addr[7]" IOSTANDARD = LVCMOS33;
+NET "sdram_addr[6]" IOSTANDARD = LVCMOS33;
+NET "sdram_addr[5]" IOSTANDARD = LVCMOS33;
+NET "sdram_addr[4]" IOSTANDARD = LVCMOS33;
+NET "sdram_addr[3]" IOSTANDARD = LVCMOS33;
+NET "sdram_addr[2]" IOSTANDARD = LVCMOS33;
+NET "sdram_addr[1]" IOSTANDARD = LVCMOS33;
+NET "sdram_addr[0]" IOSTANDARD = LVCMOS33;
+
+
+NET "qspi_di" LOC = L16;
+NET "qspi_do" LOC = L13;
+NET "qspi_clk" LOC = M15;
+
+NET "qspi_wpn" LOC = C6;
+NET "qspi_holdn" LOC = D6;
+NET "qspi_csn" LOC = F7;
+
+
+
+NET "qspi_clk" IOSTANDARD = LVCMOS33;
+NET "pa0" IOSTANDARD = LVCMOS33;
+NET "qspi_csn" IOSTANDARD = LVCMOS33;
+NET "qspi_di" IOSTANDARD = LVCMOS33;
+NET "qspi_do" IOSTANDARD = LVCMOS33;
+NET "qspi_holdn" IOSTANDARD = LVCMOS33;
+NET "qspi_wpn" IOSTANDARD = LVCMOS33;
+NET "rst_n" IOSTANDARD = LVCMOS33;
+NET "sdram_casn" IOSTANDARD = LVCMOS33;
+NET "sdram_clk" IOSTANDARD = LVCMOS33;
+NET "sdram_csn" IOSTANDARD = LVCMOS33;
+NET "sdram_rasn" IOSTANDARD = LVCMOS33;
+NET "sdram_wen" IOSTANDARD = LVCMOS33;
+NET "usb_clk" IOSTANDARD = LVCMOS33;
+NET "usb_flaga" IOSTANDARD = LVCMOS33;
+NET "usb_flagb" IOSTANDARD = LVCMOS33;
+NET "usb_flagc" IOSTANDARD = LVCMOS33;
+NET "usb_slcs" IOSTANDARD = LVCMOS33;
+NET "usb_sloe" IOSTANDARD = LVCMOS33;
+NET "usb_slrd" IOSTANDARD = LVCMOS33;
+NET "usb_slwr" IOSTANDARD = LVCMOS33;
+NET "qspi_di" DRIVE = 12;
+NET "qspi_do" DRIVE = 12;
+NET "qspi_holdn" DRIVE = 12;
+NET "qspi_wpn" DRIVE = 12;
+NET "rst_n" DRIVE = 12;
+NET "sdram_casn" DRIVE = 12;
+NET "sdram_clk" DRIVE = 12;
+NET "sdram_csn" DRIVE = 12;
+NET "sdram_rasn" DRIVE = 12;
+NET "sdram_wen" DRIVE = 12;
+NET "usb_clk" DRIVE = 12;
+NET "usb_flaga" DRIVE = 12;
+NET "usb_flagb" DRIVE = 12;
+NET "usb_flagc" DRIVE = 12;
+NET "usb_slcs" DRIVE = 12;
+NET "usb_sloe" DRIVE = 12;
+NET "usb_slrd" DRIVE = 12;
+NET "usb_slwr" DRIVE = 12;
+NET "qspi_di" SLEW = SLOW;
+NET "qspi_do" SLEW = SLOW;
+NET "qspi_holdn" SLEW = SLOW;
+NET "qspi_wpn" SLEW = SLOW;
+NET "rst_n" SLEW = SLOW;
+NET "sdram_casn" SLEW = SLOW;
+NET "sdram_clk" SLEW = SLOW;
+NET "sdram_csn" SLEW = SLOW;
+NET "sdram_rasn" SLEW = SLOW;
+NET "sdram_wen" SLEW = SLOW;
+NET "usb_clk" SLEW = SLOW;
+NET "usb_flaga" SLEW = SLOW;
+NET "usb_flagb" SLEW = SLOW;
+NET "usb_flagc" SLEW = SLOW;
+NET "usb_slcs" SLEW = SLOW;
+NET "usb_sloe" SLEW = SLOW;
+NET "usb_slrd" SLEW = SLOW;
+NET "usb_slwr" SLEW = SLOW;
+
+
+
+PIN "clk_sdram_inst/clkout2_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
+#PIN "clk_sdram_inst/clkout1_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
+#PIN "clk_cyp_inst/clkout1_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
+PIN "clk_cyp_inst/clkout2_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "qspi_clk" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "fpga_clk" CLOCK_DEDICATED_ROUTE = FALSE;
+
+# PlanAhead Generated physical constraints 
+
+# PlanAhead Generated physical constraints 
+
+NET "sdram_cke" LOC = M3;
+
+# PlanAhead Generated IO constraints 
+
+NET "sdram_cke" IOSTANDARD = LVCMOS33;

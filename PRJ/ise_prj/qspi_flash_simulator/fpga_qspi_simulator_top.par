@@ -1,0 +1,384 @@
+Release 14.7 par P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+localhost.localdomain::  Sun May 29 15:38:31 2022
+
+par -w -intstyle ise -ol high -mt off fpga_qspi_simulator_top_map.ncd
+fpga_qspi_simulator_top.ncd fpga_qspi_simulator_top.pcf 
+
+
+Constraints file: fpga_qspi_simulator_top.pcf.
+Loading device for application Rf_Device from file '6slx16.nph' in environment /opt/Xilinx/14.7/ISE_DS/ISE/.
+   "fpga_qspi_simulator_top" is an NCD, version 3.2, device xc6slx16, package ftg256, speed -3
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
+
+Device speed data version:  "PRODUCTION 1.23 2013-10-13".
+
+
+
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                 1,198 out of  18,224    6%
+    Number used as Flip Flops:               1,194
+    Number used as Latches:                      4
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      1,376 out of   9,112   15%
+    Number used as logic:                      653 out of   9,112    7%
+      Number using O6 output only:             358
+      Number using O5 output only:             126
+      Number using O5 and O6:                  169
+      Number used as ROM:                        0
+    Number used as Memory:                     574 out of   2,176   26%
+      Number used as Dual Port RAM:            392
+        Number using O6 output only:           356
+        Number using O5 output only:             4
+        Number using O5 and O6:                 32
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:           182
+        Number using O6 output only:           121
+        Number using O5 output only:             0
+        Number using O5 and O6:                 61
+    Number used exclusively as route-thrus:    149
+      Number with same-slice register load:    137
+      Number with same-slice carry load:        12
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   556 out of   2,278   24%
+  Number of MUXCYs used:                       336 out of   4,556    7%
+  Number of LUT Flip Flop pairs used:        1,722
+    Number with an unused Flip Flop:           788 out of   1,722   45%
+    Number with an unused LUT:                 346 out of   1,722   20%
+    Number of fully used LUT-FF pairs:         588 out of   1,722   34%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of  18,224    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        72 out of     186   38%
+    Number of LOCed IOBs:                       72 out of      72  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                        15 out of      32   46%
+  Number of RAMB8BWERs:                          1 out of      64    1%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       8 out of      16   50%
+    Number used as BUFGs:                        8
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     1 out of       4   25%
+    Number used as DCMs:                         1
+    Number used as DCM_CLKGENs:                  0
+  Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     248    0%
+  Number of BSCANs:                              1 out of       4   25%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      32    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            1 out of       2   50%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 3 secs 
+Finished initial Timing Analysis.  REAL time: 3 secs 
+
+WARNING:Par:288 - The signal qspi_holdn_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal usb_flagb_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal usb_flagc_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_csn_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_wpn_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/Mram_temp_wdata1_RAMD_D1_O has no load.  PAR will not
+   attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/qspi2sdram_inst/ram_rd_sdram_inst/ram_inst/Mram_rammem2_RAMD_D1_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/qspi2sdram_inst/ram_rd_sdram_inst/ram_inst/Mram_rammem1_RAMD_D1_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/Mram_temp_rdata2_RAMD_D1_O has no load.  PAR will not
+   attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/Mram_temp_rdata1_RAMD_D1_O has no load.  PAR will not
+   attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/Mram_temp_wdata2_RAMD_D1_O has no load.  PAR will not
+   attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem58_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem13_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem2_RAMD_O has no load.  PAR will not
+   attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem10_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem34_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem11_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem80_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem1_RAMD_O has no load.  PAR will not
+   attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem12_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem65_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem50_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem74_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem66_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem27_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem16_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem9_RAMD_O has no load.  PAR will not
+   attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem14_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem18_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem61_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem77_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem59_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem60_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem45_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem76_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem64_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem44_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem29_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem49_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem33_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem75_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem63_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem78_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem79_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem47_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem31_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem30_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem17_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem52_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem56_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem51_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem28_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem40_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem35_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem8_RAMD_O has no load.  PAR will not
+   attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem3_RAMD_O has no load.  PAR will not
+   attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem68_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem4_RAMD_O has no load.  PAR will not
+   attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem54_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem70_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem48_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem32_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem62_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem15_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem46_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem26_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem25_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem72_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem67_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem19_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem24_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem36_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem20_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem57_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem6_RAMD_O has no load.  PAR will not
+   attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem38_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem53_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem22_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem5_RAMD_O has no load.  PAR will not
+   attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem37_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem69_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem71_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem43_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem55_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem39_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem7_RAMD_O has no load.  PAR will not
+   attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem73_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem42_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem23_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem21_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem41_RAMD_O has no load.  PAR will
+   not attempt to route this signal.
+Starting Router
+
+
+Phase  1  : 10623 unrouted;      REAL time: 4 secs 
+
+Phase  2  : 7766 unrouted;      REAL time: 4 secs 
+
+Phase  3  : 1928 unrouted;      REAL time: 11 secs 
+
+Phase  4  : 1928 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
+
+Updating file: fpga_qspi_simulator_top.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 16 secs 
+
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 16 secs 
+
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 16 secs 
+
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 16 secs 
+
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 16 secs 
+
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 16 secs 
+Total REAL time to Router completion: 16 secs 
+Total CPU time to Router completion: 15 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+INFO:Par:459 - The Clock Report is not displayed in the non timing-driven mode.
+Timing Score: 0 (Setup: 0, Hold: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net sd_ | SETUP       |         N/A|     5.815ns|     N/A|           0
+  clk                                       | HOLD        |     0.298ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net cyp | SETUP       |         N/A|     7.327ns|     N/A|           0
+  _clk                                      | HOLD        |     0.364ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net qsp | SETUP       |         N/A|     8.263ns|     N/A|           0
+  i_clk_BUFGP                               | HOLD        |     0.400ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net qsp | SETUP       |         N/A|     7.679ns|     N/A|           0
+  i_simulator_inst/CONTROL<0>               | HOLD        |     0.353ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net qsp | SETUP       |         N/A|     0.911ns|     N/A|           0
+  i_simulator_inst/icon_inst/U0/iUPDATE_OUT | HOLD        |     0.415ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net qsp | SETUP       |         N/A|     1.804ns|     N/A|           0
+  i_simulator_inst/qspi2sdram_inst/qspi_rd_ | HOLD        |     0.491ns|            |       0|           0
+  ram_inst/qspi_state_nxt[4]_PWR_11_o_Selec |             |            |            |        |            
+  t_37_o                                    |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 91 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+Total REAL time to PAR completion: 17 secs 
+Total CPU time to PAR completion: 16 secs 
+
+Peak Memory Usage:  662 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 93
+Number of info messages: 2
+
+Writing design to file fpga_qspi_simulator_top.ncd
+
+
+
+PAR done!

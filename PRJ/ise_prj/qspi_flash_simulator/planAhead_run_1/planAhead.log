@@ -1,0 +1,126 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Tue May 24 15:49:49 2022
+# Process ID: 7886
+# Log file: /home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/planAhead_run_1/planAhead.log
+# Journal file: /home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Common 17-86] Your PlanAhead license expires in -1850 day(s)
+INFO: [Device 21-36] Loading parts and site information from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source /home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/pa.fromNetlist.tcl
+# create_project -name qspi_flash_simulator -dir "/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/planAhead_run_1" -part xc6slx16ftg256-3
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/fpga_qspi_simulator_top_cs.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator} {ipcore_dir} }
+# set_property target_constrs_file "qspi_simulator.ucf" [current_fileset -constrset]
+Adding file '/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf' to fileset 'constrs_1'
+# add_files [list {qspi_simulator.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc6slx16ftg256-3
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design fpga_qspi_simulator_top_cs.ngc ...
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/iDOUT_dly<2 : 0> on block ila_pro_0 is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/iDOUT_dly<4 : 0> on block ila_pro_0 is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus U0/U_ICON/iCORE_ID_SEL<15 : 0> on block
+   icon_pro is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/cur_rd_preaddr<7 : 0> on
+   block fpga_qspi_simulator_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/last_rd_preaddr<7 : 0>
+   on block fpga_qspi_simulator_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/Mcompar_GND_13_o_ref_cnt[31]
+   _LessThan_6_o_lut<5 : 0> on block fpga_qspi_simulator_top is not
+   reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file fpga_qspi_simulator_top_cs.edif ...
+ngc2edif: Total memory usage is 109480 kilobytes
+
+Parsing EDIF File [./planAhead_run_1/qspi_flash_simulator.data/cache/fpga_qspi_simulator_top_cs_ngc_928f000a.edif]
+Finished Parsing EDIF File [./planAhead_run_1/qspi_flash_simulator.data/cache/fpga_qspi_simulator_top_cs_ngc_928f000a.edif]
+INFO: [Netlist 29-17] Analyzing 147 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockRegion.xml
+Loading clock buffers from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockBuffers.xml
+Loading package pin functions from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/spartan6lx/xc6slx16/ftg256/Package.xml
+Loading io standards from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan6/drc.xml
+WARNING: [Timing 38-83] Timing library cell SRLC32E does not define port A[4] which is referred to in the netlist. The library cell will be ignored and the cell will be treated as a black box for timing purposes.
+WARNING: [Timing 38-83] Timing library cell SRLC32E does not define port A[3] which is referred to in the netlist. The library cell will be ignored and the cell will be treated as a black box for timing purposes.
+WARNING: [Timing 38-83] Timing library cell SRLC32E does not define port A[2] which is referred to in the netlist. The library cell will be ignored and the cell will be treated as a black box for timing purposes.
+WARNING: [Timing 38-83] Timing library cell SRLC32E does not define port A[1] which is referred to in the netlist. The library cell will be ignored and the cell will be treated as a black box for timing purposes.
+WARNING: [Timing 38-83] Timing library cell SRLC32E does not define port A[0] which is referred to in the netlist. The library cell will be ignored and the cell will be treated as a black box for timing purposes.
+Parsing UCF File [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/.Xil/PlanAhead-7886-localhost.localdomain/ngc2edif/fpga_qspi_simulator_top_cs.xncf]
+Finished Parsing UCF File [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/.Xil/PlanAhead-7886-localhost.localdomain/ngc2edif/fpga_qspi_simulator_top_cs.xncf]
+Parsing UCF File [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'fpga_clk' [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf:4]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'fpga_clk' [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf:8]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'qspi_di' [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf:149]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'qspi_do' [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf:150]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'qspi_wpn' [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf:151]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'qspi_holdn' [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf:152]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'qspi_csn' [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf:153]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'qspi_csn' [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf:160]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'qspi_di' [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf:161]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'qspi_do' [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf:162]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'qspi_holdn' [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf:163]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'qspi_wpn' [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf:164]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'qspi_di' [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf:179]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'qspi_do' [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf:180]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'qspi_holdn' [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf:181]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'qspi_wpn' [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf:182]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'qspi_di' [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf:197]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'qspi_do' [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf:198]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'qspi_holdn' [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf:199]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'qspi_wpn' [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf:200]
+CRITICAL WARNING: [Constraints 18-11] Could not find pin 'clk_gen_inst/clkout1_buf.O' [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf:216]
+CRITICAL WARNING: [Constraints 18-10] Could not create constraint 'CLOCK_DEDICATED_ROUTE' [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf:216]
+CRITICAL WARNING: [Constraints 18-11] Could not find pin 'clk_gen_inst/clkout2_buf.O' [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf:217]
+CRITICAL WARNING: [Constraints 18-10] Could not create constraint 'CLOCK_DEDICATED_ROUTE' [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf:217]
+Finished Parsing UCF File [/home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/qspi_simulator.ucf]
+INFO: [Designutils 20-20] Invalid constraints found, use command 'write_ucf -constraints invalid <file>' to save all the invalid constraints to a file
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 147 instances were transformed.
+  BUFGP => BUFGP (IBUF, BUFG): 1 instances
+  IOBUF => IOBUF (OBUFT, IBUF): 32 instances
+  RAM16X1D => RAM16X1D (RAMD32, RAMD32, GND): 12 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 80 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 16 instances
+
+Phase 0 | Netlist Checksum: eb9bdee9
+link_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2805.328 ; gain = 170.453
+exit
+ERROR: [#UNDEF] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+ (See /home/ise/88-ISE_share/PRJ/ise_prj/qspi_flash_simulator/planAhead_pid7886.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Tue May 24 15:50:25 2022...
+INFO: [Common 17-83] Releasing license: PlanAhead

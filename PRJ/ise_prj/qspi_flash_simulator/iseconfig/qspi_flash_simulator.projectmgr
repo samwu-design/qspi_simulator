@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--This is an ISE project configuration file.-->
+<!--It holds project specific layout data for the projectmgr plugin.-->
+<!--Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.-->
+<Project version="2" owner="projectmgr" name="qspi_flash_simulator" >
+   <!--This is an ISE project configuration file.-->
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/fpga_qspi_simulator_top |home|ise|88-ISE_share|GIT_QSPI_SIMULATOR_V30|PRJ|design_rtl|my_rtl|fpga_qspi_simulator_top.v/qspi_simulator_inst - qspi_simulator_top/cyp2sdram_inst - cyp2sdram_top</ClosedNode>
+         <ClosedNode>/fpga_qspi_simulator_top |home|ise|88-ISE_share|GIT_QSPI_SIMULATOR_V30|PRJ|design_rtl|my_rtl|fpga_qspi_simulator_top.v/qspi_simulator_inst - qspi_simulator_top/cyp2sdram_inst - cyp2sdram_top/cy_wr_fifo_inst - cyp_wr_fifo</ClosedNode>
+         <ClosedNode>/fpga_qspi_simulator_top |home|ise|88-ISE_share|GIT_QSPI_SIMULATOR_V30|PRJ|design_rtl|my_rtl|fpga_qspi_simulator_top.v/qspi_simulator_inst - qspi_simulator_top/cyp2sdram_inst - cyp2sdram_top/cy_wr_fifo_inst - cyp_wr_fifo/wrfifo_inst - asyn_fifo_top</ClosedNode>
+         <ClosedNode>/fpga_qspi_simulator_top |home|ise|88-ISE_share|GIT_QSPI_SIMULATOR_V30|PRJ|design_rtl|my_rtl|fpga_qspi_simulator_top.v/qspi_simulator_inst - qspi_simulator_top/qspi2sdram_inst - qspi2sdram_top</ClosedNode>
+         <ClosedNode>/fpga_qspi_simulator_top |home|ise|88-ISE_share|GIT_QSPI_SIMULATOR_V30|PRJ|design_rtl|my_rtl|fpga_qspi_simulator_top.v/qspi_simulator_inst - qspi_simulator_top/qspi2sdram_inst - qspi2sdram_top/ram_rd_sdram_inst - ram_rd_sdram</ClosedNode>
+         <ClosedNode>/fpga_qspi_simulator_top |home|ise|88-ISE_share|PRJ|design_rtl|my_rtl|fpga_qspi_simulator_top.v</ClosedNode>
+         <ClosedNode>/fpga_qspi_simulator_top |home|ise|88-ISE_share|PRJ|design_rtl|my_rtl|fpga_qspi_simulator_top.v/qspi_simulator_inst - qspi_simulator_top/cyp2sdram_inst - cyp2sdram_top</ClosedNode>
+         <ClosedNode>/fpga_qspi_simulator_top |home|ise|88-ISE_share|PRJ|design_rtl|my_rtl|fpga_qspi_simulator_top.v/qspi_simulator_inst - qspi_simulator_top/qspi2sdram_inst - qspi2sdram_top/fifo_rd_sdram_inst - fifo_rd_sdram</ClosedNode>
+         <ClosedNode>/fpga_qspi_simulator_top |home|ise|88-ISE_share|PRJ|design_rtl|my_rtl|fpga_qspi_simulator_top.v/qspi_simulator_inst - qspi_simulator_top/sdram_ctrl_inst - sdram_top</ClosedNode>
+         <ClosedNode>/qspi2sdram_top |home|ise|88-ISE_share|GIT_QSPI_SIMULATOR_V30|PRJ|design_rtl|my_rtl|qspi2sdram|qspi2sdram_top.v</ClosedNode>
+         <ClosedNode>/qspi2sdram_top_sdtest |home|ise|88-ISE_share|GIT_QSPI_SIMULATOR_V30|PRJ|design_rtl|my_rtl|qspi2sdram|qspi2sdram_top_sdtest.v</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>fpga_qspi_simulator_top (/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/fpga_qspi_simulator_top.v)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001f6000000020000000000000000000000000200000064ffffffff000000810000000300000002000001f60000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>fpga_qspi_simulator_top (/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/fpga_qspi_simulator_top.v)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+         <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>Implement Design/Map</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route</ClosedNode>
+         <ClosedNode>Implement Design/Translate</ClosedNode>
+         <ClosedNode>Synthesize - XST</ClosedNode>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000021a000000010000000100000000000000000000000064ffffffff0000008100000000000000010000021a0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView guiview="File" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000038f000000040101000100000000000000000000000064ffffffff000000810000000000000004000000c800000001000000000000011b0000000100000000000000840000000100000000000001280000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>asyn_fifo_top.v</CurrentItem>
+   </ItemView>
+   <ItemView guiview="Library" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>work</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000128000000010001000100000000000000000000000064ffffffff000000810000000000000001000001280000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>work</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_CDC" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000021a000000010000000100000000000000000000000064ffffffff0000008100000000000000010000021a0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <SourceProcessView>000000ff0000000000000002000001040000012501000000060100000002</SourceProcessView>
+   <CurrentView>Implementation</CurrentView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_XCO" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>CORE Generator</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000021a000000010000000100000000000000000000000064ffffffff0000008100000000000000010000021a0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000021a000000010000000100000000000000000000000064ffffffff0000008100000000000000010000021a0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000021a000000010000000100000000000000000000000064ffffffff0000008100000000000000010000021a0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+</Project>

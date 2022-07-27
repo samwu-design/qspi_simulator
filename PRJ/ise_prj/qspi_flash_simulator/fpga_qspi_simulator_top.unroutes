@@ -1,0 +1,103 @@
+Release 14.7 - par P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Sun May 29 15:38:49 2022
+
+All signals are completely routed.
+
+WARNING:ParHelpers:361 - There are 91 loadless signals in this design. This design will cause Bitgen to issue DRC
+   warnings.
+
+   qspi_csn_IBUF
+   qspi_holdn_IBUF
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem10_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem11_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem12_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem13_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem14_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem15_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem16_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem17_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem18_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem19_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem1_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem20_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem21_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem22_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem23_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem24_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem25_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem26_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem27_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem28_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem29_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem2_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem30_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem31_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem32_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem33_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem34_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem35_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem36_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem37_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem38_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem39_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem3_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem40_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem41_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem42_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem43_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem44_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem45_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem46_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem47_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem48_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem49_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem4_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem50_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem51_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem52_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem53_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem54_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem55_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem56_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem57_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem58_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem59_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem5_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem60_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem61_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem62_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem63_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem64_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem65_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem66_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem67_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem68_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem69_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem6_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem70_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem71_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem72_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem73_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem74_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem75_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem76_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem77_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem78_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem79_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem7_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem80_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem8_RAMD_O
+   qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/fifo/Mram_mem9_RAMD_O
+   qspi_simulator_inst/qspi2sdram_inst/ram_rd_sdram_inst/ram_inst/Mram_rammem1_RAMD_D1_O
+   qspi_simulator_inst/qspi2sdram_inst/ram_rd_sdram_inst/ram_inst/Mram_rammem2_RAMD_D1_O
+   qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/Mram_temp_rdata1_RAMD_D1_O
+   qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/Mram_temp_rdata2_RAMD_D1_O
+   qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/Mram_temp_wdata1_RAMD_D1_O
+   qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/Mram_temp_wdata2_RAMD_D1_O
+   qspi_wpn_IBUF
+   usb_flagb_IBUF
+   usb_flagc_IBUF
+
+

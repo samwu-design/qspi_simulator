@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_fpga_qspi_sim_behav/xsimk.exe -simmode gui -wdb tb_fpga_qspi_sim_behav.wdb -simrunnum 0 -socket 53019
+Design successfully loaded
+Design Loading Memory Usage: 72224 KB (Peak: 72224 KB)
+Design Loading CPU Usage: 77 ms
+Simulation completed
+Simulation Memory Usage: 73344 KB (Peak: 73344 KB)
+Simulation CPU Usage: 6233 ms

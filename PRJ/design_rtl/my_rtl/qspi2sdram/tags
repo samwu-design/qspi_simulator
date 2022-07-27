@@ -1,0 +1,44 @@
+S_QSPI_CMD	qspi_rd_fifo.v	96
+adress_flag	qspi_rd_fifo.v	37
+always	qspi_rd_fifo.v	/^always@(posedge qspi_clk or negedge rst_n)begin$/
+always	qspi_rd_fifo.v	/^always@(posedge clk or negedge rst_n)begin$/
+bit_cnt	qspi_rd_fifo.v	60
+byte_cnt	qspi_rd_fifo.v	61
+byte_flag	qspi_rd_fifo.v	39
+cmd_fstrd_08h	qspi_rd_fifo.v	36
+cmd_fstrd_08h	qspi_rd_fifo.v	152
+cur_value	qspi_rd_fifo.v	44
+cur_value	qspi_rd_fifo.v	46
+dummy_end	qspi_rd_fifo.v	38
+in_dat	qspi_rd_fifo.v	43
+qspi_state	qspi_rd_fifo.v	94
+read_end	qspi_rd_fifo.v	40
+ASIZE	fifo_rd_sdram.v	/^	.ASIZE(10)     \/\/ 10 --> deepth 512 $/
+S_RD_IDLE	fifo_rd_sdram.v	78
+always	fifo_rd_sdram.v	/^always@(posedge sdram_clk or negedge rst_n)begin$/
+always	fifo_rd_sdram.v	/^always@(posedge sdram_clk or negedge rst_n)begin$/
+always	fifo_rd_sdram.v	/^always@(posedge sdram_clk or negedge rst_n)begin$/
+qspi_rd_busy	fifo_rd_sdram.v	146
+qspi_rd_posedge	fifo_rd_sdram.v	50
+qspi_rd_posedge	fifo_rd_sdram.v	63
+qspi_rd_req0	fifo_rd_sdram.v	49
+qspi_rd_req1	fifo_rd_sdram.v	49
+rd_avalid	fifo_rd_sdram.v	148
+rd_cnt	fifo_rd_sdram.v	84
+rd_ready	fifo_rd_sdram.v	149
+wen	fifo_rd_sdram.v	45
+wen	fifo_rd_sdram.v	147
+RD_BL	qspi2sdram_top.v	/^	.RD_BL(2)$/
+M_IDLE	qspi_master_model.v	49
+always	qspi_master_model.v	/^always@(posedge clk)begin$/
+always	qspi_master_model.v	/^always@(posedge clk or negedge rst_n)begin$/
+always	qspi_master_model.v	/^always@(posedge clk or negedge rst_n)begin$/
+cmd_end	qspi_master_model.v	141
+m_cnt	qspi_master_model.v	110
+qspi_clk	qspi_master_model.v	25
+qspi_clk	qspi_master_model.v	29
+rand	qspi_master_model.v	36
+rst_n	qspi_master_model.v	26
+rst_n	qspi_master_model.v	30
+start	qspi_master_model.v	41
+start	qspi_master_model.v	42
