@@ -1,4 +1,5 @@
-/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/fpga_qspi_simulator_top.ngc 1653838668
-ipcore_dir/chipscope_ila_0.ngc 1653771580
+/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/fpga_qspi_simulator_top.ngc 1659472137
+ipcore_dir/chipscope_ila_0.ngc 1659465661
 ipcore_dir/chipscope_icon.ngc 1653723154
+ipcore_dir/asyn_fifo.ngc 1659352671
 OK

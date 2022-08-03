@@ -1,4 +1,4 @@
-C51 COMPILER V6.12  FW                                                                     07/22/2022 09:39:44 PAGE 1   
+C51 COMPILER V6.12  FW                                                                     08/03/2022 09:05:05 PAGE 1   
 
 
 C51 COMPILER V6.12, COMPILATION OF MODULE FW
@@ -62,7 +62,7 @@ stmt level    source
   53          BOOL TD_Resume(void);
   54          
   55          BOOL DR_GetDescriptor(void);
-C51 COMPILER V6.12  FW                                                                     07/22/2022 09:39:44 PAGE 2   
+C51 COMPILER V6.12  FW                                                                     08/03/2022 09:05:05 PAGE 2   
 
   56          BOOL DR_SetConfiguration(void);
   57          BOOL DR_GetConfiguration(void);
@@ -126,7 +126,7 @@ stmt level    source
  115   1         pHighSpeedConfigDscr = (WORD)&HighSpeedConfigDscr;
  116   1         pFullSpeedConfigDscr = (WORD)&FullSpeedConfigDscr;
  117   1         pStringDscr = (WORD)&StringDscr;
-C51 COMPILER V6.12  FW                                                                     07/22/2022 09:39:44 PAGE 3   
+C51 COMPILER V6.12  FW                                                                     08/03/2022 09:05:05 PAGE 3   
 
  118   1      
  119   1         // Is the descriptor table in external RAM (> 16Kbytes)?  If yes,
@@ -190,7 +190,7 @@ stmt level    source
  177   2      
  178   2            // Check for pending SETUP
  179   2            if(GotSUD)
-C51 COMPILER V6.12  FW                                                                     07/22/2022 09:39:44 PAGE 4   
+C51 COMPILER V6.12  FW                                                                     08/03/2022 09:05:05 PAGE 4   
 
  180   2            {
  181   3               SetupCommand();          // Implement setup command
@@ -254,7 +254,7 @@ stmt level    source
  238   3                        break;
  239   3                     case GD_DEVICE_QUALIFIER:            // Device Qualifier
  240   3      			   	  // only retuen a device qualifier if this is a high speed
-C51 COMPILER V6.12  FW                                                                     07/22/2022 09:39:44 PAGE 5   
+C51 COMPILER V6.12  FW                                                                     08/03/2022 09:05:05 PAGE 5   
 
  241   3      				  // capable chip.
  242   3      			   	  if (HighSpeedCapable())
@@ -318,7 +318,7 @@ stmt level    source
  300   3                        break;
  301   3                     case GS_ENDPOINT:         // End Point
  302   3                        EP0BUF[0] = *(BYTE xdata *) epcs(SETUPDAT[4]) & bmEPSTALL;
-C51 COMPILER V6.12  FW                                                                     07/22/2022 09:39:44 PAGE 6   
+C51 COMPILER V6.12  FW                                                                     08/03/2022 09:05:05 PAGE 6   
 
  303   3                        EP0BUF[1] = 0;
  304   3                        EP0BCH = 0;
@@ -382,7 +382,7 @@ stmt level    source
  362   1         EP0CS |= bmHSNAK;
  363   1      }
  364          
-C51 COMPILER V6.12  FW                                                                     07/22/2022 09:39:44 PAGE 7   
+C51 COMPILER V6.12  FW                                                                     08/03/2022 09:05:05 PAGE 7   
 
  365          // Wake-up interrupt handler
  366          void resume_isr(void) interrupt WKUP_VECT

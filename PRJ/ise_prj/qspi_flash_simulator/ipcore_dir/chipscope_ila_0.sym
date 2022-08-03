@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="chipscope_ila_0">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2022-7-27T9:20:51</timestamp>
+    <timestamp>2022-8-3T8:46:44</timestamp>
     <pin polarity="Input" x="0" y="80" name="control[35:0]" />
     <pin polarity="Input" x="0" y="112" name="clk" />
-    <pin polarity="Input" x="0" y="176" name="trig0[79:0]" />
+    <pin polarity="Input" x="0" y="176" name="trig0[136:0]" />
     <graph>
         <text style="fontsize:40;fontname:Arial" x="32" y="32">chipscope_ila_0</text>
         <rect width="256" x="32" y="32" height="672" />
@@ -13,6 +13,6 @@
         <line x2="32" y1="112" y2="112" x1="0" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="112" type="pin clk" />
         <line x2="32" y1="176" y2="176" style="linewidth:W" x1="0" />
-        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="176" type="pin trig0[79:0]" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="176" type="pin trig0[136:0]" />
     </graph>
 </symbol>

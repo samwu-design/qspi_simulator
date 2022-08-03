@@ -154,22 +154,10 @@ always @ (posedge clk or negedge rst_n) begin
 	else begin
 		case (work_state_r)
 			S_IDLE:	begin
-				//if(sdram_ref_req && sdram_init_done) begin  // auto refresh
-				//	work_state_r <= S_AR; 		
-				//end 		
-				//else if(sdram_wr_req & sdram_init_done)	begin  // write
-				//	work_state_r <= S_RAS_ACTIVE;	
-				//end											
-				//else if(sdram_rd_req && sdram_init_done) begin //read
-				//	work_state_r <= S_RAS_ACTIVE;	
-				//end
-				//else begin 
-				//	work_state_r <= S_IDLE;
-				//end
 				if(sdram_init_done)begin
-					if(sdram_ref_req)
+					if(sdram_ref_req)          // if have the priority               
 						work_state_r <= S_AR;
-					else if(sdram_wr_req || sdram_rd_req)
+					else if(sdram_wr_req || sdram_rd_req)  // actually only one will occur, so no need a arbiter here
 						//work_state_r <= S_RAS_ACTIVE;
 						work_state_r <= S_NOP;
 					else
@@ -239,7 +227,7 @@ always @ (posedge clk or negedge rst_n) begin
 			
 			S_TDAL: begin  // tWR 写完数据后 需要等1clk+7.5ns = 2 周期 + (with auto precharge)tRP(3) = 5
 				if(end_tdal)
-					work_state_r <= S_IDLE;
+					work_state_r <= S_IDLE;  // read mode is autoprecharge
 					//work_state_r <= S_R_PRECHARGE;
 				else
 					work_state_r <= S_TDAL;
@@ -252,8 +240,8 @@ always @ (posedge clk or negedge rst_n) begin
 
 			S_TRFC:	begin
 				if(end_trfc)
-					//work_state_r <= S_AR1;
-					work_state_r <= S_IDLE;
+					work_state_r <= S_AR1;      // suggest twice for autorefresh
+					//work_state_r <= S_IDLE;
 				else
 					work_state_r <= S_TRFC;
 			end
@@ -316,6 +304,14 @@ assign sdram_wr_ack = (work_state_r == S_WR_CMD);
 //当次读请求响应信号 一个周期
 assign sdram_rd_ack = (work_state_r == S_RD_CMD);		
 
-assign sdram_wr_data_valid = (cur_work_state == S_WR_CMD || cur_work_state == S_WR_DATA);
+//assign sdram_wr_data_valid = (cur_work_state == S_WR_CMD || cur_work_state == S_WR_DATA);
+reg sdram_wr_data_valid;
+always@(*)begin
+	if(cur_work_state == S_WR_CMD || cur_work_state == S_WR_DATA)
+		sdram_wr_data_valid = 1;
+	else
+	   sdram_wr_data_valid = 0;
+		
+end
 
 endmodule

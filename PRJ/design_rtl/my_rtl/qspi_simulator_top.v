@@ -45,7 +45,7 @@ module qspi_simulator_top(
 	output          sdram_data_oe,
 
 	// usb2
-	output 		  usb_clk,
+	input 		  usb_clk,
 	output  [1:0]     usb_fifoaddr,  //CY68013 FIFO Address
     	output  	  usb_slcs,      //CY68013 Chipset select
     	output  	  usb_sloe,      //CY68013 Data output enable
@@ -145,28 +145,28 @@ cyp2sdram_top cyp2sdram_inst(
 
 
 
-//`ifdef DEBUG_ILA
-//wire[35:0] CONTROL;
-//wire[136:0] trig0;
-//	
-//assign trig0 = {wr_ready,wr_valid,wr_addr[23:0],wr_data,rd_ready,rd_valid,rd_aready,rd_avalid,rd_addr[23:0],rd_data,sdram_rasn,sdram_casn,sdram_wen,sdram_ba[1:0],sdram_addr[12:0],sdram_data_oe,sdram_data_o,sdram_data_i};	
-//
-//
-//
-//chipscope_icon icon_inst(
-//    .CONTROL0  (CONTROL)
-//);	
-//	
-// chipscope_ila_0  cy_ila_inst(
-//    .CONTROL	(CONTROL),
-//    //.CLK			(qspi_clk),
-//	 .CLK			(sd_clk),
-//	 //.CLK			(cyp_clk),
-//    .TRIG0		(trig0)//,
-//	 //.TRIG1		(trig1),
-//	 //.TRIG2		(trig2)
-//	 );
-// `endif
+`ifdef DEBUG_ILA
+wire[35:0] CONTROL;
+wire[136:0] trig0;
+	
+assign trig0 = {wr_ready,wr_valid,wr_addr,wr_data
+					,rd_avalid,rd_aready,rd_addr,rd_valid,rd_ready,rd_data
+					,sdram_rasn,sdram_casn,sdram_wen,sdram_ba,sdram_addr,sdram_data_oe,sdram_data_i,sdram_data_o
+					};	
+
+chipscope_icon icon_inst(
+    .CONTROL0  (CONTROL)
+);	
+	
+ chipscope_ila_0  db_ila_inst(
+    .CONTROL	(CONTROL),
+    //.CLK			(qspi_clk),
+	 //.CLK			(sd_clk),
+	 .CLK			(sd_clk),
+	 //.CLK			(cyp_clk),
+    .TRIG0		(trig0)
+	 );
+ `endif
 
 
 endmodule

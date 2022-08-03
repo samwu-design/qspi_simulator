@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sun May 29 15:38:27 2022
+// Written by: Map P.20131013 on Tue Aug 02 20:29:30 2022
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -28,6 +28,8 @@ COMP "sdram_addr<7>" LOCATE = SITE "M1" LEVEL 1;
 COMP "sdram_addr<8>" LOCATE = SITE "L1" LEVEL 1;
 COMP "sdram_addr<9>" LOCATE = SITE "K2" LEVEL 1;
 COMP "usb_clk" LOCATE = SITE "G12" LEVEL 1;
+PIN usb_clk_pin<0> = BEL "usb_clk" PINNAME PAD;
+PIN "usb_clk_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
 COMP "sdram_data<0>" LOCATE = SITE "A3" LEVEL 1;
 COMP "sdram_data<1>" LOCATE = SITE "B3" LEVEL 1;
 COMP "sdram_data<2>" LOCATE = SITE "A2" LEVEL 1;
@@ -79,11 +81,8 @@ COMP "qspi_wpn" LOCATE = SITE "C6" LEVEL 1;
 COMP "usb_sloe" LOCATE = SITE "G14" LEVEL 1;
 COMP "usb_slrd" LOCATE = SITE "K11" LEVEL 1;
 COMP "usb_slwr" LOCATE = SITE "J12" LEVEL 1;
-PIN clk_cyp_inst/clkout2_buf_pin<1> = BEL "clk_cyp_inst/clkout2_buf" PINNAME
-        O;
-PIN "clk_cyp_inst/clkout2_buf_pin<1>" CLOCK_DEDICATED_ROUTE = FALSE;
-PIN clk_sdram_inst/clkout2_buf_pin<1> = BEL "clk_sdram_inst/clkout2_buf"
+PIN clk_sdram_inst/clkout1_buf_pin<1> = BEL "clk_sdram_inst/clkout1_buf"
         PINNAME O;
-PIN "clk_sdram_inst/clkout2_buf_pin<1>" CLOCK_DEDICATED_ROUTE = FALSE;
+PIN "clk_sdram_inst/clkout1_buf_pin<1>" CLOCK_DEDICATED_ROUTE = FALSE;
 SCHEMATIC END;
 

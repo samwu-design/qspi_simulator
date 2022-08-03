@@ -76,7 +76,7 @@ end
 assign ref_60ms = (ref_cnt == T_REFRESH_PERIOD);
 
 // during the period no read and write requrst 
-assign ref_domain = ( ref_cnt>=(T_REFRESH_PERIOD - 31'd100) && ref_cnt<=T_REFRESH_PERIOD );
+assign ref_domain = ( ref_cnt>=(T_REFRESH_PERIOD - T_REFRESH_DOMAIN) && ref_cnt<=T_REFRESH_PERIOD );
 
 always@(posedge clk or negedge rst_n)begin
 	if(!rst_n)begin

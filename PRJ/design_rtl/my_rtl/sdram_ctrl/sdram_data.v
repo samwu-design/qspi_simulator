@@ -260,21 +260,30 @@ end
 
 
 // count recive data from fifo;
+
+assign wdata_valid = (wr_cnt == W_BL-1) && wr_state == S_WR_IDLE && wr_valid && wr_ready;
+//reg wdata_valid;
 always@(posedge clk or negedge rst_n)begin
 	if(!rst_n)begin
 		wr_cnt <= 3'd0;
+	//	wdata_valid <= 0;
 	end
-	else if(wr_state == S_WR_IDLE && wr_valid && wr_ready) begin
-		if(wdata_valid)
-			wr_cnt <= 3'd0;
-		else
-			wr_cnt <= wr_cnt + 1;
+	else if(wr_state == S_WR_IDLE)begin
+      if(wr_valid && wr_ready) begin
+		    if(wr_cnt == W_BL-1)
+				 wr_cnt <= 3'd0;
+		    else
+			    wr_cnt <= wr_cnt + 3'd1;
+		end
+		else begin
+			wr_cnt <= wr_cnt;
+		end
 	end
-	else
-		wr_cnt <= wr_cnt;
+	else begin
+			wr_cnt <= wr_cnt;
+	end	
 end
 
-assign wdata_valid = (wr_cnt == W_BL-1);
 
 
 always@(posedge clk)begin

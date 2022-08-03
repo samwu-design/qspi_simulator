@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Sat May 28 19:29:56 2022
+# Date: Mon Aug  1 12:25:07 2022
 #
 ##############################################################
 #
@@ -197,15 +197,15 @@ CSET override_pll=false
 CSET platform=lin64
 CSET pll_bandwidth=OPTIMIZED
 CSET pll_clk_feedback=CLKFBOUT
-CSET pll_clkfbout_mult=25
+CSET pll_clkfbout_mult=19
 CSET pll_clkfbout_phase=0.000
 CSET pll_clkin_period=20.000
-CSET pll_clkout0_divide=13
+CSET pll_clkout0_divide=10
 CSET pll_clkout0_duty_cycle=0.500
 CSET pll_clkout0_phase=0.000
-CSET pll_clkout1_divide=13
+CSET pll_clkout1_divide=119
 CSET pll_clkout1_duty_cycle=0.500
-CSET pll_clkout1_phase=17.308
+CSET pll_clkout1_phase=180.000
 CSET pll_clkout2_divide=1
 CSET pll_clkout2_duty_cycle=0.500
 CSET pll_clkout2_phase=0.000
@@ -266,4 +266,4 @@ CSET use_status=false
 MISC pkg_timestamp=2012-05-10T12:44:55Z
 # END Extra information
 GENERATE
-# CRC: b903a531
+# CRC: 57e44bb1

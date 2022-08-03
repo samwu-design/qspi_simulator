@@ -1,14 +1,16 @@
 // // 75-133mhz-7.5ns  条件? 参数配置数??
 parameter TRP  = 9'd3;  // trp = 20ns
-parameter TRFC = 9'd9;  // trc = 66ns
+//parameter TRFC = 9'd9;  // trc =min 66ns
+parameter TRFC = 9'd10;
 parameter TMRD = 9'd2;  // mrd = 2
 parameter TRCD = 9'd3;  // trcd = 20ns
 parameter TCL  = 9'd3;  // cl = 3 clk 
 parameter TDAL = 9'd5;  // tWR + tRP = (1clk + 7.5ns = 3 clk) -- (auto precharg--> + 2clk)
 
 // 刷新周期计数,?60ms?(理论?64ms，保?4ms的时间避免踩点错?)
-parameter T_REFRESH_PERIOD = 32'd8_000_000; 
-//parameter T_REFRESH_PERIOD = 32'd7_000_000;
+//parameter T_REFRESH_PERIOD = 32'd8_000_000; // 60ms
+parameter T_REFRESH_PERIOD = 32'd1041;   // 52.5ms
+parameter T_REFRESH_DOMAIN = 31'd50;
 parameter T_200US = 15'd26_667; 
 
 // write burst length
@@ -29,7 +31,8 @@ parameter	CMD_PRECHARGE	= 5'b10010;	// PRECHARGE
 parameter	CMD_A_REF	= 5'b10001;	// AOTO REFRESH
 parameter	CMD_LMR		= 5'b10000;	// LODE MODE REGISTER A0~A11  A12=0
 
-parameter	MODE_REGISTER	= { 1'b0,       // A12 reserved
+parameter	MODE_REGISTER	= { 
+					 1'b0,       // A12 reserved
 				    2'b00,      // ba1 ba0
 				    1'b0,       // burst mode 0-programed burst length
 				    2'b00,      // 00-stand op

@@ -15,11 +15,12 @@
 
 module cyp2sdram_top(
 	input cyp_clk,   // 48mhz
+	input usb_clk,
+	
 	input sdram_clk, // 133mhz
 	input rst_n,
 	input  sdram_init_done,
     	
-	output 		  usb_clk,
 	output  [1:0]     usb_fifoaddr,  //CY68013 FIFO Address
     	output  	  usb_slcs,      //CY68013 Chipset select
     	output  	  usb_sloe,      //CY68013 Data output enable
@@ -55,7 +56,7 @@ cyp_wr_fifo cy_wr_fifo_inst(/*autoinst*/
     .cyp_clk                        (cyp_clk                                    ), // input 
     .rst_n                          (rst_n                                      ), // input 
     .sdram_init_done                (sdram_init_done                            ),	
-    .usb_clk                        (usb_clk                                    ), // output
+    .usb_clk                        (usb_clk                                    ), // input  phase 180 of cyp_clk
     .usb_fifoaddr                   (usb_fifoaddr[1:0]                          ), // output
     .usb_slcs                       (usb_slcs                                   ), // output
     .usb_sloe                       (usb_sloe                                   ), // output
@@ -96,23 +97,24 @@ fifo_wr_sdram fifo_wr_sdram_inst(/*autoinst*/
     // 
 );
 
-`ifdef DEBUG_ILA
-wire[35:0] CONTROL;
-wire[79:0] trig0;
-	
-assign trig0 = {wr_ready,wr_valid,wr_addr,wr_data,fifo_rdata,fifo_rempty,fifo_ren,usb_slrd,usb_sloe,usb_fd_oe,usb_flaga,usb_fd_i};	
+//`ifdef DEBUG_ILA
+//wire[35:0] CONTROL;
+//wire[79:0] trig0;
+//	
+//assign trig0 = {wr_ready,wr_valid,wr_addr,wr_data,fifo_rdata,fifo_rempty,fifo_ren,usb_slrd,usb_sloe,usb_flagb,usb_flaga,usb_fd_i};	
+//
+//chipscope_icon icon_inst(
+//    .CONTROL0  (CONTROL)
+//);	
+//	
+// chipscope_ila_0  cy_ila_inst(
+//    .CONTROL	(CONTROL),
+//    //.CLK			(qspi_clk),
+//	 //.CLK			(sd_clk),
+//	 .CLK			(sdram_clk),
+//	 //.CLK			(cyp_clk),
+//    .TRIG0		(trig0)
+//	 );
+// `endif
 
-chipscope_icon icon_inst(
-    .CONTROL0  (CONTROL)
-);	
-	
- chipscope_ila_0  cy_ila_inst(
-    .CONTROL	(CONTROL),
-    //.CLK			(qspi_clk),
-	 .CLK			(sd_clk),
-	 .CLK			(sdram_clk),
-	 //.CLK			(cyp_clk),
-    .TRIG0		(trig0)
-	 );
- `endif
 endmodule

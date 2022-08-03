@@ -37,7 +37,8 @@ module fpga_qspi_simulator_top(
 	inout  [15:0]   sdram_data,
 
 	// usb2
-	output 		  usb_clk,
+	//output 		  usb_clk,
+	input 		  usb_clk,
 	output  [1:0]     usb_fifoaddr,  //CY68013 FIFO Address
     	output  	  usb_slcs,      //CY68013 Chipset select
     	output  	  usb_sloe,      //CY68013 Data output enable
@@ -92,37 +93,27 @@ generate
    		   .T(!usb_fd_oe)      // 3-state enable input, high=input, low=output
    		);
 	end
-
-
-
-
 endgenerate
 
+
+assign cyp_clk = usb_clk ;
+assign sdram_clk = sd_clk;
 
 clk_gen clk_sdram_inst 
  (// Clock in ports
   .CLK_IN1			(fpga_clk),
   // Clock out ports
   .CLK_OUT1       (sd_clk),
-  .CLK_OUT2       (sdram_clk),
+  .CLK_OUT2       (),
   // Status and control signals
   .RESET          (~rst_n),
   .LOCKED         (LOCKED0)
  );
-
-clk_gen_cyp clk_cyp_inst 
- (// Clock in ports
-  .CLK_IN1			(fpga_clk),
-  // Clock out ports
-  .CLK_OUT1       (cyp_clk),
-  .CLK_OUT2       (usb_clk),
-  // Status and control signals
-  .RESET          (~rst_n),
-  .LOCKED         (LOCKED1)
- );
-
+ 
+ 
 wire resetn;
-assign resetn = LOCKED0 && LOCKED1 && rst_n;
+//assign resetn = LOCKED0 && LOCKED1 && rst_n;
+assign resetn = LOCKED0 && rst_n;
 
 qspi_simulator_top qspi_simulator_inst(/*autoinst*/
     .rst_n                          (resetn                                      ), // input 
@@ -139,7 +130,6 @@ qspi_simulator_top qspi_simulator_inst(/*autoinst*/
     .qspi_holdn                     (qspi_holdn                                      ), // input 
 
     	// sdram if
-    //.sdram_clk                      (sdram_clk                                  ), // output
     .sdram_cke                      (sdram_cke                                  ), // output
     .sdram_csn                      (sdram_csn                                  ), // output
     .sdram_rasn                     (sdram_rasn                                 ), // output
@@ -152,7 +142,7 @@ qspi_simulator_top qspi_simulator_inst(/*autoinst*/
     .sdram_data_oe                  (sdram_data_oe                              ), // output
 
     	// usb2
-    .usb_clk                        (                                    ), // output
+    .usb_clk                        (cyp_clk                                    ), // input  180 phase off cy_usb
     .usb_fifoaddr                   (usb_fifoaddr[1:0]                          ), // output
     .usb_slcs                       (usb_slcs                                   ), // output
     .usb_sloe                       (usb_sloe                                   ), // output

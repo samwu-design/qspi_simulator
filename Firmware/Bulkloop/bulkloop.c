@@ -42,23 +42,16 @@ void TD_Init(void)             // Called once at startup
    CPUCS = ((CPUCS & ~bmCLKSPD) | bmCLKSPD1) ;
 	SYNCDELAY;
 
-   REVCTL = 0x01; // REVCTL.0 and REVCTL.1 to set to 1
+   REVCTL = 0x03; // REVCTL.0 and REVCTL.1 to set to 1
 	SYNCDELAY;  
 
-   // [7] IFCLKSRC: 0- EXTEND 1-INTERNAL;[6] 30/48: 0-30MHZ 1-48MHZ; [5]IFCLKOE:0-OUT; [4]IFCLKPOL: 0
+   // [7] IFCLKSRC: 0- EXTEND 1-INTERNAL;[6] 30/48: 0-30MHZ 1-48MHZ; [5]IFCLKOE:0-IN 1-OUT; [4]IFCLKPOL: 0
    // [3] ASYNC:0-SYNC 1-ASYNC; [2]G_STATE 0-XX 1-PORT[0:2]; [1:0] IFCFG:00-PORT 01-RSV 11-SLAVE FIFO
    //IFCONFIG |= 0x43; // set the slave FIFO interface to 48MHz / slave fifo
-	IFCONFIG |= 0x53; // IFCLK 48MHz / IFCLK REVERT/ slave fifo
+	//IFCONFIG |= 0x53; // IFCLK 48MHz / IFCLK REVERT/ slave fifo
 	//IFCONFIG |= 0x13; // IFCLK 30MHz/ IFCLK REVERT / slave fifo
-	SYNCDELAY;	
-
-  FIFORESET = 0x80; // Reset the FIFO
-  SYNCDELAY;
-  FIFORESET = 0x02;
-  SYNCDELAY;
-  FIFORESET = 0x00;
-  SYNCDELAY;
-
+   IFCONFIG |= 0xE3; // 1110 0011  INTERNAL CLK  OUTPUT OE SLAVE FIFO
+	SYNCDELAY;	 
 
   // Registers which require a synchronization delay, see section 15.14
   // FIFORESET        FIFOPINPOLAR
@@ -84,6 +77,51 @@ void TD_Init(void)             // Called once at startup
   // default: EP2, EP4, EP6, and EP8 are double buffered
 
 
+  // we are just using the default values, yes this is not necessary...
+  // see TRM section 15.14
+  
+  //EP2CFG = 0xA0;                // OUT  valid bulk 512B 4buf
+  EP2CFG = 0xA8;                // OUT  valid bulk 1024B 4buf
+  //EP2CFG = 0xA2;                  // OUT  valid bulk 512B 2buf
+  SYNCDELAY;                    
+  
+  //EP4CFG = 0xA0;                // OUT  valid 512B 2BUF
+  //SYNCDELAY;                    
+  //EP6CFG = 0x7f;                // IN   invalid
+  //SYNCDELAY;                    
+  //EP8CFG = 0x7f;                // IN   invalid
+  //SYNCDELAY;
+
+
+  FIFORESET = 0x80; // Reset the FIFO
+  SYNCDELAY;
+  FIFORESET = 0x82;
+  SYNCDELAY;
+  FIFORESET = 0x00;
+  SYNCDELAY;
+
+  OUTPKTEND = 0x82;  //
+  SYNCDELAY;
+  OUTPKTEND = 0x82;  //
+  SYNCDELAY;
+  OUTPKTEND = 0x82;  //
+  SYNCDELAY;
+  OUTPKTEND = 0x82;  //
+  SYNCDELAY;
+  // 
+  //SYNCDELAY;
+  //EP2FIFOCFG = 0x00;              // AUTO=0, WORDWIDE=0(0-8bit 1-16bits)                    
+  EP2FIFOCFG = 0x11;              // AUTO=1, WORDWIDE=1
+  SYNCDELAY;
+
+  //EP4FIFOCFG = 0x11;              // AUTO=1, WORDWIDE=1
+  //SYNCDELAY;  
+        
+  //EP6FIFOCFG = 0x00;              // AUTO=0, WORDWIDE=0
+  //SYNCDELAY;                    
+  //EP6FIFOCFG = 0x0D;              // AUTO=1, WORDWIDE=1
+  //SYNCDELAY;
+                
 
 	// [7:4] flagb: 
 	// [3:0] flaga:
@@ -103,46 +141,19 @@ void TD_Init(void)             // Called once at startup
    FIFOPINPOLAR = 0x00;   // ACTIVE LOW
 	SYNCDELAY;
 
-
-  // we are just using the default values, yes this is not necessary...
-  // see TRM section 15.14
-  
-  //EP2CFG = 0xA0;                // OUT  valid bulk 512B 4buf
-  //EP2CFG = 0xA8;                // OUT  valid bulk 1024B 4buf
-  EP2CFG = 0xA2;                // OUT  valid bulk 512B 2buf
-  SYNCDELAY;                    
-  
-  EP4CFG = 0xA0;                // OUT  valid 512B 2BUF
-  SYNCDELAY;                    
-  //EP6CFG = 0x7f;                // IN   invalid
-  //SYNCDELAY;                    
-  //EP8CFG = 0x7f;                // IN   invalid
-  //SYNCDELAY;
-
-  // 
-  //SYNCDELAY;
-  //EP2FIFOCFG = 0x00;              // AUTO=0, WORDWIDE=0(0-8bit 1-16bits)                    
-  EP2FIFOCFG = 0x11;              // AUTO=1, WORDWIDE=1
-  SYNCDELAY;
-
-  //EP4FIFOCFG = 0x11;              // AUTO=1, WORDWIDE=1
-  //SYNCDELAY;  
-        
-  //EP6FIFOCFG = 0x00;              // AUTO=0, WORDWIDE=0
-  //SYNCDELAY;                    
-  //EP6FIFOCFG = 0x0D;              // AUTO=1, WORDWIDE=1
-  //SYNCDELAY;
-                
-
   // out endpoints do not come up armed
   
   // since the defaults are double buffered we must write dummy byte counts twice
                    
-  EP2BCL = 0x80;                // arm EP2OUT by writing byte count w/skip.
-  SYNCDELAY;                                        
-  EP2BCL = 0x80;
-  SYNCDELAY;
-                    
+//  EP2BCL = 0x80;                // arm EP2OUT by writing byte count w/skip.
+//  SYNCDELAY;                                        
+//  EP2BCL = 0x80;
+//  SYNCDELAY;
+//  EP2BCL = 0x80;
+//  SYNCDELAY;
+//  EP2BCL = 0x80;
+//  SYNCDELAY;                  
+
   //EP4BCL = 0x80;
   //SYNCDELAY;                  
   //EP4BCL = 0x80;
@@ -156,8 +167,8 @@ void TD_Init(void)             // Called once at startup
   //SYNCDELAY;   
 
   // enable dual autopointer feature
-  AUTOPTRSETUP |= 0x01;
-  SYNCDELAY;
+  //AUTOPTRSETUP |= 0x01;
+  //SYNCDELAY;
 
 
 }
@@ -187,7 +198,8 @@ if (!(EP2468STAT & bmEP2EMPTY))
 
 	
    EP2BCL = 0x80; // re (arm) EP2OUT
-   SYNCDELAY;
+
+   SYNCDELAY;
 }
 
 
@@ -438,6 +450,8 @@ void ISR_Ep1pingnak(void) interrupt 0
 }
 void ISR_Ep2pingnak(void) interrupt 0
 {
+	EZUSB_IRQ_CLEAR();
+    NAKIRQ = bmEP2PING;
 }
 void ISR_Ep4pingnak(void) interrupt 0
 {

@@ -1,0 +1,11 @@
+# PROMGEN: Xilinx Prom Generator P.20131013
+# Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+SOFTWARE_VERSION P.20131013
+DATE             8/ 1/2022 - 12:11
+SOURCE          /home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/20220807.mcs
+DEVICE          512K
+DATA_WIDTH      1
+FILL_DATA       0xFF
+SIGNATURE       0x010E36ED
+START_ADDRESS   0x00000000 END_ADDRESS 0x0007165B DIRECTION_UP   "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/fpga_qspi_simulator_top.bit" 6slx16ftg256

@@ -145,7 +145,6 @@ always @ (posedge clk or negedge rst_n) begin
 					S_RAS_ACTIVE: begin
 						sdram_cmd_r <= CMD_ACTIVE;
 						sdram_ba_r <= sys_addr[23:22];	//L-Bank地址
-						//sdram_addr_r <= {2'd0,sys_addr[19:9]};	//行地址
 						sdram_addr_r <= sys_addr[21:9];	//行地址
 					end
 
@@ -159,7 +158,7 @@ always @ (posedge clk or negedge rst_n) begin
 						sdram_cmd_r <= CMD_READ;
 						sdram_ba_r <= sys_addr[23:22];	//L-Bank地址
 						sdram_addr_r <= {
-							         4'b0010,	// A10=1,设置写完成允许自动预充电
+							    4'b0010,	// A10=1,设置写完成允许自动预充电
 								 sys_addr[8:0]	//列地址  
 								};
 					end
@@ -179,7 +178,7 @@ always @ (posedge clk or negedge rst_n) begin
 					S_R_PRECHARGE:begin
 						sdram_cmd_r <= CMD_PRECHARGE;
 						sdram_ba_r <= 2'b00;
-						sdram_addr_r <= 13'h0200;  // A10
+						sdram_addr_r <= 13'h0400;  // A10
 					end
 
 					S_RWAIT: begin

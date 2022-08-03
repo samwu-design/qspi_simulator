@@ -8,7 +8,7 @@
 // \   \   \/     Version    : 14.7
 //  \   \         Application: Xilinx CORE Generator
 //  /   /         Filename   : chipscope_ila_0.veo
-// /___/   /\     Timestamp  : Sun May 29 16:11:59 UTC 2022
+// /___/   /\     Timestamp  : Tue Aug 02 18:41:13 UTC 2022
 // \   \  /  \
 //  \___\/\___\
 //
@@ -23,7 +23,7 @@
 chipscope_ila_0 YourInstanceName (
     .CONTROL(CONTROL), // INOUT BUS [35:0]
     .CLK(CLK), // IN
-    .TRIG0(TRIG0) // IN BUS [79:0]
+    .TRIG0(TRIG0) // IN BUS [136:0]
 );
 
 // INST_TAG_END ------ End INSTANTIATION Template ---------

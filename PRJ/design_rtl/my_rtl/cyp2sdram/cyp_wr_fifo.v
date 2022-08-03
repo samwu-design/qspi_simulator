@@ -14,10 +14,11 @@
 
 module cyp_wr_fifo(
 	input 		  cyp_clk,   // 48mhz
+	input         usb_clk,
 	input 		  rst_n,
     input         sdram_init_done,	
-	output 		  usb_clk,
-	output reg [1:0]  usb_fifoaddr,  //CY68013 FIFO Address
+	//output 		  usb_clk,
+	output  [1:0]  usb_fifoaddr,  //CY68013 FIFO Address
     	output  	  usb_slcs,      //CY68013 Chipset select
     	output  	  usb_sloe,      //CY68013 Data output enable
     	output  	  usb_slrd,      //CY68013 READ indication
@@ -41,91 +42,114 @@ module cyp_wr_fifo(
 
 );
 
-assign usb_clk = cyp_clk;
 
-assign usb_fd_o = 16'hffff;  // no write this version
+assign  pa0 = 1; // no use int0 
+assign  usb_slwr = 1;
+assign  usb_slcs = 0; // always cs
+assign  usb_fd_o = 16'hffff;  // no write this version
+
+//localparam  USB_EPOUT_PKSIZE = 16'd256;  // 512 bytes = 256x16bis
+localparam  CYP_WAIT_CLKS = 16'd64;
+
+reg [15:0] cy_cnt;
+
+
+
 //--------------------------------
 // cypress read FSM
 //--------------------------------
 
-reg [4:0] cyp_state;
+reg [4:0] cyp_state_cur;
+reg [4:0] cyp_state_nxt;
 
-localparam  IDLE    		= 5'd0;
-localparam  CYP_READ_PRE  	= 5'd1;
-localparam  CYP_READ	  	= 5'd2;
-
-
+localparam  CYP_IDLE    	= 5'd0;
+localparam  CYP_READ	  	   = 5'd1;
+localparam  CYP_OE	  	   = 5'd2;
 
 always@(posedge cyp_clk or negedge rst_n)begin
 	if(!rst_n)begin
-		cyp_state <= IDLE;
+		cyp_state_cur <= CYP_IDLE;
 	end
 	else begin
-		case(cyp_state)
-			IDLE:begin
-				if(!wfull && !usb_empty && sdram_init_done)
-					cyp_state <= CYP_READ_PRE;
-				else
-					cyp_state <= IDLE;
-			end
+		cyp_state_cur <= cyp_state_nxt;
+	end
+end
+	
 
-			CYP_READ_PRE:begin
-				cyp_state <= CYP_READ;
-			end
+
+always@(*)begin
+	cyp_state_nxt = cyp_state_cur;
+	case(cyp_state_cur)
+		CYP_IDLE:begin
+			if(usb_flaga)  // have data
+				cyp_state_nxt = CYP_OE;
+			else
+				cyp_state_nxt = CYP_IDLE;
+		end
 		
-			CYP_READ:begin
-				if(wfull || usb_empty)
-					cyp_state <= IDLE;
-				else
-					cyp_state <= CYP_READ;
-			end
-			
-			default: cyp_state <= IDLE;		
-		endcase
-	end
+		CYP_OE:begin
+			cyp_state_nxt = CYP_READ;
+		end
+
+		CYP_READ:begin
+			if(!usb_flaga) // read over
+				//cyp_state_nxt = CYP_WAIT;
+				cyp_state_nxt = CYP_IDLE;
+			else
+				cyp_state_nxt = CYP_READ;
+		end
+
+		default:begin
+			cyp_state_nxt = CYP_IDLE;
+		end
+	endcase
 end
 
 
-always@(posedge cyp_clk or negedge rst_n)begin
-	if(!rst_n)begin
-		usb_fifoaddr <= 2'b00; 
+
+assign usb_fifoaddr = 2'b00; // ep2out
+
+//assign  usb_sloe = !usb_flaga;  // 0- out  1-in
+//assign  usb_fd_oe = !usb_flaga;
+//assign  usb_slrd = !(!usb_sloe);
+
+assign usb_sloe = usb_sloe_r;
+assign usb_fd_oe = usb_fd_oe_r;
+assign usb_slrd  = usb_slrd_r;
+
+reg  usb_sloe_r,usb_fd_oe_r,usb_slrd_r;
+always@(*)begin
+   if(cyp_state_cur == CYP_READ & usb_flaga)begin
+		usb_sloe_r = 0;
+		usb_fd_oe_r = 0;
+		usb_slrd_r = 0;
 	end
-	else if(cyp_state == CYP_READ_PRE) begin
-		usb_fifoaddr <= 2'b00;  // fixed EP0 
+	else begin
+		usb_sloe_r = 1;
+		usb_fd_oe_r = 1;
+		usb_slrd_r = 1;	
 	end
 end
 
-
-assign  pa0 = 1; // no use int0 
-assign  usb_empty = !usb_flaga;
-assign  usb_slwr = 1;
-assign  usb_slrd = !((cyp_state == CYP_READ) && !usb_empty && !wfull);
-assign  usb_slcs = 0; // always cs
-assign  usb_sloe = (cyp_state == IDLE);  // 0- out  1-in
-assign  usb_fd_oe = !((cyp_state == CYP_READ_PRE) || (cyp_state == CYP_READ));
-//assign  usb_fd_oe = usb_slrd;  // 不读 则默认是写方?
-
+wire wen;
+wire [15:0] wdata;
 
 assign wen = !usb_slrd;  // wen 1-active   usb_slrd 0-active
+assign wdata = usb_fd_i;
 
-asyn_fifo_top#(
-	.DATAWIDTH(16),
-	.ASIZE(10)     // 10 --> deepth 512 
-)wrfifo_inst(
-	.wfull	(wfull),
-	.wdata	(usb_fd_i),
-	.wen	(wen), // 
-	.wclk	(cyp_clk),
-	.wrstn	(rst_n),		
-	
-	.rdata	(fifo_rdata),
-	.ren	(fifo_ren),
-	.rempty	(fifo_rempty),
-	.rclk	(sdram_clk),
-	.rrstn	(rst_n)	
+
+// ise ip
+asyn_fifo wrfifo_inst(
+  .rst		(!rst_n)	,
+  .wr_clk	(cyp_clk)	,
+  .rd_clk	(sdram_clk)	,
+  .din		(wdata)	,
+  .wr_en	(wen)	,	
+  .rd_en	(fifo_ren)	,
+  .dout		(fifo_rdata)	,
+  .full		(wfull)	,
+  .empty	(fifo_rempty)		
 );
-
-
 
 
 

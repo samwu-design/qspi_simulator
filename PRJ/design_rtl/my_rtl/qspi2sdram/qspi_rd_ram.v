@@ -265,7 +265,7 @@ always@(posedge qspi_clk or negedge rst_n)begin
 end
 
 //  CMD register
-reg [7:0]  cur_rd_preaddr,last_rd_preaddr;
+reg [23:0]  cur_rd_preaddr,last_rd_preaddr;
 reg [3:0]  qspi_pre_idx;
 
 always@(posedge qspi_clk or negedge rst_n)begin
@@ -325,22 +325,6 @@ assign preidx_ready	= (bit_cnt == 16'd2) && qspi_state == S_QSPI_PREIDX;
 assign ram_ren = preidx_end || (byte_end && byte_cnt[1:0] == 2'b01);
 
 assign ram_raddr = (qspi_state == S_QSPI_DATA) ? (qspi_pre_idx[2:0] + 3'd1) : qspi_pre_idx[2:0];
-//reg [2:0] ram_raddr;
-//always@(posedge qspi_clk or negedge rst_n)begin
-//	if(!rst_n)
-//		ram_raddr <= 3'd0;
-//	else if(preidx_ready)
-//	   ram_raddr <=  qspi_pre_idx[2:0];
-//	else if(byte_pre_end && byte_cnt == 3'd0)
-//	   ram_raddr <=  qspi_pre_idx[2:0] + 3'd1;
-//	else if(byte_pre_end && byte_cnt == 3'd1)
-//	   ram_raddr <=  qspi_pre_idx[2:0] + 3'd2;
-//	else if(byte_pre_end && byte_cnt == 3'd2)
-//	   ram_raddr <=  qspi_pre_idx[2:0] + 3'd3;
-//   else
-//	   ram_raddr <= ram_raddr;	
-//end
-
 
 reg [15:0] do_data;
 
@@ -366,24 +350,23 @@ always@(negedge qspi_clk or negedge rst_n)begin
 	else
 		qspi_do <= 1'bz;
 end
-//assign qspi_do = (qspi_state == S_QSPI_DATA || qspi_state_nxt == S_QSPI_DATA) ? do_data[15]:1'bz;
 
 
 //`ifdef DEBUG_ILA
 //wire[35:0] CONTROL;
-//wire[136:0] trig0;
-//
+//wire[71:0] trig0;
 //	
-//assign trig0 = {wr_ready,wr_valid,wr_addr[23:0],wr_data,rd_ready,rd_valid,rd_aready,rd_avalid,rd_addr[23:0],rd_data,sdram_rasn,sdram_casn,sdram_wen,sdram_ba[1:0],sdram_addr[12:0],sdram_data_oe,sdram_data_o,sdram_data_i};	
+//assign trig0 = {qspi_rd_req,preaddr_end,cur_rd_preaddr[23:0],last_rd_preaddr[23:0],preidx_end,qspi_pre_idx[3:0],ram_ren,ram_rdata[15:0]};	
 //
 //chipscope_icon icon_inst(
 //    .CONTROL0  (CONTROL)
 //);	
 //	
-// chipscope_ila_1  cy_ila_inst(
+// chipscope_ila_0  db_ila_inst(
 //    .CONTROL	(CONTROL),
-//    //.CLK			(qspi_clk),
-//	 .CLK			(sd_clk),
+//    .CLK			(qspi_clk),
+//	 //.CLK			(sd_clk),
+//	 //.CLK			(cyp_clk),
 //    .TRIG0		(trig0)
 //	 );
 // `endif

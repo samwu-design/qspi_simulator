@@ -7,8 +7,8 @@
 module fifomem
 #(
     parameter  DATAWIDTH = 8, // Memory data word width      
-    parameter  DEEPTH = (2<<(ASIZE-1)),    
-    parameter  ASIZE = 4  // Éî¶ÈÎª8¼´µØÖ·Îª3Î»¼´¿É£¬ÕâÀï¶à¶¨ÒåÒ»Î»µÄÔ­ÒòÊÇÓÃÀ´ÅÐ¶ÏÊÇ¿Õ»¹ÊÇÂú
+    parameter  DEEPTH = (1<<(ASIZE-1)),    
+    parameter  ASIZE = 4  // Îª8Ö·Îª3Î»É£à¶¨Ò»Î»Ô­Ð¶Ç¿Õ»
 ) // Number of mem address bits
 (
 	input  resetn,

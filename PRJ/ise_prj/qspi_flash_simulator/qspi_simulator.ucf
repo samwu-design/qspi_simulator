@@ -206,11 +206,12 @@ NET "usb_slwr" SLEW = SLOW;
 
 
 PIN "clk_sdram_inst/clkout2_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
-#PIN "clk_sdram_inst/clkout1_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
+PIN "clk_sdram_inst/clkout1_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
 #PIN "clk_cyp_inst/clkout1_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
-PIN "clk_cyp_inst/clkout2_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
+#PIN "clk_cyp_inst/clkout2_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
 NET "qspi_clk" CLOCK_DEDICATED_ROUTE = FALSE;
 NET "fpga_clk" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "usb_clk" CLOCK_DEDICATED_ROUTE = FALSE;
 
 # PlanAhead Generated physical constraints 
 
@@ -221,3 +222,10 @@ NET "sdram_cke" LOC = M3;
 # PlanAhead Generated IO constraints 
 
 NET "sdram_cke" IOSTANDARD = LVCMOS33;
+
+//  
+#NET usb_flaga OFFSET=IN 0.1ns BEFORE usb_clk;
+#NET usb_fd[*] OFFSET=IN 2ns BEFORE usb_clk;
+#
+#NET usb_slrd OFFSET=OUT 5ns AFTER usb_clk;
+#NET usb_sloe OFFSET=OUT 11ns AFTER usb_clk;
