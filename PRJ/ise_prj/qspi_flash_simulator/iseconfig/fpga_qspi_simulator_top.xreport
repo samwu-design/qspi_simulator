@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2022-08-02T12:32:35</DateModified>
+  <DateModified>2022-08-02T20:44:41</DateModified>
   <ModuleName>fpga_qspi_simulator_top</ModuleName>
   <SummaryTimeStamp>2022-08-02T11:07:14</SummaryTimeStamp>
-  <SavedFilePath>/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/iseconfig/fpga_qspi_simulator_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/</ImplementationReportsDirectory>
+  <SavedFilePath>/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V40/PRJ/ise_prj/qspi_flash_simulator/iseconfig/fpga_qspi_simulator_top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V40/PRJ/ise_prj/qspi_flash_simulator/</ImplementationReportsDirectory>
   <DateInitialized>2022-05-24T11:09:17</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

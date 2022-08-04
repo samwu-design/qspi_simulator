@@ -16,10 +16,8 @@ module ram_rd_sdram(
 
 	input    		rst_n,
 
-	input  [1:0]		qspi_cmd_flag,
 	input  [23:0]           qspi_rd_addr,
 	input            	qspi_rd_req,
-	output             	qspi_rd_busy,
 	
 	input    		qspi_clk, // ?mhz  <50mhz  fifo readclk
 	input                   ram_ren,
@@ -142,7 +140,6 @@ end
 
 
 
-assign qspi_rd_busy = !(rd_state == S_RD_IDLE);
 assign rd_avalid = rd_state == S_RD_ADDR;
 assign rd_ready  = rd_state == S_RD_DATA;
 

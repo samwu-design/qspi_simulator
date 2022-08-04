@@ -38,7 +38,6 @@ module qspi2sdram_top(
 
 wire [23:0] qspi_rd_addr;
 
-wire [1:0] qspi_cmd_flag;
 
 wire        ram_ren	    ;		
 wire [2:0]  ram_raddr  	    ;		
@@ -55,10 +54,8 @@ qspi_rd_ram  qspi_rd_ram_inst(/*autoinst*/
     .qspi_wpn                            (qspi_wpn                                        ), // input 
     .qspi_holdn                          (qspi_holdn                                      ), // input 
    
-    .qspi_cmd_flag                  (qspi_cmd_flag[1:0]				), // output 
     .qspi_rd_addr                   (qspi_rd_addr[23:0]                         ), // output 
     .qspi_rd_req                    (qspi_rd_req                                ), // output 
-    .qspi_rd_busy                   (qspi_rd_busy                               ), // input
 
     .ram_ren			    (ram_ren	 				), // output
     .ram_raddr			    (ram_raddr[2:0] 				), // output
@@ -71,10 +68,8 @@ qspi_rd_ram  qspi_rd_ram_inst(/*autoinst*/
 ram_rd_sdram ram_rd_sdram_inst(/*autoinst*/
     .rst_n                          (rst_n                                      ), // input 
 
-    .qspi_cmd_flag                  (qspi_cmd_flag[1:0]				), // input 
     .qspi_rd_addr                   (qspi_rd_addr[23:0]                         ), // input 
     .qspi_rd_req                    (qspi_rd_req                                ), // input 
-    .qspi_rd_busy                   (qspi_rd_busy                               ), // output
 	
     .qspi_clk                       (qspi_clk                                   ), // input 
     .ram_ren			    (ram_ren	 				), // input

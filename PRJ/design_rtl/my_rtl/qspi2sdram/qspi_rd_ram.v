@@ -24,10 +24,8 @@ module qspi_rd_ram(
 	input  			qspi_wpn,
 	input  			qspi_holdn,
 
-	output 	[1:0]		qspi_cmd_flag,
 	output reg [23:0]       qspi_rd_addr,
 	output            	qspi_rd_req,
-	input             	qspi_rd_busy,
 
 	// ram 
 	output                  ram_ren,
@@ -62,7 +60,6 @@ wire read_end;
 
 wire preidx_ready,preidx_end,preaddr_end,pre_rd_req;
 
-assign qspi_cmd_flag = {cmd_fstrd_0bh_flag,cmd_rd_03h_flag};
 
 //----------------------get data in
 reg  [31:0] in_dat; 
