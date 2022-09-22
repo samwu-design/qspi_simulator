@@ -149,6 +149,8 @@ module mt48lc16m16a2 (Dq, Addr, Ba, Clk, Cke, Cs_n, Ras_n, Cas_n, We_n, Dqm);
 //    parameter tWRm =  14.0;     // A2 Version - Manual precharge mode (14 ns)
 
     // Timing Parameters for -75 PC133 CL3
+//    parameter tAC  =   5.4;
+//    parameter tHZ  =   5.4;
     parameter tAC  =   5.4;
     parameter tHZ  =   5.4;
     parameter tOH  =   3.0;

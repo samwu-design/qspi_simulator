@@ -1,22 +1,19 @@
 Release 14.7 - par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Tue Aug  2 20:29:50 2022
+Wed Aug 24 00:29:39 2022
 
 All signals are completely routed.
 
-WARNING:ParHelpers:361 - There are 11 loadless signals in this design. This design will cause Bitgen to issue DRC
+WARNING:ParHelpers:361 - There are 8 loadless signals in this design. This design will cause Bitgen to issue DRC
    warnings.
 
-   qspi_csn_IBUF
-   qspi_holdn_IBUF
-   qspi_simulator_inst/qspi2sdram_inst/ram_rd_sdram_inst/ram_inst/Mram_rammem1_RAMD_D1_O
-   qspi_simulator_inst/qspi2sdram_inst/ram_rd_sdram_inst/ram_inst/Mram_rammem2_RAMD_D1_O
-   qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/Mram_temp_rdata1_RAMD_D1_O
-   qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/Mram_temp_rdata2_RAMD_D1_O
-   qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/Mram_temp_wdata1_RAMD_D1_O
-   qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/Mram_temp_wdata2_RAMD_D1_O
-   qspi_wpn_IBUF
+   qspi_simulator_inst_qspi2sdram_inst_ram_rd_sdram_inst_ram_inst_Mram_rammem1_RAMD_D1_O
+   qspi_simulator_inst_qspi2sdram_inst_ram_rd_sdram_inst_ram_inst_Mram_rammem2_RAMD_D1_O
+   qspi_simulator_inst_sdram_ctrl_inst_sdram_data_inst_Mram_temp_rdata1_RAMD_D1_O
+   qspi_simulator_inst_sdram_ctrl_inst_sdram_data_inst_Mram_temp_rdata2_RAMD_D1_O
+   qspi_simulator_inst_sdram_ctrl_inst_sdram_data_inst_Mram_temp_wdata1_RAMD_D1_O
+   qspi_simulator_inst_sdram_ctrl_inst_sdram_data_inst_Mram_temp_wdata2_RAMD_D1_O
    usb_flagb_IBUF
    usb_flagc_IBUF
 

@@ -3,12 +3,12 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Tue Aug  2 20:29:32 2022">
+<application name="pn" timeStamp="Wed Aug 24 00:29:22 2022">
 <section name="Project Information" visible="false">
-<property name="ProjectID" value="6D453718FBCD5094F1608AFA61723799" type="project"/>
-<property name="ProjectIteration" value="244" type="project"/>
+<property name="ProjectID" value="2B408C9072EFAABD10A847E950529E8C" type="project"/>
+<property name="ProjectIteration" value="130" type="project"/>
 <property name="ProjectFile" value="/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/qspi_flash_simulator.xise" type="project"/>
-<property name="ProjectCreationTimestamp" value="2022-05-24T11:07:10" type="project"/>
+<property name="ProjectCreationTimestamp" value="2022-08-09T18:35:01" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">
 <property name="PROP_Enable_Message_Filtering" value="false" type="design"/>
@@ -21,14 +21,15 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_SynthTopFile" value="changed" type="process"/>
 <property name="PROP_Top_Level_Module_Type" value="HDL" type="design"/>
 <property name="PROP_UseSmartGuide" value="false" type="design"/>
+<property name="PROP_UserBrowsedStrategyFiles" value="/opt/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6_performance_with_iobpacking.xds" type="process"/>
 <property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
-<property name="PROP_intProjectCreationTimestamp" value="2022-05-24T11:07:10" type="design"/>
-<property name="PROP_intWbtProjectID" value="6D453718FBCD5094F1608AFA61723799" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="244" type="process"/>
+<property name="PROP_intProjectCreationTimestamp" value="2022-08-09T18:35:01" type="design"/>
+<property name="PROP_intWbtProjectID" value="2B408C9072EFAABD10A847E950529E8C" type="design"/>
+<property name="PROP_intWbtProjectIteration" value="130" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_lockPinsUcfFile" value="changed" type="process"/>
-<property name="PROP_xilxBitgStart_IntDone" value="true" type="process"/>
+<property name="PROP_xstHierarchySeparator" value="_" type="process"/>
 <property name="PROP_xstVerilogMacros" value="DEBUG_ILA" type="process"/>
 <property name="PROP_AutoTop" value="false" type="design"/>
 <property name="PROP_DevFamily" value="Spartan6" type="design"/>
@@ -38,9 +39,9 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_Synthesis_Tool" value="XST (VHDL/Verilog)" type="design"/>
 <property name="PROP_DevSpeed" value="-3" type="design"/>
 <property name="PROP_PreferredLanguage" value="Verilog" type="design"/>
-<property name="FILE_COREGEN" value="5" type="source"/>
-<property name="FILE_UCF" value="1" type="source"/>
-<property name="FILE_VERILOG" value="21" type="source"/>
+<property name="FILE_COREGEN" value="11" type="source"/>
+<property name="FILE_UCF" value="2" type="source"/>
+<property name="FILE_VERILOG" value="22" type="source"/>
 </section>
 </application>
 </document>

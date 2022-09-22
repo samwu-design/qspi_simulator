@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/test_a12pin.xst" -ofn "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/test_a12pin.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc test_a12.ucf -p xc6slx16-ftg256-3 test_a12pin.ngc test_a12pin.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc test_a12.ucf -p xc6slx16-ftg256-3 test_a12pin.ngc test_a12pin.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc test_a12.ucf -p xc6slx16-ftg256-3 test_a12pin.ngc test_a12pin.ngd  
+map -intstyle ise -p xc6slx16-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o test_a12pin_map.ncd test_a12pin.ngd test_a12pin.pcf 
+par -w -intstyle ise -ol high -mt off test_a12pin_map.ncd test_a12pin.ncd test_a12pin.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml test_a12pin.twx test_a12pin.ncd -o test_a12pin.twr test_a12pin.pcf -ucf test_a12.ucf 
+bitgen -intstyle ise -f test_a12pin.ut test_a12pin.ncd 

@@ -30,8 +30,18 @@ module usb2_cyp_vip(
 
 );
 
+reg[7:0] reset_delay_cnt;
+always@(posedge usb_clk or negedge rst_n)
+    if(!rst_n)
+        reset_delay_cnt <= 8'd0;
+    else if(reset_delay_cnt == 8'd10)
+        reset_delay_cnt <= reset_delay_cnt;
+    else
+        reset_delay_cnt <= reset_delay_cnt + 8'd1;
+assign usb_flaga =  (reset_delay_cnt < 8'd10 || usb_download_finished) ? 0:1;   // 1 -- data valid  0 -- no data
 
-assign usb_flaga =  usb_download_finished ? 0:1;   // 1 -- data valid  0 -- no data
+
+
 assign usb_flagb =  0;
 assign usb_flagc =  0;
 
@@ -61,10 +71,10 @@ end
 
 always@(posedge usb_clk or negedge rst_n)begin
 	if(!rst_n)begin
-		usb_fd_o <= {8'd1,8'd0};
+		usb_fd_o <= {16'd0};
 	end
 	else if(!usb_slrd) begin
-		usb_fd_o <= {usb_fd_o[15:8] + 8'd2,usb_fd_o[7:0] + 8'd2};
+		usb_fd_o <= {usb_fd_o + 8'd1};
 	end
 	else begin
 		usb_fd_o <= usb_fd_o;

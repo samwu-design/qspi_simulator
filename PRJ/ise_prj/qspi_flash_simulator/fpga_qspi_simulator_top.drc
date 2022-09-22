@@ -1,146 +1,41 @@
 Release 14.7 Drc P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Tue Aug  2 20:30:05 2022
+Wed Aug 24 00:29:53 2022
 
 drc -z fpga_qspi_simulator_top.ncd fpga_qspi_simulator_top.pcf
 
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state_nxt[4]_PWR_9_
-   o_Select_37_o is sourced by a combinatorial pin. This is not good design
-   practice. Use the CE pin to control the loading of data into the flip-flop.
+   qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_preidx_end_byte_end_OR_4
+   8_o is sourced by a combinatorial pin. This is not good design practice. Use
+   the CE pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   qspi_simulator_inst/CONTROL<13> is sourced by a combinatorial pin. This is
-   not good design practice. Use the CE pin to control the loading of data into
-   the flip-flop.
+   qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_CONTROL<13> is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:367 - The signal
-   <qspi_simulator_inst/qspi2sdram_inst/ram_rd_sdram_inst/ram_inst/Mram_rammem1_
+   <qspi_simulator_inst_sdram_ctrl_inst_sdram_data_inst_Mram_temp_rdata2_RAMD_D1
+   _O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <qspi_simulator_inst_qspi2sdram_inst_ram_rd_sdram_inst_ram_inst_Mram_rammem2_
    RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
    design.
 WARNING:PhysDesignRules:367 - The signal
-   <qspi_simulator_inst/qspi2sdram_inst/ram_rd_sdram_inst/ram_inst/Mram_rammem2_
+   <qspi_simulator_inst_sdram_ctrl_inst_sdram_data_inst_Mram_temp_rdata1_RAMD_D1
+   _O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <qspi_simulator_inst_sdram_ctrl_inst_sdram_data_inst_Mram_temp_wdata2_RAMD_D1
+   _O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <qspi_simulator_inst_sdram_ctrl_inst_sdram_data_inst_Mram_temp_wdata1_RAMD_D1
+   _O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <qspi_simulator_inst_qspi2sdram_inst_ram_rd_sdram_inst_ram_inst_Mram_rammem1_
    RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
    design.
-WARNING:PhysDesignRules:367 - The signal
-   <qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/Mram_temp_rdata2_RAMD_D1
-   _O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/Mram_temp_wdata2_RAMD_D1
-   _O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/Mram_temp_rdata1_RAMD_D1
-   _O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/Mram_temp_wdata1_RAMD_D1
-   _O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
-   on
-   block:<qspi_simulator_inst/db_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YE
-   S_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_
-   0/I_B18KGT0.G_RAMB18[12].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The
-   block is configured to use input parity pin DIBP0. There is dangling output
-   for parity pin DOPB0.
-WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
-   on
-   block:<qspi_simulator_inst/db_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YE
-   S_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_
-   0/I_B18KGT0.G_RAMB18[7].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The
-   block is configured to use input parity pin DIBP0. There is dangling output
-   for parity pin DOPB0.
-WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
-   on
-   block:<qspi_simulator_inst/db_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YE
-   S_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_
-   0/I_B18KGT0.G_RAMB18[2].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The
-   block is configured to use input parity pin DIBP0. There is dangling output
-   for parity pin DOPB0.
-WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
-   on
-   block:<qspi_simulator_inst/db_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YE
-   S_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_
-   0/I_B18KGT0.G_RAMB18[10].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The
-   block is configured to use input parity pin DIBP0. There is dangling output
-   for parity pin DOPB0.
-WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
-   on
-   block:<qspi_simulator_inst/db_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YE
-   S_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_
-   0/I_B18KGT0.G_RAMB18[5].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The
-   block is configured to use input parity pin DIBP0. There is dangling output
-   for parity pin DOPB0.
-WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
-   on
-   block:<qspi_simulator_inst/db_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YE
-   S_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_
-   0/I_B18KGT0.G_RAMB18[0].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The
-   block is configured to use input parity pin DIBP0. There is dangling output
-   for parity pin DOPB0.
-WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
-   on
-   block:<qspi_simulator_inst/db_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YE
-   S_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_
-   0/I_B18KGT0.G_RAMB18[13].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The
-   block is configured to use input parity pin DIBP0. There is dangling output
-   for parity pin DOPB0.
-WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
-   on
-   block:<qspi_simulator_inst/db_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YE
-   S_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_
-   0/I_B18KGT0.G_RAMB18[8].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The
-   block is configured to use input parity pin DIBP0. There is dangling output
-   for parity pin DOPB0.
-WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
-   on
-   block:<qspi_simulator_inst/db_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YE
-   S_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_
-   0/I_B18KGT0.G_RAMB18[3].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The
-   block is configured to use input parity pin DIBP0. There is dangling output
-   for parity pin DOPB0.
-WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
-   on
-   block:<qspi_simulator_inst/db_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YE
-   S_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_
-   0/I_B18KGT0.G_RAMB18[11].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The
-   block is configured to use input parity pin DIBP0. There is dangling output
-   for parity pin DOPB0.
-WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
-   on
-   block:<qspi_simulator_inst/db_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YE
-   S_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_
-   0/I_B18KGT0.G_RAMB18[6].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The
-   block is configured to use input parity pin DIBP0. There is dangling output
-   for parity pin DOPB0.
-WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
-   on
-   block:<qspi_simulator_inst/db_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YE
-   S_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_
-   0/I_B18KGT0.G_RAMB18[1].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The
-   block is configured to use input parity pin DIBP0. There is dangling output
-   for parity pin DOPB0.
-WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
-   on
-   block:<qspi_simulator_inst/db_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YE
-   S_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_
-   0/I_B18KGT0.G_RAMB18[14].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The
-   block is configured to use input parity pin DIBP0. There is dangling output
-   for parity pin DOPB0.
-WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
-   on
-   block:<qspi_simulator_inst/db_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YE
-   S_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_
-   0/I_B18KGT0.G_RAMB18[9].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The
-   block is configured to use input parity pin DIBP0. There is dangling output
-   for parity pin DOPB0.
-WARNING:PhysDesignRules:1176 - Issue with pin connections and/or configuration
-   on
-   block:<qspi_simulator_inst/db_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YE
-   S_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_
-   0/I_B18KGT0.G_RAMB18[4].u_ramb18/U_RAMB18>:<RAMB16BWER_RAMB16BWER>.  The
-   block is configured to use input parity pin DIBP0. There is dangling output
-   for parity pin DOPB0.
 WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
    (RAMB8BWER).  9K Block RAM initialization data, both user defined and
    default, may be incorrect and should not be used.  For more information,
    please reference Xilinx Answer Record 39999.
-DRC detected 0 errors and 24 warnings.  Please see the previously displayed
+DRC detected 0 errors and 9 warnings.  Please see the previously displayed
 individual error or warning messages for more details.

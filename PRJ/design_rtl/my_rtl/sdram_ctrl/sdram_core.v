@@ -21,7 +21,8 @@ module sdram_core(
 	input  		clk,
 	input  		rst_n,
 
-	output          sdram_init_done, 
+	output          sdram_init_done,
+   input           forbiden_autofresh,	
 	// inner  if
 	output [4:0]    init_state,
 	output [4:0]    work_state,
@@ -29,21 +30,21 @@ module sdram_core(
 	output reg [4:0]  cur_work_state,
 
 	// sdram t 
-	input      	end_trp,        // 预充电结束
-	input      	end_trfc,       // 结束自动刷新
-	input      	end_tmrd,       // 模式寄存器设置结束
-	input      	end_trcd,       // 行地址命令延迟结束 
-	input      	end_tcl,        // 列地址命令延迟结束
-	input      	end_tread,      // 读数据结束，时间与BL有关
-	input      	end_twait,      // 完成读之后得预充电等待结束
-	input      	end_twrite,     // 写数据结束
-	input      	end_tdal,       // 写完数据后等待结束
+	input      	end_trp,        // 
+	input      	end_trfc,       // 
+	input      	end_tmrd,       // 
+	input      	end_trcd,       //  
+	input      	end_tcl,        // 
+	input      	end_tread,      // BL
+	input      	end_twait,      // 
+	input      	end_twrite,     // 
+	input      	end_tdal,       // 
 
 	//sdram_t
 	input      	done_200us,
-	input      	ref_domain,     // 刷新时间域
-	input      	sdram_ref_req,  // 刷新请求
-	output      	sdram_ref_ack,  // 刷新请求响应
+	input      	ref_domain,     // 
+	input      	sdram_ref_req,  // 
+	output      	sdram_ref_ack,  // 
 
 	// sdram_data 
 	output  reg 	sdram_r_wn,
@@ -62,9 +63,9 @@ module sdram_core(
 // sdram initial
 
 //------------------------------------------------------------------------------
-//SDRAM的初始化操作状态机
+//SDRAM
 //------------------------------------------------------------------------------
-reg[4:0] init_state_r;	// SDRAM初始化状态
+reg[4:0] init_state_r;	// SDRAM
 
 
 
@@ -126,7 +127,7 @@ always@(posedge clk or negedge rst_n)
 
 			end
 
-			I_DONE:	init_state_r <= I_DONE;		// SDRAM的初始化设置完成
+			I_DONE:	init_state_r <= I_DONE;		// SDRAM
 			
 			default: init_state_r <= I_POWON;
 		endcase
@@ -134,17 +135,15 @@ always@(posedge clk or negedge rst_n)
 
 
 assign init_state = init_state_r;
-assign sdram_init_done = (init_state_r == I_DONE);		// SDRAM初始化完成标志
+assign sdram_init_done = (init_state_r == I_DONE);		// SDRAM
 
 
 
 
 //------------------------------------------------------------------------------
-//SDRAM的读写以及自刷新操作状态机
+//SDRAM
 //------------------------------------------------------------------------------
-reg[4:0] work_state_r;	// SDRAM读写状态
-//reg sdram_r_wn;			// SDRAM读/写控制信号
-
+reg[4:0] work_state_r;	// SDRAM
 
 
 always @ (posedge clk or negedge rst_n) begin
@@ -154,22 +153,35 @@ always @ (posedge clk or negedge rst_n) begin
 	else begin
 		case (work_state_r)
 			S_IDLE:	begin
+
 				if(sdram_init_done)begin
-					if(sdram_ref_req)          // if have the priority               
-						work_state_r <= S_AR;
-					else if(sdram_wr_req || sdram_rd_req)  // actually only one will occur, so no need a arbiter here
-						//work_state_r <= S_RAS_ACTIVE;
-						work_state_r <= S_NOP;
-					else
-						work_state_r <= S_IDLE;
+					if(forbiden_autofresh)begin
+						if(sdram_rd_req)
+							work_state_r <= S_NOP;
+							//work_state_r <= S_RAS_ACTIVE;
+						else
+						   work_state_r <= S_IDLE;
+					end
+					else begin
+					   if(sdram_ref_req)
+						   work_state_r <= S_AR;
+					   else if(sdram_wr_req)
+						   work_state_r <= S_NOP;
+						   //work_state_r <= S_RAS_ACTIVE;
+						else
+						   work_state_r <= S_IDLE;
+					end
 				end
+				else begin
+				   work_state_r <= S_IDLE;
+				end			 
 			end
 			
 			S_NOP:begin
 					work_state_r <= S_RAS_ACTIVE;
 			end
 
-			S_RAS_ACTIVE: begin   // 行地址命令
+			S_RAS_ACTIVE: begin   // 
 					work_state_r <= S_TRCD;
 			end
 
@@ -184,7 +196,7 @@ always @ (posedge clk or negedge rst_n) begin
 					work_state_r <= S_TRCD;
 			end
 					
-			S_RD_CMD: begin   //读地址列命令
+			S_RD_CMD: begin   //
 				work_state_r <= S_CL;
 			end
 			
@@ -197,8 +209,8 @@ always @ (posedge clk or negedge rst_n) begin
 
 			S_RD_DATA: begin
 				if(end_tread)
-					work_state_r <= S_IDLE;
-					//work_state_r <= S_R_PRECHARGE;
+					//work_state_r <= S_IDLE;
+					work_state_r <= S_R_END;
 				else
 					work_state_r <= S_RD_DATA;
 			end
@@ -207,14 +219,14 @@ always @ (posedge clk or negedge rst_n) begin
 				work_state_r <= S_RWAIT;
 			end
 			
-			S_RWAIT: begin  // tPR 读完之后的预充电操作
+			S_RWAIT: begin  // tPR 
 				if(end_twait)
 					work_state_r <= S_IDLE;
 				else
 					work_state_r <= S_RWAIT;
 			end
 			
-			S_WR_CMD: begin // 写列地址命令
+			S_WR_CMD: begin // 
 				work_state_r <= S_WR_DATA;
 			end
 
@@ -225,7 +237,7 @@ always @ (posedge clk or negedge rst_n) begin
 					work_state_r <= S_WR_DATA;
 			end
 			
-			S_TDAL: begin  // tWR 写完数据后 需要等1clk+7.5ns = 2 周期 + (with auto precharge)tRP(3) = 5
+			S_TDAL: begin  // tWR  1clk+7.5ns = 2  + (with auto precharge)tRP(3) = 5
 				if(end_tdal)
 					work_state_r <= S_IDLE;  // read mode is autoprecharge
 					//work_state_r <= S_R_PRECHARGE;
@@ -258,13 +270,15 @@ always @ (posedge clk or negedge rst_n) begin
 					work_state_r <= S_TRFC1;
 			end
 			
+			S_R_END: work_state_r <= S_IDLE;
+			
 			default: work_state_r <= S_IDLE;
 		endcase
 	end
 end
 
-assign work_state = work_state_r;		// SDRAM工作状态寄存器
-assign sdram_ref_ack = (work_state_r == S_AR);		// SDRAM自刷新应答信号
+assign work_state = work_state_r;		// SDRAM
+assign sdram_ref_ack = (work_state_r == S_AR);		// SDRAM
 
 
 //write flag
@@ -284,8 +298,8 @@ always@(posedge clk or negedge rst_n)begin
 		sdram_r_wn <= sdram_r_wn;
 end
 
-// 因为寄存器延迟一个周期响应，所以输出的信号比状态机迟一个周期，
-// 定义这个寄存器用于对齐当前输出真实信号状态值
+// 
+// 
 
 always@(posedge clk or negedge rst_n)begin
 	if(!rst_n)begin
@@ -299,10 +313,27 @@ always@(posedge clk or negedge rst_n)begin
 end
 
 
-//当次写请求响应信号 一个周期
-assign sdram_wr_ack = (work_state_r == S_WR_CMD);  		
-//当次读请求响应信号 一个周期
-assign sdram_rd_ack = (work_state_r == S_RD_CMD);		
+// 
+assign sdram_wr_ack = (work_state_r == S_WR_CMD);  		 
+assign sdram_rd_ack = (work_state_r == S_RD_CMD);	
+	
+//reg sdram_rd_ack,sdram_wr_ack;
+//always@(posedge clk or negedge rst_n)begin
+//	if(!rst_n)
+//		sdram_rd_ack <= 1'b0;
+//	else if(work_state_r == S_RD_CMD)
+//		sdram_rd_ack <= 1'b1 ;
+//	else
+//	   sdram_rd_ack <= 1'b0;
+//end
+//always@(posedge clk or negedge rst_n)begin
+//	if(!rst_n)
+//		sdram_wr_ack <= 1'b0;
+//	else if(work_state_r == S_WR_CMD)
+//		sdram_wr_ack <= 1'b1 ;
+//	else
+//	   sdram_wr_ack <= 1'b0;
+//end
 
 //assign sdram_wr_data_valid = (cur_work_state == S_WR_CMD || cur_work_state == S_WR_DATA);
 reg sdram_wr_data_valid;
@@ -313,5 +344,31 @@ always@(*)begin
 	   sdram_wr_data_valid = 0;
 		
 end
+
+
+//`ifdef DEBUG_ILA
+//wire[35:0] CONTROL;
+//wire[25:0] trig0;
+//	
+//assign trig0 = {
+//               ref_domain,sdram_ref_ack,               
+//               sdram_ref_req,forbiden_autofresh,
+//               sdram_rd_req,sdram_rd_ack,
+//					cur_work_state,work_state_r,
+//					sdram_r_wn,end_trp,end_trfc,end_tmrd,end_trcd,end_tcl,end_tread,end_twait,end_twrite,end_tdal
+//					};	
+//
+//chipscope_icon icon_inst(
+//    .CONTROL0  (CONTROL)
+//);	
+//	
+//chipscope_ila_3  db_ila_inst(
+//    .CONTROL	(CONTROL),
+//	 .CLK			(clk),
+//    .TRIG0		(trig0)
+//	 );
+// `endif
+
+
 
 endmodule

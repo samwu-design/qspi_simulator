@@ -19,11 +19,11 @@ module fpga_qspi_simulator_top(
 
 	// qspi
 	input  		qspi_clk, // 10mhz
-	input  		qspi_csn,
-	input  		qspi_di,
-	output 		qspi_do,
-	input  		qspi_wpn,
-	input  		qspi_holdn,
+	//input  		qspi_csn,
+	input  		qspi_di, //io0     
+	output 		qspi_do, //io1
+	//input  		qspi_wpn,
+	//input  		qspi_holdn,
 
 	// sdram if
 	output          sdram_clk,
@@ -55,6 +55,7 @@ module fpga_qspi_simulator_top(
 );
 
 //assign qspi_do = qspi_clk;
+
 
 wire [15:0]  sdram_data_i; 
 wire [15:0]  sdram_data_o; 
@@ -104,7 +105,7 @@ clk_gen clk_sdram_inst
   .CLK_IN1			(fpga_clk),
   // Clock out ports
   .CLK_OUT1       (sd_clk),
-  .CLK_OUT2       (),
+  .CLK_OUT2       (debug_clk),
   // Status and control signals
   .RESET          (~rst_n),
   .LOCKED         (LOCKED0)
@@ -118,14 +119,15 @@ assign resetn = LOCKED0 && rst_n;
 qspi_simulator_top qspi_simulator_inst(/*autoinst*/
     .rst_n                          (resetn                                      ), // input 
 //	 .sw							(sw						                       ),
+    .debug_clk                      (debug_clk),
     .sd_clk                         (sd_clk                                     ), // input 
     .cyp_clk                        (cyp_clk                                     ), // input 
     //.sdram_init_done                (sdram_init_done				),  // output
     	// qspi
-    .qspi_clk                       (qspi_clk                                   ), // input 
+    .qspi_clk                       (qspi_clk                                  ), // input 
     .qspi_csn                       (qspi_csn                                        ), // input 
-    .qspi_di                        (qspi_di                                         ), // input 
-    .qspi_do                        (qspi_do                                         ), // output
+    .qspi_di                        (qspi_di                                  ), // input 
+    .qspi_do                        (qspi_do                                   ), // output
     .qspi_wpn                       (qspi_wpn                                        ), // input 
     .qspi_holdn                     (qspi_holdn                                      ), // input 
 

@@ -39,7 +39,7 @@ module cyp2sdram_top(
 
 		//
 	output [15:0] 	wr_data,
-	output [23:0] 	wr_addr,
+	output [31:0] 	wr_addr,
 	output          wr_valid,
 	input           wr_ready
 
@@ -90,7 +90,7 @@ fifo_wr_sdram fifo_wr_sdram_inst(/*autoinst*/
     .fifo_rempty                    (fifo_rempty                                ), // input 
 
     .wr_data                        (wr_data[15:0]                              ), // output
-    .wr_addr                        (wr_addr[23:0]                              ), // output
+    .wr_addr                        (wr_addr[31:0]                              ), // output
     .wr_valid                       (wr_valid                                   ), // output
     .wr_ready                       (wr_ready                                   )  // input 
 	

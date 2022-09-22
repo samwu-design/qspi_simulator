@@ -16,12 +16,11 @@ module ram_rd_sdram(
 
 	input    		rst_n,
 
-	input  [1:0]		qspi_cmd_flag,
 	input  [23:0]           qspi_rd_addr,
 	input            	qspi_rd_req,
 	output             	qspi_rd_busy,
 	
-	input    		qspi_clk, // ?mhz  <50mhz  fifo readclk
+	input    		ram_clk, // ?mhz  <50mhz  fifo readclk
 	input                   ram_ren,
 	input [2:0]             ram_raddr,
         output [15:0]           ram_rdata,
@@ -43,7 +42,8 @@ localparam PRE_RD_BL    = 4'd8;
 
 //  address cross clk 
 reg  qspi_rd_req0,qspi_rd_req1;
-wire qspi_rd_posedge;
+reg qspi_rd_posedge;
+reg[23:0] last_rd_addr;
 
 always@(posedge sdram_clk or negedge rst_n)begin
 	if(!rst_n)begin
@@ -55,21 +55,30 @@ always@(posedge sdram_clk or negedge rst_n)begin
 		qspi_rd_req1 <= qspi_rd_req0;
 	end
 end
+//assign qspi_rd_posedge = qspi_rd_req0 && !qspi_rd_req1;
 
-assign qspi_rd_posedge = qspi_rd_req0 && !qspi_rd_req1;
 
 always@(posedge sdram_clk or negedge rst_n)begin
 	if(!rst_n)begin
-		rd_addr <= 24'd0;
+		rd_addr <= 24'hff_ffff;
+		last_rd_addr <= 24'hff_0000;  // 
+		qspi_rd_posedge <= 0;
 	end
-	else if(qspi_rd_posedge) begin
-		//rd_addr <= qspi_rd_addr[23:0];
-		rd_addr <= {1'b0,qspi_rd_addr[23:1]};
+	else if(qspi_rd_req0 && !qspi_rd_req1) begin
+		rd_addr <= {1'b0,qspi_rd_addr[23:1]}; // 16 bits
+		//rd_addr <= {qspi_rd_addr[23:22],1'b0,qspi_rd_addr[21:1]}; // BA[1:0] 16 bits  24bits --> 16MB space
+		last_rd_addr <= rd_addr;
+		qspi_rd_posedge <= 1;
+	end
+	else begin
+		rd_addr <= rd_addr; // 16 bits
+		last_rd_addr <= last_rd_addr;
+		qspi_rd_posedge <= 0;	
 	end
 end
 
-
-
+wire real_req_pulse;
+assign real_req_pulse = qspi_rd_posedge && (last_rd_addr != rd_addr);
 
 
 wire [3:0]  rd_bl;
@@ -96,7 +105,7 @@ always@(posedge sdram_clk or negedge rst_n)begin
 	else begin
 		case(rd_state)
 			S_RD_IDLE:begin
-				if(qspi_rd_posedge)
+				if(real_req_pulse)
 					rd_state <= S_RD_ADDR;
 				else
 					rd_state <= S_RD_IDLE;
@@ -176,7 +185,7 @@ dual_port_ram#(
 .waddr	(ram_waddr),
 .wdata  (rd_data),
 
-.rclk	(qspi_clk),
+.rclk	(ram_clk),
 .rrstn	(rst_n),
 .ren	(ram_ren),
 .raddr  (ram_raddr),
@@ -184,6 +193,28 @@ dual_port_ram#(
 );
 
 
-
+//`ifdef DEBUG_ILA
+//wire[35:0] CONTROL;
+//wire[96:0] trig0;
+//	
+//assign trig0 = {
+//               real_req_pulse,last_rd_addr,rd_addr,
+//					qspi_rd_posedge,rd_avalid,rd_aready,rd_valid,rd_ready,
+//					rd_state,
+//					ram_wen,ram_waddr,rd_data,
+//					ram_ren,ram_raddr,ram_rdata
+//					};	
+//
+//chipscope_icon icon_inst(
+//    .CONTROL0  (CONTROL)
+//);	
+//	
+//chipscope_ila_0  db_ila_inst(
+//    .CONTROL	(CONTROL),
+//    .CLK			(sdram_clk),
+//	 //.CLK			(cyp_clk),
+//    .TRIG0		(trig0)
+//	 );
+// `endif
 endmodule
 

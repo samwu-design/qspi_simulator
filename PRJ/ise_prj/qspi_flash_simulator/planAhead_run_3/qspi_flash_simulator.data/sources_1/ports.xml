@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<Interface Version="1" Minor="1">
+	<Ifc Id="ROOT" Top="1">
+		<Bus Id="sdram_ba">
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="0" Dir="OUT"/>
+		</Bus>
+		<Bus Id="sdram_addr">
+			<Port Id="12" Dir="OUT"/>
+			<Port Id="11" Dir="OUT"/>
+			<Port Id="10" Dir="OUT"/>
+			<Port Id="9" Dir="OUT"/>
+			<Port Id="8" Dir="OUT"/>
+			<Port Id="7" Dir="OUT"/>
+			<Port Id="6" Dir="OUT"/>
+			<Port Id="5" Dir="OUT"/>
+			<Port Id="4" Dir="OUT"/>
+			<Port Id="3" Dir="OUT"/>
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="0" Dir="OUT"/>
+		</Bus>
+		<Bus Id="sdram_data">
+			<Port Id="15" Dir="INOUT"/>
+			<Port Id="14" Dir="INOUT"/>
+			<Port Id="13" Dir="INOUT"/>
+			<Port Id="12" Dir="INOUT"/>
+			<Port Id="11" Dir="INOUT"/>
+			<Port Id="10" Dir="INOUT"/>
+			<Port Id="9" Dir="INOUT"/>
+			<Port Id="8" Dir="INOUT"/>
+			<Port Id="7" Dir="INOUT"/>
+			<Port Id="6" Dir="INOUT"/>
+			<Port Id="5" Dir="INOUT"/>
+			<Port Id="4" Dir="INOUT"/>
+			<Port Id="3" Dir="INOUT"/>
+			<Port Id="2" Dir="INOUT"/>
+			<Port Id="1" Dir="INOUT"/>
+			<Port Id="0" Dir="INOUT"/>
+		</Bus>
+		<Bus Id="usb_fifoaddr">
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="0" Dir="OUT"/>
+		</Bus>
+		<Bus Id="usb_fd">
+			<Port Id="15" Dir="INOUT"/>
+			<Port Id="14" Dir="INOUT"/>
+			<Port Id="13" Dir="INOUT"/>
+			<Port Id="12" Dir="INOUT"/>
+			<Port Id="11" Dir="INOUT"/>
+			<Port Id="10" Dir="INOUT"/>
+			<Port Id="9" Dir="INOUT"/>
+			<Port Id="8" Dir="INOUT"/>
+			<Port Id="7" Dir="INOUT"/>
+			<Port Id="6" Dir="INOUT"/>
+			<Port Id="5" Dir="INOUT"/>
+			<Port Id="4" Dir="INOUT"/>
+			<Port Id="3" Dir="INOUT"/>
+			<Port Id="2" Dir="INOUT"/>
+			<Port Id="1" Dir="INOUT"/>
+			<Port Id="0" Dir="INOUT"/>
+		</Bus>
+		<Port Id="rst_n" Dir="IN"/>
+		<Port Id="fpga_clk" Dir="IN"/>
+		<Port Id="qspi_clk" Dir="IN"/>
+		<Port Id="qspi_csn" Dir="IN"/>
+		<Port Id="qspi_di" Dir="IN"/>
+		<Port Id="qspi_wpn" Dir="IN"/>
+		<Port Id="qspi_holdn" Dir="IN"/>
+		<Port Id="qspi_di_1v8" Dir="IN"/>
+		<Port Id="qspi_clk_1v8" Dir="IN"/>
+		<Port Id="usb_clk" Dir="IN"/>
+		<Port Id="usb_flaga" Dir="IN"/>
+		<Port Id="usb_flagb" Dir="IN"/>
+		<Port Id="usb_flagc" Dir="IN"/>
+		<Port Id="qspi_do" Dir="OUT"/>
+		<Port Id="qspi_do_1v8" Dir="OUT"/>
+		<Port Id="sdram_clk" Dir="OUT"/>
+		<Port Id="sdram_cke" Dir="OUT"/>
+		<Port Id="sdram_csn" Dir="OUT"/>
+		<Port Id="sdram_rasn" Dir="OUT"/>
+		<Port Id="sdram_casn" Dir="OUT"/>
+		<Port Id="sdram_wen" Dir="OUT"/>
+		<Port Id="usb_slcs" Dir="OUT"/>
+		<Port Id="usb_sloe" Dir="OUT"/>
+		<Port Id="usb_slrd" Dir="OUT"/>
+		<Port Id="usb_slwr" Dir="OUT"/>
+		<Port Id="pa0" Dir="OUT"/>
+	</Ifc>
+</Interface>
+

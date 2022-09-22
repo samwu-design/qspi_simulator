@@ -43,7 +43,7 @@ module sdram_data(
 
 	//
 	input [15:0] 		wr_data,
-	input [23:0] 		wr_addr,
+	input [31:0] 		wr_addr,
 	input           	wr_valid,
 	output  	     	wr_ready,
 
@@ -60,6 +60,7 @@ module sdram_data(
 `include "sdram_param.v"
 
 reg [23:0] sys_rdaddr_r;
+//wire [23:0] sys_rdaddr_r;
 reg [23:0] sys_wraddr_r;
 
 reg [2:0]  rd_cnt,wr_cnt;
@@ -69,6 +70,9 @@ reg [2:0]  rd_cnt,wr_cnt;
 
 assign sys_rdaddr = sys_rdaddr_r;
 assign sys_wraddr = sys_wraddr_r;
+//assign sys_rdaddr = rd_addr;
+
+
 
 
 //sys_wraddr
@@ -84,9 +88,7 @@ always@(posedge clk or negedge rst_n)begin
 	end
 end
 
-
-
-assign sd_rd_finished = (cur_work_state == (S_RD_DATA)) && cur_end_tread;
+//assign sd_rd_finished = (cur_work_state == (S_RD_DATA)) && cur_end_tread;
 assign sd_wr_finished = (cur_work_state == (S_WR_DATA)) && cur_end_twrite; 
 
 //---------------------------------------
@@ -94,8 +96,17 @@ assign sd_wr_finished = (cur_work_state == (S_WR_DATA)) && cur_end_twrite;
 // --------------------------------------
 
 reg [4:0]  rd_state;
+reg sdram_rd_req;
 
-assign sdram_rd_req = rd_state == S_RD_REQ; 
+always@(posedge clk or negedge rst_n)begin
+	if(!rst_n)
+		sdram_rd_req <= 0;
+	else if(rd_avalid && rd_aready)
+	   sdram_rd_req <= 1;
+	else if(sdram_rd_req && sdram_rd_ack)
+	   sdram_rd_req <= 0;
+end
+
 
 always@(posedge clk or negedge rst_n)begin
 	if(!rst_n)begin
@@ -118,10 +129,11 @@ always@(posedge clk or negedge rst_n)begin
 			end
 
 			S_RD_SDDATA: begin
-				if(sd_rd_finished)
+				if(sdram_data_i_valid)				
 					rd_state <= S_RD_TRANS;
 				else
 					rd_state <= S_RD_SDDATA;
+
 			end
 
 			S_RD_TRANS: begin
@@ -139,7 +151,7 @@ always@(posedge clk or negedge rst_n)begin
 	end
 end
 
-//鑾峰? 璇诲????
+//? ????
 assign rd_aready = rd_state == S_RD_IDLE;
 
 always@(posedge clk or negedge rst_n)begin
@@ -147,7 +159,6 @@ always@(posedge clk or negedge rst_n)begin
 		sys_rdaddr_r <= 24'd0;
 	end
 	else if(rd_aready && rd_avalid)begin
-		//sys_rdaddr_r <= {rd_addr[21:2],2'b00};
 		sys_rdaddr_r <= rd_addr;
 	end
 	else begin
@@ -195,7 +206,7 @@ always@(posedge clk or negedge rst_n)begin
 		sd_rcnt <= 3'd0;
 end
 
-//always@(negedge clk)begin
+
 always@(posedge clk)begin
 	if(sdram_data_i_valid) 
 		temp_rdata[sd_rcnt] <= sdram_data_i;
@@ -262,11 +273,10 @@ end
 // count recive data from fifo;
 
 assign wdata_valid = (wr_cnt == W_BL-1) && wr_state == S_WR_IDLE && wr_valid && wr_ready;
-//reg wdata_valid;
+
 always@(posedge clk or negedge rst_n)begin
 	if(!rst_n)begin
 		wr_cnt <= 3'd0;
-	//	wdata_valid <= 0;
 	end
 	else if(wr_state == S_WR_IDLE)begin
       if(wr_valid && wr_ready) begin
@@ -296,8 +306,8 @@ always@(posedge clk or negedge rst_n)begin
 		sys_wraddr_r <= 24'd0;
 	end
 	else if(wr_ready && wr_valid && wr_cnt == 3'd0)begin
-		//sys_wraddr_r <= {wr_addr[21:2],2'b00};
-		sys_wraddr_r <= wr_addr;
+		//sys_wraddr_r <= wr_addr;
+		sys_wraddr_r <= {wr_addr[24:1]};
 	end
 	else begin
 		sys_wraddr_r <= sys_wraddr_r;
@@ -323,6 +333,33 @@ assign  sdram_data_oe = ~sdram_r_wn;
 assign sdram_wr_req = wr_state == S_WR_REQ; 
 assign wr_ready = wr_state == S_WR_IDLE;
 
+
+
+//
+//`ifdef DEBUG_ILA
+//wire[35:0] CONTROL;
+//wire[85:0] trig0;
+//	
+//assign trig0 = {
+//               sys_rdaddr,
+//               wr_state,wr_ready,wr_valid,wr_cnt,sdram_wr_req,sdram_wr_ack,sd_wr_finished,end_twrite,            
+//               sdram_data_i_valid,sdram_data_i_valid_delay0,sdram_data_i_valid_delay1,
+//               sdram_rd_req,sdram_rd_ack,
+//					rd_avalid,rd_aready,rd_valid,rd_ready,end_rdata,
+//					rd_state,
+//					sdram_data_oe,sdram_data_i,sdram_data_o
+//					};	
+//
+//chipscope_icon icon_inst(
+//    .CONTROL0  (CONTROL)
+//);	
+//	
+// chipscope_ila_2  db_ila_inst(
+//    .CONTROL	(CONTROL),
+//	 .CLK			(clk),
+//    .TRIG0		(trig0)
+//	 );
+// `endif
 
 endmodule
 

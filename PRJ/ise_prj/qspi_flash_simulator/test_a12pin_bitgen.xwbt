@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/test_a12pin.ncd
+OUTFILE=/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/test_a12pin.bit
+FAMILY=Spartan6
+PART=xc6slx16-3ftg256
+WORKINGDIR=/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator
+LICENSE=WebPack
+USER_INFO=8416_11442_1478797146_620

@@ -137,7 +137,23 @@ wire [15:0] wdata;
 assign wen = !usb_slrd;  // wen 1-active   usb_slrd 0-active
 assign wdata = usb_fd_i;
 
+`ifdef VIVADO_SIM
+// ise ip
+asyn_fifo  wrfifo_inst(
+  .rst		(!rst_n)	,
+  .wr_clk	(cyp_clk)	,
+  .rd_clk	(sdram_clk)	,
+  .din		(wdata)	,
+  .wr_en	(wen)	,	
+  .rd_en	(fifo_ren)	,
+  .dout		(fifo_rdata)	,
+  .full		(wfull)	,
+  .empty	(fifo_rempty),
+  .wr_rst_busy(),
+  .rd_rst_busy()		
+);
 
+`else
 // ise ip
 asyn_fifo wrfifo_inst(
   .rst		(!rst_n)	,
@@ -150,8 +166,29 @@ asyn_fifo wrfifo_inst(
   .full		(wfull)	,
   .empty	(fifo_rempty)		
 );
+`endif
 
-
-
-
+//
+//`ifdef DEBUG_ILA
+//wire[35:0] CONTROL;
+//wire[52:0] trig0;
+//	
+//assign trig0 = { 
+//                 fifo_rempty,fifo_ren,fifo_rdata,
+//					  wen,wdata,
+//                 usb_flaga,usb_slrd,usb_fd_i
+//                 };	
+//
+//chipscope_icon icon_inst(
+//    .CONTROL0  (CONTROL)
+//);	
+//	
+// chipscope_ila_7  cy_ila_inst(
+//    .CONTROL	(CONTROL),
+//	 .CLK			(cyp_clk),
+//    .TRIG0		(trig0)
+//	 );
+// `endif
+ 
+ 
 endmodule

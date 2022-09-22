@@ -21,19 +21,20 @@ module fifo_wr_sdram(
 	input            	  fifo_rempty,
 
 	output reg [15:0] 	  wr_data,
-	output reg [23:0] 	  wr_addr,
+	//output reg [23:0] 	  wr_addr,
+	output reg [31:0] 	  wr_addr,
 	output                 wr_valid,
 	input             	  wr_ready
 	
 );
 
 localparam  SD_WR_BL  =  8'd8;
-localparam  WAIT_CLKS = 8'h3f;
+localparam  WAIT_CLKS = 8'h2f;
 
 // 
 
 localparam   S_IDLE 		=  9'd0;
-localparam   S_WAIT_10CLK	=  9'd1;
+localparam   S_WAIT_8DATA	=  9'd1;
 localparam   S_RD_FIFO 		=  9'd2;
 localparam   S_WAIT_WR 		=  9'd3;
 localparam   S_ADDR_GEN		=  9'd4;
@@ -49,16 +50,16 @@ always@(posedge sdram_clk or negedge rst_n)begin
 		case(wr_state)
 			S_IDLE:begin
 				if(wr_ready && !fifo_rempty)
-					wr_state <= S_WAIT_10CLK;
+					wr_state <= S_WAIT_8DATA;
 				else
 					wr_state <= S_IDLE;
 			end
 			
-			S_WAIT_10CLK:begin			// write may slow, avoid there is only one data at begining
+			S_WAIT_8DATA:begin			// write may slow, avoid there is only one data at begining
 				if(rd_cnt == WAIT_CLKS)
 					wr_state <= S_RD_FIFO;
 				else
-					wr_state <= S_WAIT_10CLK;
+					wr_state <= S_WAIT_8DATA;
 			end
 
 			S_RD_FIFO:begin
@@ -71,7 +72,8 @@ always@(posedge sdram_clk or negedge rst_n)begin
 
 			S_WAIT_WR: begin
 				if(!fifo_rempty)
-					wr_state <= S_RD_FIFO;
+					//wr_state <= S_RD_FIFO;
+					wr_state <= S_WAIT_8DATA;
 				else
 				   wr_state <= S_ADDR_GEN;
 			end
@@ -89,7 +91,7 @@ end
 always@(posedge sdram_clk or negedge rst_n)begin
 	if(!rst_n)
 		rd_cnt <= 8'd0;
-	else if(wr_state == S_WAIT_10CLK)begin
+	else if(wr_state == S_WAIT_8DATA)begin
 		if(rd_cnt == WAIT_CLKS)
 			rd_cnt <= 8'd0;
 		else
@@ -110,22 +112,14 @@ always@(posedge sdram_clk or negedge rst_n)begin
 end
 
 //assign fifo_ren = (wr_state == S_RD_FIFO) && (!fifo_rempty) && wr_ready && (rd_cnt <= (SD_WR_BL-1));
-reg fifo_ren;
-always@(*) begin
-	if((wr_state == S_RD_FIFO) && (!fifo_rempty) && wr_ready && (rd_cnt <= (SD_WR_BL-1)))
-		fifo_ren = 1;
-	else
-	   fifo_ren = 0;
-end
 
+/* the data size from usb must be power of 8 */
+assign fifo_ren = (wr_state == S_RD_FIFO) && wr_ready && (rd_cnt <= (SD_WR_BL-1));
 
 always@(posedge sdram_clk or negedge rst_n)begin
 	if(!rst_n)begin
 		wr_data <= 16'd0;
 	end
-//	else if(fifo_rempty) begin   // if empty padding zero
-//		wr_data <= 16'd0;
-//	end
 	else begin
 		wr_data <= fifo_rdata;
 	end
@@ -135,24 +129,25 @@ reg wr_valid;
 always@(posedge sdram_clk or negedge rst_n)begin
 	if(!rst_n)
 		wr_valid <= 0;
-	else if(fifo_ren)    // if empty padding zero
+	else if(fifo_ren)    // data always package by 512 bytes, hold by software 
 		wr_valid <= 1;
 	else 
 		wr_valid <= 0;
 end
- 
-//assign wr_valid = fifo_ren;
 
 // if long time (1s) state is IDLE regard as current trans is finished
 reg [31:0] detect_cnt;
 wire files_time_out;
-assign files_time_out = detect_cnt > 32'd133000000;
+assign files_time_out = detect_cnt >= 32'd133000000;
 always@(posedge sdram_clk or negedge rst_n)begin
 	if(!rst_n)begin
 		detect_cnt <= 32'd0;
 	end
 	else if(wr_state == S_IDLE) begin
-		detect_cnt <= detect_cnt + 32'd1;
+		if(detect_cnt == 32'd133000000)
+			detect_cnt <= detect_cnt;
+		else
+			detect_cnt <= detect_cnt + 32'd1;
 	end
 	else
 		detect_cnt <= 32'd0;
@@ -161,20 +156,38 @@ end
 
 always@(posedge sdram_clk or negedge rst_n)begin
 	if(!rst_n)begin
-		wr_addr <= 24'd0;
+		wr_addr <= 32'd0;
 	end
 	else if(wr_valid && wr_ready) begin   // 
-		//wr_addr <= wr_addr + 24'd2;
-		wr_addr <= wr_addr + 24'd1;  // sdram address sized by 16bits
+		wr_addr <= wr_addr + 32'd2;
+		//wr_addr <= wr_addr + 32'd1;  // sdram address sized by 16bits
 	end
 	else if(files_time_out) begin
-		wr_addr <= 24'd0;
+		wr_addr <= 32'd0;
 	end
 	else begin
 		wr_addr <= wr_addr;
 	end
 end
 
-
+//`ifdef DEBUG_ILA
+//wire[35:0] CONTROL;
+//wire[81:0] trig0;
+//	
+//assign trig0 = {wr_ready,wr_valid,wr_addr,wr_data,wr_state,files_time_out,rd_cnt,fifo_rempty,fifo_ren,fifo_rdata};	
+//
+//chipscope_icon icon_inst(
+//    .CONTROL0  (CONTROL)
+//);	
+//	
+// chipscope_ila_4  cy_ila_inst(
+//    .CONTROL	(CONTROL),
+//    //.CLK			(qspi_clk),
+//	 //.CLK			(sd_clk),
+//	 .CLK			(sdram_clk),
+//	 //.CLK			(cyp_clk),
+//    .TRIG0		(trig0)
+//	 );
+// `endif
 endmodule
 

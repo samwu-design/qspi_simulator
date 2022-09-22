@@ -16,12 +16,13 @@ module tb_fpga_qspi_sim(
 
 );
 
-reg  sd_clk,cyp_clk;
+reg  sd_clk,cyp_clk,clk;
 reg  rst_n;
 
 initial begin
 	rst_n    = 0;
 	sd_clk   = 0;
+	clk   = 0;
 	cyp_clk  = 0;
 #100    rst_n    = 1;
 end
@@ -29,6 +30,7 @@ end
 
 always @(*) #3.25 sd_clk <= !sd_clk; //133mhz 
 always @(*) #10 cyp_clk <= !cyp_clk; //48mhz(50mhz) 
+always @(*) #6.25 clk <= !clk; //40mhz 
 
 assign  ph_sd_clk = !sd_clk; 
  
@@ -72,6 +74,7 @@ generate
 
 endgenerate
 
+
 wire [1:0]   usb_fifoaddr;
 wire [1:0]   sdram_ba;
 wire [12:0]  sdram_addr;
@@ -82,9 +85,10 @@ wire [15:0]  usb_fd;
 
 qspi_simulator_top qspi_simulator_inst(/*autoinst*/
     .rst_n                          (rst_n                                      ), // input 
+    .clk                      (clk),
     .sd_clk                         (sd_clk                                     ), // input 
     .cyp_clk                        (cyp_clk                                     ), // input 
-    //.sdram_init_done                (sdram_init_done				),  // output
+    .sdram_init_done                (sdram_init_done				),  // output
     	// qspi
     .qspi_clk                       (qspi_clk                                   ), // input 
     .qspi_csn                       (qspi_csn                                        ), // input 
@@ -107,7 +111,7 @@ qspi_simulator_top qspi_simulator_inst(/*autoinst*/
     .sdram_data_oe                  (sdram_data_oe                              ), // output
 
     	// usb2
-    .usb_clk                        (usb_clk                                    ), // output
+    .usb_clk                        (cyp_clk                                    ), // output
     .usb_fifoaddr                   (usb_fifoaddr[1:0]                          ), // output
     .usb_slcs                       (usb_slcs                                   ), // output
     .usb_sloe                       (usb_sloe                                   ), // output
@@ -129,7 +133,8 @@ qspi_simulator_top qspi_simulator_inst(/*autoinst*/
 // qspi contrl vip
 qspi_master_model  qspi_master_vip_inst(/*autoinst*/
     .usb_download_finished          (usb_download_finished                      ), 
-    .qspi_clk                       (qspi_clk                                   ), // output
+    .sdram_init_done                (sdram_init_done),
+    .qspi_clk_cg                       (qspi_clk                                   ), // output
     .csn                            (qspi_csn                                        ), // output
     .di                             (qspi_di                                         ), // output
     .do                             (qspi_do                                         ), // input 
@@ -142,7 +147,8 @@ mt48lc16m16a2 sdram_module_inst(
 .Dq	(sdram_data), 
 .Addr	(sdram_addr),	 
 .Ba	(sdram_ba), 
-.Clk	(ph_sd_clk), 
+//.Clk	(ph_sd_clk), 
+.Clk	(sd_clk), 
 .Cke	(sdram_cke), 
 .Cs_n	(sdram_csn), 
 .Ras_n	(sdram_rasn), 
@@ -155,7 +161,7 @@ mt48lc16m16a2 sdram_module_inst(
 // usb2 cyp vip
 usb2_cyp_vip usb2_cyp_vip_inst(/*autoinst*/
     .rst_n			    (rst_n					),
-    .usb_clk                        (usb_clk                                    ), // input 
+    .usb_clk                        (cyp_clk                                    ), // input 
     .usb_fifoaddr                   (usb_fifoaddr[1:0]                          ), // input 
     .usb_slcs                       (usb_slcs                                   ), // input 
     .usb_sloe                       (usb_sloe                                   ), // input 

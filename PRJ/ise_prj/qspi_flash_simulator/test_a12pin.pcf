@@ -1,0 +1,10 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sat Aug 20 09:55:41 2022
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "sdram_a12" LOCATE = SITE "J1" LEVEL 1;
+COMP "fpga_rstn" LOCATE = SITE "L5" LEVEL 1;
+COMP "fpga_clk" LOCATE = SITE "T8" LEVEL 1;
+SCHEMATIC END;
+

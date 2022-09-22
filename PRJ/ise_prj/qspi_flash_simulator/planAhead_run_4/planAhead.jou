@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Thu Aug 11 22:26:47 2022
+# Process ID: 32190
+# Log file: /home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/planAhead_run_4/planAhead.log
+# Journal file: /home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/planAhead_run_4/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/pa.fromNetlist.tcl
+set_property pulltype PULLUP [get_ports [list qspi_do_1v8]]
+set_property out_term UNTUNED_50 [get_ports [list qspi_do_1v8]]
+save_constraints

@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: fpga_qspi_simulator_top.prj
@@ -94,7 +94,7 @@ Global Optimization                : AllClockNets
 Read Cores                         : YES
 Write Timing Constraints           : NO
 Cross Clock Analysis               : NO
-Hierarchy Separator                : /
+Hierarchy Separator                : _
 Bus Delimiter                      : <>
 Case Specifier                     : Maintain
 Slice Utilization Ratio            : 100
@@ -114,6 +114,10 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/ipcore_dir/clk_gen.v" into library work
 Parsing module <clk_gen>.
+Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/ipcore_dir/chipscope_ila_5.v" into library work
+Parsing module <chipscope_ila_5>.
+Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/ipcore_dir/chipscope_icon.v" into library work
+Parsing module <chipscope_icon>.
 Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/ipcore_dir/asyn_fifo.v" into library work
 Parsing module <asyn_fifo>.
 Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/dual_port_ram/dual_port_ram.v" into library work
@@ -122,14 +126,15 @@ Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design
 Parsing module <sdram_t>.
 Parsing verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_param.v" included at line 51.
 WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_t.v" Line 60: Redeclaration of ansi port ref_domain is not allowed
-WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_t.v" Line 171: Redeclaration of ansi port sdram_data_i_valid is not allowed
+WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_t.v" Line 189: Redeclaration of ansi port sdram_data_i_valid is not allowed
 Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_data.v" into library work
 Parsing module <sdram_data>.
 Parsing verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_param.v" included at line 60.
+WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_data.v" Line 99: Redeclaration of ansi port sdram_rd_req is not allowed
 Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_core.v" into library work
 Parsing module <sdram_core>.
-Parsing verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_param.v" included at line 59.
-WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_core.v" Line 308: Redeclaration of ansi port sdram_wr_data_valid is not allowed
+Parsing verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_param.v" included at line 60.
+WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_core.v" Line 339: Redeclaration of ansi port sdram_wr_data_valid is not allowed
 Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_cmd.v" into library work
 Parsing module <sdram_cmd>.
 Parsing verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_param.v" included at line 63.
@@ -137,22 +142,21 @@ Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design
 Parsing module <ram_rd_sdram>.
 Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" into library work
 Parsing module <qspi_rd_ram>.
-WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" Line 344: Redeclaration of ansi port qspi_do is not allowed
+WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" Line 86: Redeclaration of ansi port forbiden_autofresh is not allowed
+WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" Line 252: Redeclaration of ansi port qspi_rd_req is not allowed
+WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" Line 293: Redeclaration of ansi port ram_ren is not allowed
+WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" Line 303: Redeclaration of ansi port ram_raddr is not allowed
+WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" Line 329: Redeclaration of ansi port qspi_do is not allowed
 Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/cyp2sdram/fifo_wr_sdram.v" into library work
 Parsing module <fifo_wr_sdram>.
-WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/cyp2sdram/fifo_wr_sdram.v" Line 113: Redeclaration of ansi port fifo_ren is not allowed
-WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/cyp2sdram/fifo_wr_sdram.v" Line 134: Redeclaration of ansi port wr_valid is not allowed
+WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/cyp2sdram/fifo_wr_sdram.v" Line 128: Redeclaration of ansi port wr_valid is not allowed
 Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/cyp2sdram/cyp_wr_fifo.v" into library work
 Parsing module <cyp_wr_fifo>.
-Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/ipcore_dir/chipscope_ila_0.v" into library work
-Parsing module <chipscope_ila_0>.
-Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/ipcore_dir/chipscope_icon.v" into library work
-Parsing module <chipscope_icon>.
 Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_top.v" into library work
 Parsing module <sdram_top>.
-WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_top.v" Line 84: Redeclaration of ansi port sdram_data_i is not allowed
-WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_top.v" Line 85: Redeclaration of ansi port sdram_data_o is not allowed
-WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_top.v" Line 86: Redeclaration of ansi port sdram_data_oe is not allowed
+WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_top.v" Line 85: Redeclaration of ansi port sdram_data_i is not allowed
+WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_top.v" Line 86: Redeclaration of ansi port sdram_data_o is not allowed
+WARNING:HDLCompiler:751 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_top.v" Line 87: Redeclaration of ansi port sdram_data_oe is not allowed
 Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi2sdram_top.v" into library work
 Parsing module <qspi2sdram_top>.
 Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/cyp2sdram/cyp2sdram_top.v" into library work
@@ -161,12 +165,13 @@ Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design
 Parsing module <qspi_simulator_top>.
 Analyzing Verilog file "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/fpga_qspi_simulator_top.v" into library work
 Parsing module <fpga_qspi_simulator_top>.
-WARNING:HDLCompiler:248 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/fpga_qspi_simulator_top.v" Line 69: Block identifier is required on this block
-WARNING:HDLCompiler:248 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/fpga_qspi_simulator_top.v" Line 83: Block identifier is required on this block
+WARNING:HDLCompiler:248 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/fpga_qspi_simulator_top.v" Line 70: Block identifier is required on this block
+WARNING:HDLCompiler:248 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/fpga_qspi_simulator_top.v" Line 84: Block identifier is required on this block
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
+WARNING:HDLCompiler:1016 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/fpga_qspi_simulator_top.v" Line 119: Port sdram_init_done is not connected to this instance
 
 Elaborating module <fpga_qspi_simulator_top>.
 
@@ -174,7 +179,7 @@ Elaborating module <IOBUF(DRIVE=12,IBUF_LOW_PWR="TRUE",IOSTANDARD="DEFAULT",SLEW
 
 Elaborating module <clk_gen>.
 
-Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="SYSTEM_SYNCHRONOUS",DIVCLK_DIVIDE=1,CLKFBOUT_MULT=16,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=6,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DIVIDE=6,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.5,CLKIN_PERIOD=20.0,REF_JITTER=0.01)>.
+Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="SYSTEM_SYNCHRONOUS",DIVCLK_DIVIDE=1,CLKFBOUT_MULT=16,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=6,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DIVIDE=20,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.5,CLKIN_PERIOD=20.0,REF_JITTER=0.01)>.
 WARNING:HDLCompiler:1127 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/ipcore_dir/clk_gen.v" Line 119: Assignment to clkout2_unused ignored, since the identifier is never used
 WARNING:HDLCompiler:1127 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/ipcore_dir/clk_gen.v" Line 120: Assignment to clkout3_unused ignored, since the identifier is never used
 WARNING:HDLCompiler:1127 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/ipcore_dir/clk_gen.v" Line 121: Assignment to clkout4_unused ignored, since the identifier is never used
@@ -183,21 +188,21 @@ WARNING:HDLCompiler:1127 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/is
 Elaborating module <BUFG>.
 
 Elaborating module <qspi_simulator_top>.
+WARNING:HDLCompiler:1016 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi2sdram_top.v" Line 49: Port qspi_cmd_flag is not connected to this instance
 
 Elaborating module <qspi2sdram_top>.
 
 Elaborating module <qspi_rd_ram>.
-WARNING:HDLCompiler:91 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" Line 151: Signal <qspi_state_nxt> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" Line 153: Signal <cmd_fstrd_0bh> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" Line 160: Signal <preaddr_end> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" Line 167: Signal <preidx_end> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" Line 168: Signal <cmd_rd_03h_flag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" Line 170: Signal <cmd_fstrd_0bh_flag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" Line 177: Signal <dummy_end> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" Line 184: Signal <byte_end> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" Line 185: Signal <read_end> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:413 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" Line 206: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" Line 207: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" Line 168: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" Line 169: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" Line 170: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" Line 171: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" Line 172: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:1127 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v" Line 284: Assignment to pre_rd_req ignored, since the identifier is never used
+
+Elaborating module <chipscope_icon>.
+
+Elaborating module <chipscope_ila_5>.
 
 Elaborating module <ram_rd_sdram>.
 
@@ -208,16 +213,16 @@ Elaborating module <sdram_top>.
 Elaborating module <sdram_core>.
 
 Elaborating module <sdram_t>.
-WARNING:HDLCompiler:1127 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_t.v" Line 76: Assignment to ref_60ms ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_t.v" Line 155: Result of 9-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:1127 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_t.v" Line 155: Assignment to cnt_clk ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_t.v" Line 173: Result of 9-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:1127 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_t.v" Line 173: Assignment to cnt_clk ignored, since the identifier is never used
 
 Elaborating module <sdram_cmd>.
 
 Elaborating module <sdram_data>.
-WARNING:HDLCompiler:413 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_data.v" Line 167: Result of 4-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_data.v" Line 192: Result of 4-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_data.v" Line 315: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:1127 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_data.v" Line 80: Assignment to cur_end_tread ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_data.v" Line 178: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_data.v" Line 203: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_data.v" Line 325: Result of 4-bit expression is truncated to fit in 3-bit target.
 
 Elaborating module <cyp2sdram_top>.
 
@@ -225,13 +230,12 @@ Elaborating module <cyp_wr_fifo>.
 
 Elaborating module <asyn_fifo>.
 WARNING:HDLCompiler:1499 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/ipcore_dir/asyn_fifo.v" Line 39: Empty module <asyn_fifo> remains a black box.
-WARNING:HDLCompiler:1127 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/cyp2sdram/cyp_wr_fifo.v" Line 150: Assignment to wfull ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/cyp2sdram/cyp_wr_fifo.v" Line 166: Assignment to wfull ignored, since the identifier is never used
 
 Elaborating module <fifo_wr_sdram>.
-
-Elaborating module <chipscope_icon>.
-
-Elaborating module <chipscope_ila_0>.
+WARNING:HDLCompiler:634 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/fpga_qspi_simulator_top.v" Line 128: Net <qspi_csn> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/fpga_qspi_simulator_top.v" Line 131: Net <qspi_wpn> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/fpga_qspi_simulator_top.v" Line 132: Net <qspi_holdn> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -239,7 +243,10 @@ Elaborating module <chipscope_ila_0>.
 
 Synthesizing Unit <fpga_qspi_simulator_top>.
     Related source file is "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/fpga_qspi_simulator_top.v".
-INFO:Xst:3210 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/fpga_qspi_simulator_top.v" line 102: Output port <CLK_OUT2> of the instance <clk_sdram_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/fpga_qspi_simulator_top.v" line 119: Output port <sdram_init_done> of the instance <qspi_simulator_inst> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <qspi_csn> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <qspi_wpn> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <qspi_holdn> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
 Unit <fpga_qspi_simulator_top> synthesized.
@@ -258,6 +265,7 @@ Unit <qspi_simulator_top> synthesized.
 
 Synthesizing Unit <qspi2sdram_top>.
     Related source file is "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi2sdram_top.v".
+INFO:Xst:3210 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi2sdram_top.v" line 49: Output port <qspi_cmd_flag> of the instance <qspi_rd_ram_inst> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <qspi2sdram_top> synthesized.
@@ -266,12 +274,13 @@ Synthesizing Unit <qspi_rd_ram>.
     Related source file is "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/qspi_rd_ram.v".
         CMD_FAST_READ = 8'b00001011
         CMD_READ = 8'b00000011
+        CMD_WR_EN = 8'b00000110
+        CMD_PG_256B = 8'b00000010
+        CMD_BLKERASE64K = 8'b11011000
 WARNING:Xst:647 - Input <qspi_csn> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <qspi_wpn> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <qspi_holdn> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <qspi_rd_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 24-bit register for signal <last_rd_preaddr>.
-    Found 24-bit register for signal <cur_rd_preaddr>.
     Found 5-bit register for signal <qspi_state>.
     Found 16-bit register for signal <bit_cnt>.
     Found 16-bit register for signal <do_data>.
@@ -279,16 +288,19 @@ WARNING:Xst:647 - Input <qspi_rd_busy> is never used. This port will be preserve
     Found 24-bit register for signal <qspi_rd_addr>.
     Found 4-bit register for signal <qspi_pre_idx>.
     Found 31-bit register for signal <in_dat<30:0>>.
+    Found 1-bit register for signal <forbiden_autofresh>.
     Found 1-bit register for signal <cmd_fstrd_0bh_flag>.
     Found 1-bit register for signal <cmd_rd_03h_flag>.
-    Found 1-bit register for signal <Z_8_o_qspi_clk_DFF_87_q>.
-    Found 1-bit register for signal <qspi_state[4]_qspi_clk_DFF_88>.
+    Found 1-bit register for signal <qspi_rd_req>.
+    Found 1-bit register for signal <ram_ren>.
+    Found 1-bit register for signal <qspi_state[4]_qspi_clk_DFF_91>.
+    Found 1-bit register for signal <Z_8_o_qspi_clk_DFF_90_q>.
     Found finite state machine <FSM_0> for signal <qspi_state>.
     -----------------------------------------------------------------------
-    | States             | 6                                              |
-    | Transitions        | 19                                             |
+    | States             | 5                                              |
+    | Transitions        | 18                                             |
     | Inputs             | 8                                              |
-    | Outputs            | 6                                              |
+    | Outputs            | 8                                              |
     | Clock              | qspi_clk (rising_edge)                         |
     | Reset              | rst_n (negative)                               |
     | Reset type         | asynchronous                                   |
@@ -296,40 +308,32 @@ WARNING:Xst:647 - Input <qspi_rd_busy> is never used. This port will be preserve
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 16-bit adder for signal <bit_cnt[15]_GND_8_o_add_58_OUT> created at line 250.
-    Found 3-bit adder for signal <byte_cnt[2]_GND_8_o_add_61_OUT> created at line 260.
-    Found 3-bit adder for signal <qspi_pre_idx[2]_GND_8_o_add_90_OUT> created at line 327.
-    Found 1-bit 7-to-1 multiplexer for signal <_n0213> created at line 151.
-    Found 1-bit 7-to-1 multiplexer for signal <_n0247> created at line 151.
-    Found 1-bit 7-to-1 multiplexer for signal <_n0267> created at line 151.
-    Found 1-bit 7-to-1 multiplexer for signal <_n0287> created at line 151.
-    Found 1-bit 7-to-1 multiplexer for signal <_n0307> created at line 151.
-WARNING:Xst:737 - Found 1-bit latch for signal <qspi_state_nxt<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <qspi_state_nxt<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <qspi_state_nxt<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <qspi_state_nxt<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <qspi_state_nxt<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 1-bit tristate buffer for signal <qspi_do> created at line 345
-    Found 24-bit comparator not equal for signal <n0068> created at line 299
+    Found 16-bit adder for signal <bit_cnt[15]_GND_8_o_add_39_OUT> created at line 219.
+    Found 3-bit adder for signal <byte_cnt[2]_GND_8_o_add_42_OUT> created at line 229.
+    Found 3-bit adder for signal <qspi_pre_idx[2]_GND_8_o_add_70_OUT> created at line 308.
+WARNING:Xst:737 - Found 1-bit latch for signal <ram_raddr<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ram_raddr<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ram_raddr<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit tristate buffer for signal <qspi_do> created at line 331
     Summary:
 	inferred   3 Adder/Subtractor(s).
-	inferred 146 D-type flip-flop(s).
-	inferred   5 Latch(s).
-	inferred   1 Comparator(s).
-	inferred  21 Multiplexer(s).
+	inferred 101 D-type flip-flop(s).
+	inferred   3 Latch(s).
+	inferred   6 Multiplexer(s).
 	inferred   1 Tristate(s).
 	inferred   1 Finite State Machine(s).
 Unit <qspi_rd_ram> synthesized.
 
 Synthesizing Unit <ram_rd_sdram>.
     Related source file is "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/qspi2sdram/ram_rd_sdram.v".
-WARNING:Xst:647 - Input <qspi_cmd_flag> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <qspi_rd_addr<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 24-bit register for signal <rd_addr>.
+    Found 24-bit register for signal <last_rd_addr>.
     Found 3-bit register for signal <rd_state>.
     Found 3-bit register for signal <ram_waddr>.
     Found 4-bit register for signal <rd_cnt>.
     Found 1-bit register for signal <qspi_rd_req1>.
+    Found 1-bit register for signal <qspi_rd_posedge>.
     Found 1-bit register for signal <qspi_rd_req0>.
     Found finite state machine <FSM_1> for signal <rd_state>.
     -----------------------------------------------------------------------
@@ -344,11 +348,13 @@ WARNING:Xst:647 - Input <qspi_rd_addr<0:0>> is never used. This port will be pre
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 4-bit adder for signal <rd_cnt[3]_GND_17_o_add_17_OUT> created at line 137.
-    Found 3-bit adder for signal <ram_waddr[2]_GND_17_o_add_25_OUT> created at line 158.
+    Found 4-bit adder for signal <rd_cnt[3]_GND_17_o_add_20_OUT> created at line 146.
+    Found 3-bit adder for signal <ram_waddr[2]_GND_17_o_add_28_OUT> created at line 167.
+    Found 24-bit comparator equal for signal <n0009> created at line 81
     Summary:
 	inferred   2 Adder/Subtractor(s).
-	inferred  33 D-type flip-flop(s).
+	inferred  58 D-type flip-flop(s).
+	inferred   1 Comparator(s).
 	inferred   2 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <ram_rd_sdram> synthesized.
@@ -361,7 +367,6 @@ WARNING:Xst:647 - Input <wrstn> is never used. This port will be preserved and l
 WARNING:Xst:647 - Input <rclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <rrstn> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <ren> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:3015 - Contents of array <rammem> may be accessed with an index that does not cover the full array size or with a negative index. The RAM size is reduced to the index upper access or for only positive index values.
     Found 8x16-bit dual-port RAM <Mram_rammem> for signal <rammem>.
     Summary:
 	inferred   1 RAM(s).
@@ -376,13 +381,13 @@ Unit <sdram_top> synthesized.
 Synthesizing Unit <sdram_core>.
     Related source file is "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_core.v".
         TRP = 9'b000000011
-        TRFC = 9'b000001010
+        TRFC = 9'b000001001
         TMRD = 9'b000000010
         TRCD = 9'b000000011
         TCL = 9'b000000011
         TDAL = 9'b000000101
-        T_REFRESH_PERIOD = 32'b00000000000000000000010000010001
-        T_REFRESH_DOMAIN = 31'b0000000000000000000000000110010
+        T_REFRESH_PERIOD = 32'b00000000000000000000010000010000
+        T_REFRESH_DOMAIN = 31'b0000000000000000000000000101000
         T_200US = 15'b110100000101011
         W_BL = 9'b000001000
         R_BL = 9'b000001000
@@ -422,6 +427,7 @@ Synthesizing Unit <sdram_core>.
         S_AR1 = 5'b01101
         S_TRFC1 = 5'b01110
         S_NOP = 5'b01111
+        S_R_END = 5'b10000
 WARNING:Xst:647 - Input <ref_domain> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <sdram_r_wn>.
     Found 5-bit register for signal <work_state_r>.
@@ -431,10 +437,10 @@ WARNING:Xst:647 - Input <ref_domain> is never used. This port will be preserved 
 INFO:Xst:1799 - State 00111 is never reached in FSM <work_state_r>.
     Found finite state machine <FSM_2> for signal <work_state_r>.
     -----------------------------------------------------------------------
-    | States             | 15                                             |
-    | Transitions        | 25                                             |
-    | Inputs             | 11                                             |
-    | Outputs            | 8                                              |
+    | States             | 16                                             |
+    | Transitions        | 28                                             |
+    | Inputs             | 13                                             |
+    | Outputs            | 9                                              |
     | Clock              | clk (rising_edge)                              |
     | Reset              | rst_n (negative)                               |
     | Reset type         | asynchronous                                   |
@@ -463,13 +469,13 @@ Unit <sdram_core> synthesized.
 Synthesizing Unit <sdram_t>.
     Related source file is "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_t.v".
         TRP = 9'b000000011
-        TRFC = 9'b000001010
+        TRFC = 9'b000001001
         TMRD = 9'b000000010
         TRCD = 9'b000000011
         TCL = 9'b000000011
         TDAL = 9'b000000101
-        T_REFRESH_PERIOD = 32'b00000000000000000000010000010001
-        T_REFRESH_DOMAIN = 31'b0000000000000000000000000110010
+        T_REFRESH_PERIOD = 32'b00000000000000000000010000010000
+        T_REFRESH_DOMAIN = 31'b0000000000000000000000000101000
         T_200US = 15'b110100000101011
         W_BL = 9'b000001000
         R_BL = 9'b000001000
@@ -509,37 +515,34 @@ Synthesizing Unit <sdram_t>.
         S_AR1 = 5'b01101
         S_TRFC1 = 5'b01110
         S_NOP = 5'b01111
+        S_R_END = 5'b10000
 WARNING:Xst:647 - Input <cur_init_state> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <sdram_ref_req>.
     Found 15-bit register for signal <cnt_200us>.
     Found 9-bit register for signal <cnt_clk_r>.
     Found 32-bit register for signal <ref_cnt>.
-    Found 1-bit register for signal <ref_req_r0>.
-    Found 1-bit register for signal <ref_req_r1>.
-    Found 1-bit register for signal <sdram_ref_req>.
     Found 1-bit register for signal <sdram_data_i_valid>.
-    Found 32-bit adder for signal <ref_cnt[31]_GND_22_o_add_1_OUT> created at line 72.
-    Found 15-bit adder for signal <cnt_200us[14]_GND_22_o_add_8_OUT> created at line 117.
-    Found 9-bit adder for signal <cnt_clk_r[8]_GND_22_o_add_27_OUT> created at line 153.
-    Found 32-bit comparator lessequal for signal <n0004> created at line 79
-    Found 32-bit comparator lessequal for signal <n0006> created at line 79
-    Found 15-bit comparator greater for signal <cnt_200us[14]_PWR_19_o_LessThan_8_o> created at line 116
+    Found 32-bit adder for signal <ref_cnt[31]_GND_23_o_add_1_OUT> created at line 72.
+    Found 15-bit adder for signal <cnt_200us[14]_GND_23_o_add_7_OUT> created at line 133.
+    Found 9-bit adder for signal <cnt_clk_r[8]_GND_23_o_add_28_OUT> created at line 171.
+    Found 15-bit comparator greater for signal <cnt_200us[14]_PWR_16_o_LessThan_7_o> created at line 132
     Summary:
 	inferred   3 Adder/Subtractor(s).
-	inferred  60 D-type flip-flop(s).
-	inferred   3 Comparator(s).
+	inferred  58 D-type flip-flop(s).
+	inferred   1 Comparator(s).
 	inferred   2 Multiplexer(s).
 Unit <sdram_t> synthesized.
 
 Synthesizing Unit <sdram_cmd>.
     Related source file is "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_cmd.v".
         TRP = 9'b000000011
-        TRFC = 9'b000001010
+        TRFC = 9'b000001001
         TMRD = 9'b000000010
         TRCD = 9'b000000011
         TCL = 9'b000000011
         TDAL = 9'b000000101
-        T_REFRESH_PERIOD = 32'b00000000000000000000010000010001
-        T_REFRESH_DOMAIN = 31'b0000000000000000000000000110010
+        T_REFRESH_PERIOD = 32'b00000000000000000000010000010000
+        T_REFRESH_DOMAIN = 31'b0000000000000000000000000101000
         T_200US = 15'b110100000101011
         W_BL = 9'b000001000
         R_BL = 9'b000001000
@@ -579,25 +582,26 @@ Synthesizing Unit <sdram_cmd>.
         S_AR1 = 5'b01101
         S_TRFC1 = 5'b01110
         S_NOP = 5'b01111
+        S_R_END = 5'b10000
     Found 2-bit register for signal <sdram_ba_r>.
     Found 13-bit register for signal <sdram_addr_r>.
     Found 24-bit register for signal <sys_addr>.
     Found 5-bit register for signal <sdram_cmd_r>.
     Summary:
 	inferred  44 D-type flip-flop(s).
-	inferred  31 Multiplexer(s).
+	inferred  33 Multiplexer(s).
 Unit <sdram_cmd> synthesized.
 
 Synthesizing Unit <sdram_data>.
     Related source file is "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/sdram_ctrl/sdram_data.v".
         TRP = 9'b000000011
-        TRFC = 9'b000001010
+        TRFC = 9'b000001001
         TMRD = 9'b000000010
         TRCD = 9'b000000011
         TCL = 9'b000000011
         TDAL = 9'b000000101
-        T_REFRESH_PERIOD = 32'b00000000000000000000010000010001
-        T_REFRESH_DOMAIN = 31'b0000000000000000000000000110010
+        T_REFRESH_PERIOD = 32'b00000000000000000000010000010000
+        T_REFRESH_DOMAIN = 31'b0000000000000000000000000101000
         T_200US = 15'b110100000101011
         W_BL = 9'b000001000
         R_BL = 9'b000001000
@@ -637,9 +641,13 @@ Synthesizing Unit <sdram_data>.
         S_AR1 = 5'b01101
         S_TRFC1 = 5'b01110
         S_NOP = 5'b01111
+        S_R_END = 5'b10000
 WARNING:Xst:647 - Input <init_state> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <work_state> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <cur_init_state> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wr_addr<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wr_addr<31:25>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <end_tread> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 8x16-bit dual-port RAM <Mram_temp_rdata> for signal <temp_rdata>.
     Found 8x16-bit dual-port RAM <Mram_temp_wdata> for signal <temp_wdata>.
     Found 5-bit register for signal <rd_state>.
@@ -651,13 +659,13 @@ WARNING:Xst:647 - Input <cur_init_state> is never used. This port will be preser
     Found 3-bit register for signal <wr_cnt>.
     Found 3-bit register for signal <w_idx>.
     Found 1-bit register for signal <cur_end_twrite>.
-    Found 1-bit register for signal <cur_end_tread>.
+    Found 1-bit register for signal <sdram_rd_req>.
     Found finite state machine <FSM_4> for signal <rd_state>.
     -----------------------------------------------------------------------
     | States             | 5                                              |
     | Transitions        | 15                                             |
     | Inputs             | 7                                              |
-    | Outputs            | 3                                              |
+    | Outputs            | 2                                              |
     | Clock              | clk (rising_edge)                              |
     | Reset              | rst_n (negative)                               |
     | Reset type         | asynchronous                                   |
@@ -678,10 +686,10 @@ WARNING:Xst:647 - Input <cur_init_state> is never used. This port will be preser
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 3-bit adder for signal <rd_cnt[2]_GND_25_o_add_22_OUT> created at line 167.
-    Found 3-bit adder for signal <sd_rcnt[2]_GND_25_o_add_28_OUT> created at line 192.
-    Found 3-bit adder for signal <wr_cnt[2]_GND_25_o_add_49_OUT> created at line 276.
-    Found 3-bit adder for signal <w_idx[2]_GND_25_o_add_59_OUT> created at line 315.
+    Found 3-bit adder for signal <rd_cnt[2]_GND_27_o_add_20_OUT> created at line 178.
+    Found 3-bit adder for signal <sd_rcnt[2]_GND_27_o_add_26_OUT> created at line 203.
+    Found 3-bit adder for signal <wr_cnt[2]_GND_27_o_add_47_OUT> created at line 286.
+    Found 3-bit adder for signal <w_idx[2]_GND_27_o_add_57_OUT> created at line 325.
     Summary:
 	inferred   2 RAM(s).
 	inferred   4 Adder/Subtractor(s).
@@ -702,7 +710,7 @@ WARNING:Xst:647 - Input <usb_clk> is never used. This port will be preserved and
 WARNING:Xst:647 - Input <sdram_init_done> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <usb_flagb> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <usb_flagc> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/cyp2sdram/cyp_wr_fifo.v" line 142: Output port <full> of the instance <wrfifo_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/design_rtl/my_rtl/cyp2sdram/cyp_wr_fifo.v" line 158: Output port <full> of the instance <wrfifo_inst> is unconnected or connected to loadless signal.
     Found 5-bit register for signal <cyp_state_cur>.
     Found finite state machine <FSM_6> for signal <cyp_state_cur>.
     -----------------------------------------------------------------------
@@ -726,13 +734,13 @@ Synthesizing Unit <fifo_wr_sdram>.
     Found 8-bit register for signal <rd_cnt>.
     Found 16-bit register for signal <wr_data>.
     Found 32-bit register for signal <detect_cnt>.
-    Found 24-bit register for signal <wr_addr>.
+    Found 32-bit register for signal <wr_addr>.
     Found 5-bit register for signal <wr_state>.
     Found 1-bit register for signal <wr_valid>.
     Found finite state machine <FSM_7> for signal <wr_state>.
     -----------------------------------------------------------------------
     | States             | 5                                              |
-    | Transitions        | 17                                             |
+    | Transitions        | 16                                             |
     | Inputs             | 6                                              |
     | Outputs            | 5                                              |
     | Clock              | sdram_clk (rising_edge)                        |
@@ -742,15 +750,15 @@ Synthesizing Unit <fifo_wr_sdram>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 8-bit adder for signal <rd_cnt[7]_GND_29_o_add_20_OUT> created at line 103.
-    Found 32-bit adder for signal <detect_cnt[31]_GND_29_o_add_31_OUT> created at line 155.
-    Found 24-bit adder for signal <wr_addr[23]_GND_29_o_add_34_OUT> created at line 168.
-    Found 8-bit 4-to-1 multiplexer for signal <_n0108> created at line 98.
-    Found 8-bit comparator greater for signal <n0029> created at line 115
-    Found 32-bit comparator lessequal for signal <files_time_out> created at line 149
+    Found 8-bit adder for signal <rd_cnt[7]_GND_31_o_add_20_OUT> created at line 105.
+    Found 32-bit adder for signal <detect_cnt[31]_GND_31_o_add_32_OUT> created at line 150.
+    Found 32-bit adder for signal <wr_addr[31]_GND_31_o_add_36_OUT> created at line 162.
+    Found 8-bit 4-to-1 multiplexer for signal <_n0111> created at line 100.
+    Found 8-bit comparator greater for signal <n0028> created at line 117
+    Found 32-bit comparator greater for signal <_n0119> created at line 141
     Summary:
 	inferred   3 Adder/Subtractor(s).
-	inferred  81 D-type flip-flop(s).
+	inferred  89 D-type flip-flop(s).
 	inferred   2 Comparator(s).
 	inferred   6 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
@@ -765,44 +773,42 @@ Macro Statistics
 # Adders/Subtractors                                   : 15
  15-bit adder                                          : 1
  16-bit adder                                          : 1
- 24-bit adder                                          : 1
  3-bit adder                                           : 7
- 32-bit adder                                          : 2
+ 32-bit adder                                          : 3
  4-bit adder                                           : 1
  8-bit adder                                           : 1
  9-bit adder                                           : 1
-# Registers                                            : 44
- 1-bit register                                        : 14
+# Registers                                            : 45
+ 1-bit register                                        : 16
  13-bit register                                       : 1
  15-bit register                                       : 1
  16-bit register                                       : 3
  2-bit register                                        : 1
- 24-bit register                                       : 8
+ 24-bit register                                       : 6
  3-bit register                                        : 6
  31-bit register                                       : 1
- 32-bit register                                       : 2
+ 32-bit register                                       : 3
  4-bit register                                        : 2
  5-bit register                                        : 3
  8-bit register                                        : 1
  9-bit register                                        : 1
-# Latches                                              : 5
- 1-bit latch                                           : 5
-# Comparators                                          : 6
+# Latches                                              : 3
+ 1-bit latch                                           : 3
+# Comparators                                          : 4
  15-bit comparator greater                             : 1
- 24-bit comparator not equal                           : 1
- 32-bit comparator lessequal                           : 3
+ 24-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 1
  8-bit comparator greater                              : 1
-# Multiplexers                                         : 66
- 1-bit 2-to-1 multiplexer                              : 11
- 1-bit 7-to-1 multiplexer                              : 5
- 13-bit 2-to-1 multiplexer                             : 15
+# Multiplexers                                         : 53
+ 1-bit 2-to-1 multiplexer                              : 3
+ 13-bit 2-to-1 multiplexer                             : 17
  16-bit 2-to-1 multiplexer                             : 2
  2-bit 2-to-1 multiplexer                              : 6
- 24-bit 2-to-1 multiplexer                             : 2
- 3-bit 2-to-1 multiplexer                              : 7
- 32-bit 2-to-1 multiplexer                             : 2
+ 24-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 6
+ 32-bit 2-to-1 multiplexer                             : 3
  4-bit 2-to-1 multiplexer                              : 1
- 5-bit 2-to-1 multiplexer                              : 10
+ 5-bit 2-to-1 multiplexer                              : 9
  8-bit 2-to-1 multiplexer                              : 3
  8-bit 4-to-1 multiplexer                              : 1
  9-bit 2-to-1 multiplexer                              : 1
@@ -816,25 +822,15 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-Reading core <ipcore_dir/chipscope_ila_0.ngc>.
-Reading core <ipcore_dir/chipscope_icon.ngc>.
 Reading core <ipcore_dir/asyn_fifo.ngc>.
-Loading core <chipscope_ila_0> for timing and area information for instance <db_ila_inst>.
-Loading core <chipscope_icon> for timing and area information for instance <icon_inst>.
+Reading core <ipcore_dir/chipscope_ila_5.ngc>.
+Reading core <ipcore_dir/chipscope_icon.ngc>.
 Loading core <asyn_fifo> for timing and area information for instance <wrfifo_inst>.
+Loading core <chipscope_ila_5> for timing and area information for instance <db_ila_inst>.
+Loading core <chipscope_icon> for timing and area information for instance <icon_inst>.
 INFO:Xst:2261 - The FF/Latch <qspi_rd_addr_0> in Unit <qspi_rd_ram_inst> is equivalent to the following 3 FFs/Latches, which will be removed : <qspi_rd_addr_1> <qspi_rd_addr_2> <qspi_rd_addr_3> 
-INFO:Xst:2261 - The FF/Latch <cur_rd_preaddr_0> in Unit <qspi_rd_ram_inst> is equivalent to the following 3 FFs/Latches, which will be removed : <cur_rd_preaddr_1> <cur_rd_preaddr_2> <cur_rd_preaddr_3> 
-INFO:Xst:2261 - The FF/Latch <last_rd_preaddr_0> in Unit <qspi_rd_ram_inst> is equivalent to the following 3 FFs/Latches, which will be removed : <last_rd_preaddr_1> <last_rd_preaddr_2> <last_rd_preaddr_3> 
-WARNING:Xst:1710 - FF/Latch <sys_rdaddr_r_0> (without init value) has a constant value of 0 in block <sdram_data_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <sys_rdaddr_r_1> (without init value) has a constant value of 0 in block <sdram_data_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <sys_rdaddr_r_2> (without init value) has a constant value of 0 in block <sdram_data_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <sys_rdaddr_r_23> (without init value) has a constant value of 0 in block <sdram_data_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cur_work_state_4> (without init value) has a constant value of 0 in block <sdram_core_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rd_addr_0> (without init value) has a constant value of 0 in block <ram_rd_sdram_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rd_addr_1> (without init value) has a constant value of 0 in block <ram_rd_sdram_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rd_addr_2> (without init value) has a constant value of 0 in block <ram_rd_sdram_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rd_addr_23> (without init value) has a constant value of 0 in block <ram_rd_sdram_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <qspi_rd_addr_0> (without init value) has a constant value of 0 in block <qspi_rd_ram_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_pre_idx_3> (without init value) has a constant value of 0 in block <qspi_rd_ram_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <in_dat_19> of sequential type is unconnected in block <qspi_rd_ram_inst>.
 WARNING:Xst:2677 - Node <in_dat_20> of sequential type is unconnected in block <qspi_rd_ram_inst>.
 WARNING:Xst:2677 - Node <in_dat_21> of sequential type is unconnected in block <qspi_rd_ram_inst>.
@@ -847,14 +843,11 @@ WARNING:Xst:2677 - Node <in_dat_27> of sequential type is unconnected in block <
 WARNING:Xst:2677 - Node <in_dat_28> of sequential type is unconnected in block <qspi_rd_ram_inst>.
 WARNING:Xst:2677 - Node <in_dat_29> of sequential type is unconnected in block <qspi_rd_ram_inst>.
 WARNING:Xst:2677 - Node <in_dat_30> of sequential type is unconnected in block <qspi_rd_ram_inst>.
-WARNING:Xst:2677 - Node <qspi_pre_idx_3> of sequential type is unconnected in block <qspi_rd_ram_inst>.
-WARNING:Xst:2404 -  FFs/Latches <cur_work_state<4:4>> (without init value) have a constant value of 0 in block <sdram_core>.
 WARNING:Xst:2404 -  FFs/Latches <cur_init_state<4:4>> (without init value) have a constant value of 0 in block <sdram_core>.
-WARNING:Xst:2404 -  FFs/Latches <rd_addr<23:23>> (without init value) have a constant value of 0 in block <ram_rd_sdram>.
 WARNING:Xst:2404 -  FFs/Latches <qspi_pre_idx<3:3>> (without init value) have a constant value of 0 in block <qspi_rd_ram>.
 
 Synthesizing (advanced) Unit <dual_port_ram>.
-INFO:Xst:3217 - HDL ADVISOR - Register <do_data> currently described with an asynchronous reset, could be combined with distributed RAM <Mram_rammem> for implementation on block RAM resources if you made this reset synchronous instead.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_rammem> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -874,7 +867,6 @@ Unit <dual_port_ram> synthesized (advanced).
 
 Synthesizing (advanced) Unit <fifo_wr_sdram>.
 The following registers are absorbed into counter <detect_cnt>: 1 register on signal <detect_cnt>.
-The following registers are absorbed into counter <wr_addr>: 1 register on signal <wr_addr>.
 Unit <fifo_wr_sdram> synthesized (advanced).
 
 Synthesizing (advanced) Unit <qspi_rd_ram>.
@@ -883,8 +875,8 @@ The following registers are absorbed into counter <byte_cnt>: 1 register on sign
 Unit <qspi_rd_ram> synthesized (advanced).
 
 Synthesizing (advanced) Unit <ram_rd_sdram>.
-The following registers are absorbed into counter <ram_waddr>: 1 register on signal <ram_waddr>.
 The following registers are absorbed into counter <rd_cnt>: 1 register on signal <rd_cnt>.
+The following registers are absorbed into counter <ram_waddr>: 1 register on signal <ram_waddr>.
 Unit <ram_rd_sdram> synthesized (advanced).
 
 Synthesizing (advanced) Unit <sdram_data>.
@@ -928,8 +920,8 @@ Unit <sdram_data> synthesized (advanced).
 
 Synthesizing (advanced) Unit <sdram_t>.
 The following registers are absorbed into counter <cnt_clk_r>: 1 register on signal <cnt_clk_r>.
-The following registers are absorbed into counter <ref_cnt>: 1 register on signal <ref_cnt>.
 The following registers are absorbed into counter <cnt_200us>: 1 register on signal <cnt_200us>.
+The following registers are absorbed into counter <ref_cnt>: 1 register on signal <ref_cnt>.
 Unit <sdram_t> synthesized (advanced).
 WARNING:Xst:2677 - Node <in_dat_19> of sequential type is unconnected in block <qspi_rd_ram>.
 WARNING:Xst:2677 - Node <in_dat_20> of sequential type is unconnected in block <qspi_rd_ram>.
@@ -950,32 +942,32 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 3
  8x16-bit dual-port distributed RAM                    : 3
-# Adders/Subtractors                                   : 2
+# Adders/Subtractors                                   : 3
  3-bit adder                                           : 1
+ 32-bit adder                                          : 1
  8-bit adder                                           : 1
-# Counters                                             : 13
+# Counters                                             : 12
  15-bit up counter                                     : 1
  16-bit up counter                                     : 1
- 24-bit up counter                                     : 1
  3-bit up counter                                      : 6
  32-bit up counter                                     : 2
  4-bit up counter                                      : 1
  9-bit up counter                                      : 1
-# Registers                                            : 271
- Flip-Flops                                            : 271
-# Comparators                                          : 6
+# Registers                                            : 283
+ Flip-Flops                                            : 283
+# Comparators                                          : 4
  15-bit comparator greater                             : 1
- 24-bit comparator not equal                           : 1
- 32-bit comparator lessequal                           : 3
+ 24-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 1
  8-bit comparator greater                              : 1
-# Multiplexers                                         : 56
- 1-bit 2-to-1 multiplexer                              : 14
- 1-bit 7-to-1 multiplexer                              : 5
- 13-bit 2-to-1 multiplexer                             : 15
+# Multiplexers                                         : 42
+ 1-bit 2-to-1 multiplexer                              : 3
+ 13-bit 2-to-1 multiplexer                             : 17
  16-bit 2-to-1 multiplexer                             : 1
  2-bit 2-to-1 multiplexer                              : 6
  24-bit 2-to-1 multiplexer                             : 1
- 5-bit 2-to-1 multiplexer                              : 10
+ 32-bit 2-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 9
  8-bit 2-to-1 multiplexer                              : 3
  8-bit 4-to-1 multiplexer                              : 1
 # FSMs                                                 : 8
@@ -989,8 +981,6 @@ WARNING:Xst:1710 - FF/Latch <qspi_rd_addr_0> (without init value) has a constant
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <qspi_rd_addr_1> (without init value) has a constant value of 0 in block <qspi_rd_ram>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <qspi_rd_addr_2> (without init value) has a constant value of 0 in block <qspi_rd_ram>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <qspi_rd_addr_3> (without init value) has a constant value of 0 in block <qspi_rd_ram>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <cur_rd_preaddr_0> in Unit <qspi_rd_ram> is equivalent to the following 3 FFs/Latches, which will be removed : <cur_rd_preaddr_1> <cur_rd_preaddr_2> <cur_rd_preaddr_3> 
-INFO:Xst:2261 - The FF/Latch <last_rd_preaddr_0> in Unit <qspi_rd_ram> is equivalent to the following 3 FFs/Latches, which will be removed : <last_rd_preaddr_1> <last_rd_preaddr_2> <last_rd_preaddr_3> 
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <FSM_6> on signal <cyp_state_cur[1:2]> with sequential encoding.
 -------------------
@@ -1001,7 +991,7 @@ Optimizing FSM <FSM_6> on signal <cyp_state_cur[1:2]> with sequential encoding.
  00001 | 10
 -------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/FSM_4> on signal <rd_state[1:3]> with gray encoding.
+Optimizing FSM <qspi_simulator_inst_sdram_ctrl_inst_sdram_data_inst/FSM_4> on signal <rd_state[1:3]> with gray encoding.
 -------------------
  State | Encoding
 -------------------
@@ -1012,7 +1002,7 @@ Optimizing FSM <qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/FSM_4> on si
  00100 | 110
 -------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/FSM_5> on signal <wr_state[1:2]> with gray encoding.
+Optimizing FSM <qspi_simulator_inst_sdram_ctrl_inst_sdram_data_inst/FSM_5> on signal <wr_state[1:2]> with gray encoding.
 -------------------
  State | Encoding
 -------------------
@@ -1022,7 +1012,7 @@ Optimizing FSM <qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/FSM_5> on si
  00011 | 10
 -------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/FSM_3> on signal <init_state_r[1:4]> with sequential encoding.
+Optimizing FSM <qspi_simulator_inst_sdram_ctrl_inst_sdram_core_inst/FSM_3> on signal <init_state_r[1:4]> with sequential encoding.
 -------------------
  State | Encoding
 -------------------
@@ -1038,7 +1028,7 @@ Optimizing FSM <qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/FSM_3> on si
  01001 | 1001
 -------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/FSM_2> on signal <work_state_r[1:5]> with user encoding.
+Optimizing FSM <qspi_simulator_inst_sdram_ctrl_inst_sdram_core_inst/FSM_2> on signal <work_state_r[1:5]> with user encoding.
 -------------------
  State | Encoding
 -------------------
@@ -1050,6 +1040,7 @@ Optimizing FSM <qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/FSM_2> on si
  00011 | 00011
  00100 | 00100
  00101 | 00101
+ 10000 | 10000
  00111 | unreached
  01001 | 01001
  01010 | 01010
@@ -1059,7 +1050,7 @@ Optimizing FSM <qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/FSM_2> on si
  00001 | 00001
 -------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <qspi_simulator_inst/cyp2sdram_inst/fifo_wr_sdram_inst/FSM_7> on signal <wr_state[1:3]> with sequential encoding.
+Optimizing FSM <qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst/FSM_7> on signal <wr_state[1:3]> with sequential encoding.
 -------------------
  State | Encoding
 -------------------
@@ -1070,7 +1061,7 @@ Optimizing FSM <qspi_simulator_inst/cyp2sdram_inst/fifo_wr_sdram_inst/FSM_7> on 
  00100 | 100
 -------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <qspi_simulator_inst/qspi2sdram_inst/ram_rd_sdram_inst/FSM_1> on signal <rd_state[1:2]> with sequential encoding.
+Optimizing FSM <qspi_simulator_inst_qspi2sdram_inst_ram_rd_sdram_inst/FSM_1> on signal <rd_state[1:2]> with sequential encoding.
 -------------------
  State | Encoding
 -------------------
@@ -1079,21 +1070,20 @@ Optimizing FSM <qspi_simulator_inst/qspi2sdram_inst/ram_rd_sdram_inst/FSM_1> on 
  010   | 10
 -------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/FSM_0> on signal <qspi_state[1:3]> with gray encoding.
+Optimizing FSM <qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst/FSM_0> on signal <qspi_state[1:3]> with sequential encoding.
 -------------------
  State | Encoding
 -------------------
  00000 | 000
  00001 | 001
- 00010 | 011
- 00011 | 010
- 00100 | 110
- 00101 | 111
+ 00010 | 010
+ 00011 | 011
+ 00100 | 100
 -------------------
 WARNING:Xst:1710 - FF/Latch <sdram_cmd_r_3> (without init value) has a constant value of 0 in block <sdram_cmd>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_state_nxt_3> (without init value) has a constant value of 0 in block <qspi_rd_ram>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_state_nxt_4> (without init value) has a constant value of 0 in block <qspi_rd_ram>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:1901 - Instance clk_sdram_inst/pll_base_inst in unit clk_sdram_inst/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
+WARNING:Xst:1710 - FF/Latch <wr_addr_0> (without init value) has a constant value of 0 in block <fifo_wr_sdram>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:1901 - Instance clk_sdram_inst_pll_base_inst in unit clk_sdram_inst_pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
+WARNING:Xst:2041 - Unit fpga_qspi_simulator_top: 1 internal tristate is replaced by logic (pull-up yes): N2.
 
 Optimizing unit <fpga_qspi_simulator_top> ...
 
@@ -1110,56 +1100,62 @@ Optimizing unit <fifo_wr_sdram> ...
 
 Optimizing unit <ram_rd_sdram> ...
 WARNING:Xst:1710 - FF/Latch <rd_cnt_3> (without init value) has a constant value of 0 in block <ram_rd_sdram>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sys_rdaddr_r_23> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/qspi2sdram_inst/ram_rd_sdram_inst/rd_addr_2> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/qspi2sdram_inst/ram_rd_sdram_inst/rd_addr_1> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/qspi2sdram_inst/ram_rd_sdram_inst/rd_addr_0> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sys_rdaddr_r_2> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sys_rdaddr_r_1> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/sys_rdaddr_r_0> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/cur_init_state_3> of sequential type is unconnected in block <fpga_qspi_simulator_top>.
-WARNING:Xst:2677 - Node <qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/cur_init_state_2> of sequential type is unconnected in block <fpga_qspi_simulator_top>.
-WARNING:Xst:2677 - Node <qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/cur_init_state_1> of sequential type is unconnected in block <fpga_qspi_simulator_top>.
-WARNING:Xst:2677 - Node <qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/cur_init_state_0> of sequential type is unconnected in block <fpga_qspi_simulator_top>.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/cyp2sdram_inst/fifo_wr_sdram_inst/rd_cnt_6> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/cyp2sdram_inst/fifo_wr_sdram_inst/rd_cnt_7> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_cnt_11> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_cnt_12> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_cnt_13> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_cnt_14> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_cnt_15> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_cnt_16> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_cnt_17> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_cnt_18> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_cnt_19> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_cnt_20> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_cnt_21> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_cnt_22> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_cnt_23> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_cnt_24> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_cnt_25> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_cnt_26> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_cnt_27> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_cnt_28> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_cnt_29> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_cnt_30> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/ref_cnt_31> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/byte_cnt_2> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <qspi_simulator_inst/qspi2sdram_inst/ram_rd_sdram_inst/ram_waddr_0> in Unit <fpga_qspi_simulator_top> is equivalent to the following FF/Latch, which will be removed : <qspi_simulator_inst/qspi2sdram_inst/ram_rd_sdram_inst/rd_cnt_0> 
-INFO:Xst:2261 - The FF/Latch <qspi_simulator_inst/qspi2sdram_inst/ram_rd_sdram_inst/ram_waddr_1> in Unit <fpga_qspi_simulator_top> is equivalent to the following FF/Latch, which will be removed : <qspi_simulator_inst/qspi2sdram_inst/ram_rd_sdram_inst/rd_cnt_1> 
-INFO:Xst:2261 - The FF/Latch <qspi_simulator_inst/qspi2sdram_inst/ram_rd_sdram_inst/ram_waddr_2> in Unit <fpga_qspi_simulator_top> is equivalent to the following FF/Latch, which will be removed : <qspi_simulator_inst/qspi2sdram_inst/ram_rd_sdram_inst/rd_cnt_2> 
+WARNING:Xst:2677 - Node <qspi_simulator_inst_sdram_ctrl_inst_sdram_core_inst_cur_init_state_3> of sequential type is unconnected in block <fpga_qspi_simulator_top>.
+WARNING:Xst:2677 - Node <qspi_simulator_inst_sdram_ctrl_inst_sdram_core_inst_cur_init_state_2> of sequential type is unconnected in block <fpga_qspi_simulator_top>.
+WARNING:Xst:2677 - Node <qspi_simulator_inst_sdram_ctrl_inst_sdram_core_inst_cur_init_state_1> of sequential type is unconnected in block <fpga_qspi_simulator_top>.
+WARNING:Xst:2677 - Node <qspi_simulator_inst_sdram_ctrl_inst_sdram_core_inst_cur_init_state_0> of sequential type is unconnected in block <fpga_qspi_simulator_top>.
+WARNING:Xst:2677 - Node <qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst_wr_addr_31> of sequential type is unconnected in block <fpga_qspi_simulator_top>.
+WARNING:Xst:2677 - Node <qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst_wr_addr_30> of sequential type is unconnected in block <fpga_qspi_simulator_top>.
+WARNING:Xst:2677 - Node <qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst_wr_addr_29> of sequential type is unconnected in block <fpga_qspi_simulator_top>.
+WARNING:Xst:2677 - Node <qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst_wr_addr_28> of sequential type is unconnected in block <fpga_qspi_simulator_top>.
+WARNING:Xst:2677 - Node <qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst_wr_addr_27> of sequential type is unconnected in block <fpga_qspi_simulator_top>.
+WARNING:Xst:2677 - Node <qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst_wr_addr_26> of sequential type is unconnected in block <fpga_qspi_simulator_top>.
+WARNING:Xst:2677 - Node <qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst_wr_addr_25> of sequential type is unconnected in block <fpga_qspi_simulator_top>.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst_detect_cnt_27> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst_detect_cnt_28> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst_detect_cnt_29> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst_detect_cnt_30> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst_detect_cnt_31> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_sdram_ctrl_inst_sdram_t_inst_ref_cnt_11> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_sdram_ctrl_inst_sdram_t_inst_ref_cnt_12> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_sdram_ctrl_inst_sdram_t_inst_ref_cnt_13> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_sdram_ctrl_inst_sdram_t_inst_ref_cnt_14> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_sdram_ctrl_inst_sdram_t_inst_ref_cnt_15> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_sdram_ctrl_inst_sdram_t_inst_ref_cnt_16> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_sdram_ctrl_inst_sdram_t_inst_ref_cnt_17> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_sdram_ctrl_inst_sdram_t_inst_ref_cnt_18> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_sdram_ctrl_inst_sdram_t_inst_ref_cnt_19> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_sdram_ctrl_inst_sdram_t_inst_ref_cnt_20> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_sdram_ctrl_inst_sdram_t_inst_ref_cnt_21> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_sdram_ctrl_inst_sdram_t_inst_ref_cnt_22> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_sdram_ctrl_inst_sdram_t_inst_ref_cnt_23> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_sdram_ctrl_inst_sdram_t_inst_ref_cnt_24> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_sdram_ctrl_inst_sdram_t_inst_ref_cnt_25> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_sdram_ctrl_inst_sdram_t_inst_ref_cnt_26> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_sdram_ctrl_inst_sdram_t_inst_ref_cnt_27> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_sdram_ctrl_inst_sdram_t_inst_ref_cnt_28> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_sdram_ctrl_inst_sdram_t_inst_ref_cnt_29> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_sdram_ctrl_inst_sdram_t_inst_ref_cnt_30> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <qspi_simulator_inst_sdram_ctrl_inst_sdram_t_inst_ref_cnt_31> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_byte_cnt_2> (without init value) has a constant value of 0 in block <fpga_qspi_simulator_top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <qspi_simulator_inst_sdram_ctrl_inst_sdram_data_inst_sys_rdaddr_r_23> in Unit <fpga_qspi_simulator_top> is equivalent to the following 3 FFs/Latches, which will be removed : <qspi_simulator_inst_sdram_ctrl_inst_sdram_data_inst_sys_rdaddr_r_2> <qspi_simulator_inst_sdram_ctrl_inst_sdram_data_inst_sys_rdaddr_r_1> <qspi_simulator_inst_sdram_ctrl_inst_sdram_data_inst_sys_rdaddr_r_0> 
+INFO:Xst:2261 - The FF/Latch <qspi_simulator_inst_qspi2sdram_inst_ram_rd_sdram_inst_ram_waddr_0> in Unit <fpga_qspi_simulator_top> is equivalent to the following FF/Latch, which will be removed : <qspi_simulator_inst_qspi2sdram_inst_ram_rd_sdram_inst_rd_cnt_0> 
+INFO:Xst:2261 - The FF/Latch <qspi_simulator_inst_qspi2sdram_inst_ram_rd_sdram_inst_ram_waddr_1> in Unit <fpga_qspi_simulator_top> is equivalent to the following FF/Latch, which will be removed : <qspi_simulator_inst_qspi2sdram_inst_ram_rd_sdram_inst_rd_cnt_1> 
+INFO:Xst:2261 - The FF/Latch <qspi_simulator_inst_qspi2sdram_inst_ram_rd_sdram_inst_ram_waddr_2> in Unit <fpga_qspi_simulator_top> is equivalent to the following FF/Latch, which will be removed : <qspi_simulator_inst_qspi2sdram_inst_ram_rd_sdram_inst_rd_cnt_2> 
+INFO:Xst:2261 - The FF/Latch <qspi_simulator_inst_qspi2sdram_inst_ram_rd_sdram_inst_rd_addr_23> in Unit <fpga_qspi_simulator_top> is equivalent to the following 3 FFs/Latches, which will be removed : <qspi_simulator_inst_qspi2sdram_inst_ram_rd_sdram_inst_rd_addr_2> <qspi_simulator_inst_qspi2sdram_inst_ram_rd_sdram_inst_rd_addr_1> <qspi_simulator_inst_qspi2sdram_inst_ram_rd_sdram_inst_rd_addr_0> 
+INFO:Xst:2261 - The FF/Latch <qspi_simulator_inst_qspi2sdram_inst_ram_rd_sdram_inst_last_rd_addr_0> in Unit <fpga_qspi_simulator_top> is equivalent to the following 2 FFs/Latches, which will be removed : <qspi_simulator_inst_qspi2sdram_inst_ram_rd_sdram_inst_last_rd_addr_2> <qspi_simulator_inst_qspi2sdram_inst_ram_rd_sdram_inst_last_rd_addr_1> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block fpga_qspi_simulator_top, actual ratio is 15.
-INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
-INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
-INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
-INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
-INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
-INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
-INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
-INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+Found area constraint ratio of 100 (+ 5) on block fpga_qspi_simulator_top, actual ratio is 13.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_wrfifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_wrfifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_wrfifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_wrfifo_inst> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_wrfifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_wrfifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_wrfifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_wrfifo_inst> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
 
 Final Macro Processing ...
 
@@ -1167,8 +1163,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 393
- Flip-Flops                                            : 393
+# Registers                                            : 376
+ Flip-Flops                                            : 376
 
 =========================================================================
 
@@ -1191,51 +1187,51 @@ Top Level Output File Name         : fpga_qspi_simulator_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1278
+# BELS                             : 1210
 #      GND                         : 5
-#      INV                         : 22
-#      LUT1                        : 106
-#      LUT2                        : 118
-#      LUT3                        : 75
-#      LUT4                        : 201
-#      LUT5                        : 53
-#      LUT6                        : 191
-#      MUXCY                       : 153
-#      MUXCY_L                     : 139
+#      INV                         : 20
+#      LUT1                        : 132
+#      LUT2                        : 119
+#      LUT3                        : 101
+#      LUT4                        : 200
+#      LUT5                        : 63
+#      LUT6                        : 150
+#      MUXCY                       : 134
+#      MUXCY_L                     : 105
 #      MUXF5                       : 2
 #      MUXF6                       : 1
-#      MUXF7                       : 32
-#      MUXF8                       : 12
+#      MUXF7                       : 11
+#      MUXF8                       : 2
 #      VCC                         : 4
-#      XORCY                       : 164
-# FlipFlops/Latches                : 1320
-#      FD                          : 279
-#      FDC                         : 278
+#      XORCY                       : 161
+# FlipFlops/Latches                : 1019
+#      FD                          : 135
+#      FDC                         : 251
 #      FDC_1                       : 18
-#      FDCE                        : 217
+#      FDCE                        : 239
 #      FDE                         : 32
-#      FDP                         : 290
-#      FDPE                        : 44
-#      FDR                         : 50
-#      FDRE                        : 98
+#      FDP                         : 147
+#      FDPE                        : 31
+#      FDR                         : 52
+#      FDRE                        : 100
 #      FDS                         : 10
 #      LD                          : 3
 #      LDC                         : 1
-# RAMS                             : 36
+# RAMS                             : 37
 #      RAM16X1D                    : 12
 #      RAM32M                      : 6
-#      RAMB16BWER                  : 17
+#      RAMB16BWER                  : 18
 #      RAMB8BWER                   : 1
-# Shift Registers                  : 243
-#      SRL16                       : 137
+# Shift Registers                  : 135
+#      SRL16                       : 65
 #      SRL16E                      : 1
-#      SRLC16E                     : 25
-#      SRLC32E                     : 80
+#      SRLC16E                     : 16
+#      SRLC32E                     : 53
 # Clock Buffers                    : 6
-#      BUFG                        : 4
-#      BUFGP                       : 2
-# IO Buffers                       : 65
-#      IBUF                        : 4
+#      BUFG                        : 5
+#      BUFGP                       : 1
+# IO Buffers                       : 66
+#      IBUF                        : 5
 #      IOBUF                       : 32
 #      OBUF                        : 28
 #      OBUFT                       : 1
@@ -1250,27 +1246,27 @@ Selected Device : 6slx16ftg256-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1320  out of  18224     7%  
- Number of Slice LUTs:                 1057  out of   9112    11%  
-    Number used as Logic:               766  out of   9112     8%  
-    Number used as Memory:              291  out of   2176    13%  
+ Number of Slice Registers:            1019  out of  18224     5%  
+ Number of Slice LUTs:                  968  out of   9112    10%  
+    Number used as Logic:               785  out of   9112     8%  
+    Number used as Memory:              183  out of   2176     8%  
        Number used as RAM:               48
-       Number used as SRL:              243
+       Number used as SRL:              135
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1847
-   Number with an unused Flip Flop:     527  out of   1847    28%  
-   Number with an unused LUT:           790  out of   1847    42%  
-   Number of fully used LUT-FF pairs:   530  out of   1847    28%  
-   Number of unique control sets:        81
+ Number of LUT Flip Flop pairs used:   1531
+   Number with an unused Flip Flop:     512  out of   1531    33%  
+   Number with an unused LUT:           563  out of   1531    36%  
+   Number of fully used LUT-FF pairs:   456  out of   1531    29%  
+   Number of unique control sets:        83
 
 IO Utilization: 
- Number of IOs:                          72
+ Number of IOs:                          69
  Number of bonded IOBs:                  67  out of    186    36%  
 
 Specific Feature Utilization:
- Number of Block RAM/FIFO:               18  out of     32    56%  
-    Number using Block RAM only:         18
+ Number of Block RAM/FIFO:               19  out of     32    59%  
+    Number using Block RAM only:         19
  Number of BUFG/BUFGCTRLs:                6  out of     16    37%  
  Number of PLL_ADVs:                      1  out of      2    50%  
 
@@ -1292,17 +1288,18 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+-------+
-Clock Signal                                                                                                                                                                                   | Clock buffer(FF name)                                                         | Load  |
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+-------+
-usb_clk                                                                                                                                                                                        | BUFGP                                                                         | 85    |
-qspi_clk                                                                                                                                                                                       | BUFGP                                                                         | 125   |
-qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state_nxt[4]_PWR_9_o_Select_37_o(qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/Mmux_qspi_state_nxt[4]_PWR_9_o_Select_37_o11:O)| NONE(*)(qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state_nxt_0)| 3     |
-clk_sdram_inst/pll_base_inst/CLKOUT0                                                                                                                                                           | BUFG                                                                          | 1191  |
-qspi_simulator_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL                                                                                                                           | BUFG                                                                          | 211   |
-qspi_simulator_inst/icon_inst/CONTROL0<13>(qspi_simulator_inst/icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE:O)                                                                       | NONE(*)(qspi_simulator_inst/db_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC)   | 1     |
-qspi_simulator_inst/icon_inst/U0/iUPDATE_OUT                                                                                                                                                   | NONE(qspi_simulator_inst/icon_inst/U0/U_ICON/U_iDATA_CMD)                     | 1     |
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+-------+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                                                                                                                                                              | Clock buffer(FF name)                                                                                       | Load  |
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+-------+
+usb_clk                                                                                                                                                                                   | BUFGP                                                                                                       | 85    |
+qspi_clk                                                                                                                                                                                  | IBUF+BUFG                                                                                                   | 86    |
+qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_preidx_end_byte_end_OR_48_o(qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_preidx_end_byte_end_OR_48_o1:O)                     | NONE(*)(qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_ram_raddr_1)                                   | 3     |
+clk_sdram_inst_pll_base_inst/CLKOUT0                                                                                                                                                      | BUFG                                                                                                        | 400   |
+qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL                                                                                     | BUFG                                                                                                        | 175   |
+clk_sdram_inst_pll_base_inst/CLKOUT1                                                                                                                                                      | BUFG                                                                                                        | 459   |
+qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/CONTROL0<13>(qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE:O)| NONE(*)(qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_db_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC)| 1     |
+qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/iUPDATE_OUT                                                                                                             | NONE(qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/U_iDATA_CMD)                  | 1     |
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+-------+
 (*) These 2 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -1316,8 +1313,8 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 8.081ns (Maximum Frequency: 123.750MHz)
-   Minimum input arrival time before clock: 5.627ns
+   Minimum period: 6.946ns (Maximum Frequency: 143.963MHz)
+   Minimum input arrival time before clock: 5.994ns
    Maximum output required time after clock: 5.101ns
    Maximum combinational path delay: 5.774ns
 
@@ -1331,18 +1328,18 @@ Timing constraint: Default period analysis for Clock 'usb_clk'
   Total number of paths / destination ports: 465 / 210
 -------------------------------------------------------------------------
 Delay:               4.423ns (Levels of Logic = 3)
-  Source:            qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/cyp_state_cur_FSM_FFd1 (FF)
-  Destination:       qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_10 (FF)
+  Source:            qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_cyp_state_cur_FSM_FFd1 (FF)
+  Destination:       qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_wrfifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_10 (FF)
   Source Clock:      usb_clk rising
   Destination Clock: usb_clk rising
 
-  Data Path: qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/cyp_state_cur_FSM_FFd1 to qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_10
+  Data Path: qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_cyp_state_cur_FSM_FFd1 to qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_wrfifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_10
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              4   0.447   0.788  qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/cyp_state_cur_FSM_FFd1 (qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/cyp_state_cur_FSM_FFd1)
-     LUT2:I0->O           20   0.203   1.197  qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wen1 (qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wen)
-     begin scope: 'qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst:wr_en'
+     FDC:C->Q              4   0.447   0.788  qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_cyp_state_cur_FSM_FFd1 (qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_cyp_state_cur_FSM_FFd1)
+     LUT2:I0->O           20   0.203   1.197  qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_wen1 (qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_wen)
+     begin scope: 'qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_wrfifo_inst:wr_en'
      LUT2:I0->O           30   0.203   1.263  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/ram_wr_en_i1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/ram_wr_en)
      FDPE:CE                   0.322          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_1
     ----------------------------------------
@@ -1351,122 +1348,119 @@ Delay:               4.423ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'qspi_clk'
-  Clock period: 8.081ns (frequency: 123.750MHz)
-  Total number of paths / destination ports: 3540 / 187
+  Clock period: 5.823ns (frequency: 171.734MHz)
+  Total number of paths / destination ports: 1925 / 108
 -------------------------------------------------------------------------
-Delay:               4.040ns (Levels of Logic = 3)
-  Source:            qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/bit_cnt_0 (FF)
-  Destination:       qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/do_data_15 (FF)
+Delay:               5.823ns (Levels of Logic = 5)
+  Source:            qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_bit_cnt_8 (FF)
+  Destination:       qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_bit_cnt_15 (FF)
   Source Clock:      qspi_clk rising
-  Destination Clock: qspi_clk falling
+  Destination Clock: qspi_clk rising
 
-  Data Path: qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/bit_cnt_0 to qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/do_data_15
+  Data Path: qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_bit_cnt_8 to qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_bit_cnt_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              7   0.447   1.021  qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/bit_cnt_0 (qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/bit_cnt_0)
-     LUT4:I0->O            1   0.203   0.808  qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/preidx_end1_SW0 (N104)
-     LUT6:I3->O           18   0.205   1.050  qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/preidx_end1 (qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/preidx_end)
-     LUT6:I5->O            1   0.205   0.000  qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/Mmux_do_data[14]_ram_rdata[15]_mux_92_OUT17 (qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/do_data[14]_ram_rdata[15]_mux_92_OUT<0>)
-     FDC_1:D                   0.102          qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/do_data_0
+     FDC:C->Q              2   0.447   0.981  qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_bit_cnt_8 (qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_bit_cnt_8)
+     LUT6:I0->O            3   0.203   0.755  qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_preidx_ready_byte_end_pre_OR_47_o12 (qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_preidx_ready_byte_end_pre_OR_47_o12)
+     LUT4:I2->O            9   0.203   0.830  qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_preidx_ready_byte_end_pre_OR_47_o21 (qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_preidx_ready_byte_end_pre_OR_47_o2)
+     LUT6:I5->O            1   0.205   0.684  qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_cmd_fstrd_0bh_preidx_end_OR_28_o_SW1 (N71)
+     LUT6:I4->O           16   0.203   1.005  qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_cmd_fstrd_0bh_preidx_end_OR_28_o (qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_cmd_fstrd_0bh_preidx_end_OR_28_o)
+     LUT2:I1->O            1   0.205   0.000  qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_bit_Mcount_cnt_eqn_151 (qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_bit_Mcount_cnt_eqn_15)
+     FDC:D                     0.102          qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_bit_cnt_15
     ----------------------------------------
-    Total                      4.040ns (1.162ns logic, 2.878ns route)
-                                       (28.8% logic, 71.2% route)
+    Total                      5.823ns (1.568ns logic, 4.255ns route)
+                                       (26.9% logic, 73.1% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state_nxt[4]_PWR_9_o_Select_37_o'
-  Clock period: 2.632ns (frequency: 379.997MHz)
-  Total number of paths / destination ports: 11 / 3
+Timing constraint: Default period analysis for Clock 'clk_sdram_inst_pll_base_inst/CLKOUT0'
+  Clock period: 5.827ns (frequency: 171.613MHz)
+  Total number of paths / destination ports: 7453 / 802
 -------------------------------------------------------------------------
-Delay:               2.632ns (Levels of Logic = 2)
-  Source:            qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state_nxt_0 (LATCH)
-  Destination:       qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state_nxt_0 (LATCH)
-  Source Clock:      qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state_nxt[4]_PWR_9_o_Select_37_o falling
-  Destination Clock: qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state_nxt[4]_PWR_9_o_Select_37_o falling
+Delay:               5.827ns (Levels of Logic = 4)
+  Source:            qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst_wr_state_FSM_FFd2 (FF)
+  Destination:       qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_wrfifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_15 (FF)
+  Source Clock:      clk_sdram_inst_pll_base_inst/CLKOUT0 rising
+  Destination Clock: clk_sdram_inst_pll_base_inst/CLKOUT0 rising
 
-  Data Path: qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state_nxt_0 to qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state_nxt_0
+  Data Path: qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst_wr_state_FSM_FFd2 to qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_wrfifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD:G->Q               6   0.498   1.109  qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state_nxt_0 (qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state_nxt_0)
-     LUT6:I0->O            1   0.203   0.580  qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/Mmux_qspi_state_nxt[4]_GND_8_o_Select_40_o132 (qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/Mmux_qspi_state_nxt[4]_GND_8_o_Select_40_o131)
-     LUT5:I4->O            1   0.205   0.000  qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/Mmux_qspi_state_nxt[4]_GND_8_o_Select_40_o133 (qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state_nxt[4]_GND_8_o_Select_44_o)
-     LD:D                      0.037          qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state_nxt_0
+     FDC:C->Q             38   0.447   1.481  qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst_wr_state_FSM_FFd2 (qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst_wr_state_FSM_FFd2)
+     LUT3:I1->O            1   0.203   0.684  qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst_GND_31_o_rd_cnt[7]_mux_24_OUT<6>3_SW0 (N27)
+     LUT6:I4->O           18   0.203   1.278  qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst_GND_31_o_rd_cnt[7]_mux_24_OUT<6>3 (qspi_simulator_inst_cyp2sdram_inst_fifo_ren)
+     begin scope: 'qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_wrfifo_inst:rd_en'
+     LUT3:I0->O           16   0.205   1.004  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/RAM_REGOUT_EN1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/ram_regout_en)
+     FDRE:CE                   0.322          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_0
     ----------------------------------------
-    Total                      2.632ns (0.943ns logic, 1.689ns route)
-                                       (35.8% logic, 64.2% route)
+    Total                      5.827ns (1.380ns logic, 4.447ns route)
+                                       (23.7% logic, 76.3% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'clk_sdram_inst/pll_base_inst/CLKOUT0'
-  Clock period: 6.262ns (frequency: 159.687MHz)
-  Total number of paths / destination ports: 9990 / 2006
+Timing constraint: Default period analysis for Clock 'qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
+  Clock period: 6.946ns (frequency: 143.963MHz)
+  Total number of paths / destination ports: 2871 / 491
 -------------------------------------------------------------------------
-Delay:               6.262ns (Levels of Logic = 6)
-  Source:            qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/cnt_clk_r_7 (FF)
-  Destination:       qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/work_state_r_FSM_FFd5 (FF)
-  Source Clock:      clk_sdram_inst/pll_base_inst/CLKOUT0 rising
-  Destination Clock: clk_sdram_inst/pll_base_inst/CLKOUT0 rising
+Delay:               6.946ns (Levels of Logic = 7)
+  Source:            qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_db_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[10].u_ramb18/U_RAMB18 (RAM)
+  Destination:       qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/U_TDO_reg (FF)
+  Source Clock:      qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
+  Destination Clock: qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
 
-  Data Path: qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/cnt_clk_r_7 to qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/work_state_r_FSM_FFd5
+  Data Path: qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_db_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[10].u_ramb18/U_RAMB18 to qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/U_TDO_reg
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              3   0.447   0.995  qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/cnt_clk_r_7 (qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/cnt_clk_r_7)
-     LUT5:I0->O           17   0.203   1.028  qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/init_state[4]_work_state[4]_OR_188_o31 (qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/init_state[4]_work_state[4]_OR_188_o3)
-     LUT3:I2->O            3   0.205   0.651  qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/end_tread111 (qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/end_tread11)
-     LUT5:I4->O            3   0.205   0.651  qspi_simulator_inst/sdram_ctrl_inst/sdram_t_inst/end_trcd1 (qspi_simulator_inst/sdram_ctrl_inst/end_trcd)
-     LUT6:I5->O            1   0.205   0.580  qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/work_state_r_FSM_FFd5-In3 (qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/work_state_r_FSM_FFd5-In3)
-     LUT6:I5->O            1   0.205   0.580  qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/work_state_r_FSM_FFd5-In4 (qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/work_state_r_FSM_FFd5-In4)
-     LUT3:I2->O            1   0.205   0.000  qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/work_state_r_FSM_FFd5-In5 (qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/work_state_r_FSM_FFd5-In)
-     FDC:D                     0.102          qspi_simulator_inst/sdram_ctrl_inst/sdram_core_inst/work_state_r_FSM_FFd5
-    ----------------------------------------
-    Total                      6.262ns (1.777ns logic, 4.485ns route)
-                                       (28.4% logic, 71.6% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'qspi_simulator_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
-  Clock period: 7.146ns (frequency: 139.934MHz)
-  Total number of paths / destination ports: 3402 / 510
--------------------------------------------------------------------------
-Delay:               7.146ns (Levels of Logic = 10)
-  Source:            qspi_simulator_inst/db_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[12].u_ramb18/U_RAMB18 (RAM)
-  Destination:       qspi_simulator_inst/icon_inst/U0/U_ICON/U_TDO_reg (FF)
-  Source Clock:      qspi_simulator_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
-  Destination Clock: qspi_simulator_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
-
-  Data Path: qspi_simulator_inst/db_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[12].u_ramb18/U_RAMB18 to qspi_simulator_inst/icon_inst/U0/U_ICON/U_TDO_reg
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     RAMB16BWER:CLKA->DOA1    1   1.850   0.827  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[12].u_ramb18/U_RAMB18 (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_data<109>)
-     LUT6:I2->O            1   0.203   0.000  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O_123 (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O_123)
-     MUXF7:I1->O           1   0.140   0.000  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O_11_f7_1 (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O_11_f72)
-     MUXF8:I1->O           1   0.152   0.827  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O_10_f8_0 (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O_10_f81)
-     LUT6:I2->O            1   0.203   0.000  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O_51 (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O_51)
-     MUXF7:I1->O           1   0.140   0.000  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O_4_f7 (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O_4_f7)
-     MUXF8:I0->O           1   0.144   0.579  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I8.U_MUX256/Mmux_O_2_f8 (U0/I_NO_D.U_ILA/iDATA_DOUT1)
-     INV:I->O              1   0.206   0.684  U0/I_NO_D.U_ILA/iDATA_DOUT_inv1_INV_0 (U0/I_NO_D.U_ILA/iDATA_DOUT)
+     RAMB16BWER:CLKA->DOA1    1   1.850   0.827  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[10].u_ramb18/U_RAMB18 (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_data<41>)
+     LUT6:I2->O            1   0.203   0.827  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I7.U_MUX128/Mmux_O_144 (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I7.U_MUX128/Mmux_O_144)
+     LUT6:I2->O            1   0.203   0.827  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I7.U_MUX128/Mmux_O_91 (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I7.U_MUX128/Mmux_O_91)
+     LUT6:I2->O            1   0.203   0.000  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I7.U_MUX128/Mmux_O_41 (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I7.U_MUX128/Mmux_O_4)
+     MUXF7:I0->O           1   0.131   0.684  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I7.U_MUX128/Mmux_O_2_f7 (U0/I_NO_D.U_ILA/iDATA_DOUT)
      LUT3:I1->O            1   0.203   0.684  U0/I_NO_D.U_ILA/U_DOUT (CONTROL<3>)
-     end scope: 'qspi_simulator_inst/db_ila_inst:CONTROL<3>'
-     begin scope: 'qspi_simulator_inst/icon_inst:CONTROL0<3>'
+     end scope: 'qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_db_ila_inst:CONTROL<3>'
+     begin scope: 'qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst:CONTROL0<3>'
      LUT6:I4->O            1   0.203   0.000  U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O11 (U0/U_ICON/iTDO_next)
      FDE:D                     0.102          U0/U_ICON/U_TDO_reg
     ----------------------------------------
-    Total                      7.146ns (3.546ns logic, 3.600ns route)
-                                       (49.6% logic, 50.4% route)
+    Total                      6.946ns (3.098ns logic, 3.848ns route)
+                                       (44.6% logic, 55.4% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'qspi_simulator_inst/icon_inst/U0/iUPDATE_OUT'
+Timing constraint: Default period analysis for Clock 'clk_sdram_inst_pll_base_inst/CLKOUT1'
+  Clock period: 3.514ns (frequency: 284.604MHz)
+  Total number of paths / destination ports: 1159 / 845
+-------------------------------------------------------------------------
+Delay:               3.514ns (Levels of Logic = 2)
+  Source:            qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_db_ila_inst/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_GEN_DELAY[1].U_FD (FF)
+  Destination:       qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_db_ila_inst/U0/I_NO_D.U_ILA/U_RST/G_RST[7].U_RST (FF)
+  Source Clock:      clk_sdram_inst_pll_base_inst/CLKOUT1 rising
+  Destination Clock: clk_sdram_inst_pll_base_inst/CLKOUT1 rising
+
+  Data Path: qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_db_ila_inst/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_GEN_DELAY[1].U_FD to qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_db_ila_inst/U0/I_NO_D.U_ILA/U_RST/G_RST[7].U_RST
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.447   0.845  U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_GEN_DELAY[1].U_FD (U0/I_NO_D.U_ILA/U_RST/HALT_pulse)
+     LUT3:I0->O            1   0.205   0.580  U0/I_NO_D.U_ILA/U_RST/U_PRST1 (U0/I_NO_D.U_ILA/U_RST/PRE_RESET1)
+     LUT4:I3->O            8   0.205   0.802  U0/I_NO_D.U_ILA/U_RST/U_PRST0 (U0/I_NO_D.U_ILA/U_RST/PRE_RESET0)
+     FDS:S                     0.430          U0/I_NO_D.U_ILA/U_RST/G_RST[0].U_RST
+    ----------------------------------------
+    Total                      3.514ns (1.287ns logic, 2.227ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/iUPDATE_OUT'
   Clock period: 1.984ns (frequency: 504.007MHz)
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Delay:               1.984ns (Levels of Logic = 1)
-  Source:            qspi_simulator_inst/icon_inst/U0/U_ICON/U_iDATA_CMD (FF)
-  Destination:       qspi_simulator_inst/icon_inst/U0/U_ICON/U_iDATA_CMD (FF)
-  Source Clock:      qspi_simulator_inst/icon_inst/U0/iUPDATE_OUT rising
-  Destination Clock: qspi_simulator_inst/icon_inst/U0/iUPDATE_OUT rising
+  Source:            qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:       qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/U_iDATA_CMD (FF)
+  Source Clock:      qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/iUPDATE_OUT rising
+  Destination Clock: qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/iUPDATE_OUT rising
 
-  Data Path: qspi_simulator_inst/icon_inst/U0/U_ICON/U_iDATA_CMD to qspi_simulator_inst/icon_inst/U0/U_ICON/U_iDATA_CMD
+  Data Path: qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/U_iDATA_CMD to qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/U_iDATA_CMD
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -1483,16 +1477,16 @@ Timing constraint: Default OFFSET IN BEFORE for Clock 'usb_clk'
 -------------------------------------------------------------------------
 Offset:              5.096ns (Levels of Logic = 4)
   Source:            usb_flaga (PAD)
-  Destination:       qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_10 (FF)
+  Destination:       qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_wrfifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_10 (FF)
   Destination Clock: usb_clk rising
 
-  Data Path: usb_flaga to qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_10
+  Data Path: usb_flaga to qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_wrfifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_10
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             4   1.222   0.684  usb_flaga_IBUF (usb_flaga_IBUF)
-     LUT2:I1->O           20   0.205   1.197  qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wen1 (qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wen)
-     begin scope: 'qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wrfifo_inst:wr_en'
+     LUT2:I1->O           20   0.205   1.197  qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_wen1 (qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_wen)
+     begin scope: 'qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_wrfifo_inst:wr_en'
      LUT2:I0->O           30   0.203   1.263  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/ram_wr_en_i1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/ram_wr_en)
      FDPE:CE                   0.322          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_1
     ----------------------------------------
@@ -1501,108 +1495,103 @@ Offset:              5.096ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'qspi_clk'
-  Total number of paths / destination ports: 148 / 148
+  Total number of paths / destination ports: 108 / 108
 -------------------------------------------------------------------------
-Offset:              5.501ns (Levels of Logic = 5)
-  Source:            qspi_di (PAD)
-  Destination:       qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/bit_cnt_15 (FF)
+Offset:              4.551ns (Levels of Logic = 2)
+  Source:            rst_n (PAD)
+  Destination:       qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_bit_cnt_15 (FF)
   Destination Clock: qspi_clk rising
 
-  Data Path: qspi_di to qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/bit_cnt_15
+  Data Path: rst_n to qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_bit_cnt_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             5   1.222   0.715  qspi_di_IBUF (qspi_di_IBUF)
-     LUT4:I3->O            1   0.205   0.580  qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/cmd_fstrd_0bh_flag_PWR_8_o_MUX_49_o1_SW0 (N2)
-     LUT6:I5->O            5   0.205   1.059  qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/cmd_fstrd_0bh_flag_PWR_8_o_MUX_49_o1 (qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/cmd_fstrd_0bh_flag_PWR_8_o_MUX_49_o1)
-     LUT6:I1->O           16   0.203   1.005  qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/cmd_fstrd_0bh_preidx_end_OR_29_o1 (qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/cmd_fstrd_0bh_preidx_end_OR_29_o)
-     LUT2:I1->O            1   0.205   0.000  qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/Mcount_bit_cnt_eqn_151 (qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/Mcount_bit_cnt_eqn_15)
-     FDC:D                     0.102          qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/bit_cnt_15
+     IBUF:I->O             2   1.222   0.617  rst_n_IBUF (rst_n_IBUF)
+     LUT2:I1->O          378   0.205   2.077  qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_rst_n_inv1 (qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst_rst_n_inv)
+     FDC:CLR                   0.430          qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_in_dat_0
     ----------------------------------------
-    Total                      5.501ns (2.142ns logic, 3.359ns route)
-                                       (38.9% logic, 61.1% route)
+    Total                      4.551ns (1.857ns logic, 2.694ns route)
+                                       (40.8% logic, 59.2% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state_nxt[4]_PWR_9_o_Select_37_o'
-  Total number of paths / destination ports: 1 / 1
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_sdram_inst_pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 305 / 305
 -------------------------------------------------------------------------
-Offset:              4.669ns (Levels of Logic = 5)
-  Source:            qspi_di (PAD)
-  Destination:       qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state_nxt_0 (LATCH)
-  Destination Clock: qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state_nxt[4]_PWR_9_o_Select_37_o falling
+Offset:              4.551ns (Levels of Logic = 2)
+  Source:            rst_n (PAD)
+  Destination:       qspi_simulator_inst_sdram_ctrl_inst_sdram_data_inst_wr_cnt_2 (FF)
+  Destination Clock: clk_sdram_inst_pll_base_inst/CLKOUT0 rising
 
-  Data Path: qspi_di to qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state_nxt_0
+  Data Path: rst_n to qspi_simulator_inst_sdram_ctrl_inst_sdram_data_inst_wr_cnt_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             5   1.222   0.715  qspi_di_IBUF (qspi_di_IBUF)
-     LUT4:I3->O            1   0.205   0.580  qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/cmd_fstrd_0bh_flag_PWR_8_o_MUX_49_o1_SW0 (N2)
-     LUT6:I5->O            5   0.205   0.715  qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/cmd_fstrd_0bh_flag_PWR_8_o_MUX_49_o1 (qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/cmd_fstrd_0bh_flag_PWR_8_o_MUX_49_o1)
-     LUT6:I5->O            1   0.205   0.580  qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/Mmux_qspi_state_nxt[4]_GND_8_o_Select_40_o132 (qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/Mmux_qspi_state_nxt[4]_GND_8_o_Select_40_o131)
-     LUT5:I4->O            1   0.205   0.000  qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/Mmux_qspi_state_nxt[4]_GND_8_o_Select_40_o133 (qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state_nxt[4]_GND_8_o_Select_44_o)
-     LD:D                      0.037          qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state_nxt_0
+     IBUF:I->O             2   1.222   0.617  rst_n_IBUF (rst_n_IBUF)
+     LUT2:I1->O          378   0.205   2.077  qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_rst_n_inv1 (qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst_rst_n_inv)
+     FDC:CLR                   0.430          qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst_wr_data_0
     ----------------------------------------
-    Total                      4.669ns (2.079ns logic, 2.590ns route)
-                                       (44.5% logic, 55.5% route)
+    Total                      4.551ns (1.857ns logic, 2.694ns route)
+                                       (40.8% logic, 59.2% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_sdram_inst/pll_base_inst/CLKOUT0'
-  Total number of paths / destination ports: 582 / 582
+Timing constraint: Default OFFSET IN BEFORE for Clock 'qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
+  Total number of paths / destination ports: 207 / 195
 -------------------------------------------------------------------------
-Offset:              5.103ns (Levels of Logic = 3)
-  Source:            qspi_simulator_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT (PAD)
-  Destination:       qspi_simulator_inst/db_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/G_GAND_DLY2[0].I_IN_RANGE.U_GAND_DLY2 (FF)
-  Destination Clock: clk_sdram_inst/pll_base_inst/CLKOUT0 rising
+Offset:              5.994ns (Levels of Logic = 6)
+  Source:            qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT (PAD)
+  Destination:       qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_db_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_TDO (FF)
+  Destination Clock: qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
 
-  Data Path: qspi_simulator_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT to qspi_simulator_inst/db_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/G_GAND_DLY2[0].I_IN_RANGE.U_GAND_DLY2
+  Data Path: qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT to qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_db_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_TDO
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
     BSCAN_SPARTAN6:SHIFT    3   0.000   0.651  U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS (U0/iSHIFT_OUT)
      LUT2:I1->O           32   0.205   1.539  U0/U_ICON/U_CTRL_OUT/U_DATA_VALID (U0/U_ICON/U_CTRL_OUT/iDATA_VALID)
-     LUT4:I0->O          346   0.203   2.075  U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[0].U_HCE (CONTROL0<20>)
-     end scope: 'qspi_simulator_inst/icon_inst:CONTROL0<20>'
-     begin scope: 'qspi_simulator_inst/db_ila_inst:CONTROL<20>'
+     LUT4:I0->O            4   0.203   0.912  U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[0].U_LCE (CONTROL0<4>)
+     end scope: 'qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst:CONTROL0<4>'
+     begin scope: 'qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_db_ila_inst:CONTROL<4>'
+     LUT3:I0->O            1   0.205   0.944  U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O114 (U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O113)
+     LUT6:I0->O            1   0.203   0.827  U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O116 (U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O115)
+     LUT6:I2->O            1   0.203   0.000  U0/I_NO_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_O117 (U0/I_NO_D.U_ILA/U_STAT/TDO_next)
+     FDE:D                     0.102          U0/I_NO_D.U_ILA/U_STAT/U_TDO
+    ----------------------------------------
+    Total                      5.994ns (1.121ns logic, 4.873ns route)
+                                       (18.7% logic, 81.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_sdram_inst_pll_base_inst/CLKOUT1'
+  Total number of paths / destination ports: 147 / 147
+-------------------------------------------------------------------------
+Offset:              5.051ns (Levels of Logic = 3)
+  Source:            qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT (PAD)
+  Destination:       qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_db_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/G_GAND_DLY2[0].I_IN_RANGE.U_GAND_DLY2 (FF)
+  Destination Clock: clk_sdram_inst_pll_base_inst/CLKOUT1 rising
+
+  Data Path: qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT to qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_db_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/G_GAND_DLY2[0].I_IN_RANGE.U_GAND_DLY2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_SPARTAN6:SHIFT    3   0.000   0.651  U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS (U0/iSHIFT_OUT)
+     LUT2:I1->O           32   0.205   1.539  U0/U_ICON/U_CTRL_OUT/U_DATA_VALID (U0/U_ICON/U_CTRL_OUT/iDATA_VALID)
+     LUT4:I0->O          166   0.203   2.022  U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[0].U_HCE (CONTROL0<20>)
+     end scope: 'qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst:CONTROL0<20>'
+     begin scope: 'qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_db_ila_inst:CONTROL<20>'
      FDP:PRE                   0.430          U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/G_GAND_DLY2[0].I_IN_RANGE.U_GAND_DLY2
     ----------------------------------------
-    Total                      5.103ns (0.838ns logic, 4.265ns route)
-                                       (16.4% logic, 83.6% route)
+    Total                      5.051ns (0.838ns logic, 4.213ns route)
+                                       (16.6% logic, 83.4% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'qspi_simulator_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
-  Total number of paths / destination ports: 244 / 233
--------------------------------------------------------------------------
-Offset:              5.627ns (Levels of Logic = 5)
-  Source:            qspi_simulator_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT (PAD)
-  Destination:       qspi_simulator_inst/db_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_STAT_CNT/G[0].U_FDRE (FF)
-  Destination Clock: qspi_simulator_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
-
-  Data Path: qspi_simulator_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT to qspi_simulator_inst/db_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_STAT_CNT/G[0].U_FDRE
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-    BSCAN_SPARTAN6:SHIFT    3   0.000   0.651  U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS (U0/iSHIFT_OUT)
-     LUT2:I1->O           32   0.205   1.539  U0/U_ICON/U_CTRL_OUT/U_DATA_VALID (U0/U_ICON/U_CTRL_OUT/iDATA_VALID)
-     LUT4:I0->O            3   0.203   0.755  U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[0].U_LCE (CONTROL0<4>)
-     end scope: 'qspi_simulator_inst/icon_inst:CONTROL0<4>'
-     begin scope: 'qspi_simulator_inst/db_ila_inst:CONTROL<4>'
-     LUT2:I0->O            1   0.203   0.579  U0/I_NO_D.U_ILA/U_STAT/U_STATCMD (U0/I_NO_D.U_ILA/U_STAT/iSTATCMD_CE)
-     INV:I->O             10   0.206   0.856  U0/I_NO_D.U_ILA/U_STAT/U_STATCMD_n (U0/I_NO_D.U_ILA/U_STAT/iSTATCMD_CE_n)
-     FDRE:R                    0.430          U0/I_NO_D.U_ILA/U_STAT/U_STAT_CNT/G[9].U_FDRE
-    ----------------------------------------
-    Total                      5.627ns (1.247ns logic, 4.380ns route)
-                                       (22.2% logic, 77.8% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'qspi_simulator_inst/icon_inst/U0/iUPDATE_OUT'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/iUPDATE_OUT'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              1.831ns (Levels of Logic = 1)
-  Source:            qspi_simulator_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SEL (PAD)
-  Destination:       qspi_simulator_inst/icon_inst/U0/U_ICON/U_iDATA_CMD (FF)
-  Destination Clock: qspi_simulator_inst/icon_inst/U0/iUPDATE_OUT rising
+  Source:            qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SEL (PAD)
+  Destination:       qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination Clock: qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/iUPDATE_OUT rising
 
-  Data Path: qspi_simulator_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SEL to qspi_simulator_inst/icon_inst/U0/U_ICON/U_iDATA_CMD
+  Data Path: qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SEL to qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/U_iDATA_CMD
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -1614,40 +1603,40 @@ Offset:              1.831ns (Levels of Logic = 1)
                                        (34.7% logic, 65.3% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_sdram_inst/pll_base_inst/CLKOUT0'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_sdram_inst_pll_base_inst/CLKOUT0'
   Total number of paths / destination ports: 62 / 34
 -------------------------------------------------------------------------
-Offset:              4.772ns (Levels of Logic = 2)
-  Source:            qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/w_idx_0 (FF)
+Offset:              4.734ns (Levels of Logic = 2)
+  Source:            qspi_simulator_inst_sdram_ctrl_inst_sdram_data_inst_w_idx_0 (FF)
   Destination:       sdram_data<15> (PAD)
-  Source Clock:      clk_sdram_inst/pll_base_inst/CLKOUT0 rising
+  Source Clock:      clk_sdram_inst_pll_base_inst/CLKOUT0 rising
 
-  Data Path: qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/w_idx_0 to sdram_data<15>
+  Data Path: qspi_simulator_inst_sdram_ctrl_inst_sdram_data_inst_w_idx_0 to sdram_data<15>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             13   0.447   0.932  qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/w_idx_0 (qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/w_idx_0)
-     RAM16X1D:DPRA0->DPO    2   0.205   0.616  qspi_simulator_inst/sdram_ctrl_inst/sdram_data_inst/Mram_temp_wdata31 (sdram_data_o<12>)
+     FDC:C->Q             13   0.447   0.932  qspi_simulator_inst_sdram_ctrl_inst_sdram_data_inst_w_idx_0 (qspi_simulator_inst_sdram_ctrl_inst_sdram_data_inst_w_idx_0)
+     RAM16X1D:DPRA0->DPO    1   0.205   0.579  qspi_simulator_inst_sdram_ctrl_inst_sdram_data_inst_Mram_temp_wdata31 (sdram_data_o<12>)
      IOBUF:I->IO               2.571          [12].IOBUF_sdram_inst (sdram_data<12>)
     ----------------------------------------
-    Total                      4.772ns (3.223ns logic, 1.549ns route)
-                                       (67.5% logic, 32.5% route)
+    Total                      4.734ns (3.223ns logic, 1.511ns route)
+                                       (68.1% logic, 31.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'usb_clk'
   Total number of paths / destination ports: 18 / 18
 -------------------------------------------------------------------------
 Offset:              5.101ns (Levels of Logic = 2)
-  Source:            qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/cyp_state_cur_FSM_FFd1 (FF)
+  Source:            qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_cyp_state_cur_FSM_FFd1 (FF)
   Destination:       usb_fd<15> (PAD)
   Source Clock:      usb_clk rising
 
-  Data Path: qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/cyp_state_cur_FSM_FFd1 to usb_fd<15>
+  Data Path: qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_cyp_state_cur_FSM_FFd1 to usb_fd<15>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              4   0.447   0.788  qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/cyp_state_cur_FSM_FFd1 (qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/cyp_state_cur_FSM_FFd1)
-     LUT2:I0->O           20   0.203   1.092  qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wen1 (qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wen)
+     FDC:C->Q              4   0.447   0.788  qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_cyp_state_cur_FSM_FFd1 (qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_cyp_state_cur_FSM_FFd1)
+     LUT2:I0->O           20   0.203   1.092  qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_wen1 (qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_wen)
      IOBUF:T->IO               2.571          [0].IOBUF_usb_inst (usb_fd<0>)
     ----------------------------------------
     Total                      5.101ns (3.221ns logic, 1.880ns route)
@@ -1657,32 +1646,32 @@ Offset:              5.101ns (Levels of Logic = 2)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'qspi_clk'
   Total number of paths / destination ports: 2 / 1
 -------------------------------------------------------------------------
-Offset:              4.382ns (Levels of Logic = 2)
-  Source:            qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state[4]_qspi_clk_DFF_88 (FF)
+Offset:              4.419ns (Levels of Logic = 2)
+  Source:            qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_qspi_state[4]_qspi_clk_DFF_91 (FF)
   Destination:       qspi_do (PAD)
   Source Clock:      qspi_clk falling
 
-  Data Path: qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state[4]_qspi_clk_DFF_88 to qspi_do
+  Data Path: qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_qspi_state[4]_qspi_clk_DFF_91 to qspi_do
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC_1:C->Q            1   0.447   0.579  qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state[4]_qspi_clk_DFF_88 (qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state[4]_qspi_clk_DFF_88)
-     INV:I->O              1   0.206   0.579  qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state[4]_qspi_clk_DFF_88_inv1_INV_0 (qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state[4]_qspi_clk_DFF_88_inv)
+     FDC_1:C->Q            2   0.447   0.616  qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_qspi_state[4]_qspi_clk_DFF_91 (qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_qspi_state[4]_qspi_clk_DFF_91)
+     INV:I->O              1   0.206   0.579  qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_qspi_state[4]_qspi_clk_DFF_91_inv1_INV_0 (qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_qspi_state[4]_qspi_clk_DFF_91_inv)
      OBUFT:T->O                2.571          qspi_do_OBUFT (qspi_do)
     ----------------------------------------
-    Total                      4.382ns (3.224ns logic, 1.158ns route)
-                                       (73.6% logic, 26.4% route)
+    Total                      4.419ns (3.224ns logic, 1.195ns route)
+                                       (73.0% logic, 27.0% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'qspi_simulator_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              0.447ns (Levels of Logic = 0)
-  Source:            qspi_simulator_inst/icon_inst/U0/U_ICON/U_TDO_reg (FF)
-  Destination:       qspi_simulator_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:TDO (PAD)
-  Source Clock:      qspi_simulator_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
+  Source:            qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/U_TDO_reg (FF)
+  Destination:       qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:TDO (PAD)
+  Source Clock:      qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
 
-  Data Path: qspi_simulator_inst/icon_inst/U0/U_ICON/U_TDO_reg to qspi_simulator_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:TDO
+  Data Path: qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/U_TDO_reg to qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:TDO
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -1705,7 +1694,7 @@ Delay:               5.774ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             4   1.222   0.684  usb_flaga_IBUF (usb_flaga_IBUF)
-     LUT2:I1->O           20   0.205   1.092  qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wen1 (qspi_simulator_inst/cyp2sdram_inst/cy_wr_fifo_inst/wen)
+     LUT2:I1->O           20   0.205   1.092  qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_wen1 (qspi_simulator_inst_cyp2sdram_inst_cy_wr_fifo_inst_wen)
      IOBUF:T->IO               2.571          [0].IOBUF_usb_inst (usb_fd<0>)
     ----------------------------------------
     Total                      5.774ns (3.998ns logic, 1.776ns route)
@@ -1716,84 +1705,95 @@ Delay:               5.774ns (Levels of Logic = 3)
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock clk_sdram_inst/pll_base_inst/CLKOUT0
---------------------------------------------------------------------+---------+---------+---------+---------+
-                                                                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                                                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
---------------------------------------------------------------------+---------+---------+---------+---------+
-clk_sdram_inst/pll_base_inst/CLKOUT0                                |    6.262|         |         |         |
-qspi_clk                                                            |    3.967|         |         |         |
-qspi_simulator_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL|    6.051|         |         |         |
-usb_clk                                                             |    1.128|         |         |         |
---------------------------------------------------------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock clk_sdram_inst_pll_base_inst/CLKOUT0
+--------------------------------------------------------------------------------+---------+---------+---------+---------+
+                                                                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------------------------------------+---------+---------+---------+---------+
+clk_sdram_inst_pll_base_inst/CLKOUT0                                            |    5.827|         |         |         |
+qspi_clk                                                                        |    4.307|         |         |         |
+qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_preidx_end_byte_end_OR_48_o|         |    1.354|         |         |
+usb_clk                                                                         |    1.128|         |         |         |
+--------------------------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_sdram_inst_pll_base_inst/CLKOUT1
+-----------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
+                                                                                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                                                         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
+clk_sdram_inst_pll_base_inst/CLKOUT0                                                                 |    1.708|         |         |         |
+clk_sdram_inst_pll_base_inst/CLKOUT1                                                                 |    3.514|         |         |         |
+qspi_clk                                                                                             |    3.954|    1.473|         |         |
+qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL|    5.998|         |         |         |
+qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_preidx_end_byte_end_OR_48_o                     |         |    2.277|         |         |
+-----------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock qspi_clk
-------------------------------------------------------------------------------------------+---------+---------+---------+---------+
-                                                                                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                                                                              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
-------------------------------------------------------------------------------------------+---------+---------+---------+---------+
-clk_sdram_inst/pll_base_inst/CLKOUT0                                                      |         |         |    2.169|         |
-qspi_clk                                                                                  |    6.735|         |    4.040|         |
-qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state_nxt[4]_PWR_9_o_Select_37_o|         |         |    1.892|         |
-------------------------------------------------------------------------------------------+---------+---------+---------+---------+
+--------------------------------------------------------------------------------+---------+---------+---------+---------+
+                                                                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------------------------------------+---------+---------+---------+---------+
+clk_sdram_inst_pll_base_inst/CLKOUT0                                            |         |         |    1.914|         |
+qspi_clk                                                                        |    5.823|         |    2.010|         |
+qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_preidx_end_byte_end_OR_48_o|         |         |    2.483|         |
+--------------------------------------------------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock qspi_simulator_inst/icon_inst/CONTROL0<13>
+Clock to Setup on destination clock qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/CONTROL0<13>
 ------------------------------------+---------+---------+---------+---------+
                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------------+---------+---------+---------+---------+
-clk_sdram_inst/pll_base_inst/CLKOUT0|         |         |    1.969|         |
+clk_sdram_inst_pll_base_inst/CLKOUT1|         |         |    1.990|         |
 ------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock qspi_simulator_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL
---------------------------------------------------------------------+---------+---------+---------+---------+
-                                                                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                                                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
---------------------------------------------------------------------+---------+---------+---------+---------+
-clk_sdram_inst/pll_base_inst/CLKOUT0                                |    3.622|         |         |         |
-qspi_simulator_inst/icon_inst/CONTROL0<13>                          |         |    3.669|         |         |
-qspi_simulator_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL|    7.146|         |         |         |
-qspi_simulator_inst/icon_inst/U0/iUPDATE_OUT                        |    2.583|         |         |         |
---------------------------------------------------------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL
+-----------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
+                                                                                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                                                         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
+clk_sdram_inst_pll_base_inst/CLKOUT1                                                                 |    3.631|         |         |         |
+qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/CONTROL0<13>                          |         |    4.643|         |         |
+qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL|    6.946|         |         |         |
+qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/iUPDATE_OUT                        |    2.583|         |         |         |
+-----------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock qspi_simulator_inst/icon_inst/U0/iUPDATE_OUT
---------------------------------------------+---------+---------+---------+---------+
-                                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
---------------------------------------------+---------+---------+---------+---------+
-qspi_simulator_inst/icon_inst/U0/iUPDATE_OUT|    1.984|         |         |         |
---------------------------------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/iUPDATE_OUT
+-----------------------------------------------------------------------------+---------+---------+---------+---------+
+                                                                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------------------------------------------------+---------+---------+---------+---------+
+qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_icon_inst/U0/iUPDATE_OUT|    1.984|         |         |         |
+-----------------------------------------------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state_nxt[4]_PWR_9_o_Select_37_o
-------------------------------------------------------------------------------------------+---------+---------+---------+---------+
-                                                                                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                                                                              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
-------------------------------------------------------------------------------------------+---------+---------+---------+---------+
-qspi_clk                                                                                  |         |         |    6.490|         |
-qspi_simulator_inst/qspi2sdram_inst/qspi_rd_ram_inst/qspi_state_nxt[4]_PWR_9_o_Select_37_o|         |         |    2.632|         |
-------------------------------------------------------------------------------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_preidx_end_byte_end_OR_48_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+qspi_clk       |         |         |    5.023|         |
+---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock usb_clk
 ------------------------------------+---------+---------+---------+---------+
                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------------+---------+---------+---------+---------+
-clk_sdram_inst/pll_base_inst/CLKOUT0|    1.128|         |         |         |
+clk_sdram_inst_pll_base_inst/CLKOUT0|    1.128|         |         |         |
 usb_clk                             |    4.423|         |         |         |
 ------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 9.09 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.71 secs
  
 --> 
 
 
-Total memory usage is 493724 kilobytes
+Total memory usage is 492748 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  142 (   0 filtered)
+Number of warnings :  140 (   0 filtered)
 Number of infos    :   24 (   0 filtered)
 

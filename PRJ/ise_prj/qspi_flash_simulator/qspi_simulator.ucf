@@ -1,6 +1,6 @@
 
 
-NET "fpga_clk" LOC = T8;
+NET "fpga_clk" LOC = T8; // 50mhz
 
 
 NET "fpga_clk" IOSTANDARD = LVCMOS33;
@@ -55,7 +55,7 @@ NET "usb_fifoaddr[1]" IOSTANDARD = LVCMOS33;
 NET "usb_fifoaddr[0]" IOSTANDARD = LVCMOS33;
 
 
-NET "rst_n" LOC = H2;
+NET "rst_n" LOC = L5;
 NET "sdram_casn" LOC = F2;
 NET "sdram_clk" LOC = H4;
 NET "sdram_csn" LOC = G1;
@@ -139,19 +139,19 @@ NET "qspi_di" LOC = L16;
 NET "qspi_do" LOC = L13;
 NET "qspi_clk" LOC = M15;
 
-NET "qspi_wpn" LOC = C6;
-NET "qspi_holdn" LOC = D6;
-NET "qspi_csn" LOC = F7;
+#NET "qspi_wpn" LOC = C6;
+#NET "qspi_holdn" LOC = D6;
+#NET "qspi_csn" LOC = F7;
 
 
 
 NET "qspi_clk" IOSTANDARD = LVCMOS33;
 NET "pa0" IOSTANDARD = LVCMOS33;
-NET "qspi_csn" IOSTANDARD = LVCMOS33;
+#NET "qspi_csn" IOSTANDARD = LVCMOS33;
 NET "qspi_di" IOSTANDARD = LVCMOS33;
 NET "qspi_do" IOSTANDARD = LVCMOS33;
-NET "qspi_holdn" IOSTANDARD = LVCMOS33;
-NET "qspi_wpn" IOSTANDARD = LVCMOS33;
+#NET "qspi_holdn" IOSTANDARD = LVCMOS33;
+#NET "qspi_wpn" IOSTANDARD = LVCMOS33;
 NET "rst_n" IOSTANDARD = LVCMOS33;
 NET "sdram_casn" IOSTANDARD = LVCMOS33;
 NET "sdram_clk" IOSTANDARD = LVCMOS33;
@@ -167,9 +167,9 @@ NET "usb_sloe" IOSTANDARD = LVCMOS33;
 NET "usb_slrd" IOSTANDARD = LVCMOS33;
 NET "usb_slwr" IOSTANDARD = LVCMOS33;
 NET "qspi_di" DRIVE = 12;
-NET "qspi_do" DRIVE = 12;
-NET "qspi_holdn" DRIVE = 12;
-NET "qspi_wpn" DRIVE = 12;
+NET "qspi_do" DRIVE = 24;
+#NET "qspi_holdn" DRIVE = 12;
+#NET "qspi_wpn" DRIVE = 12;
 NET "rst_n" DRIVE = 12;
 NET "sdram_casn" DRIVE = 12;
 NET "sdram_clk" DRIVE = 12;
@@ -186,8 +186,8 @@ NET "usb_slrd" DRIVE = 12;
 NET "usb_slwr" DRIVE = 12;
 NET "qspi_di" SLEW = SLOW;
 NET "qspi_do" SLEW = SLOW;
-NET "qspi_holdn" SLEW = SLOW;
-NET "qspi_wpn" SLEW = SLOW;
+#NET "qspi_holdn" SLEW = SLOW;
+#NET "qspi_wpn" SLEW = SLOW;
 NET "rst_n" SLEW = SLOW;
 NET "sdram_casn" SLEW = SLOW;
 NET "sdram_clk" SLEW = SLOW;
@@ -205,22 +205,17 @@ NET "usb_slwr" SLEW = SLOW;
 
 
 
-PIN "clk_sdram_inst/clkout2_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
-PIN "clk_sdram_inst/clkout1_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
+#PIN "clk_sdram_inst/clkout2_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
+PIN "clk_sdram_inst_clkout1_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
+PIN "clk_sdram_inst_clkout2_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
+
 #PIN "clk_cyp_inst/clkout1_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
 #PIN "clk_cyp_inst/clkout2_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
 NET "qspi_clk" CLOCK_DEDICATED_ROUTE = FALSE;
 NET "fpga_clk" CLOCK_DEDICATED_ROUTE = FALSE;
 NET "usb_clk" CLOCK_DEDICATED_ROUTE = FALSE;
 
-# PlanAhead Generated physical constraints 
-
-# PlanAhead Generated physical constraints 
-
 NET "sdram_cke" LOC = M3;
-
-# PlanAhead Generated IO constraints 
-
 NET "sdram_cke" IOSTANDARD = LVCMOS33;
 
 //  
@@ -229,3 +224,14 @@ NET "sdram_cke" IOSTANDARD = LVCMOS33;
 #
 #NET usb_slrd OFFSET=OUT 5ns AFTER usb_clk;
 #NET usb_sloe OFFSET=OUT 11ns AFTER usb_clk;
+
+#NET "qspi_do" PULLUP;
+#NET "qspi_do" OUT_TERM = UNTUNED_50;
+
+#NET qspi_do OFFSET=OUT 1ns AFTER qspi_clk;
+
+
+# PlanAhead Generated IO constraints 
+
+#NET "qspi_do_1v8" PULLUP;
+#NET "qspi_do_1v8" OUT_TERM = UNTUNED_50;

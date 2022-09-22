@@ -1,48 +1,10 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Aug 02 20:29:30 2022
+// Written by: Map P.20131013 on Wed Aug 24 00:29:19 2022
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "pa0" LOCATE = SITE "H11" LEVEL 1;
-COMP "sdram_casn" LOCATE = SITE "F2" LEVEL 1;
-COMP "sdram_rasn" LOCATE = SITE "F1" LEVEL 1;
-COMP "sdram_ba<0>" LOCATE = SITE "G6" LEVEL 1;
-COMP "sdram_ba<1>" LOCATE = SITE "J6" LEVEL 1;
-COMP "usb_fifoaddr<0>" LOCATE = SITE "H14" LEVEL 1;
-COMP "usb_fifoaddr<1>" LOCATE = SITE "H13" LEVEL 1;
-COMP "rst_n" LOCATE = SITE "H2" LEVEL 1;
-COMP "usb_fd<10>" LOCATE = SITE "J16" LEVEL 1;
-COMP "usb_fd<11>" LOCATE = SITE "K16" LEVEL 1;
-COMP "usb_fd<12>" LOCATE = SITE "K15" LEVEL 1;
-COMP "usb_fd<13>" LOCATE = SITE "K12" LEVEL 1;
-COMP "usb_fd<14>" LOCATE = SITE "K14" LEVEL 1;
-COMP "usb_fd<15>" LOCATE = SITE "J13" LEVEL 1;
-COMP "sdram_addr<0>" LOCATE = SITE "J3" LEVEL 1;
-COMP "sdram_addr<1>" LOCATE = SITE "J4" LEVEL 1;
-COMP "sdram_addr<2>" LOCATE = SITE "K3" LEVEL 1;
-COMP "sdram_addr<3>" LOCATE = SITE "K5" LEVEL 1;
-COMP "sdram_addr<4>" LOCATE = SITE "P1" LEVEL 1;
-COMP "sdram_addr<5>" LOCATE = SITE "N1" LEVEL 1;
-COMP "sdram_addr<6>" LOCATE = SITE "M2" LEVEL 1;
-COMP "sdram_addr<7>" LOCATE = SITE "M1" LEVEL 1;
-COMP "sdram_addr<8>" LOCATE = SITE "L1" LEVEL 1;
-COMP "sdram_addr<9>" LOCATE = SITE "K2" LEVEL 1;
-COMP "usb_clk" LOCATE = SITE "G12" LEVEL 1;
-PIN usb_clk_pin<0> = BEL "usb_clk" PINNAME PAD;
-PIN "usb_clk_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
-COMP "sdram_data<0>" LOCATE = SITE "A3" LEVEL 1;
-COMP "sdram_data<1>" LOCATE = SITE "B3" LEVEL 1;
-COMP "sdram_data<2>" LOCATE = SITE "A2" LEVEL 1;
-COMP "sdram_data<3>" LOCATE = SITE "B2" LEVEL 1;
-COMP "qspi_di" LOCATE = SITE "L16" LEVEL 1;
-COMP "sdram_data<4>" LOCATE = SITE "B1" LEVEL 1;
-COMP "sdram_data<5>" LOCATE = SITE "C2" LEVEL 1;
-COMP "sdram_data<6>" LOCATE = SITE "C1" LEVEL 1;
-COMP "qspi_do" LOCATE = SITE "L13" LEVEL 1;
-COMP "sdram_data<7>" LOCATE = SITE "D1" LEVEL 1;
 COMP "sdram_data<8>" LOCATE = SITE "H5" LEVEL 1;
 COMP "sdram_data<9>" LOCATE = SITE "G5" LEVEL 1;
-COMP "qspi_holdn" LOCATE = SITE "D6" LEVEL 1;
 COMP "sdram_cke" LOCATE = SITE "M3" LEVEL 1;
 COMP "sdram_clk" LOCATE = SITE "H4" LEVEL 1;
 COMP "sdram_csn" LOCATE = SITE "G1" LEVEL 1;
@@ -75,14 +37,52 @@ COMP "sdram_data<15>" LOCATE = SITE "F4" LEVEL 1;
 COMP "qspi_clk" LOCATE = SITE "M15" LEVEL 1;
 PIN qspi_clk_pin<0> = BEL "qspi_clk" PINNAME PAD;
 PIN "qspi_clk_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
-COMP "qspi_csn" LOCATE = SITE "F7" LEVEL 1;
 COMP "usb_slcs" LOCATE = SITE "G16" LEVEL 1;
-COMP "qspi_wpn" LOCATE = SITE "C6" LEVEL 1;
 COMP "usb_sloe" LOCATE = SITE "G14" LEVEL 1;
 COMP "usb_slrd" LOCATE = SITE "K11" LEVEL 1;
 COMP "usb_slwr" LOCATE = SITE "J12" LEVEL 1;
-PIN clk_sdram_inst/clkout1_buf_pin<1> = BEL "clk_sdram_inst/clkout1_buf"
+PIN clk_sdram_inst_clkout1_buf_pin<1> = BEL "clk_sdram_inst_clkout1_buf"
         PINNAME O;
-PIN "clk_sdram_inst/clkout1_buf_pin<1>" CLOCK_DEDICATED_ROUTE = FALSE;
+PIN "clk_sdram_inst_clkout1_buf_pin<1>" CLOCK_DEDICATED_ROUTE = FALSE;
+PIN clk_sdram_inst_clkout2_buf_pin<1> = BEL "clk_sdram_inst_clkout2_buf"
+        PINNAME O;
+PIN "clk_sdram_inst_clkout2_buf_pin<1>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "pa0" LOCATE = SITE "H11" LEVEL 1;
+COMP "sdram_casn" LOCATE = SITE "F2" LEVEL 1;
+COMP "sdram_rasn" LOCATE = SITE "F1" LEVEL 1;
+COMP "sdram_ba<0>" LOCATE = SITE "G6" LEVEL 1;
+COMP "sdram_ba<1>" LOCATE = SITE "J6" LEVEL 1;
+COMP "usb_fifoaddr<0>" LOCATE = SITE "H14" LEVEL 1;
+COMP "usb_fifoaddr<1>" LOCATE = SITE "H13" LEVEL 1;
+COMP "rst_n" LOCATE = SITE "L5" LEVEL 1;
+COMP "usb_fd<10>" LOCATE = SITE "J16" LEVEL 1;
+COMP "usb_fd<11>" LOCATE = SITE "K16" LEVEL 1;
+COMP "usb_fd<12>" LOCATE = SITE "K15" LEVEL 1;
+COMP "usb_fd<13>" LOCATE = SITE "K12" LEVEL 1;
+COMP "usb_fd<14>" LOCATE = SITE "K14" LEVEL 1;
+COMP "usb_fd<15>" LOCATE = SITE "J13" LEVEL 1;
+COMP "sdram_addr<0>" LOCATE = SITE "J3" LEVEL 1;
+COMP "sdram_addr<1>" LOCATE = SITE "J4" LEVEL 1;
+COMP "sdram_addr<2>" LOCATE = SITE "K3" LEVEL 1;
+COMP "sdram_addr<3>" LOCATE = SITE "K5" LEVEL 1;
+COMP "sdram_addr<4>" LOCATE = SITE "P1" LEVEL 1;
+COMP "sdram_addr<5>" LOCATE = SITE "N1" LEVEL 1;
+COMP "sdram_addr<6>" LOCATE = SITE "M2" LEVEL 1;
+COMP "sdram_addr<7>" LOCATE = SITE "M1" LEVEL 1;
+COMP "sdram_addr<8>" LOCATE = SITE "L1" LEVEL 1;
+COMP "sdram_addr<9>" LOCATE = SITE "K2" LEVEL 1;
+COMP "usb_clk" LOCATE = SITE "G12" LEVEL 1;
+PIN usb_clk_pin<0> = BEL "usb_clk" PINNAME PAD;
+PIN "usb_clk_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "sdram_data<0>" LOCATE = SITE "A3" LEVEL 1;
+COMP "sdram_data<1>" LOCATE = SITE "B3" LEVEL 1;
+COMP "sdram_data<2>" LOCATE = SITE "A2" LEVEL 1;
+COMP "sdram_data<3>" LOCATE = SITE "B2" LEVEL 1;
+COMP "qspi_di" LOCATE = SITE "L16" LEVEL 1;
+COMP "sdram_data<4>" LOCATE = SITE "B1" LEVEL 1;
+COMP "sdram_data<5>" LOCATE = SITE "C2" LEVEL 1;
+COMP "sdram_data<6>" LOCATE = SITE "C1" LEVEL 1;
+COMP "qspi_do" LOCATE = SITE "L13" LEVEL 1;
+COMP "sdram_data<7>" LOCATE = SITE "D1" LEVEL 1;
 SCHEMATIC END;
 

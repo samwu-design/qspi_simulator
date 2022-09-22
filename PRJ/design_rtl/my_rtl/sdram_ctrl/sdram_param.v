@@ -1,16 +1,19 @@
-// // 75-133mhz-7.5ns  条件? 参数配置数??
+// // 75-133mhz-7.5ns  ? ??
 parameter TRP  = 9'd3;  // trp = 20ns
-//parameter TRFC = 9'd9;  // trc =min 66ns
-parameter TRFC = 9'd10;
+parameter TRFC = 9'd9;  // trc =min 66ns
 parameter TMRD = 9'd2;  // mrd = 2
 parameter TRCD = 9'd3;  // trcd = 20ns
+`ifdef VIVADO_SIM 
+parameter TCL  = 9'd2;  // cl = 3 clk 
+`else
 parameter TCL  = 9'd3;  // cl = 3 clk 
+`endif
 parameter TDAL = 9'd5;  // tWR + tRP = (1clk + 7.5ns = 3 clk) -- (auto precharg--> + 2clk)
 
-// 刷新周期计数,?60ms?(理论?64ms，保?4ms的时间避免踩点错?)
-//parameter T_REFRESH_PERIOD = 32'd8_000_000; // 60ms
-parameter T_REFRESH_PERIOD = 32'd1041;   // 52.5ms
-parameter T_REFRESH_DOMAIN = 31'd50;
+// ,?60ms?(?64ms?4ms?)
+//parameter T_REFRESH_PERIOD = 32'd1041;   // 7.8us
+parameter T_REFRESH_PERIOD = 32'd1040;   // 7.8us
+parameter T_REFRESH_DOMAIN = 31'd40;
 parameter T_200US = 15'd26_667; 
 
 // write burst length
@@ -72,7 +75,8 @@ parameter  	S_AR  		= 5'd11;
 parameter  	S_TRFC  	= 5'd12;
 parameter  	S_AR1  		= 5'd13;
 parameter  	S_TRFC1  	= 5'd14;
-parameter   S_NOP       = 5'd15;
+parameter     S_NOP       = 5'd15;
+parameter     S_R_END     = 5'd16;
 //---------------------------------------
 // read  FSM
 // --------------------------------------

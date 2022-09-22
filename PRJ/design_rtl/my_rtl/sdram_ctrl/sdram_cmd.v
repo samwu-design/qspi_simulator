@@ -71,8 +71,8 @@ assign {sdram_cke,sdram_csn,sdram_rasn,sdram_casn,sdram_wen} = sdram_cmd_r;
 assign sdram_ba = sdram_ba_r;
 assign sdram_addr = sdram_addr_r;
 
-// 读写SDRAM时地址暂存器，(bit24-23)L-Bank地址:(bit22-11)为行地址，(bit10-1)为列地址
-//wire[21:0] sys_addr;		 	
+// SDRAM(bit23-22)L-Bank:(bit21-19)(bit8-0)
+//wire[23:0] sys_addr;		 	
 //assign sys_addr = sdram_r_wn ? sys_rdaddr : sys_wraddr;
 
 reg[23:0] sys_addr;		 	
@@ -89,7 +89,7 @@ always@(posedge clk or negedge rst_n)begin
 end
 
 
-// cmd 输出 与状态机 后移一个周期。
+// cmd   
 always @ (posedge clk or negedge rst_n) begin
 	if(!rst_n) begin
 			sdram_cmd_r <= CMD_NOP;
@@ -112,6 +112,7 @@ always @ (posedge clk or negedge rst_n) begin
 			
 			I_AR0_CMD: begin
 				sdram_cmd_r <= CMD_A_REF;
+				sdram_addr_r <= 13'h0400;
 			end
 			
 			I_AR0_TRFC: begin
@@ -120,15 +121,16 @@ always @ (posedge clk or negedge rst_n) begin
 			
 			I_AR1_CMD: begin
 				sdram_cmd_r <= CMD_A_REF;
+				sdram_addr_r <= 13'h0400;
 			end
 			
 			I_AR1_TRFC: begin
 				sdram_cmd_r <= CMD_NOP;
 			end 
 			
-			I_MRS_CMD: begin	//模式寄存器设置，可根据实际需要进行设置
+			I_MRS_CMD: begin	//
 				sdram_cmd_r <= CMD_LMR;
-				sdram_ba_r <= 2'b00;	//操作模式设置
+				sdram_ba_r <= 2'b00;	//
 				sdram_addr_r <= MODE_REGISTER;
 			end	
 			
@@ -137,15 +139,15 @@ always @ (posedge clk or negedge rst_n) begin
 				case (work_state)
 					S_IDLE: begin
 						sdram_cmd_r <= CMD_NOP;
-						sdram_ba_r <= 2'b00;
+						sdram_ba_r <= sys_addr[23:22];
 						sdram_addr_r <= 13'h0000;
 					end
 
 
 					S_RAS_ACTIVE: begin
 						sdram_cmd_r <= CMD_ACTIVE;
-						sdram_ba_r <= sys_addr[23:22];	//L-Bank地址
-						sdram_addr_r <= sys_addr[21:9];	//行地址
+						sdram_ba_r <= sys_addr[23:22];	//L-Bank
+						sdram_addr_r <= sys_addr[21:9];	//
 					end
 
 					S_TRCD: begin
@@ -156,10 +158,10 @@ always @ (posedge clk or negedge rst_n) begin
 
 					S_RD_CMD: begin
 						sdram_cmd_r <= CMD_READ;
-						sdram_ba_r <= sys_addr[23:22];	//L-Bank地址
+						sdram_ba_r <= sys_addr[23:22];	//L-Bank
 						sdram_addr_r <= {
-							    4'b0010,	// A10=1,设置写完成允许自动预充电
-								 sys_addr[8:0]	//列地址  
+							    4'b0010,	// A10=1,
+								 sys_addr[8:0]	//  
 								};
 					end
 
@@ -177,7 +179,7 @@ always @ (posedge clk or negedge rst_n) begin
 
 					S_R_PRECHARGE:begin
 						sdram_cmd_r <= CMD_PRECHARGE;
-						sdram_ba_r <= 2'b00;
+						sdram_ba_r <= sys_addr[23:22];
 						sdram_addr_r <= 13'h0400;  // A10
 					end
 
@@ -189,10 +191,10 @@ always @ (posedge clk or negedge rst_n) begin
 
 					S_WR_CMD: begin
 						sdram_cmd_r <= CMD_WRITE;
-						sdram_ba_r <= sys_addr[23:22];	//L-Bank地址
+						sdram_ba_r <= sys_addr[23:22];	//L-Bank
 						sdram_addr_r <= {
-								4'b0010,	// A10=1,设置写完成允许预充电
-								sys_addr[8:0]	//列地址  
+								4'b0010,	// A10=1,
+								sys_addr[8:0]	//  
 								};
 					end
 					
@@ -210,8 +212,8 @@ always @ (posedge clk or negedge rst_n) begin
 					
 					S_AR,S_AR1: begin
 						sdram_cmd_r <= CMD_A_REF;
-						sdram_ba_r <= 2'b00;
-						sdram_addr_r <= 13'h0000;	
+						sdram_ba_r <= sys_addr[23:22];
+						sdram_addr_r <= 13'h0400;	
 					end
 
 					S_TRFC,S_TRFC1: begin
@@ -228,13 +230,34 @@ always @ (posedge clk or negedge rst_n) begin
 				endcase
 			default: begin
 				sdram_cmd_r <= CMD_NOP;
-				sdram_ba_r <= 2'b00;
+				sdram_ba_r <= sys_addr[23:22];
 				sdram_addr_r <= 13'h0000;	
 			end
 		endcase
 end
 
 
-
+//`ifdef DEBUG_ILA
+//wire[35:0] CONTROL;
+//wire[77:0] trig0;
+//	
+//assign trig0 = {
+//               sdram_rasn,sdram_csn,
+//               sdram_wen,sdram_casn,
+//               sdram_addr,sdram_ba,
+//					sdram_r_wn,work_state,init_state,
+//					sys_rdaddr,sys_wraddr
+//					};	
+//
+//chipscope_icon icon_inst(
+//    .CONTROL0  (CONTROL)
+//);	
+//	
+// chipscope_ila_6  db_ila_inst(
+//    .CONTROL	(CONTROL),
+//	 .CLK			(clk),
+//    .TRIG0		(trig0)
+//	 );
+// `endif
 
 endmodule

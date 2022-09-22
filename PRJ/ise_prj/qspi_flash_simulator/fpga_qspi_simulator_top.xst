@@ -18,7 +18,7 @@ run
 -sd {"ipcore_dir"  }
 -write_timing_constraints NO
 -cross_clock_analysis NO
--hierarchy_separator /
+-hierarchy_separator _
 -bus_delimiter <>
 -case Maintain
 -slice_utilization_ratio 100

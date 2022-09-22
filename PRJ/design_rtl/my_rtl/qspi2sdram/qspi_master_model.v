@@ -14,7 +14,8 @@
 
 module qspi_master_model(
     input           usb_download_finished,
-	output  		qspi_clk,
+    input           sdram_init_done,
+	output  		qspi_clk_cg,
 	output  		csn,
 	output  		di,
 	input 			do,
@@ -37,12 +38,17 @@ assign holdn = 1;
 
 
 
-
+assign qspi_clk_cg = clk_cg && qspi_clk;
 
 reg  qspi_clk;
 reg  rst_n;
+reg  sim_start = 0;
+wire  clk_cg = m_state == M_CMD || m_state == M_ADDR || m_state == M_DATA ;  
+
 
 wire start,cmd_end,address_end,dummy_end,byte_end,data_end;
+
+reg[7:0]  idle_cnt;
 
 initial begin
 	qspi_clk = 0;
@@ -130,6 +136,19 @@ always@(posedge qspi_clk or negedge rst_n)begin
 end
 
 
+
+
+always@(posedge qspi_clk or negedge rst_n)begin
+   if(!rst_n)begin
+       idle_cnt <= 8'd0;
+   end
+   else if(m_state == M_IDLE)begin
+       idle_cnt <= idle_cnt + 8'd1;
+   end
+   else begin
+      idle_cnt <= 8'd0;
+   end
+end
 //----------------------------------
 reg [15:0] m_cnt;
 
@@ -164,13 +183,13 @@ reg [7:0]  r_cnt;
 always@(posedge qspi_clk or negedge rst_n)
     if(!rst_n)
         r_cnt <= 8'd0;
-    else if(usb_download_finished)
+    else if(sdram_init_done)
         r_cnt <= r_cnt + 8'd1;
     else
         r_cnt <= r_cnt;
 
-
-assign start = (rand == 8'd0) && (m_state == M_IDLE) && usb_download_finished && (r_cnt > 8'd128);
+assign start =  (m_state == M_IDLE) && sdram_init_done && idle_cnt == 8'hff;
+//assign start = (rand == 8'd0) && (m_state == M_IDLE) && usb_download_finished && (r_cnt > 8'd128);
 assign cmd_end = m_cnt == 16'd7 && m_state == M_CMD;
 assign address_end = m_cnt == 16'd23 && m_state == M_ADDR;
 assign dummy_end = m_cnt == 16'd7 && m_state == M_DUMMY;

@@ -1,0 +1,19 @@
+# Output products list for <chipscope_ila_7>
+_xmsgs/pn_parser.xmsgs
+chipscope_ila_7.asy
+chipscope_ila_7.cdc
+chipscope_ila_7.constraints/chipscope_ila_7.ucf
+chipscope_ila_7.constraints/chipscope_ila_7.xdc
+chipscope_ila_7.gise
+chipscope_ila_7.ncf
+chipscope_ila_7.ngc
+chipscope_ila_7.sym
+chipscope_ila_7.ucf
+chipscope_ila_7.v
+chipscope_ila_7.veo
+chipscope_ila_7.xco
+chipscope_ila_7.xdc
+chipscope_ila_7.xise
+chipscope_ila_7_flist.txt
+chipscope_ila_7_readme.txt
+chipscope_ila_7_xmdf.tcl

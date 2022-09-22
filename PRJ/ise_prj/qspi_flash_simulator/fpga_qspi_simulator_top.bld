@@ -8,13 +8,13 @@ xc6slx16-ftg256-3 fpga_qspi_simulator_top.ngc fpga_qspi_simulator_top.ngd
 Reading NGO file
 "/home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/
 fpga_qspi_simulator_top.ngc" ...
-Loading design module "ipcore_dir/chipscope_ila_0.ngc"...
-Loading design module "ipcore_dir/chipscope_icon.ngc"...
 Loading design module "ipcore_dir/asyn_fifo.ngc"...
+Loading design module "ipcore_dir/chipscope_ila_5.ngc"...
+Loading design module "ipcore_dir/chipscope_icon.ngc"...
 INFO:NgdBuild:1317 - Using core chipscope_ila_v1 requires a ChipScopePro
    license.  The following blocks are instances of core chipscope_ila_v1:
-	/fpga_qspi_simulator_top/fpga_qspi_simulator_top
-	/fpga_qspi_simulator_top/qspi_simulator_inst/db_ila_inst
+	/fpga_qspi_simulator_top/qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_d
+b_ila_inst
 
 -----------------------------------------------
 INFO:Security:71 - If a license for part 'xc6slx16' is available, it will be
@@ -47,7 +47,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 530420 kilobytes
+Total memory usage is 526544 kilobytes
 
 Writing NGD file "fpga_qspi_simulator_top.ngd" ...
 Total REAL time to NGDBUILD completion:  3 sec

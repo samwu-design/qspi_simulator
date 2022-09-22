@@ -20,11 +20,6 @@ Creates an implementation netlist:
    * chipscope_ila_0.xdc
    * chipscope_ila_0_xmdf.tcl
 
-Creates an HDL instantiation template:
-   Creates an HDL instantiation template for the IP.
-
-   * chipscope_ila_0.veo
-
 IP Symbol Generator:
    Generate an IP symbol based on the current project options'.
 

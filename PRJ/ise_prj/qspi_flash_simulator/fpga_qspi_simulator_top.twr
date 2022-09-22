@@ -37,23 +37,24 @@ Setup/Hold to clock fpga_clk
               |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source        | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 --------------+------------+------------+------------+------------+------------------+--------+
-rst_n         |    9.575(R)|      SLOW  |   -0.907(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_data<0> |    1.711(R)|      SLOW  |   -0.226(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
-sdram_data<1> |    2.009(R)|      SLOW  |   -0.748(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_data<2> |    1.857(R)|      SLOW  |    0.061(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
-sdram_data<3> |    1.585(R)|      SLOW  |    0.144(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
-sdram_data<4> |    1.763(R)|      SLOW  |    0.181(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
-sdram_data<5> |    0.523(R)|      FAST  |    0.970(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
-sdram_data<6> |    0.757(R)|      FAST  |    0.293(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
-sdram_data<7> |    0.799(R)|      SLOW  |    0.368(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
-sdram_data<8> |    0.275(R)|      FAST  |    0.954(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
-sdram_data<9> |    0.740(R)|      SLOW  |    0.118(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
-sdram_data<10>|    0.282(R)|      FAST  |    0.942(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
-sdram_data<11>|    2.167(R)|      SLOW  |   -0.312(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
-sdram_data<12>|    0.867(R)|      FAST  |    0.810(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
-sdram_data<13>|    1.818(R)|      SLOW  |   -0.155(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
-sdram_data<14>|    1.708(R)|      SLOW  |    0.067(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
-sdram_data<15>|    2.231(R)|      SLOW  |   -0.187(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
+qspi_di       |    2.707(R)|      SLOW  |   -0.426(R)|      SLOW  |debug_clk         |   0.000|
+rst_n         |    8.961(R)|      SLOW  |   -1.327(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_data<0> |    0.876(R)|      FAST  |   -0.223(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
+sdram_data<1> |    1.081(R)|      SLOW  |   -0.606(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_data<2> |    0.717(R)|      FAST  |    0.041(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
+sdram_data<3> |    0.639(R)|      FAST  |   -0.094(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
+sdram_data<4> |    0.700(R)|      FAST  |    0.041(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
+sdram_data<5> |    0.315(R)|      FAST  |    0.395(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
+sdram_data<6> |    0.442(R)|      FAST  |    0.380(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
+sdram_data<7> |    0.221(R)|      FAST  |    0.515(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
+sdram_data<8> |    0.454(R)|      FAST  |    0.420(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
+sdram_data<9> |    0.281(R)|      FAST  |    0.419(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
+sdram_data<10>|    0.385(R)|      FAST  |    0.462(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
+sdram_data<11>|    0.697(R)|      FAST  |   -0.205(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
+sdram_data<12>|    1.025(R)|      SLOW  |   -0.425(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
+sdram_data<13>|    0.970(R)|      FAST  |   -0.306(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
+sdram_data<14>|    0.620(R)|      FAST  |    0.167(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
+sdram_data<15>|    0.797(R)|      FAST  |    0.101(R)|      SLOW  |sdram_clk_OBUF    |   0.000|
 --------------+------------+------------+------------+------------+------------------+--------+
 
 Setup/Hold to clock qspi_clk
@@ -61,9 +62,9 @@ Setup/Hold to clock qspi_clk
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-qspi_di     |    2.828(R)|      SLOW  |    1.954(R)|      SLOW  |qspi_clk_BUFGP    |   0.000|
-rst_n       |    2.939(R)|      SLOW  |    0.577(R)|      SLOW  |qspi_clk_BUFGP    |   0.000|
-            |    3.249(F)|      SLOW  |    0.521(F)|      SLOW  |qspi_clk_BUFGP    |   0.000|
+qspi_di     |    0.993(R)|      SLOW  |    1.379(R)|      SLOW  |qspi_clk_IBUF_BUFG|   0.000|
+rst_n       |    4.447(R)|      SLOW  |    0.965(R)|      SLOW  |qspi_clk_IBUF_BUFG|   0.000|
+            |    5.419(F)|      SLOW  |   -0.361(F)|      SLOW  |qspi_clk_IBUF_BUFG|   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Setup/Hold to clock usb_clk
@@ -71,24 +72,24 @@ Setup/Hold to clock usb_clk
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-rst_n       |    6.923(R)|      SLOW  |   -2.295(R)|      FAST  |usb_clk_BUFGP     |   0.000|
-usb_fd<0>   |   -0.577(R)|      FAST  |    2.233(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
-usb_fd<1>   |   -0.602(R)|      FAST  |    2.274(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
-usb_fd<2>   |   -0.582(R)|      FAST  |    2.201(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
-usb_fd<3>   |   -0.381(R)|      FAST  |    1.895(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
-usb_fd<4>   |   -0.583(R)|      FAST  |    2.227(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
-usb_fd<5>   |   -0.704(R)|      FAST  |    2.425(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
-usb_fd<6>   |   -0.547(R)|      FAST  |    2.166(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
-usb_fd<7>   |   -0.788(R)|      FAST  |    2.506(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
-usb_fd<8>   |   -0.815(R)|      FAST  |    2.570(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
-usb_fd<9>   |   -0.791(R)|      FAST  |    2.557(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
-usb_fd<10>  |   -0.492(R)|      FAST  |    2.164(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
-usb_fd<11>  |   -0.520(R)|      FAST  |    2.171(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
-usb_fd<12>  |   -0.468(R)|      FAST  |    2.074(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
-usb_fd<13>  |   -0.555(R)|      FAST  |    2.191(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
-usb_fd<14>  |   -0.701(R)|      FAST  |    2.417(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
-usb_fd<15>  |   -0.658(R)|      FAST  |    2.336(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
-usb_flaga   |    1.220(R)|      SLOW  |    0.829(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
+rst_n       |    8.244(R)|      SLOW  |   -2.575(R)|      FAST  |usb_clk_BUFGP     |   0.000|
+usb_fd<0>   |   -0.931(R)|      FAST  |    2.796(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
+usb_fd<1>   |   -0.830(R)|      FAST  |    2.643(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
+usb_fd<2>   |   -0.785(R)|      FAST  |    2.548(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
+usb_fd<3>   |   -0.929(R)|      FAST  |    2.825(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
+usb_fd<4>   |   -0.761(R)|      FAST  |    2.503(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
+usb_fd<5>   |   -0.841(R)|      FAST  |    2.633(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
+usb_fd<6>   |   -0.797(R)|      FAST  |    2.553(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
+usb_fd<7>   |   -0.675(R)|      FAST  |    2.445(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
+usb_fd<8>   |   -0.137(R)|      FAST  |    1.598(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
+usb_fd<9>   |    0.567(R)|      FAST  |    0.736(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
+usb_fd<10>  |    1.030(R)|      SLOW  |    0.202(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
+usb_fd<11>  |    0.966(R)|      SLOW  |    0.265(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
+usb_fd<12>  |    1.055(R)|      SLOW  |    0.182(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
+usb_fd<13>  |    0.924(R)|      SLOW  |    0.307(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
+usb_fd<14>  |    0.713(R)|      FAST  |    0.515(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
+usb_fd<15>  |    0.753(R)|      SLOW  |    0.469(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
+usb_flaga   |    1.642(R)|      SLOW  |    1.837(R)|      SLOW  |usb_clk_BUFGP     |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock fpga_clk to Pad
@@ -96,40 +97,40 @@ Clock fpga_clk to Pad
               |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination   |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 --------------+-----------------+------------+-----------------+------------+------------------+--------+
-sdram_addr<0> |         9.524(R)|      SLOW  |         5.748(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_addr<1> |         8.807(R)|      SLOW  |         5.316(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_addr<2> |         8.601(R)|      SLOW  |         5.169(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_addr<3> |         8.813(R)|      SLOW  |         5.282(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_addr<4> |        10.075(R)|      SLOW  |         6.045(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_addr<5> |         9.868(R)|      SLOW  |         5.925(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_addr<6> |         9.769(R)|      SLOW  |         5.892(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_addr<7> |         9.805(R)|      SLOW  |         5.885(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_addr<8> |         9.609(R)|      SLOW  |         5.771(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_addr<9> |         9.467(R)|      SLOW  |         5.716(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_addr<10>|         9.265(R)|      SLOW  |         5.568(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_addr<11>|         9.407(R)|      SLOW  |         5.651(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_addr<12>|         9.401(R)|      SLOW  |         5.689(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_ba<0>   |        10.271(R)|      SLOW  |         6.182(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_ba<1>   |         8.617(R)|      SLOW  |         5.165(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_casn    |         9.007(R)|      SLOW  |         5.404(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_data<0> |        11.077(R)|      SLOW  |         5.992(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_data<1> |        10.867(R)|      SLOW  |         5.866(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_data<2> |        10.912(R)|      SLOW  |         5.682(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_data<3> |        10.786(R)|      SLOW  |         5.682(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_data<4> |        10.717(R)|      SLOW  |         5.552(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_data<5> |        10.221(R)|      SLOW  |         5.028(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_data<6> |        10.070(R)|      SLOW  |         5.526(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_data<7> |         9.789(R)|      SLOW  |         5.369(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_data<8> |         9.858(R)|      SLOW  |         5.241(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_data<9> |         9.858(R)|      SLOW  |         5.382(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_data<10>|         9.848(R)|      SLOW  |         5.161(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_data<11>|        10.509(R)|      SLOW  |         5.712(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_data<12>|        11.560(R)|      SLOW  |         5.412(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_data<13>|        11.692(R)|      SLOW  |         5.917(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_data<14>|        11.290(R)|      SLOW  |         5.807(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_data<15>|        12.741(R)|      SLOW  |         5.786(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_rasn    |         8.930(R)|      SLOW  |         5.358(R)|      FAST  |sdram_clk_OBUF    |   0.000|
-sdram_wen     |         8.709(R)|      SLOW  |         5.206(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_addr<0> |         9.058(R)|      SLOW  |         5.449(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_addr<1> |         8.561(R)|      SLOW  |         5.122(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_addr<2> |         8.711(R)|      SLOW  |         5.267(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_addr<3> |         8.494(R)|      SLOW  |         5.101(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_addr<4> |        10.012(R)|      SLOW  |         5.988(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_addr<5> |         9.736(R)|      SLOW  |         5.823(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_addr<6> |         9.529(R)|      SLOW  |         5.710(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_addr<7> |         9.688(R)|      SLOW  |         5.805(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_addr<8> |         9.367(R)|      SLOW  |         5.612(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_addr<9> |         9.199(R)|      SLOW  |         5.508(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_addr<10>|         8.605(R)|      SLOW  |         5.137(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_addr<11>|         9.147(R)|      SLOW  |         5.481(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_addr<12>|         9.326(R)|      SLOW  |         5.596(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_ba<0>   |         9.222(R)|      SLOW  |         5.523(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_ba<1>   |         8.752(R)|      SLOW  |         5.249(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_casn    |         9.008(R)|      SLOW  |         5.391(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_data<0> |        10.918(R)|      SLOW  |         5.655(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_data<1> |        10.849(R)|      SLOW  |         5.608(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_data<2> |        10.647(R)|      SLOW  |         5.487(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_data<3> |        10.539(R)|      SLOW  |         5.406(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_data<4> |        10.739(R)|      SLOW  |         5.399(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_data<5> |        11.688(R)|      SLOW  |         5.323(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_data<6> |        10.517(R)|      SLOW  |         5.527(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_data<7> |        10.485(R)|      SLOW  |         5.425(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_data<8> |        11.311(R)|      SLOW  |         5.549(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_data<9> |        10.234(R)|      SLOW  |         5.387(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_data<10>|        11.121(R)|      SLOW  |         5.461(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_data<11>|        10.670(R)|      SLOW  |         5.694(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_data<12>|        11.359(R)|      SLOW  |         5.814(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_data<13>|        10.822(R)|      SLOW  |         5.696(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_data<14>|        10.282(R)|      SLOW  |         5.586(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_data<15>|        10.347(R)|      SLOW  |         5.586(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_rasn    |         9.282(R)|      SLOW  |         5.609(R)|      FAST  |sdram_clk_OBUF    |   0.000|
+sdram_wen     |         8.494(R)|      SLOW  |         5.094(R)|      FAST  |sdram_clk_OBUF    |   0.000|
 --------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock qspi_clk to Pad
@@ -137,7 +138,7 @@ Clock qspi_clk to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-qspi_do     |        12.242(F)|      SLOW  |         6.445(F)|      FAST  |qspi_clk_BUFGP    |   0.000|
+qspi_do     |        12.761(F)|      SLOW  |         7.198(F)|      FAST  |qspi_clk_IBUF_BUFG|   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock usb_clk to Pad
@@ -145,24 +146,24 @@ Clock usb_clk to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-usb_fd<0>   |        11.575(R)|      SLOW  |         6.791(R)|      FAST  |usb_clk_BUFGP     |   0.000|
-usb_fd<1>   |        11.358(R)|      SLOW  |         6.664(R)|      FAST  |usb_clk_BUFGP     |   0.000|
-usb_fd<2>   |        11.525(R)|      SLOW  |         6.793(R)|      FAST  |usb_clk_BUFGP     |   0.000|
-usb_fd<3>   |        11.951(R)|      SLOW  |         7.015(R)|      FAST  |usb_clk_BUFGP     |   0.000|
-usb_fd<4>   |        11.329(R)|      SLOW  |         6.622(R)|      FAST  |usb_clk_BUFGP     |   0.000|
-usb_fd<5>   |        11.496(R)|      SLOW  |         6.751(R)|      FAST  |usb_clk_BUFGP     |   0.000|
-usb_fd<6>   |        11.335(R)|      SLOW  |         6.654(R)|      FAST  |usb_clk_BUFGP     |   0.000|
-usb_fd<7>   |        11.335(R)|      SLOW  |         6.654(R)|      FAST  |usb_clk_BUFGP     |   0.000|
-usb_fd<8>   |        10.930(R)|      SLOW  |         6.391(R)|      FAST  |usb_clk_BUFGP     |   0.000|
-usb_fd<9>   |        10.930(R)|      SLOW  |         6.391(R)|      FAST  |usb_clk_BUFGP     |   0.000|
-usb_fd<10>  |        11.408(R)|      SLOW  |         6.689(R)|      FAST  |usb_clk_BUFGP     |   0.000|
-usb_fd<11>  |        11.575(R)|      SLOW  |         6.792(R)|      FAST  |usb_clk_BUFGP     |   0.000|
-usb_fd<12>  |        11.575(R)|      SLOW  |         6.792(R)|      FAST  |usb_clk_BUFGP     |   0.000|
-usb_fd<13>  |        11.388(R)|      SLOW  |         6.681(R)|      FAST  |usb_clk_BUFGP     |   0.000|
-usb_fd<14>  |        11.002(R)|      SLOW  |         6.435(R)|      FAST  |usb_clk_BUFGP     |   0.000|
-usb_fd<15>  |        11.002(R)|      SLOW  |         6.435(R)|      FAST  |usb_clk_BUFGP     |   0.000|
-usb_sloe    |        10.912(R)|      SLOW  |         6.462(R)|      FAST  |usb_clk_BUFGP     |   0.000|
-usb_slrd    |        11.711(R)|      SLOW  |         6.958(R)|      FAST  |usb_clk_BUFGP     |   0.000|
+usb_fd<0>   |        11.556(R)|      SLOW  |         6.769(R)|      FAST  |usb_clk_BUFGP     |   0.000|
+usb_fd<1>   |        11.780(R)|      SLOW  |         6.906(R)|      FAST  |usb_clk_BUFGP     |   0.000|
+usb_fd<2>   |        11.780(R)|      SLOW  |         6.906(R)|      FAST  |usb_clk_BUFGP     |   0.000|
+usb_fd<3>   |        11.361(R)|      SLOW  |         6.643(R)|      FAST  |usb_clk_BUFGP     |   0.000|
+usb_fd<4>   |        11.952(R)|      SLOW  |         7.014(R)|      FAST  |usb_clk_BUFGP     |   0.000|
+usb_fd<5>   |        11.952(R)|      SLOW  |         7.014(R)|      FAST  |usb_clk_BUFGP     |   0.000|
+usb_fd<6>   |        12.119(R)|      SLOW  |         7.117(R)|      FAST  |usb_clk_BUFGP     |   0.000|
+usb_fd<7>   |        12.119(R)|      SLOW  |         7.117(R)|      FAST  |usb_clk_BUFGP     |   0.000|
+usb_fd<8>   |        12.663(R)|      SLOW  |         7.438(R)|      FAST  |usb_clk_BUFGP     |   0.000|
+usb_fd<9>   |        12.663(R)|      SLOW  |         7.438(R)|      FAST  |usb_clk_BUFGP     |   0.000|
+usb_fd<10>  |        13.295(R)|      SLOW  |         7.829(R)|      FAST  |usb_clk_BUFGP     |   0.000|
+usb_fd<11>  |        13.462(R)|      SLOW  |         7.932(R)|      FAST  |usb_clk_BUFGP     |   0.000|
+usb_fd<12>  |        13.462(R)|      SLOW  |         7.932(R)|      FAST  |usb_clk_BUFGP     |   0.000|
+usb_fd<13>  |        13.275(R)|      SLOW  |         7.821(R)|      FAST  |usb_clk_BUFGP     |   0.000|
+usb_fd<14>  |        12.889(R)|      SLOW  |         7.575(R)|      FAST  |usb_clk_BUFGP     |   0.000|
+usb_fd<15>  |        12.889(R)|      SLOW  |         7.575(R)|      FAST  |usb_clk_BUFGP     |   0.000|
+usb_sloe    |        12.729(R)|      SLOW  |         7.527(R)|      FAST  |usb_clk_BUFGP     |   0.000|
+usb_slrd    |        13.500(R)|      SLOW  |         7.992(R)|      FAST  |usb_clk_BUFGP     |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock fpga_clk
@@ -170,9 +171,9 @@ Clock to Setup on destination clock fpga_clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-fpga_clk       |    5.071|         |         |         |
-qspi_clk       |    6.254|         |         |         |
-usb_clk        |    4.106|         |         |         |
+fpga_clk       |    5.008|         |         |         |
+qspi_clk       |    6.497|    5.190|         |         |
+usb_clk        |    3.483|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock qspi_clk
@@ -180,8 +181,8 @@ Clock to Setup on destination clock qspi_clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-fpga_clk       |         |         |    0.794|         |
-qspi_clk       |    5.284|         |    4.083|    2.138|
+fpga_clk       |         |         |    0.831|         |
+qspi_clk       |    4.298|         |    2.093|    1.744|
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock usb_clk
@@ -189,44 +190,44 @@ Clock to Setup on destination clock usb_clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-fpga_clk       |    0.497|         |         |         |
-usb_clk        |    3.125|         |         |         |
+fpga_clk       |    0.250|         |         |         |
+usb_clk        |    3.786|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-fpga_clk       |sdram_clk      |    8.180|
-usb_flaga      |usb_fd<0>      |    9.585|
-usb_flaga      |usb_fd<1>      |    9.368|
-usb_flaga      |usb_fd<2>      |    9.535|
-usb_flaga      |usb_fd<3>      |    9.961|
-usb_flaga      |usb_fd<4>      |    9.339|
-usb_flaga      |usb_fd<5>      |    9.506|
-usb_flaga      |usb_fd<6>      |    9.345|
-usb_flaga      |usb_fd<7>      |    9.345|
-usb_flaga      |usb_fd<8>      |    8.940|
-usb_flaga      |usb_fd<9>      |    8.940|
-usb_flaga      |usb_fd<10>     |    9.418|
-usb_flaga      |usb_fd<11>     |    9.585|
-usb_flaga      |usb_fd<12>     |    9.585|
-usb_flaga      |usb_fd<13>     |    9.398|
-usb_flaga      |usb_fd<14>     |    9.012|
-usb_flaga      |usb_fd<15>     |    9.012|
-usb_flaga      |usb_sloe       |    8.922|
-usb_flaga      |usb_slrd       |    9.721|
+fpga_clk       |sdram_clk      |    8.178|
+usb_flaga      |usb_fd<0>      |    9.036|
+usb_flaga      |usb_fd<1>      |    9.260|
+usb_flaga      |usb_fd<2>      |    9.260|
+usb_flaga      |usb_fd<3>      |    8.841|
+usb_flaga      |usb_fd<4>      |    9.432|
+usb_flaga      |usb_fd<5>      |    9.432|
+usb_flaga      |usb_fd<6>      |    9.599|
+usb_flaga      |usb_fd<7>      |    9.599|
+usb_flaga      |usb_fd<8>      |   10.143|
+usb_flaga      |usb_fd<9>      |   10.143|
+usb_flaga      |usb_fd<10>     |   10.775|
+usb_flaga      |usb_fd<11>     |   10.942|
+usb_flaga      |usb_fd<12>     |   10.942|
+usb_flaga      |usb_fd<13>     |   10.755|
+usb_flaga      |usb_fd<14>     |   10.369|
+usb_flaga      |usb_fd<15>     |   10.369|
+usb_flaga      |usb_sloe       |   10.209|
+usb_flaga      |usb_slrd       |   10.980|
 ---------------+---------------+---------+
 
 
-Analysis completed Tue Aug  2 20:29:58 2022 
+Analysis completed Wed Aug 24 00:29:47 2022 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 417 MB
+Peak Memory Usage: 412 MB
 
 
 

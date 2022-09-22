@@ -13,15 +13,16 @@
 //     data burt bytenum = 4 bytes
 // -FHDR------------------------------------------------------------
 
-
+//`define DEBUG_ILA
 
 module qspi_simulator_top(
 
-	input           rst_n,
+	input          rst_n,
+	input          debug_clk,
 	input          sd_clk,
 	input          cyp_clk,
 
-	//output         sdram_init_done,
+	output         sdram_init_done,
 
 	// qspi
 	input  		qspi_clk, // 10mhz
@@ -70,13 +71,14 @@ module qspi_simulator_top(
 wire  [23:0] 	rd_addr;
 wire  [15:0]	rd_data;	
 wire  [15:0] 	wr_data;
-wire  [23:0] 	wr_addr;
+wire  [31:0] 	wr_addr;
 wire            wr_valid;
 wire            wr_ready;
 
 
 qspi2sdram_top qspi2sdram_inst(
 .rst_n		(rst_n		),
+.debug_clk  (debug_clk),
 .qspi_clk	(qspi_clk	), // <50mhz
 .qspi_csn		(qspi_csn		),
 .qspi_di		(qspi_di		),
@@ -84,6 +86,7 @@ qspi2sdram_top qspi2sdram_inst(
 .qspi_wpn		(qspi_wpn		),
 .qspi_holdn		(qspi_holdn		),
 .sdram_clk	(sd_clk	), // 133mhz
+.forbiden_autofresh (forbiden_autofresh), //output
 .rd_addr	(rd_addr	),
 .rd_avalid	(rd_avalid	),
 .rd_aready	(rd_aready	),
@@ -111,6 +114,7 @@ sdram_top sdram_ctrl_inst(
 .wr_addr	(wr_addr	),
 .wr_valid	(wr_valid	),
 .wr_ready	(wr_ready	),
+.forbiden_autofresh(forbiden_autofresh), 
 .rd_addr	(rd_addr	),
 .rd_avalid	(rd_avalid	),
 .rd_aready	(rd_aready	),
@@ -145,28 +149,28 @@ cyp2sdram_top cyp2sdram_inst(
 
 
 
-`ifdef DEBUG_ILA
-wire[35:0] CONTROL;
-wire[136:0] trig0;
-	
-assign trig0 = {wr_ready,wr_valid,wr_addr,wr_data
-					,rd_avalid,rd_aready,rd_addr,rd_valid,rd_ready,rd_data
-					,sdram_rasn,sdram_casn,sdram_wen,sdram_ba,sdram_addr,sdram_data_oe,sdram_data_i,sdram_data_o
-					};	
-
-chipscope_icon icon_inst(
-    .CONTROL0  (CONTROL)
-);	
-	
- chipscope_ila_0  db_ila_inst(
-    .CONTROL	(CONTROL),
-    //.CLK			(qspi_clk),
-	 //.CLK			(sd_clk),
-	 .CLK			(sd_clk),
-	 //.CLK			(cyp_clk),
-    .TRIG0		(trig0)
-	 );
- `endif
+//`ifdef DEBUG_ILA
+//wire[35:0] CONTROL;
+//wire[136:0] trig0;
+//	
+//assign trig0 = {wr_ready,wr_valid,wr_addr,wr_data
+//					,rd_avalid,rd_aready,rd_addr,rd_valid,rd_ready,rd_data
+//					,sdram_rasn,sdram_casn,sdram_wen,sdram_ba,sdram_addr,sdram_data_oe,sdram_data_i,sdram_data_o
+//					};	
+//
+//chipscope_icon icon_inst(
+//    .CONTROL0  (CONTROL)
+//);	
+//	
+// chipscope_ila_1  db_ila_inst(
+//    .CONTROL	(CONTROL),
+//    //.CLK			(qspi_clk),
+//	 //.CLK			(sd_clk),
+//	 .CLK			(sd_clk),
+//	 //.CLK			(cyp_clk),
+//    .TRIG0		(trig0)
+//	 );
+// `endif
 
 
 endmodule

@@ -1,9 +1,10 @@
 Storage Target: SPI Flash Single FPGA
 8M
 FF
-20220803
+20220831
 /home/ise/88-ISE_share/GIT_QSPI_SIMULATOR_V30/PRJ/ise_prj/qspi_flash_simulator/
 
 MCS
 No
-
+CS
+No

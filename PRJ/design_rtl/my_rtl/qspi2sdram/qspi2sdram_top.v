@@ -14,6 +14,7 @@
 
 module qspi2sdram_top(
 	input  		rst_n,
+	input       debug_clk,
 
 	// qspi
 	input  		qspi_clk, // 10mhz
@@ -25,6 +26,8 @@ module qspi2sdram_top(
 
 	// sdram ctrl read port
 	input 		sdram_clk, //133mhz
+	
+	output           forbiden_autofresh,
 	
 	output [23:0] 	rd_addr,
 	output 		rd_avalid,
@@ -38,7 +41,6 @@ module qspi2sdram_top(
 
 wire [23:0] qspi_rd_addr;
 
-wire [1:0] qspi_cmd_flag;
 
 wire        ram_ren	    ;		
 wire [2:0]  ram_raddr  	    ;		
@@ -46,6 +48,7 @@ wire [15:0] ram_rdata 	    ;
 
 qspi_rd_ram  qspi_rd_ram_inst(/*autoinst*/
     .qspi_clk                       (qspi_clk                                   ), // input 
+	 .debug_clk                      (debug_clk                                  ),
     .rst_n                          (rst_n                                      ), // input 
 
     	// qspi
@@ -55,10 +58,10 @@ qspi_rd_ram  qspi_rd_ram_inst(/*autoinst*/
     .qspi_wpn                            (qspi_wpn                                        ), // input 
     .qspi_holdn                          (qspi_holdn                                      ), // input 
    
-    .qspi_cmd_flag                  (qspi_cmd_flag[1:0]				), // output 
     .qspi_rd_addr                   (qspi_rd_addr[23:0]                         ), // output 
     .qspi_rd_req                    (qspi_rd_req                                ), // output 
     .qspi_rd_busy                   (qspi_rd_busy                               ), // input
+	 .forbiden_autofresh             (forbiden_autofresh), //output
 
     .ram_ren			    (ram_ren	 				), // output
     .ram_raddr			    (ram_raddr[2:0] 				), // output
@@ -71,12 +74,11 @@ qspi_rd_ram  qspi_rd_ram_inst(/*autoinst*/
 ram_rd_sdram ram_rd_sdram_inst(/*autoinst*/
     .rst_n                          (rst_n                                      ), // input 
 
-    .qspi_cmd_flag                  (qspi_cmd_flag[1:0]				), // input 
     .qspi_rd_addr                   (qspi_rd_addr[23:0]                         ), // input 
     .qspi_rd_req                    (qspi_rd_req                                ), // input 
     .qspi_rd_busy                   (qspi_rd_busy                               ), // output
 	
-    .qspi_clk                       (qspi_clk                                   ), // input 
+    .ram_clk                       (qspi_clk                                   ), // input 
     .ram_ren			    (ram_ren	 				), // input
     .ram_raddr			    (ram_raddr[2:0] 				), // input
     .ram_rdata	                    (ram_rdata[15:0] 				), // output

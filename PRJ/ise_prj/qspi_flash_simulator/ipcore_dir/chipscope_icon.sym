@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="chipscope_icon">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2022-7-25T13:2:23</timestamp>
+    <timestamp>2022-8-11T2:13:37</timestamp>
     <pin polarity="Output" x="576" y="112" name="control0[35:0]" />
     <graph>
         <text style="fontsize:40;fontname:Arial" x="32" y="32">chipscope_icon</text>

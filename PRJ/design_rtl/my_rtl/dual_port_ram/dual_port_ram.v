@@ -29,11 +29,11 @@ input	[ASIZE-1:0]		raddr  ,
 output [DATAWIDTH-1:0]		rdata  
 );
 
-reg[DATAWIDTH-1:0] rammem[(2<<ASIZE)-1:0];
+reg[DATAWIDTH-1:0] rammem[(1<<ASIZE)-1:0];
 
 integer i;
 initial begin
-	for(i=0;i<((2<<ASIZE));i=i+1)begin
+	for(i=0;i<((1<<ASIZE));i=i+1)begin
 		rammem[i] = 0;
 	end
 end

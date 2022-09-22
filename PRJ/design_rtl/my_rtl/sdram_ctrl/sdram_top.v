@@ -33,10 +33,11 @@ module sdram_top(
 
 	//
 	input [15:0] 	wr_data,
-	input [23:0] 	wr_addr,
+	input [31:0] 	wr_addr,
 	input           wr_valid,
 	output          wr_ready,
 
+   input          forbiden_autofresh,
 	input [23:0] 	rd_addr,
 	input 		rd_avalid,
 	output          rd_aready,
@@ -92,6 +93,7 @@ sdram_core sdram_core_inst(/*autoinst*/
     .clk                            (clk                                        ), // input 
     .rst_n                          (rst_n                                      ), // input 
     .sdram_init_done                (sdram_init_done                            ), // output
+	 .forbiden_autofresh             (forbiden_autofresh                         ), //input
     	// inner  if
     .init_state                     (init_state[4:0]                            ), // output
     .work_state                     (work_state[4:0]                            ), // output
@@ -211,7 +213,7 @@ sdram_data sdram_data_inst(/*autoinst*/
 
     	//
     .wr_data                        (wr_data[15:0]                              ), // input 
-    .wr_addr                        (wr_addr[23:0]                              ), // input 
+    .wr_addr                        (wr_addr[31:0]                              ), // input 
     .wr_valid                       (wr_valid                                   ), // input 
     .wr_ready                       (wr_ready                                   ), // output
 

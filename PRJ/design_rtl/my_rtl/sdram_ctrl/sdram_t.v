@@ -23,25 +23,25 @@ module sdram_t(
 	input [4:0] cur_init_state,
 	input [4:0] cur_work_state,
 
-	output      end_trp,        // 预充电结束
-	output      end_trfc,       // 结束自动刷新
-	output      end_tmrd,       // 模式寄存器设置结束
-	output      end_trcd,       // 行地址命令延迟结束 
-	output      end_tcl,        // 列地址命令延迟结束
-	output      end_tread,      // 读数据结束，时间与BL有关
-	output      end_twait,      // 完成读之后得预充电等待结束
-	output      end_twrite,     // 写数据结束
-	output      end_tdal,       // 写完数据后等待结束
+	output      end_trp,        // 
+	output      end_trfc,       // 
+	output      end_tmrd,       // 
+	output      end_trcd,       //  
+	output      end_tcl,        // 
+	output      end_tread,      // BL
+	output      end_twait,      // 
+	output      end_twrite,     // 
+	output      end_tdal,       // 
 
 	output      sdram_data_i_valid, //
 
 	output      done_200us,
-	output      ref_domain,     // 刷新时间域
+	output      ref_domain,     // 
 
 	input       sdram_wr_req,
 	input       sdram_rd_req,
-	output reg  sdram_ref_req,  // 刷新请求
-	input       sdram_ref_ack   // 刷新响应
+	output reg  sdram_ref_req,  // 
+	input       sdram_ref_ack   // 
 
 
 	
@@ -51,15 +51,15 @@ module sdram_t(
 `include "sdram_param.v"
 
 //------------------------------------------------------------------------------
-//每60ms全部4096行存储区进行一次自刷新
-// ( 存储体中电容的数据有效保存期上限是64ms )
-// 平均下来 每完成一次刷新需要15us
+//60ms4096
+// ( 64ms )
+//  15us
 //------------------------------------------------------------------------------	 
 reg[31:0] ref_cnt;
-wire      ref_60ms;
+wire      ref_period;
 wire      ref_domain;
 
-reg       ref_req_r0,ref_req_r1;
+//reg       ref_req_r0,ref_req_r1;
 
 always@(posedge clk or negedge rst_n)begin
 	if(!rst_n)begin
@@ -73,28 +73,44 @@ always@(posedge clk or negedge rst_n)begin
 	end
 end 
 
-assign ref_60ms = (ref_cnt == T_REFRESH_PERIOD);
+assign ref_period = (ref_cnt == T_REFRESH_PERIOD);
 
 // during the period no read and write requrst 
-assign ref_domain = ( ref_cnt>=(T_REFRESH_PERIOD - T_REFRESH_DOMAIN) && ref_cnt<=T_REFRESH_PERIOD );
+//assign ref_domain = ( ref_cnt>=(T_REFRESH_PERIOD - T_REFRESH_DOMAIN) && ref_cnt<=T_REFRESH_PERIOD );
+assign ref_domain = (ref_cnt == T_REFRESH_PERIOD);
+
+//always@(posedge clk or negedge rst_n)begin
+//	if(!rst_n)begin
+//		ref_req_r0 <= 0;
+//		ref_req_r1 <= 0;
+//	end
+//	else begin
+//		ref_req_r0 <= ref_domain;
+//		ref_req_r1 <= ref_req_r0;
+//	end
+//end
+//
+//
+//always@(posedge clk or negedge rst_n)begin
+//	if(!rst_n)begin
+//		sdram_ref_req <= 0;
+//	end
+//	else if(ref_req_r0 && !ref_req_r1)begin // posedge
+//		sdram_ref_req <= 1;
+//	end
+//	else if(sdram_ref_ack)begin  // negedge
+//		sdram_ref_req <= 0;
+//	end
+//	else begin
+//		sdram_ref_req <= sdram_ref_req;
+//	end
+//end
 
 always@(posedge clk or negedge rst_n)begin
 	if(!rst_n)begin
-		ref_req_r0 <= 0;
-		ref_req_r1 <= 0;
+		sdram_ref_req <= 1;
 	end
-	else begin
-		ref_req_r0 <= ref_domain;
-		ref_req_r1 <= ref_req_r0;
-	end
-end
-
-
-always@(posedge clk or negedge rst_n)begin
-	if(!rst_n)begin
-		sdram_ref_req <= 0;
-	end
-	else if(ref_req_r0 && !ref_req_r1)begin // posedge
+	else if(ref_period)begin // posedge
 		sdram_ref_req <= 1;
 	end
 	else if(sdram_ref_ack)begin  // negedge
@@ -107,25 +123,25 @@ end
 
 
 //------------------------------------------------------------------------------
-//上电后200us计时,计时时间到,则done_200us=1
+//200us,,done_200us=1
 //------------------------------------------------------------------------------
 reg[14:0] cnt_200us; 
 always @ (posedge clk or negedge rst_n) 
 	if(!rst_n) 
 		cnt_200us <= 15'd0;
 	else if(cnt_200us < 15'd26_667) 
-		cnt_200us <= cnt_200us+1'b1;	//计数
+		cnt_200us <= cnt_200us+1'b1;	//
 	else
 		cnt_200us <= cnt_200us;
 
 assign done_200us = (cnt_200us == 15'd26_667);
 
 //------------------------------------------------------------------------------
-//产生SDRAM时序操作的延时计数器
+//SDRAM
 //------------------------------------------------------------------------------
 
-reg[8:0] cnt_clk_r;	//时钟计数
-wire cnt_rst_n;		//时钟计数复位信号	
+reg[8:0] cnt_clk_r;	//
+wire cnt_rst_n;		//	
 //assign cnt_rst_n = ~((cur_init_state != init_state) || (cur_work_state != work_state));
 assign cnt_rst_n = ~((init_state == I_POWON && done_200us) 
 	            || (init_state == I_PRE_TRP && end_trp) 
@@ -138,24 +154,26 @@ assign cnt_rst_n = ~((init_state == I_POWON && done_200us)
 	            || (work_state == S_RD_DATA && end_tread) 
 	            || (work_state == S_RWAIT && end_twait) 
 	            || (work_state == S_WR_DATA && end_twrite) 
-	            || (work_state == S_TDAL && end_tdal) 
+	            || (work_state == S_TDAL && end_tdal)
+               || (work_state == S_AR) 					
 	            || (work_state == S_TRFC && end_trfc)
-					|| (work_state == S_TRFC1 && end_trfc)
+					|| (work_state == S_AR1)
+					|| (work_state == S_TRFC1 && end_trfc)				
 		   ); 
 
 
 always @ (posedge clk or negedge rst_n) 
 	if(!rst_n) 
-		cnt_clk_r <= 9'd0;			//计数寄存器复位
+		cnt_clk_r <= 9'd0;			//
 	else if(!cnt_rst_n) 
-		cnt_clk_r <= 9'd0;	//计数寄存器清零
+		cnt_clk_r <= 9'd0;	//
 	else 
-		cnt_clk_r <= cnt_clk_r + 1'b1;		//启动计数延时
+		cnt_clk_r <= cnt_clk_r + 1'b1;		//
 	
-assign cnt_clk = cnt_clk_r;			//计数寄存器引出，内部`define中使用 
+assign cnt_clk = cnt_clk_r;			//`define 
 
 
-// 各阶段结束标志位, cnt_rst_n is register delay 1 clk
+// , cnt_rst_n is register delay 1 clk
 
 assign end_trp 	     = (init_state == I_PRE_TRP) && (cnt_clk_r == TRP -1)	;     
 assign end_trfc	     = (init_state == I_AR0_TRFC || init_state == I_AR1_TRFC || work_state == S_TRFC || work_state == S_TRFC1) && (cnt_clk_r == TRFC-1)	;    
@@ -169,15 +187,17 @@ assign end_twrite    = (work_state == S_WR_DATA) && (cnt_clk_r == W_BL-1)	;
 
 //assign sdram_data_i_valid = cur_work_state == S_RD_DATA;
 reg sdram_data_i_valid;
-//always@(negedge clk or negedge rst_n) begin
 always@(posedge clk or negedge rst_n) begin
+//always@(negedge clk or negedge rst_n) begin
 	if(!rst_n)
 		sdram_data_i_valid <= 0;
 	else if(cur_work_state == S_RD_DATA)
 		sdram_data_i_valid <= 1;
 	else
-	   sdram_data_i_valid <= 0;
+		sdram_data_i_valid <= 0;
 end	
+
+
 
 endmodule
 

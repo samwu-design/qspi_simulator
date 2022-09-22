@@ -1,0 +1,8 @@
+NET "fpga_clk" LOC = T8; // 50mhz
+NET "fpga_clk" IOSTANDARD = LVCMOS33;
+
+NET "fpga_rstn" LOC = L5;
+NET "fpga_rstn" IOSTANDARD = LVCMOS33;
+
+NET "sdram_a12" LOC = J1;
+NET "sdram_a12" IOSTANDARD = LVCMOS33;

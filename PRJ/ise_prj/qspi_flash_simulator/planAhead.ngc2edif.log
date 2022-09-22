@@ -1,0 +1,173 @@
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design fpga_qspi_simulator_top.ngc ...
+WARNING:NetListWriters:298 - No output is written to
+   fpga_qspi_simulator_top.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_cur_rd_preaddr<7 : 0> on
+   block fpga_qspi_simulator_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_last_rd_preaddr<7 : 0>
+   on block fpga_qspi_simulator_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst_GND_30_o_rd_cnt[7]_mux_
+   24_OUT<6 : 0> on block fpga_qspi_simulator_top is not reconstructed, because
+   there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file fpga_qspi_simulator_top.edif ...
+ngc2edif: Total memory usage is 106240 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design asyn_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to asyn_fifo.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file asyn_fifo.edif ...
+ngc2edif: Total memory usage is 105004 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design chipscope_ila_2.ngc ...
+WARNING:NetListWriters:298 - No output is written to chipscope_ila_2.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/iDOUT_dly<2 : 0> on block chipscope_ila_2
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/iDOUT_dly<4 : 0> on block chipscope_ila_2 is
+   not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file chipscope_ila_2.edif ...
+ngc2edif: Total memory usage is 107028 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design chipscope_icon.ngc ...
+WARNING:NetListWriters:298 - No output is written to chipscope_icon.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus U0/U_ICON/iCORE_ID_SEL<15 : 0> on block
+   chipscope_icon is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file chipscope_icon.edif ...
+ngc2edif: Total memory usage is 104328 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design fpga_qspi_simulator_top.ngc ...
+WARNING:NetListWriters:298 - No output is written to
+   fpga_qspi_simulator_top.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_cur_rd_preaddr<7 : 0> on
+   block fpga_qspi_simulator_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_last_rd_preaddr<7 : 0>
+   on block fpga_qspi_simulator_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst_GND_28_o_rd_cnt[7]_mux_
+   24_OUT<6 : 0> on block fpga_qspi_simulator_top is not reconstructed, because
+   there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file fpga_qspi_simulator_top.edif ...
+ngc2edif: Total memory usage is 106144 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design asyn_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to asyn_fifo.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file asyn_fifo.edif ...
+ngc2edif: Total memory usage is 105000 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design fpga_qspi_simulator_top.ngc ...
+WARNING:NetListWriters:298 - No output is written to
+   fpga_qspi_simulator_top.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_cur_rd_preaddr<7 : 0> on
+   block fpga_qspi_simulator_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_last_rd_preaddr<7 : 0>
+   on block fpga_qspi_simulator_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst_GND_28_o_rd_cnt[7]_mux_
+   24_OUT<6 : 0> on block fpga_qspi_simulator_top is not reconstructed, because
+   there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file fpga_qspi_simulator_top.edif ...
+ngc2edif: Total memory usage is 106152 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design asyn_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to asyn_fifo.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file asyn_fifo.edif ...
+ngc2edif: Total memory usage is 105004 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design fpga_qspi_simulator_top.ngc ...
+WARNING:NetListWriters:298 - No output is written to
+   fpga_qspi_simulator_top.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_cur_rd_preaddr<7 : 0> on
+   block fpga_qspi_simulator_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   qspi_simulator_inst_qspi2sdram_inst_qspi_rd_ram_inst_last_rd_preaddr<7 : 0>
+   on block fpga_qspi_simulator_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   qspi_simulator_inst_cyp2sdram_inst_fifo_wr_sdram_inst_GND_28_o_rd_cnt[7]_mux_
+   24_OUT<6 : 0> on block fpga_qspi_simulator_top is not reconstructed, because
+   there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file fpga_qspi_simulator_top.edif ...
+ngc2edif: Total memory usage is 106148 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design asyn_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to asyn_fifo.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file asyn_fifo.edif ...
+ngc2edif: Total memory usage is 105000 kilobytes
+
